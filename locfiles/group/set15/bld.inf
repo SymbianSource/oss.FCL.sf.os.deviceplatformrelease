@@ -1,0 +1,37 @@
+
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*   Build file
+*
+*/
+
+
+#include <platform_paths.hrh>
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+:zip   ../../data/76.zip   OS_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/76.zip   MW_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/76.zip   APP_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/78.zip   OS_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/78.zip   MW_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/78.zip   APP_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/79.zip   OS_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/79.zip   MW_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/79.zip   APP_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/83.zip   OS_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/83.zip   MW_LAYER_PLATFORM_EXPORT_PATH(loc)
+:zip   ../../data/83.zip   APP_LAYER_PLATFORM_EXPORT_PATH(loc)
