@@ -2060,3 +2060,9 @@ This #define supports PREQ1184
 */
 #define SYMBIAN_OE_LIBSTDCPP
 
+/**
+SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV
+
+If SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV, the windowserver component is built to use the OpenWF version of NGA.
+*/
+#define SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV

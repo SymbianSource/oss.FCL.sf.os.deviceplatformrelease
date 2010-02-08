@@ -11,9 +11,14 @@
 *
 * Contributors:
 *
-* Description: 
+* Description:  Defines Series 60 specific feature constants for common
+*                Feature Manager component. This file is included by
+*                Feature Manager component when building it.
+*                The counterpart for this file is the generic SpdStaticFeatures.hrh.
 *
 */
+
+
 
 /* 
 *

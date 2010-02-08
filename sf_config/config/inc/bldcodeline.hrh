@@ -15,6 +15,7 @@
 *
 */
 
+
 #ifndef __BLDCODELINE_HRH 
 #define __BLDCODELINE_HRH 
 
@@ -585,7 +586,7 @@ Image Handling Library utilized Extended ICL JPEG API
 /** #RD_IMAGEPREVIEW  
 ImageViewer's ImagePreview API and DLL are available in release. 
 */ 
-#define RD_IMAGEPREVIEW                                     
+#undef RD_IMAGEPREVIEW                                     
  
 /** #RD_IMAGINGCONFIGMANAGER  
 Flag to include/exclude Imaging Configuration Manager component. 
@@ -1239,25 +1240,25 @@ Development of transition effects in UI rotation (layoutswitch) use case will be
 done behind this flag to secure that existing functionality won't suffer
 regression during implementation. 
 */ 
-#undef RD_UI_TRANSITION_EFFECTS_LAYOUT_SWITCH              
+#define RD_UI_TRANSITION_EFFECTS_LAYOUT_SWITCH              
  
 /** #RD_UI_TRANSITION_EFFECTS_LIST  
 This flag will be used to secure that development of list transition effects
 won't break existing fullscreen and components transition effects. 
 */ 
-#undef RD_UI_TRANSITION_EFFECTS_LIST                       
+#define RD_UI_TRANSITION_EFFECTS_LIST                       
  
 /** #RD_UI_TRANSITION_EFFECTS_PHASE2  
 Feature enables early development of 2nd phase UI transition effects. 
 */ 
-#undef RD_UI_TRANSITION_EFFECTS_PHASE2                     
+#define RD_UI_TRANSITION_EFFECTS_PHASE2                     
  
 /** #RD_UI_TRANSITION_EFFECTS_POPUPS  
 "Development of transition effects in popups (notes, queries, etc) will be done
 behind this flag to secure that existing functionality won't suffer regression
 during implementation." 
 */ 
-#undef RD_UI_TRANSITION_EFFECTS_POPUPS                     
+#define RD_UI_TRANSITION_EFFECTS_POPUPS                     
  
 /** #RD_UI_ZOOM  
 This feature activates the zooming support in Series 60 UI. 
@@ -1414,4 +1415,4 @@ RD flag for development of new XML Engine APIs.
 #define RD_XML_ENGINE_API_CHANGE                            
  
 
-#endif // __BLDCODELINE_HRH 
+#endif // __BLDCODELINE_HRH
