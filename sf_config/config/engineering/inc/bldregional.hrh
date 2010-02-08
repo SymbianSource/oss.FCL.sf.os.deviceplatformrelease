@@ -18,6 +18,8 @@
 #ifndef __BLDREGIONAL_HRH 
 #define __BLDREGIONAL_HRH 
 
+//Defining only language 01 for SF build purposes
+#define LANGUAGE_IDS LANG sc 01  
  
 /** #FF_KOREAN  
 Runtime flag for Korean language 
