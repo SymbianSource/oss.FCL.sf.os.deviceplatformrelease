@@ -1,0 +1,6 @@
+component           deviceplatformrelease_metadata
+source   \sf\os\deviceplatformrelease\deviceplatformrelease_info\deviceplatformrelease_metadata 
+source   \sf\os\deviceplatformrelease\package_definition.xml
+source   \sf\os\deviceplatformrelease\distribution.policy.s60
+notes_source      \component_defs\release.src
+ipr T 
