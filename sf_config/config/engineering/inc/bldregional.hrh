@@ -19,6 +19,9 @@
 #define __BLDREGIONAL_HRH 
 
 //Defining only language 01 for SF build purposes
+#if defined LANGUAGE_IDS
+#undef LANGUAGE_IDS
+#endif
 #define LANGUAGE_IDS LANG sc 01  
  
 /** #FF_KOREAN  
