@@ -59,6 +59,12 @@ RD flag for development of new AIW Dial Data APIs.
 Flag enables ui accelerator toolkit development. 
 */ 
 #define RD_ALF_IN_PLATFORM                                  
+
+/** #ALF_USE_OPENWF_COMPOSITION
+Bug 1391 - UI Acceleration migration to OpenWF
+*/ 
+#define ALF_USE_OPENWF_COMPOSITION
+
  
 /** #RD_ALR_AND_NLR_ENABLERS  
 Enables Application and Network Level Roaming. 
