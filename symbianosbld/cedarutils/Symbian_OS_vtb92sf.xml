@@ -64,13 +64,13 @@
 	<!-- Install cbr tools from latest green tcl build by sf zip package  -->
 	<Execute Component="Make temporary epoc32/relinfo Dir" Cwd="%BuildDir%" CommandLine="mkdir %EPOCROOT%epoc32\relinfo"/>
     <Execute Component="Get TCL sfreltools.ini" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\TCL_Support\sfreltools.ini %EPOCROOT%epoc32\relinfo\reltools.ini"/>
-    <Execute Component="Unzip zip package of cbr tools" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\unzip_cbr_tools.pl -tcl_delta_cache %TCLDeltaCache% -log_dir %LogsDir% -product dp -number 11 -version DP00572"/>
+    <Execute Component="Unzip zip package of cbr tools" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\unzip_cbr_tools.pl -tcl_delta_cache %TCLDeltaCache% -log_dir %LogsDir% -product dp -number 11"/>
 	<Execute Component="Copy cbr tools to own directory" Cwd="%BuildDir%" CommandLine="xcopy &quot;cbr tools&quot; \reltools\ /E /R /Y"/>
 	<Execute Component="Remove cbr tools directory" Cwd="%BuildDir%" CommandLine="rd &quot;cbr tools&quot; /s /q"/>
     <Execute Component="Publish cbrtools_unzip.log" Cwd="%LogsDir%" CommandLine="copy cbrtools_unzip.log %PublishLocation%\%Type%\%BuildNumber%\logs\"/>
 	
     <!-- Install SBSv2 -->
-    <Execute Component="Get Raptor related components" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c dev_build_sbsv2_raptor -c dev_build_sbsv2_cpp-raptor -c dev_hostenv_dist_cygwin-1.5.25 -c dev_hostenv_dist_mingw-5.1.4 -c dev_hostenv_pythontoolsplat_python-2.5.2 -bv DP00572_DeveloperProduct -o %LogsDir%\raptor_version.txt"/>
+    <Execute Component="Get Raptor related components" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c dev_build_sbsv2_raptor -c dev_build_sbsv2_cpp-raptor -c dev_hostenv_dist_cygwin-1.5.25 -c dev_hostenv_dist_mingw-5.1.4 -c dev_hostenv_pythontoolsplat_python-2.5.2 -bv green -o %LogsDir%\raptor_version.txt"/>
     <Execute Component="Copy SBSv2 to own directory" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\bxcopy.pl  -s %SBS_SRC%  -t %SBS_HOME%"/>
     <Execute Component="Remove Raptor related components" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\RmInstalledEnv.pl -x  %LogsDir%\raptor_version.txt"/>
 	<Execute Component="Remove epoc32 directory" Cwd="%BuildDir%" CommandLine="rd %EPOCROOT%epoc32 /s /q"/>
@@ -240,23 +240,23 @@
     <Execute Component="e32toolp Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog  -t 3 -j %MAX_CONCURRENT% -k -m %EPOCROOT%epoc32\build\Makefile_e32toolp -f %LogsDir%\sbs_e32toolp_log.xml.log -b %SourceDir%\os\buildtools\sbsv1_os\e32toolp\group\bld.inf -c tools2_rel.vtb92.whatlog -i > %LogsDir%\e32toolp.log 2>&amp;1"/>
     <Execute Component="Generate html log for e32toolp" Cwd="%EPOCROOT%tools" CommandLine="perl %EPOCROOT%tools\sbsv2htmlscanlog.pl -l %LogsDir%\sbs_e32toolp_log.xml.log  -o %LogsDir%\sbs_e32toolp_log.html -v -v "/>
     <Execute Component="Copy TCL reltools.ini to get rcomp" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\TCL_Support\sfreltools.ini %EPOCROOT%epoc32\relinfo\reltools.ini"/>
-    <Execute Component="Get latest Rcomp component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_bintools_rcomp -bv DP00572_DeveloperProduct -o %LogsDir%\rcomp_version.txt 2>&amp;1"/>
-    <Execute Component="Get Latest Green Trace Compiler from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c osttracecompiler -bv DP00572_DeveloperProduct -o %LogsDir%\tracecompiler_version.txt 2>&amp;1"/>    
+    <Execute Component="Get latest Rcomp component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_bintools_rcomp -bv green -o %LogsDir%\rcomp_version.txt 2>&amp;1"/>
+    <Execute Component="Get Latest Green Trace Compiler from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c osttracecompiler -bv green -o %LogsDir%\tracecompiler_version.txt 2>&amp;1"/>    
     <Execute Component="Copy OS Reltools.ini to epoc32/relinfo" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\%BuildShortName%\reltools.ini %EPOCROOT%epoc32\relinfo\toreltools.ini"/>
-    <Execute Component="Push the latest Rcomp to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_bintools_rcomp -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
-    <Execute Component="Push the Latest Green Trace Compiler to OS Archive" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c osttracecompiler -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+    <Execute Component="Push the latest Rcomp to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_bintools_rcomp -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
+    <Execute Component="Push the Latest Green Trace Compiler to OS Archive" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c osttracecompiler -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
 	 <!-- "DS.1756" changes bootstrapping components from TCL  START -->
- 	 <Execute Component="Get latest dev_build_imgtools_romtools component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_romtools -bv DP00572_DeveloperProduct -o %LogsDir%\dev_build_imgtools_romtools_version.txt 2>&amp;1"/>
-     <Execute Component="Push the latest dev_build_imgtools_romtools to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_romtools -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+ 	 <Execute Component="Get latest dev_build_imgtools_romtools component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_romtools -bv green -o %LogsDir%\dev_build_imgtools_romtools_version.txt 2>&amp;1"/>
+     <Execute Component="Push the latest dev_build_imgtools_romtools to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_romtools -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
      
-     <Execute Component="Get latest dev_build_imgtools_buildrom component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_buildrom -bv DP00572_DeveloperProduct -o %LogsDir%\dev_build_imgtools_buildrom_version.txt 2>&amp;1"/>
-     <Execute Component="Push the latest dev_build_imgtools_buildrom to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_buildrom -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+     <Execute Component="Get latest dev_build_imgtools_buildrom component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_buildrom -bv green -o %LogsDir%\dev_build_imgtools_buildrom_version.txt 2>&amp;1"/>
+     <Execute Component="Push the latest dev_build_imgtools_buildrom to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_buildrom -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
  
-     <Execute Component="Get latest dev_build_imgtools_imglib component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_imglib -bv DP00572_DeveloperProduct -o %LogsDir%\dev_build_imgtools_imglib_version.txt 2>&amp;1"/>
-     <Execute Component="Push the latest dev_build_imgtools_imglib to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_imglib -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+     <Execute Component="Get latest dev_build_imgtools_imglib component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_imglib -bv green -o %LogsDir%\dev_build_imgtools_imglib_version.txt 2>&amp;1"/>
+     <Execute Component="Push the latest dev_build_imgtools_imglib to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_imglib -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
  
-     <Execute Component="Get latest dev_build_imgtools_sisutils component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_sisutils -bv DP00572_DeveloperProduct -o %LogsDir%\dev_build_imgtools_sisutils_version.txt 2>&amp;1"/>
-     <Execute Component="Push the latest dev_build_imgtools_sisutils to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_sisutils -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+     <Execute Component="Get latest dev_build_imgtools_sisutils component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_sisutils -bv green -o %LogsDir%\dev_build_imgtools_sisutils_version.txt 2>&amp;1"/>
+     <Execute Component="Push the latest dev_build_imgtools_sisutils to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_sisutils -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
       <!-- "DS.1756" changes bootstrapping components from TCL  END -->
 
  <!-- Retrieve S60 binaries which remoteconn is dependent on -->
@@ -442,7 +442,7 @@
     <!-- GET IMGCHECK component  --> 
     <Execute Component="Imgcheck  Make Dir relinfo" Cwd="%BuildDir%" CommandLine="mkdir %BuildDir%\epoc32\relinfo\"/>
     <Execute Component="Get TCL sfreltools.ini" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\TCL_Support\sfreltools.ini %BuildDir%\epoc32\relinfo\reltools.ini"/>
-    <Execute Component="Obtain IMGCHECK component" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c dev_build_imgtools_imgcheck -bv DP00572_DeveloperProduct -o %LogsDir%\imgcheck_version.txt"/>    
+    <Execute Component="Obtain IMGCHECK component" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c dev_build_imgtools_imgcheck -bv green -o %LogsDir%\imgcheck_version.txt"/>    
     
     <!-- USE IMGCHECK to create SID, VID reports for these ROM images -->
     <Execute Component="Run IMGCHECK" Cwd="%BuildDir%" CommandLine="%BuildDir%\epoc32\tools\imgcheck.exe --e32input --sid --vid  --verbose M:\epoc32\release\armv5\urel\ -x -o=%LogsDir%\SIDVID.xml -a 2>&amp;1"/> 
@@ -460,7 +460,7 @@
     <Execute Component="Make Dir relinfo" Cwd="%BuildDir%" CommandLine="mkdir %BuildDir%\epoc32\relinfo\"/>
     <Execute Component="Get TCL sfreltools.ini" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\TCL_Support\sfreltools.ini %EPOCROOT%epoc32\relinfo\reltools.ini"/>
           
-    <Execute Component="Obtain CDB tools" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c ana_compatanamdw_apicompatanamdw_cdb -bv DP00572_DeveloperProduct -o %LogsDir%\cdb_version.txt"/>          
+    <Execute Component="Obtain CDB tools" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c ana_compatanamdw_apicompatanamdw_cdb -bv green -o %LogsDir%\cdb_version.txt"/>          
 
 
 	 

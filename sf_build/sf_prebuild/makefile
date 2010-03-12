@@ -7,8 +7,8 @@ include /sf/os/devicesrv/commonservices/commonengine/makefile
 
 include /sf/os/devicesrv/devicesrv_pub/common_platform_security_definitions_api/makefile
 include /sf/os/devicesrv/devicesrv_pub/platform_path_definitions_api/makefile
-include /sf/tools/buildplatforms/build/makefile
-include /sf/mw/qt/group/cmaker/makefile
+include /sf/mw/qt/src/s60installs/deviceconfiguration/cmaker/makefile
+
 ifeq (S60,$(BUILD))
 include /sf/mw/uiresources/uigraphics/icons/makefile
 include /sf/mw/uiresources/uigraphics/bitmaps2/makefile
@@ -17,7 +17,7 @@ include /sf/app/homescreentools/dtdinstaller/makefile
 endif
  
 # Place the first target as the default target which is executed from this level 
-s60_prebuild  :: commonengine_all platform_path_all common_platform_security_all buildpreparation_all export_template_files icons_all bitmaps_all dtdinstaller_all
-os_prebuild  :: commonengine_all platform_path_all common_platform_security_all buildpreparation_all 
+s60_prebuild  :: commonengine_all platform_path_all common_platform_security_all export_template_files icons_all bitmaps_all dtdinstaller_all
+os_prebuild  :: commonengine_all platform_path_all common_platform_security_all  
 
 # include include_template.mk 
