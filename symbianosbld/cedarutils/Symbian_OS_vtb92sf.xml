@@ -40,9 +40,10 @@
 	<SetEnv Order="19" Name="MWLD" Value="%MWROOT%\Symbian_Tools\Command_Line_Tools\mwldsym2.exe"/> 
     <SetEnv Order="20" Name="PATH" Value="%MWROOT%\Symbian_Tools\Command_Line_Tools;%PATH%"/>
     <SetEnv Order="21" Name="PATH" Value="%PATH%;C:\Apps\Python24"/>
-    <SetEnv Order="22" Name="PATH" Value="%EPOCROOT%SBSv2\bin;%PATH%"/>
+	<!-- %SBS_LOCAL_BIN% is required to support the optional use of a locally installed Raptor -->
+    <SetEnv Order="22" Name="PATH" Value="%SBS_LOCAL_BIN%%EPOCROOT%SBSv2\bin;%PATH%"/>
     <SetEnv Order="23" Name="SBS_SRC" Value="%EPOCROOT%tools\sbs"/>
-	<SetEnv Order="24" Name="SBS_HOME" Value="%EPOCROOT%SBSv2"/>
+	<SetEnv Order="24" Name="SBS_ROOT" Value="%EPOCROOT%SBSv2"/>
     <SetEnv Order="25" Name="SOURCEROOT" Value="%SourceDir%"/> 
     <SetEnv Order="26" Name="SBS_VERSION" Value="1"/>
 	<SetEnv Order="27" Name="PATH" Value="%BuildDir%\reltools;%EPOCROOT%epoc32\tools;%EPOCROOT%epoc32\gcc\bin;%PATH%;%EPOCROOT%epoc32\rom\include;%EPOCROOT%epoc32\include;"/>
@@ -71,7 +72,7 @@
 	
     <!-- Install SBSv2 -->
     <Execute Component="Get Raptor related components" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c dev_build_sbsv2_raptor -c dev_build_sbsv2_cpp-raptor -c dev_hostenv_dist_cygwin-1.5.25 -c dev_hostenv_dist_mingw-5.1.4 -c dev_hostenv_pythontoolsplat_python-2.5.2 -bv green -o %LogsDir%\raptor_version.txt"/>
-    <Execute Component="Copy SBSv2 to own directory" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\bxcopy.pl  -s %SBS_SRC%  -t %SBS_HOME%"/>
+    <Execute Component="Copy SBSv2 to own directory" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\bxcopy.pl  -s %SBS_SRC%  -t %SBS_ROOT%"/>
     <Execute Component="Remove Raptor related components" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\RmInstalledEnv.pl -x  %LogsDir%\raptor_version.txt"/>
 	<Execute Component="Remove epoc32 directory" Cwd="%BuildDir%" CommandLine="rd %EPOCROOT%epoc32 /s /q"/>
 	
@@ -395,7 +396,7 @@
 
     <!--Prep for CBR -->
     <Execute Component="CBR Copy Clean Src" Cwd="%BuildDir%\CBRTV" CommandLine="xcopy %CleanSourceDir% %BuildDir%\CBRTV\sf /E /Z /I /Q"/>
-    <Execute Component="Run sbsv2cache tool" Cwd="%BuildDir%" CommandLine="%SBS_HOME%\win32\python252\python.exe %SBS_HOME%\bin\sbsv2cache.py -v -s -o %ABLDCACHE% -l %LogsDir%\sbs_e32toolp_log.xml.log -l %LogsDir%\sbs_GT_log.xml.log -l %LogsDir%\sbs_TV_log.xml.log -l %LogsDir%\sbs_tools_log.xml.log -l %LogsDir%\sbs_tools2_rel_log.xml.log -l %LogsDir%\sbs_tools2_deb_log.xml.log > %LogsDir%\sbs_sbsv2cache.log 2>&amp;1"/>
+    <Execute Component="Run sbsv2cache tool" Cwd="%BuildDir%" CommandLine="%SBS_ROOT%\win32\python252\python.exe %SBS_ROOT%\bin\sbsv2cache.py -v -s -o %ABLDCACHE% -l %LogsDir%\sbs_e32toolp_log.xml.log -l %LogsDir%\sbs_GT_log.xml.log -l %LogsDir%\sbs_TV_log.xml.log -l %LogsDir%\sbs_tools_log.xml.log -l %LogsDir%\sbs_tools2_rel_log.xml.log -l %LogsDir%\sbs_tools2_deb_log.xml.log > %LogsDir%\sbs_sbsv2cache.log 2>&amp;1"/>
     <Execute Component="Publish Raptor Cache Log"    Cwd="%BuildDir%" CommandLine="copy %LogsDir%\sbs_sbsv2cache.log %PublishLocation%\%Type%\%BuildNumber%\logs\sbs_sbsv2cache.log"/>
 
 	<!-- Cleanup unnecessary files  to remove warnings -->
