@@ -343,7 +343,7 @@ Removes Symbian wlan componets
 /** #SYMBIAN_GRAPHICS_ADAPTATION  
 This flag is used to take right graphics adaptation components to the ROM build 
 */ 
-#define SYMBIAN_GRAPHICS_ADAPTATION                        None 
+#define SYMBIAN_GRAPHICS_ADAPTATION                        SGA_SW 
  
 /** #SYMBIAN_GRAPHICS_USE_GCE  
 Includes the Symbian the Surface Manager and Graphics Composition Engine on ROM
