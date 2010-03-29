@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Symbian Foundation License v1.0" to Symbian Foundation members and "Symbian Foundation End User License Agreement v1.0" to non-members
+* which accompanies this distribution, and is available
+* at the URL "http://www.symbianfoundation.org/legal/licencesv10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __SYBORG_TEXTSHELL_IBY__
+#define __SYBORG_TEXTSHELL_IBY__
+
+REM ##########################################################################
+
+REM Syborg Specific Starter
+
+REM ##########################################################################
+
+// Host Filesystem
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_svphostfsdriver.ldd	\sys\bin\svphostfsdriver.ldd
+file=			KERNEL_DIR\DEBUG_DIR\svphostfsy.fsy			                        \sys\bin\svphostfsy.fsy
+file=			KERNEL_DIR\DEBUG_DIR\svphostfs.exe			                        \sys\bin\svphostfs.exe
+
+
+// Snap Driver
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_svpsnapdriver.ldd  	\sys\bin\svpsnapdriver.ldd
+file=			KERNEL_DIR\DEBUG_DIR\snapapp.exe			                          \sys\bin\snapapp.exe
+
+
+file=			KERNEL_DIR\DEBUG_DIR\svphostfsstart.exe			                     \sys\bin\sysstart.exe	 // Syborg Specific Starter	
+
+
+REM ##############################################################################
+
+REM Symbian TextShell and Symbian EKA2 Windows Server ( EWSRV )
+
+REM ##############################################################################
+
+file=	KERNEL_DIR\DEBUG_DIR\ECONS.DLL				                               \sys\bin\ECONS.DLL
+file=	KERNEL_DIR\DEBUG_DIR\EWSRV.EXE			                                 \sys\bin\EWSRV.EXE	FIXED HEAPMAX (0x40000)
+file=	ABI_DIR\DEBUG_DIR\eshell.exe				                                 \sys\bin\eshell.exe 	HEAPMAX(0x20000) capability tcb+diskadmin+allfiles+ProtServ
+
+
+#endif /* __SYBORG_TEXTSHELL_IBY__ */

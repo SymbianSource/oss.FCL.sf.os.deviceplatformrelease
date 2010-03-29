@@ -1,0 +1,30 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Symbian Foundation License v1.0" to Symbian Foundation members and "Symbian Foundation End User License Agreement v1.0" to non-members
+* which accompanies this distribution, and is available
+* at the URL "http://www.symbianfoundation.org/legal/licencesv10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  iby variant file for initiliselocale
+*
+*/
+
+
+#ifndef INITIALISELOCALE_VARIANT_IBY
+#define INITIALISELOCALE_VARIANT_IBY
+
+//default locale dll
+file=ABI_DIR\BUILD_DIR\elocl.loc			System\Libs\elocl.loc
+ 
+//default repositary file for locale settings
+data=DATAZ_\PRIVATE\10202be9\1020e4d3.cre 	private\10202be9\1020e4d3.cre
+                         
+#endif // INITIALISELOCALE_VARIANT_IBY
+
+//  End of File  
