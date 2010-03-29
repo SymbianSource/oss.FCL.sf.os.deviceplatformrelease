@@ -12,7 +12,20 @@
       <module name="version">
         <unit unitID="platform.version" mrp="" bldFile="&layer_real_source_path;/Version/group" name="version" />
       </module>
+			<!-- from buildplatform -->
+			<module name="sf_common_tsy">
+				<component name="sf_common_tsy">
+					<unit unitID="symbian.common_tsy" name="sf_common_tsy" bldFile="sf/os/cellularsrv/telephonyserverplugins/common_tsy/group" mrp="" filter=""/>
+				</component>
+			</module>
+			<module name="sf_openvg11">
+				<component name="sf_openvg11">
+					<unit unitID="symbian.openvg11" name="sf_openvg11" bldFile="sf/os/graphics/openvg/openvginterface/group/openvg11" mrp="" filter="sf_build"/>
+				</component>
+			</module>
+			<!-- from buildplatform -->
     </layer>
+    
     <layer name="app_layer">
       <module name="locfiles">
 				<unit unitID="platform.locfiles" mrp="" bldFile="&layer_real_source_path;/locfiles/group" filter="" name="locfiles" />
@@ -36,6 +49,22 @@
       <module name="helps_loc2">
         <unit unitID="platform.helps_loc2" mrp="" bldFile="&layer_real_source_path;/helps_loc2/group" name="helps_loc2" />
       </module>
+		</layer>
+
+		<!-- from buildplatform -->
+	  <layer name="stubs_layer">
+			<module name="sf_licenseetsystub">
+				<component name="sf_licenseetsystub">
+					<unit unitID="symbian.licenseetsystub" name="sf_licenseetsystub" bldFile="sf/os/cellularsrv/telephonyserverplugins/licenseetsystub/group" mrp="" filter=""/>
+				</component>
+			</module>
+		</layer>
+
+    <layer name="bin_layer">
+			<module name="bin_layer_helix_ren">
+					<unit unitID="bin_layer_sf_mw_helix_helix_ren_src" name="src" bldFile="sf/mw/helix/helix_ren/src/group" mrp="" filter="!no_binonly"/>
+			</module>
     </layer>
+		<!-- from buildplatform -->
   </systemModel>
 </SystemDefinition>
