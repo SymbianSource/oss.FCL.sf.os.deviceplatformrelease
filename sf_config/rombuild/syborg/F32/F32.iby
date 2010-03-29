@@ -1,0 +1,103 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Symbian Foundation License v1.0" to Symbian Foundation members and "Symbian Foundation End User License Agreement v1.0" to non-members
+* which accompanies this distribution, and is available
+* at the URL "http://www.symbianfoundation.org/legal/licencesv10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __F32_IBY__
+#define __F32_IBY__
+
+#include <bldprivate.hrh>    // TODO //
+
+/*########################################################################*/
+/*#	                          File Server			                           #*/
+/*#					                                                             #*/
+/*########################################################################*/
+
+
+secondary=        ABI_DIR\DEBUG_DIR\efile.exe		        sys\bin\efile.exe  FIXED HEAPMAX(0x80000)
+file=			        ABI_DIR\DEBUG_DIR\efsrv.dll           sys\bin\efsrv.dll
+file=			        ABI_DIR\DEBUG_DIR\e32strt.exe	        sys\bin\estart.exe HEAPMAX(0x2000)	// Symbian Base Starter 
+data=			        \epoc32\rom\syborg\ESTART.TXT	        \sys\data\ESTART.TXT			          // Local Drives Definition File 
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\ELOCD.LDD	      \sys\bin\ELOCD.LDD			            // Local Media Drives Access Driver
+
+device[VARID]=KERNEL_DIR\DEBUG_DIR\d_ftrace.ldd             \sys\bin\d_ftrace.ldd   // FileSystem Trace Driver
+/* FAT System Filename conversion plugins */
+#include <fatcharsetconv.iby> 														
+
+
+/* File Systems Supported */
+
+#ifdef WITH_EXFAT
+file=ABI_DIR\DEBUG_DIR\exfat.fsy                            sys\bin\exfat.fsy
+#endif
+
+#ifdef WITH_AUTOMOUNTER
+file=ABI_DIR\DEBUG_DIR\automounter.fsy                      sys\bin\automounter.fsy
+#endif
+
+
+#ifndef CUSTOM_ELOCAL
+file=ABI_DIR\DEBUG_DIR\efat32.fsy			    \sys\bin\ELocal.fsy
+#endif
+
+// PREQ2540: Prepare "LFFS" NOR Flash File System TPIP for Symbian Foundation
+// This PREQ removes the LFFS File System component from the rlease codeline.
+// Only define WITH_ELLFS_FSY macro on development branches where the component
+// has been retained.
+#ifdef WITH_ELFFS_FSY
+file=ABI_DIR\DEBUG_DIR\elffs.fsy                            \sys\bin\ELffs.fsy
+#endif
+
+#ifdef WITH_NAND
+file=ABI_DIR\BUILD_DIR\nandftl.fxt                          \sys\bin\nandftl.fxt
+file=ABI_DIR\BUILD_DIR\ecomp.fsy                            \sys\bin\ecomp.fsy
+file=ABI_DIR\BUILD_DIR\erofs.fsy                            \sys\bin\erofs.fsy
+#endif
+
+#if defined(WITH_NAND2) || defined(WITH_ONENAND) || defined (WITH_INTERNAL_MMC)
+file=ABI_DIR\BUILD_DIR\ecomp.fsy                            \sys\bin\ecomp.fsy
+file=ABI_DIR\BUILD_DIR\erofs.fsy                            \sys\bin\erofs.fsy
+#endif
+
+#ifdef WITH_ISO9660
+file=ABI_DIR\DEBUG_DIR\iso9660.fsy                          \sys\bin\Iso9660.fsy
+#endif
+
+#ifdef WITH_NTFS
+file=ABI_DIR\DEBUG_DIR\ntfs.fsy                             \sys\bin\Ntfs.fsy
+#endif
+
+#if !(defined(INST_X86) || defined(INST_X86GCC))
+file=ABI_DIR\DEBUG_DIR\USBCSC_bil.dll                       \sys\bin\usbcsc_bil.dll
+#endif
+
+#ifdef WITH_MASS_STORAGE
+#ifdef USE_MSCDB
+file=ABI_DIR\DEBUG_DIR\msfs_db.fsy                          \sys\bin\msfs.fsy
+#else
+file=ABI_DIR\DEBUG_DIR\msfs.fsy                             \sys\bin\msfs.fsy
+#endif
+#endif
+
+/*########################################################################*/
+/*#	                          Symbian Domain Manager                     #*/
+/*#                                                                      #*/
+/*########################################################################*/
+
+/* Symbian Domain Manager */
+file=ABI_DIR\DEBUG_DIR\domainSrv.exe                     \sys\bin\domainSrv.exe
+file=ABI_DIR\DEBUG_DIR\domainCli.dll                     \sys\bin\domainCli.dll
+file=ABI_DIR\DEBUG_DIR\domainPolicy.dll                  \sys\bin\domainPolicy.dll										
+#endif /* __F32_IBY__ */
