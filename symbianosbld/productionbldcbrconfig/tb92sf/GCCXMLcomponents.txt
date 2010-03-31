@@ -180,12 +180,9 @@ dev_build_imgtools_buildrom	*nosource*
 dev_build_imgtools_imglib	*nosource*
 dev_build_imgtools_romtools	*nosource*
 dev_build_imgtools_sisutils	*nosource*
-developerlibrary_doc_html	\sf\os\buildtools\devlib\devlibhelp\group\devlib96\developerlibrary_doc_html.mrp
-developerlibrary_doc_plain_html	\sf\os\buildtools\devlib\devlibhelp\group\shared\developerlibrary_doc_plain_html.mrp
 developerlibrary_doc_source	\sf\os\buildtools\devlib\devlibhelp\developerlibrary_doc_source.mrp
 deviceplatformrelease_metadata	\sf\os\deviceplatformrelease\deviceplatformrelease_info\deviceplatformrelease_metadata\deviceplatformrelease_metadata.mrp
 devicesrv_metadata	\sf\os\devicesrv\devicesrv_info\devicesrv_metadata\devicesrv_metadata.mrp
-foundation_s60_packages	\sf\os\deviceplatformrelease\symbianosbld\foundation_s60_packages\foundation_s60_packages.mrp
 graphics_bitgdi	\sf\os\graphics\graphicsdeviceinterface\bitgdi\group\graphics_bitgdi.mrp
 graphics_commonheader	\sf\os\graphics\graphicsutils\commongraphicsheaders\group\graphics_commonheader.mrp
 graphics_compositionbackend	\sf\os\graphics\graphicscomposition\compositionengineadaptation\group\graphics_compositionbackend.mrp
@@ -567,7 +564,6 @@ tools_cbr_tools	\sf\os\buildtools\toolsandutils\cbrtools\group\tools_cbr_tools.m
 tools_cinidata	\sf\os\osrndtools\testexecfw1\cinidata\tools_cinidata.mrp
 tools_debug_trace	\sf\os\persistentdata\traceservices\tracefw\ulogger\group\tools_debug_trace.mrp
 tools_depcheck	\sf\os\buildtools\binanamdw_os\depcheck\tools_depcheck.mrp
-tools_documentation	\sf\os\buildtools\devlib\toolsdocs\tools_documentation.mrp
 tools_e32tools	\sf\os\buildtools\toolsandutils\e32tools\group\tools_e32tools.mrp
 tools_evalid	\sf\os\buildtools\bintools_os\evalid\tools_evalid.mrp
 tools_redistribution_cedar	\sf\os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_cedar.mrp

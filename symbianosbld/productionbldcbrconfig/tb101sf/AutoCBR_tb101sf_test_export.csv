@@ -101,7 +101,6 @@ nokia_shortlinksrv_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G 
 nokia_textandloc_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 nokia_contacts_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 nokia_techview_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-foundation_s60_packages,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 
 # Mobile ActiveSync prebuild binaries,,,,
 mas,exclude_bin,exclude_bin,A B D E F G O T,A B D E F G O T
