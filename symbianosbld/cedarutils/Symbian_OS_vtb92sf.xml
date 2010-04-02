@@ -26,9 +26,9 @@
     <SetEnv Order="6" Name="RVCT22BIN" Value="%ARMROOT%\RVCT\Programs\2.2\349\win_32-pentium"/>
     <SetEnv Order="7" Name="RVCT22INC" Value="%ARMROOT%\RVCT\Data\2.2\349\include\windows"/>
     <SetEnv Order="8" Name="RVCT22LIB" Value="%ARMROOT%\RVCT\Data\2.2\349\lib"/>
-    <SetEnv Order="9" Name="RVCT22_CCOPT" Value="--licretry"/>
-    <SetEnv Order="10" Name="RVCT22_ASMOPT" Value="--licretry"/>
-    <SetEnv Order="11" Name="RVCT22_LINKOPT" Value="--licretry"/>
+    <SetEnv Order="9" Name="RVCT22_CCOPT" Value="--licretry --fastlicense --sitelicense"/>
+    <SetEnv Order="10" Name="RVCT22_ASMOPT" Value="--licretry --fastlicense --sitelicense"/>
+    <SetEnv Order="11" Name="RVCT22_LINKOPT" Value="--licretry --fastlicense --sitelicense"/>
     <SetEnv Order="12" Name="PATH" Value="%RVCT22BIN%;%PATH%"/>
 
     <SetEnv Order="13" Name="MWVER" Value="3.2.5"/>
@@ -52,6 +52,7 @@
 	<!-- Set Diamnods server and Schema-->
 	<SetEnv Order="30" Name="DiamondsServer" Value="diamonds.nmp.nokia.com:9003"/>
 	<SetEnv Order="31" Name="DiamondsSchemaNum" Value="16"/> 
+	<SetEnv Order="32" Name="SYSDEF_TOOLS" Value="os\buildtools\bldsystemtools\sysdeftools"/> 
  
     <!-- Dumping environment -->
     <Execute Component="Dumping all environment variables" Cwd="%BuildDir%" CommandLine="SET"/>
@@ -77,10 +78,10 @@
 	<Execute Component="Remove epoc32 directory" Cwd="%BuildDir%" CommandLine="rd %EPOCROOT%epoc32 /s /q"/>
 	
  	<!-- Combine system definitions -->
-    <Execute Component="Join Foundation System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\foundation_system\system_model\system_definition.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.SF.xml"/>
-    <Execute Component="Join Nokia System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\nokia_system\nokia_model\system_definition.xml -param path /os/deviceplatformrelease/nokia_system/nokia_model/system_definition.xml -xsl ..\sysdeftools\joinsysdef.xsl -out variability\vp_data\templates\System_Definition_Template.Nokia.xml"/>
-    <Execute Component="Merge System Definitions" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in variability\vp_data\templates\System_Definition_Template.SF.xml -param Downstream System_Definition_Template.Nokia.xml -xsl ..\sysdeftools\mergesysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Full.xml"/>
-    <Execute Component="Create 2.0.1 format System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\toolsandutils\productionbldtools\java\xalan.jar -in variability\vp_data\templates\System_Definition_Template.Full.xml -xsl ..\sysdeftools\sysdefdowngrade.xsl -out variability\vp_data\templates\System_Definition_Template.xml"/>
+    <Execute Component="Join Foundation System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\foundation_system\system_model\system_definition.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.SF.xml"/>
+    <Execute Component="Join Nokia System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\nokia_system\nokia_model\system_definition.xml -param path /os/deviceplatformrelease/nokia_system/nokia_model/system_definition.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Nokia.xml"/>
+    <Execute Component="Merge System Definitions" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in variability\vp_data\templates\System_Definition_Template.SF.xml -param Downstream System_Definition_Template.Nokia.xml -xsl ..\sysdeftools\mergesysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Full.xml"/>
+    <Execute Component="Create 2.0.1 format System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in variability\vp_data\templates\System_Definition_Template.Full.xml -xsl ..\sysdeftools\sysdefdowngrade.xsl -out variability\vp_data\templates\System_Definition_Template.xml"/>
     <Execute Component="Copy *intermediate* System Definition Files to Local Logs Dir" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="copy variability\vp_data\templates\System_Definition*.xml %LogsDir%\"/>
 
     <!-- Run Variability Tools -->
@@ -96,9 +97,9 @@
      
 
     <!-- Create component lists for CBR from System_definition_template.xml -->
-    <Execute Component="Create Intermediate GT System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;!systemtest,!techview,!s60&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_GT.xml"/>
-    <Execute Component="Create Intermediate TV System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;techview&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_TV.xml"/>
-    <Execute Component="Create Intermediate System Test System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;systemtest&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_SystemTest.xml"/>
+    <Execute Component="Create Intermediate GT System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;!systemtest,!techview,!s60&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_GT.xml"/>
+    <Execute Component="Create Intermediate TV System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;techview&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_TV.xml"/>
+    <Execute Component="Create Intermediate System Test System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;systemtest&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_SystemTest.xml"/>
     <Execute Component="Create GTcomponents.txt" Cwd="%LogsDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\genxml.pl -x %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\variability\vp_data\templates\system_definition_GT.xml -s %CleanSourceDir% -e \sf -n any -c %CleanSourceDir%\os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\%BuildShortName%\GTcomponents.txt"/>
     <Execute Component="Create TechviewComponents.txt" Cwd="%LogsDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\genxml.pl -x %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\variability\vp_data\templates\system_definition_TV.xml -s %CleanSourceDir% -e \sf -n any -c %CleanSourceDir%\os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\%BuildShortName%\TechViewComponents.txt"/>
     <Execute Component="Create SystemTestComponents.txt" Cwd="%LogsDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\genxml.pl -x %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\variability\vp_data\templates\system_definition_SystemTest.xml  -f systemtest -s %CleanSourceDir% -e \sf -n any -c %CleanSourceDir%\os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\%BuildShortName%\SystemTestComponents.txt"/>
@@ -222,7 +223,7 @@
     <!-- Setup BuildInfo.txt -->
     <Execute Component="BuildInfo" Cwd="%BuildDir%" CommandLine="echo DeviceFamily               100 >%EPOCROOT%epoc32\data\BuildInfo.txt"/>
     <Execute Component="BuildInfo" Cwd="%BuildDir%" CommandLine="echo DeviceFamilyRev            0x900 >>%EPOCROOT%epoc32\data\BuildInfo.txt"/>
-    <Execute Component="BuildInfo" Cwd="%BuildDir%" CommandLine="echo ManufacturerSoftwareBuild  %BuildNumber% >>%EPOCROOT%epoc32\data\BuildInfo.txt"/>
+    <Execute Component="BuildInfo" Cwd="%BuildDir%" CommandLine="echo ManufacturerSoftwareBuild  %SnapshotNumber% >>%EPOCROOT%epoc32\data\BuildInfo.txt"/>
 	 
 
     <!-- Post PreBuild Stuff -->
