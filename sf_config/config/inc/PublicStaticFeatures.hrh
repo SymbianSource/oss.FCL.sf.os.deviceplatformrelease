@@ -40,12 +40,24 @@ KFeatureIdFfAdditionalFonts,
 KFeatureIdFfAiWlansnifferWidget,
 #endif
 
+#ifdef FF_ALTERNATIVE_CALL_WAITING_TONE
+KFeatureIdFfAlternativeCallWaitingTone,
+#endif
+
+#ifdef FF_ARABIC_HANDWRITING_RECOGNITION_INPUT
+KFeatureIdArabicHandwritingRecognitionInput,
+#endif
+
 #ifdef FF_ASYNCH_FILE_SAVE_QUEUE
 KFeatureIdAsynchFileSaveQueue,
 #endif
 
 #ifdef FF_AUDT
 KFeatureIdFfAudt,
+#endif
+
+#ifdef FF_AUTOMOTIVESTACK
+KFeatureIdFfAutomotivestack,
 #endif
 
 #ifdef FF_AUTO_REDIAL_FOR_VIDEO_CALL
@@ -70,6 +82,14 @@ KFeatureIdFfBluetoothDisabled,
 
 #ifdef FF_BROWSER_PROGRESSIVE_DOWNLOAD
 KFeatureIdBrowserProgressiveDownload,
+#endif
+
+#ifdef FF_CALENDAR_DAY_VIEW
+KFeatureIdFfCalDayView,
+#endif
+
+#ifdef FF_CALENDAR_SCROLLABLE_PREVIEW
+KFeatureIdFfCalScrollablePreview,
 #endif
 
 #ifdef FF_CAL_MEETING_REQUEST_UI
@@ -164,12 +184,20 @@ KFeatureIdDualModem,
 KFeatureIdFfEmailFramework,
 #endif
 
+#ifdef FF_EMAIL_FULLSCREENVIEWER
+KFeatureIdFfEmailFullscreenviewer,
+#endif
+
 #ifdef FF_EMAIL_IPS_SERVICES
 KFeatureIdFfEmailIpsServices,
 #endif
 
 #ifdef FF_EMAIL_MCE_INTEGRATION
 KFeatureIdEmailMceIntegration,
+#endif
+
+#ifdef FF_EMAIL_PREDICTIVESEARCH
+KFeatureIdFfEmailPredictivesearch,
 #endif
 
 #ifdef FF_EMAIL_PROTOCOL_PLUGINS
@@ -180,8 +208,12 @@ KFeatureIdFfEmailProtocolPlugins,
 KFeatureIdFfEmailUi,
 #endif
 
+#ifdef FF_EMAIL_UI_SPLITSCREEN
+KFeatureIdFfEmailUiSplitscreen,
+#endif
+
 #ifdef FF_ENABLE_ISI_COMMUNICATION_IN_USB_CHARGING_MODE
-KFeatureIdCertificationTesting,
+KFeatureIdEnableIsiCommunicationInUsbChargingMode,
 #endif
 
 #ifdef FF_ENHANCED_CALENDAR_EVENT_UI
@@ -198,6 +230,10 @@ KFeatureIdFmtx,
 
 #ifdef FF_FMTX_RDS_TEXT
 KFeatureIdFfFmtxRdsText,
+#endif
+
+#ifdef FF_FOTA_CHECK_LIMITATION
+KFeatureIdFfFotaCheckLimitation,
 #endif
 
 #ifdef FF_FULLSCR_HWR_INPUT
@@ -240,12 +276,20 @@ KFeatureIdIAUpdate,
 KFeatureIdFfIaupdatePhase2,
 #endif
 
+#ifdef FF_IMAGE_EDITOR
+KFeatureIdFfImageEditor,
+#endif
+
 #ifdef FF_INPUTS_PER_ORIENTATION
 KFeatureIdFfInputsPerOrientation,
 #endif
 
 #ifdef FF_INTELLIGENT_TEXT_INPUT
 KFeatureIdFfIntelligentTextInput,
+#endif
+
+#ifdef FF_IPSEC_UMA_SUPPORT_ENABLE
+KFeatureIdFfIpsecUmaSupportEnable,
 #endif
 
 #ifdef FF_ITI_VIRTUAL_TOUCH_FIRST_GENERATION_SUPPORT
@@ -332,12 +376,24 @@ KFeatureIdFfOdeLegalNotice,
 KFeatureIdFfOfnFeature,
 #endif
 
+#ifdef FF_OMADRM1_FULL_SUPPORT
+KFeatureIdFfOmadrm1FullSupport,
+#endif
+
+#ifdef FF_OMADRM2_SUPPORT
+KFeatureIdFfOmadrm2Support,
+#endif
+
 #ifdef FF_OMA_SCOMO_ADAPTER
 KFeatureIdFfOmaScomoAdapter,
 #endif
 
 #ifdef FF_OSS_LEGAL_NOTICE
 KFeatureIdFfOssLegalNotice,
+#endif
+
+#ifdef FF_PLAYREADY_SUPPORT
+KFeatureIdFfPlayreadySupport,
 #endif
 
 #ifdef FF_PNPMS_PROV_FILTER
@@ -378,6 +434,18 @@ KFeatureIdFfRuntimeDeviceCapabilityConfiguration,
 
 #ifdef FF_SELECTABLE_EMAIL
 KFeatureIdSelectableEmail,
+#endif
+
+#ifdef FF_SIDESLIDER_SUPPORT
+KFeatureIdFfSidesliderSupport,
+#endif
+
+#ifdef FF_SIM_CONSECUTIVE_6F00_ERRORS_HANDLING
+KFeatureIdFfSimConsecutive6f00ErrorsHandling,
+#endif
+
+#ifdef FF_SIP_APN_SWITCHING
+KFeatureIdFfSipApnSwitching,
 #endif
 
 #ifdef FF_SIP_CUSTOM_PDP_HANDLING
@@ -428,8 +496,32 @@ KFeatureIdTcpMyfavesFeature,
 KFeatureIdFfTcpMyprofile,
 #endif
 
+#ifdef FF_TD_CLMContactReplicationFromPhonebookToUSIMCard
+KFeatureIdFfTdClmcontactreplicationfromphonebooktousimcard,
+#endif
+
+#ifdef FF_TD_CMCCATCommandsSupport
+KFeatureIdFfTdCmccatcommandssupport,
+#endif
+
+#ifdef FF_TD_CMCCPIMPromptServerFullWhenReceive420StatusCodeFromServer
+KFeatureIdFfTdCmccpimpromptserverfullwhenreceive420statuscodefromserver,
+#endif
+
+#ifdef FF_TD_CMCCPIMSynchronizationProgressIndicatorUI 
+KFeatureIdFfTdCmccpimsynchronizationprogressindicatorui ,
+#endif
+
 #ifdef FF_TD_SCDMA
 KFeatureIdFfTdScdma,
+#endif
+
+#ifdef FF_TD_SCDMA_FORBIDDENOPERATORICONDISPLAY
+KFeatureIdFfTdScdmaForbiddenoperatoricondisplay,
+#endif
+
+#ifdef FF_TD_SCDMA_VIDEOCALL_KEY
+KFeatureIdFfTdScdmaVideocallKey,
 #endif
 
 #ifdef FF_TOUCHSCREENCALIB_IN_STARTUP
@@ -468,6 +560,10 @@ KFeatureIdFfUseNavikeyForVolume,
 KFeatureIdFfVideoAudioBranding,
 #endif
 
+#ifdef FF_VIDEO_EDITOR
+KFeatureIdFfVideoEditor,
+#endif
+
 #ifdef FF_VIRTUAL_FULLSCR_QWERTY_INPUT
 KFeatureIdVirtualFullscrQwertyInput,
 #endif
@@ -492,12 +588,20 @@ KFeatureIdFfVpnClient,
 KFeatureIdWebvideoPh2,
 #endif
 
+#ifdef FF_WLAN_AUTHENTICATION_ONLY_SUPPORT
+KFeatureIdFfWlanAuthenticationOnlySupport,
+#endif
+
 #ifdef FF_WLAN_EXTENSIONS
 KFeatureIdFfWlanExtensions,
 #endif
 
 #ifdef FF_WLAN_WAPI
 KFeatureIdFfWlanWapi,
+#endif
+
+#ifdef FF_WMDRM_DLA_SUPPORT
+KFeatureIdFfWmdrmDlaSupport,
 #endif
 
 #ifdef SYMBIAN_INCLUDE_LOCATION_NPE_DSM

@@ -66,6 +66,17 @@ Flag for WLANSniffer Homescreen widget.
 */
 #undef FF_AI_WLANSNIFFER_WIDGET                           
 
+/** #FF_ALTERNATIVE_CALL_WAITING_TONE 
+When this flag is enabled an alternative call waiting tone will be used
+*/
+#undef FF_ALTERNATIVE_CALL_WAITING_TONE                   
+
+/** #FF_ARABIC_HANDWRITING_RECOGNITION_INPUT 
+This flag is used to enable arabic finger handwriting input in capacitive touch
+screen phone.
+*/
+#undef FF_ARABIC_HANDWRITING_RECOGNITION_INPUT            
+
 /** #FF_ASYNCH_FILE_SAVE_QUEUE 
 Camcorder requires support from the Asynchronous File Save Queue.
 */
@@ -88,6 +99,11 @@ Device supports Always Up-to-date Device Time (AUDT). This is an ability to
 update the device time, date and country/city automatically in phone start-up.
 */
 #undef FF_AUDT                                            
+
+/** #FF_AUTOMOTIVESTACK 
+S60_PUBLIC Feature Flag for In-Car Optimized device EPIC
+*/
+#undef FF_AUTOMOTIVESTACK                                 
 
 /** #FF_AUTO_REDIAL_FOR_VIDEO_CALL 
 This flag indicates redial sequence, when video call is not succeeded for
@@ -138,6 +154,23 @@ This feature flag is needed to enable/disable the progressiveness of the
 downloads in download manager server and its clients.
 */
 #define FF_BROWSER_PROGRESSIVE_DOWNLOAD                    
+
+/** #FF_CALENDAR_DAY_VIEW 
+This flag is needed for run time configuration of Business calendar day view.
+The day view will be loaded as a plug-in based on this flag being enabled. Day
+view will be integrated along with other native views(month, week, agenda &
+Todo).
+*/
+#undef FF_CALENDAR_DAY_VIEW                               
+
+/** #FF_CALENDAR_SCROLLABLE_PREVIEW 
+This flag is needed for run time configuration of scrollable preview pane in
+calendar. The scrollable preview pane will be loaded as a plug-in with calendar
+month view and week view based on this flag being enabled. Layouts with
+scrollable preview pane will be loaded on run time based on this flag being
+enabled for month / week view
+*/
+#undef FF_CALENDAR_SCROLLABLE_PREVIEW                     
 
 /** #FF_CAL_MEETING_REQUEST_UI 
 With this flag it is selected if Meeting Request UI included with flag
@@ -307,6 +340,11 @@ application.
 */
 #define FF_CONTACTS_SOCIAL                                 
 
+/** #FF_CONTACT_WIDGET 
+	Defines if Friends widget exists or not
+*/
+#undef FF_CONTACT_WIDGET                                  
+
 /** #FF_CONTEXT_FRAMEWORK_V2 
 This flag enables Context Framework version 2.
 */
@@ -395,6 +433,11 @@ legacy email (__EMAIL_UI) must be disabled when FF_EMAIL_FRAMEWORK is enabled.
 */
 #define FF_EMAIL_FRAMEWORK                                 
 
+/** #FF_EMAIL_FULLSCREENVIEWER 
+This flag enables full screen mode in email viewer
+*/
+#undef FF_EMAIL_FULLSCREENVIEWER                          
+
 /** #FF_EMAIL_IPS_SERVICES 
 Defines whether the product includes IMAP4, POP3 and SMTP protocol support.
 */
@@ -410,6 +453,11 @@ key.
 */
 #define FF_EMAIL_MCE_INTEGRATION                           
 
+/** #FF_EMAIL_PREDICTIVESEARCH 
+This flag enables predictive address search in email editor
+*/
+#undef FF_EMAIL_PREDICTIVESEARCH                          
+
 /** #FF_EMAIL_PROTOCOL_PLUGINS 
 When defined, default email protocol plugins are enabled.
 */
@@ -419,6 +467,12 @@ When defined, default email protocol plugins are enabled.
 Defines whether the product includes email UI application
 */
 #undef FF_EMAIL_UI                                        
+
+/** #FF_EMAIL_UI_SPLITSCREEN 
+This feature enables split screen usage in email editors instead of touch input
+window
+*/
+#undef FF_EMAIL_UI_SPLITSCREEN                            
 
 /** #FF_EMPTY_COMMSDAT 
 The override flags FF_EMPTY_COMMSDAT, FF_VANILLA_COMMSDAT and FF_RND_COMMSDAT
@@ -453,7 +507,7 @@ the value of PP bit into KFeatureIdCertTesting. SSM then will read
 KFeatureIdCertificationTesting and if system is in USB charging mode , then
 start USB components into the mode where ISI communication is possible.
 */
-#undef FF_ENABLE_ISI_COMMUNICATION_IN_USB_CHARGING_MODE   
+#define FF_ENABLE_ISI_COMMUNICATION_IN_USB_CHARGING_MODE   
 
 /** #FF_ENHANCED_CALENDAR_EVENT_UI 
 This flag controls inclusion of enhanced Calendar Event Viewers and Editors that
@@ -497,6 +551,13 @@ runtime variated in UI SW.
 RDS text transmission not enabled currently (ELZG-7PE3G9) 
 */
 #undef FF_FMTX_RDS_TEXT                                   
+
+/** #FF_FOTA_CHECK_LIMITATION 
+When this flag is enabled user can only check for FOTA updates from the server
+once in defined time period. The time period is defined by a cenrep value -
+default value is 24h.
+*/
+#undef FF_FOTA_CHECK_LIMITATION                           
 
 /** #FF_FULLSCR_HWR_INPUT 
 Indicates whether a device needs fullscreen HWR (HandWritingRecognition) input
@@ -637,6 +698,17 @@ Flag to define whether ImagePrint supports UPnP printing
 */
 #define FF_IMAGEPRINT_UPNP_PROTOCOL                        
 
+/** #FF_IMAGE_EDITOR 
+Feature flag for Image Editor support in the platform. Applications could check
+for this feature support and make use of it.
+Note: In Symbian Foundation context, Image Editor is not available in Sym ^3,
+hence there is a need to have feature flag in public domain. Other vendors can
+bring in their own implementation of the editor and make use of this flag to
+pulish the feature support.
+
+*/
+#undef FF_IMAGE_EDITOR                                    
+
 /** #FF_INCLUDE_CHINESE_DICTIONARY 
 This feature flag  controls the inclusion/exclusion of chinese dictionary in
 chinese variants. The flag is used in dictionary_variant.iby
@@ -658,6 +730,19 @@ portrait show menu items exclude "FSQ" and FSQ is also unavailabe.
 Generic QWERTY framework and 2nd generation text input engine integration
 */
 #undef FF_INTELLIGENT_TEXT_INPUT                          
+
+/** #FF_IPSEC_UMA_SUPPORT_ENABLE 
+The default behaviour in IPSec policy conflict resolution logic is to put “Drop”
+mode over the “bypass” mode. Hence the resulting action is to drop the IP
+packets with the merged policies. 
+According to the default behaviour UMA is always with “bypass” property and
+whenever mVPN with drop mode connection rove-in or rove out from GAN (UMAN)
+results in a selector conflict. 
+
+With the macro enabled IPSec handles UMA conflict gracefully allowing UMA to
+work.
+*/
+#undef FF_IPSEC_UMA_SUPPORT_ENABLE                        
 
 /** #FF_ITI_VIRTUAL_TOUCH_FIRST_GENERATION_SUPPORT 
 ITI feature (2nd generation text input features) are enabled in 5.0 & 9.1 TBD,
@@ -902,6 +987,17 @@ by switching the boolean flag defined/undefined.
 */
 #undef FF_OFN_FEATURE                                     
 
+/** #FF_OMADRM1_FULL_SUPPORT 
+This boolean feature flag indicates if OMA DRM v1 is fully (including combined
+delivery and separate delivery) supported or not. 
+*/
+#undef FF_OMADRM1_FULL_SUPPORT                            
+
+/** #FF_OMADRM2_SUPPORT 
+This boolean feature flag indicates if OMA DRM v2 is supported or not. 
+*/
+#undef FF_OMADRM2_SUPPORT                                 
+
 /** #FF_OMA_SCOMO_ADAPTER 
 This feature enables OMA SCOMO feature in "application management component".
 
@@ -913,7 +1009,13 @@ Feature flag for controlling the inclusion of Out-of-Memory2 component into the
 ROM image.
 
 */
-#undef FF_OOM_MONITOR2_COMPONENT                          
+#define FF_OOM_MONITOR2_COMPONENT                          
+
+/** #FF_OPENMAX_AL 
+OpenMax AL is a Khronos API (http://www.khronos.org) included as a platform API
+to support QtMobility multimedia.
+*/
+#undef FF_OPENMAX_AL                                      
 
 /** #FF_OSS_LEGAL_NOTICE 
 This feature adds OSS legal notice to About application. The notice is needed if
@@ -952,6 +1054,12 @@ configuration. In the future the Platform Simulator targets to support selected
 new reference hardware configurations. This makes the flag lifetime permanent.
 */
 #undef FF_PLATFORM_SIMULATOR                              
+
+/** #FF_PLAYREADY_SUPPORT 
+This boolean feature flag indicates if PlayReady technology is supported or not.
+
+*/
+#undef FF_PLAYREADY_SUPPORT                               
 
 /** #FF_PNPMS_PROV_FILTER 
 On enabling this feature flag pnpprovfilter.dll will be created and this feature
@@ -1092,6 +1200,24 @@ display it in the application shell if desired.
 */
 #undef FF_SHOW_MMPLAYER                                   
 
+/** #FF_SIDESLIDER_SUPPORT 
+To make the side slier support available at platform build which is currently
+not. System application requires this flag
+*/
+#undef FF_SIDESLIDER_SUPPORT                              
+
+/** #FF_SIM_CONSECUTIVE_6F00_ERRORS_HANDLING 
+When this flag is enabled UI error note will shonwn in case of consecutive 6F 00
+errors from UICC (SIM card)
+*/
+#undef FF_SIM_CONSECUTIVE_6F00_ERRORS_HANDLING            
+
+/** #FF_SIP_APN_SWITCHING 
+Provides a mechanism to manipulate APN name of a IAP based SIP registration
+status
+*/
+#undef FF_SIP_APN_SWITCHING                               
+
 /** #FF_SIP_CUSTOM_PDP_HANDLING 
 Controls the handling of PDP activation failures in operator specified method
 */
@@ -1168,10 +1294,56 @@ valid for MyProfile UI & MyProfile synchronization.
 */
 #undef FF_TCP_MYPROFILE                                   
 
+/** #FF_TD_CLMContactReplicationFromPhonebookToUSIMCard 
+Support for CMCC standard USIM contact format. 
+
+*/
+#undef FF_TD_CLMContactReplicationFromPhonebookToUSIMCard 
+
+/** #FF_TD_CMCCATCommandsSupport 
+When enabled, this flag will extend the set of supported AT commands
+• AT+CMGD (Delete message)
+• AT+CMGW (Write message to memory)
+• AT^HVER (Hardware version) 
+• AT^SYSINFO (System information query)
+• AT^DSCI (Call state indication)
+• AT^DMUX (Multiplexing)
+• AT^DDSETEX (Data card voice channel configuration)
+
+*/
+#undef FF_TD_CMCCATCommandsSupport                        
+
+/** #FF_TD_CMCCPIMPromptServerFullWhenReceive420StatusCodeFromServer 
+When this flag is enabled, the device will give appropriate UI prompt to the
+user, if status code 420 is received during data synchronization.
+
+*/
+#undef FF_TD_CMCCPIMPromptServerFullWhenReceive420StatusCodeFromServer 
+
+/** #FF_TD_CMCCPIMSynchronizationProgressIndicatorUI  
+This flag enables an enhanced progress status UI. Instead of standard progress
+bar or percentage information, the UI will show following information:
+x/y for uplink (x = current item, y = total items) and z for downlink (z =
+current item).
+
+*/
+#undef FF_TD_CMCCPIMSynchronizationProgressIndicatorUI    
+
 /** #FF_TD_SCDMA 
 This is a feature flag used to turn on/off TD-SCDMA releated features
 */
 #undef FF_TD_SCDMA                                        
+
+/** #FF_TD_SCDMA_FORBIDDENOPERATORICONDISPLAY 
+This feature is used enable Forbidden operator icon display feature.
+
+*/
+#undef FF_TD_SCDMA_FORBIDDENOPERATORICONDISPLAY           
+
+/** #FF_TD_SCDMA_VIDEOCALL_KEY 
+This FF is used to enable video call key feature for TD-SCDMA product
+*/
+#undef FF_TD_SCDMA_VIDEOCALL_KEY                          
 
 /** #FF_THEME_HAZE 
 Haze theme is included in ROM image.
@@ -1294,6 +1466,17 @@ branding elements.
 */
 #undef FF_VIDEO_AUDIO_BRANDING                            
 
+/** #FF_VIDEO_EDITOR 
+Feature flag for Video Editor support in the platform. Applications could check
+for this feature support and make use of it.
+Note: In Symbian Foundation context, Video Editor is not available in Sym ^3,
+hence there is a need to have feature flag in public domain. Other vendors can
+bring in their own implementation of the editor and make use of this flag to
+pulish the feature support.
+
+*/
+#undef FF_VIDEO_EDITOR                                    
+
 /** #FF_VIRTUAL_FULLSCR_QWERTY_INPUT 
 Indicates whether a device needs Virtual full-screen qwerty input or not.
 
@@ -1334,6 +1517,14 @@ interface for video decoding and postprocessing.
 */
 #undef FF_WEBVIDEO_PH2                                    
 
+/** #FF_WLAN_AUTHENTICATION_ONLY_SUPPORT 
+When defined, the flag enables support for WLAN connections that are
+authenticated but the agreed keys are not used for data frame protection. That
+is, data is transferred in plaintext and with no cryptographic integrity
+protection.
+*/
+#undef FF_WLAN_AUTHENTICATION_ONLY_SUPPORT                
+
 /** #FF_WLAN_EXTENSIONS 
 Device supports extended WLAN functionalities e.g. for association and
 authentication.
@@ -1360,6 +1551,12 @@ This feature flag is used only for including WAPI binaries to ROM. WAPI
 functionality can be (run-time) enabled with FF_WLAN_WAPI.
 */
 #define FF_WLAN_WAPI_INCLUDE_IN_ROM                        
+
+/** #FF_WMDRM_DLA_SUPPORT 
+This boolean feature flag indicates if WMDRM Direct License Acquisition is
+supported or not.
+*/
+#undef FF_WMDRM_DLA_SUPPORT                               
 
 /** #FF_XML_IDLE_THEME_BASIC_IDLE 
 Controls if Basic idle theme is going to image or not.

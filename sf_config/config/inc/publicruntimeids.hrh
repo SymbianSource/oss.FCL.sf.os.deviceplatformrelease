@@ -31,9 +31,15 @@
 
 #define KFeatureIdFfAiWlansnifferWidget                     172
 
+#define KFeatureIdFfAlternativeCallWaitingTone              315
+
+#define KFeatureIdArabicHandwritingRecognitionInput         338
+
 #define KFeatureIdAsynchFileSaveQueue                       1703
 
 #define KFeatureIdFfAudt                                    63
+
+#define KFeatureIdFfAutomotivestack                         330
 
 #define KFeatureIdAutoRedialForVideoCall                    1723
 
@@ -46,6 +52,10 @@
 #define KFeatureIdFfBluetoothDisabled                       270
 
 #define KFeatureIdBrowserProgressiveDownload                1724
+
+#define KFeatureIdFfCalDayView                              306
+
+#define KFeatureIdFfCalScrollablePreview                    307
 
 #define KFeatureIdFfCalMeetingRequestUi                     296
 
@@ -93,15 +103,21 @@
 
 #define KFeatureIdFfEmailFramework                          135
 
+#define KFeatureIdFfEmailFullscreenviewer                   325
+
 #define KFeatureIdFfEmailIpsServices                        137
 
 #define KFeatureIdEmailMceIntegration                       126
+
+#define KFeatureIdFfEmailPredictivesearch                   324
 
 #define KFeatureIdFfEmailProtocolPlugins                    215
 
 #define KFeatureIdFfEmailUi                                 136
 
-#define KFeatureIdCertificationTesting                      309
+#define KFeatureIdFfEmailUiSplitscreen                      323
+
+#define KFeatureIdEnableIsiCommunicationInUsbChargingMode   309
 
 #define KFeatureIdFfEnhancedCalendarEventUi                 295
 
@@ -110,6 +126,8 @@
 #define KFeatureIdFmtx                                      1705
 
 #define KFeatureIdFfFmtxRdsText                             220
+
+#define KFeatureIdFfFotaCheckLimitation                     326
 
 #define KFeatureIdFullscrHwrInput                           66
 
@@ -131,9 +149,13 @@
 
 #define KFeatureIdFfIaupdatePhase2                          185
 
+#define KFeatureIdFfImageEditor                             255
+
 #define KFeatureIdFfInputsPerOrientation                    192
 
 #define KFeatureIdFfIntelligentTextInput                    216
+
+#define KFeatureIdFfIpsecUmaSupportEnable                   332
 
 #define KFeatureIdFfItiVirtualTouchFirstGenerationSupport   218
 
@@ -177,9 +199,15 @@
 
 #define KFeatureIdFfOfnFeature                              193
 
+#define KFeatureIdFfOmadrm1FullSupport                      329
+
+#define KFeatureIdFfOmadrm2Support                          328
+
 #define KFeatureIdFfOmaScomoAdapter                         197
 
 #define KFeatureIdFfOssLegalNotice                          196
+
+#define KFeatureIdFfPlayreadySupport                        322
 
 #define KFeatureIdFfPnpmsProvFilter                         133
 
@@ -200,6 +228,12 @@
 #define KFeatureIdFfRuntimeDeviceCapabilityConfiguration    198
 
 #define KFeatureIdSelectableEmail                           125
+
+#define KFeatureIdFfSidesliderSupport                       320
+
+#define KFeatureIdFfSimConsecutive6f00ErrorsHandling        327
+
+#define KFeatureIdFfSipApnSwitching                         318
 
 #define KFeatureIdFfSipCustomPdpHandling                    269
 
@@ -225,7 +259,19 @@
 
 #define KFeatureIdFfTcpMyprofile                            186
 
+#define KFeatureIdFfTdClmcontactreplicationfromphonebooktousimcard  337
+
+#define KFeatureIdFfTdCmccatcommandssupport                 336
+
+#define KFeatureIdFfTdCmccpimpromptserverfullwhenreceive420statuscodefromserver  335
+
+#define KFeatureIdFfTdCmccpimsynchronizationprogressindicatorui   334
+
 #define KFeatureIdFfTdScdma                                 274
+
+#define KFeatureIdFfTdScdmaForbiddenoperatoricondisplay     316
+
+#define KFeatureIdFfTdScdmaVideocallKey                     317
 
 #define KFeatureIdTouchscreencalibInStartup                 69
 
@@ -245,6 +291,8 @@
 
 #define KFeatureIdFfVideoAudioBranding                      266
 
+#define KFeatureIdFfVideoEditor                             256
+
 #define KFeatureIdVirtualFullscrQwertyInput                 64
 
 #define KFeatureIdVirtualItutInput                          65
@@ -257,9 +305,13 @@
 
 #define KFeatureIdWebvideoPh2                               39
 
+#define KFeatureIdFfWlanAuthenticationOnlySupport           314
+
 #define KFeatureIdFfWlanExtensions                          177
 
 #define KFeatureIdFfWlanWapi                                129
+
+#define KFeatureIdFfWmdrmDlaSupport                         310
 
 #define KFeatureIdSymbianIncludeLocationNpeDsm              261
 
