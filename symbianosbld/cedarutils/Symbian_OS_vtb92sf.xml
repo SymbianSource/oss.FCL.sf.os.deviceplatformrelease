@@ -38,14 +38,14 @@
     <SetEnv Order="17" Name="MWSym2LibraryFiles" Value="MSL_ALL_MSE_Symbian_D.lib;gdi32.lib;user32.lib;kernel32.lib;"/>
 	<SetEnv Order="18" Name="MWCC" Value="%MWROOT%\Symbian_Tools\Command_Line_Tools\mwccsym2.exe"/>
 	<SetEnv Order="19" Name="MWLD" Value="%MWROOT%\Symbian_Tools\Command_Line_Tools\mwldsym2.exe"/> 
-    <SetEnv Order="20" Name="PATH" Value="%MWROOT%\Symbian_Tools\Command_Line_Tools;%PATH%"/>
-    <SetEnv Order="21" Name="PATH" Value="%PATH%;C:\Apps\Python24"/>
+  <SetEnv Order="20" Name="PATH" Value="%MWROOT%\Symbian_Tools\Command_Line_Tools;%PATH%"/>
+  <SetEnv Order="21" Name="PATH" Value="%PATH%;C:\Apps\Python24"/>
 	<!-- %SBS_LOCAL_BIN% is required to support the optional use of a locally installed Raptor -->
-    <SetEnv Order="22" Name="PATH" Value="%SBS_LOCAL_BIN%%EPOCROOT%SBSv2\bin;%PATH%"/>
-    <SetEnv Order="23" Name="SBS_SRC" Value="%EPOCROOT%tools\sbs"/>
+  <SetEnv Order="22" Name="PATH" Value="%SBS_LOCAL_BIN%%EPOCROOT%SBSv2\bin;%PATH%"/>
+  <SetEnv Order="23" Name="SBS_SRC" Value="%EPOCROOT%tools"/>
 	<SetEnv Order="24" Name="SBS_ROOT" Value="%EPOCROOT%SBSv2"/>
-    <SetEnv Order="25" Name="SOURCEROOT" Value="%SourceDir%"/> 
-    <SetEnv Order="26" Name="SBS_VERSION" Value="1"/>
+  <SetEnv Order="25" Name="SOURCEROOT" Value="%SourceDir%"/> 
+  <SetEnv Order="26" Name="SBS_VERSION" Value="1"/>
 	<SetEnv Order="27" Name="PATH" Value="%BuildDir%\reltools;%EPOCROOT%epoc32\tools;%EPOCROOT%epoc32\gcc\bin;%PATH%;%EPOCROOT%epoc32\rom\include;%EPOCROOT%epoc32\include;"/>
 	<SetEnv Order="28" Name="PERL510_HOME" Value="C:\Apps\Perl.5.10.0"/> 
 	<SetEnv Order="29" Name="TCLDeltaCache" Value="%BuildsDirect%\%Type%\src_tcl_for_mcl_sf"/> <!-- Cache dir for p4 sync from TCL -->
@@ -71,12 +71,12 @@
 	<Execute Component="Remove cbr tools directory" Cwd="%BuildDir%" CommandLine="rd &quot;cbr tools&quot; /s /q"/>
     <Execute Component="Publish cbrtools_unzip.log" Cwd="%LogsDir%" CommandLine="copy cbrtools_unzip.log %PublishLocation%\%Type%\%BuildNumber%\logs\"/>
 	
-    <!-- Install SBSv2 -->
-    <Execute Component="Get Raptor related components" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c dev_build_sbsv2_raptor -c dev_build_sbsv2_cpp-raptor -c dev_hostenv_dist_cygwin-1.5.25 -c dev_hostenv_dist_mingw-5.1.4 -c dev_hostenv_pythontoolsplat_python-2.5.2 -bv green -o %LogsDir%\raptor_version.txt"/>
-    <Execute Component="Copy SBSv2 to own directory" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\bxcopy.pl  -s %SBS_SRC%  -t %SBS_ROOT%"/>
-    <Execute Component="Remove Raptor related components" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\RmInstalledEnv.pl -x  %LogsDir%\raptor_version.txt"/>
-	<Execute Component="Remove epoc32 directory" Cwd="%BuildDir%" CommandLine="rd %EPOCROOT%epoc32 /s /q"/>
-	
+  <!--Setup Raptor-->
+	  <Execute Component="Unzip SBSv2 to location" Cwd="%BuildDir%" CommandLine="unzip \\builds01\devbuilds\BuildPCs\Software\sbsv2\sbs.zip -d %SBS_SRC% >> %LogsDir%\RaptorUnzip.txt"/>
+    <Execute Component="Copy SBSv2 to own directory" Cwd="%BuildDir%" CommandLine="xcopy %SBS_SRC%\sbs /d %SBS_ROOT% /e /i /q"/>
+	  <Execute Component="Get version of SBSv2" Cwd="%BuildDir%" CommandLine="sbs -v >> %LogsDir%\raptor_version.txt"/>
+    <Execute Component="Remove Raptor src directory" Cwd="%BuildDir%" CommandLine="rd %SBS_SRC%\sbs /s /q"/>
+	  
  	<!-- Combine system definitions -->
     <Execute Component="Join Foundation System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\foundation_system\system_model\system_definition.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.SF.xml"/>
     <Execute Component="Join Nokia System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\nokia_system\nokia_model\system_definition.xml -param path /os/deviceplatformrelease/nokia_system/nokia_model/system_definition.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Nokia.xml"/>
@@ -397,7 +397,7 @@
 
     <!--Prep for CBR -->
     <Execute Component="CBR Copy Clean Src" Cwd="%BuildDir%\CBRTV" CommandLine="xcopy %CleanSourceDir% %BuildDir%\CBRTV\sf /E /Z /I /Q"/>
-    <Execute Component="Run sbsv2cache tool" Cwd="%BuildDir%" CommandLine="%SBS_ROOT%\win32\python252\python.exe %SBS_ROOT%\bin\sbsv2cache.py -v -s -o %ABLDCACHE% -l %LogsDir%\sbs_e32toolp_log.xml.log -l %LogsDir%\sbs_GT_log.xml.log -l %LogsDir%\sbs_TV_log.xml.log -l %LogsDir%\sbs_tools_log.xml.log -l %LogsDir%\sbs_tools2_rel_log.xml.log -l %LogsDir%\sbs_tools2_deb_log.xml.log > %LogsDir%\sbs_sbsv2cache.log 2>&amp;1"/>
+    <Execute Component="Run sbsv2cache tool" Cwd="%BuildDir%" CommandLine="%SBS_ROOT%\win32\python264\python.exe %SBS_ROOT%\bin\sbsv2cache.py -v -s -o %ABLDCACHE% -l %LogsDir%\sbs_e32toolp_log.xml.log -l %LogsDir%\sbs_GT_log.xml.log -l %LogsDir%\sbs_TV_log.xml.log -l %LogsDir%\sbs_tools_log.xml.log -l %LogsDir%\sbs_tools2_rel_log.xml.log -l %LogsDir%\sbs_tools2_deb_log.xml.log > %LogsDir%\sbs_sbsv2cache.log 2>&amp;1"/>
     <Execute Component="Publish Raptor Cache Log"    Cwd="%BuildDir%" CommandLine="copy %LogsDir%\sbs_sbsv2cache.log %PublishLocation%\%Type%\%BuildNumber%\logs\sbs_sbsv2cache.log"/>
 
 	<!-- Cleanup unnecessary files  to remove warnings -->

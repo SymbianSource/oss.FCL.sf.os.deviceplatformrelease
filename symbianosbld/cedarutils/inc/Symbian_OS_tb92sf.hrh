@@ -2070,4 +2070,12 @@ If SYMBIAN_E32_ATOMIC_API is defined the header file e32atomics.h is available
 and should be used in preference to hand-coding ARM atomic instructions.
 */
 #define SYMBIAN_E32_ATOMIC_API
+/**
+@internalAll
+
+SYMBIAN_GRAPHICS_FIXNATIVEORIENTATION
+
+If SYMBIAN_GRAPHICS_FIXNATIVEORIENTATION is enabled, the Orientation Independent Windows feature is enabled.
+*/
+#define SYMBIAN_GRAPHICS_FIXNATIVEORIENTATION
 

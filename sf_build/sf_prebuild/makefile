@@ -8,7 +8,7 @@ include /sf/os/devicesrv/commonservices/commonengine/makefile
 include /sf/os/devicesrv/devicesrv_pub/common_platform_security_definitions_api/makefile
 include /sf/os/devicesrv/devicesrv_pub/platform_path_definitions_api/makefile
 include /sf/mw/qt/src/s60installs/deviceconfiguration/cmaker/makefile
-include /sf/mw/qtextensions/group/cmaker/makefile
+# removed by riku include /sf/mw/qtextensions/group/cmaker/makefile
 
 ifeq (S60,$(BUILD))
 include /sf/mw/uiresources/uigraphics/icons/makefile

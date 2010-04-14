@@ -58,6 +58,7 @@ inputmethods_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 ipappprotocols_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 ipappsrv_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 kernelhwsrv_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+kernelhwsrv_doc_pub,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 messaging_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 messagingmw_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
@@ -192,6 +193,8 @@ base_domain,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_camerasc,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_unistore2,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_unistore2_undeliverable,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+base_drivers_usbdescriptors,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+base_drivers_usbdi_utils,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_usbhostotg,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_usbhostotg_usbware,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_e32_compsupp,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
@@ -861,7 +864,7 @@ tools_redistribution_common,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G 
 tools_redistribution_winc,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_romkit,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_s60_header_compat95,S(DEFGT),S(DEFGT),A B D E F G O T,A B D E F G O T
-tools_s60_header_compatsymtb101sf,S(DEFGT),S(DEFGT),A B D E F G O T,A B D E F G O T
+tools_s60_header_compatsymtb101sf,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_s60_header_compatsymtb92,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_sdk_eng_aifapp,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_sdk_eng_aifbuilder,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
