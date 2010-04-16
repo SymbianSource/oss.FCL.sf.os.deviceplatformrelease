@@ -33,9 +33,8 @@
 #include <Techview.oby>
 #include <shma.iby>
 #include <opengles.iby>
-#include <ipupsdialog.iby>
 #include <authserver.iby>
-#include <oessl.iby>
+#include <openenv.iby>
 #include <streamingcaf.iby>
 #include <mtp_ptpip.iby>
 #include <mtp_usbsic.iby>
@@ -46,9 +45,7 @@
 #include <ssrefplugins.iby>
 #include <sqlite3.iby>
 #include <amastart.iby>
-#include <rpnp.iby>
 #include <openvg.iby>
-#include <oecrypto.iby>
 #include <pinplugin.iby>
 #include <PlatSec.oby>
 

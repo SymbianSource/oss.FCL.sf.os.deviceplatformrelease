@@ -306,7 +306,7 @@
 /**
 * Delete or comment out this macro definition to turn on header relocation.
 */
-#define SYMBIAN_OLD_EXPORT_LOCATION
+//#define SYMBIAN_OLD_EXPORT_LOCATION
 
 
 /**

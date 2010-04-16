@@ -21,7 +21,6 @@
 #include <aplp.iby>
 #include <ssrefplugins.iby>
 #include <amastart.iby>
-#include <rpnp.iby>
 #include <openvg.iby>
 #include <PlatSec.oby>
 

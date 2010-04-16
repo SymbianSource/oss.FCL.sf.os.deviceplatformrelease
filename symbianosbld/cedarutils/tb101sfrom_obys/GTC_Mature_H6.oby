@@ -17,8 +17,7 @@
 #include <Techview.oby>
 #include <openvg.iby>
 #include <sysstart.iby>
-#include <oessl.iby>
-#include <oecrypto.iby>
+#include <openenv.iby>
 #include <streamingcaf.iby>
 #include <sysstartconfig.iby>
 #include <PlatSec.oby>

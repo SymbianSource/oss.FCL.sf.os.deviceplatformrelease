@@ -4,7 +4,7 @@
 <Schedule12 Schema="2.0.0" 
 	Status="DRAFT" 
 	OS_version="tb101sf" Release_type="Update" 
-	DocVersion="$Change: 1756052 $ $DateTime: 2010/01/14 18:51:01 $ $Id: //SSS/release/sf/tb92/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS_vtb101sf_Schedule12.xml#7 $" >
+	DocVersion="$Change: 1674259 $ $DateTime: 2009/08/16 18:07:22 $ $Id: //SSS/master/sf/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS_vtb101sf_Schedule12.xml#1 $" >
 <OR name="Alarm Server">
 	Maintains a queue of all system-wide alarms and provides APIs to manage alarms
 	<system_model entry="Alarm Server"/>

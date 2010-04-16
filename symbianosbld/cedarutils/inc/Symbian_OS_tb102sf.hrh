@@ -2387,7 +2387,14 @@ This #define supports PREQ1440
 
 #define SYMBIAN_OE_ENHANCED_LOCALE_SUPPORT
 
+/**
+	@publishedPartner
+	@released
 
+	SYMBIAN_E32_ATOMIC_API
 
-
+	If SYMBIAN_E32_ATOMIC_API is defined the header file e32atomics.h is available
+	and should be used in preference to hand-coding ARM atomic instructions.
+*/
+#define SYMBIAN_E32_ATOMIC_API
 

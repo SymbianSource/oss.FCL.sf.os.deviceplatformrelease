@@ -12,30 +12,37 @@
       <module name="version">
         <unit unitID="platform.version" mrp="" bldFile="&layer_real_source_path;/Version/group" name="version" />
       </module>
-    </layer>
+			<!-- from buildplatform, this is needed for winscw emulator -->
+			<module name="sf_common_tsy">
+				<component name="sf_common_tsy">
+					<unit unitID="symbian.common_tsy" name="sf_common_tsy" bldFile="sf/os/cellularsrv/telephonyserverplugins/common_tsy/group" mrp="" filter=""/>
+				</component>
+			</module>
+			<module name="sf_openvg11">
+				<component name="sf_openvg11">
+					<unit unitID="symbian.openvg11" name="sf_openvg11" bldFile="sf/os/graphics/openvg/openvginterface/group/openvg11" mrp="" filter="sf_build"/>
+				</component>
+			</module>
+  	</layer>
     <layer name="app_layer">
-      <module name="locfiles">
-				<unit unitID="platform.locfiles" mrp="" bldFile="&layer_real_source_path;/locfiles/group" filter="" name="locfiles" />
-				<unit unitID="platform.locfiles.set1" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set1" filter="" name="locfiles_set1" />
-				<unit unitID="platform.locfiles.set2" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set2" filter="" name="locfiles_set2" />
-				<unit unitID="platform.locfiles.set3" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set3" filter="" name="locfiles_set3" />
-				<unit unitID="platform.locfiles.set4" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set4" filter="" name="locfiles_set4" />
-				<unit unitID="platform.locfiles.set5" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set5" filter="" name="locfiles_set5" />
-				<unit unitID="platform.locfiles.set6" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set6" filter="" name="locfiles_set6" />
-				<unit unitID="platform.locfiles.set7" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set7" filter="" name="locfiles_set7" />
-				<unit unitID="platform.locfiles.set8" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set8" filter="" name="locfiles_set8" />
-				<unit unitID="platform.locfiles.set9" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set9" filter="" name="locfiles_set9" />
-				<unit unitID="platform.locfiles.set10" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set10" filter="" name="locfiles_set10" />
-				<unit unitID="platform.locfiles.set11" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set11" filter="" name="locfiles_set11" />
-				<unit unitID="platform.locfiles.set12" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set12" filter="" name="locfiles_set12" />
-				<unit unitID="platform.locfiles.set13" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set13" filter="" name="locfiles_set13" />
-				<unit unitID="platform.locfiles.set14" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set14" filter="" name="locfiles_set14" />
-				<unit unitID="platform.locfiles.set15" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set15" filter="" name="locfiles_set15" />
-				<unit unitID="platform.locfiles.set16" mrp="" bldFile="&layer_real_source_path;/locfiles/group/set16" filter="" name="locfiles_set16" />
-      </module>
       <module name="helps_loc2">
         <unit unitID="platform.helps_loc2" mrp="" bldFile="&layer_real_source_path;/helps_loc2/group" name="helps_loc2" />
       </module>
+    </layer>
+    
+    <!-- from buildplatform, this is needed for winscw emulator -->
+    <layer name="stubs_layer">
+			<module name="sf_licenseetsystub">
+				<component name="sf_licenseetsystub">
+					<unit unitID="symbian.licenseetsystub" name="sf_licenseetsystub" bldFile="sf/os/cellularsrv/telephonyserverplugins/licenseetsystub/group" mrp="" filter=""/>
+				</component>
+			</module>
+		</layer>
+
+    <layer name="bin_layer">
+			<module name="bin_layer_helix_ren">
+					<unit unitID="bin_layer_sf_mw_helix_helix_ren_src" name="src" bldFile="sf/mw/helix/helix_ren/src/group" mrp="" filter="!no_binonly"/>
+			</module>
     </layer>
   </systemModel>
 </SystemDefinition>

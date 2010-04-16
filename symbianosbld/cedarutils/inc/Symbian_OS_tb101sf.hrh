@@ -2125,3 +2125,32 @@ SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK toggles the support for the Software Compone
 */
 
 #define SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+
+/**
+@publishedpartner
+@released
+
+SYMBIAN_GRAPHICS_WSERV_QT_EFFECTS
+
+This macro is supported only in the wserv_nga configuration.
+
+If SYMBIAN_GRAPHICS_WSERV_QT_EFFECTS is enabled,
+   -  code changes for supporting Qt effects in graphics window server will be enabled. 
+   -  the layer region optimizer and surface placement will no longer work.
+
+
+This #define supports PREQ2669.
+*/
+#define SYMBIAN_GRAPHICS_WSERV_QT_EFFECTS
+
+/**
+	@publishedPartner
+	@released
+
+	SYMBIAN_E32_ATOMIC_API
+
+	If SYMBIAN_E32_ATOMIC_API is defined the header file e32atomics.h is available
+	and should be used in preference to hand-coding ARM atomic instructions.
+*/
+#define SYMBIAN_E32_ATOMIC_API
+

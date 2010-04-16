@@ -31,7 +31,7 @@
     <SetEnv Order="11" Name="RVCT22_LINKOPT" Value="--licretry"/>
     <SetEnv Order="12" Name="PATH" Value="%RVCT22BIN%;%PATH%"/>
 
-    <SetEnv Order="13" Name="MWVER" Value="3.2.5"/>
+    <SetEnv Order="13" Name="MWVER" Value="3.1.2"/>
     <SetEnv Order="14" Name="MWROOT" Value="C:\Apps\Metrowerks\OEM%MWVER%"/>    
     <SetEnv Order="15" Name="MWCSym2Includes" Value="%MWROOT%\Symbian_Support\MSL\MSL_C\MSL_Common\Include;%MWROOT%\Symbian_Support\MSL\MSL_C\MSL_Win32\Include;%MWROOT%\Symbian_Support\MSL\MSL_C\MSL_X86;%MWROOT%\Symbian_Support\MSL\MSL_C++\MSL_Common\Include;+%MWROOT%\Symbian_Support\MSL\MSL_Extras\MSL_Common\Include;%MWROOT%\Symbian_Support\MSL\MSL_Extras\MSL_Win32\Include;%MWROOT%\Symbian_Support\Win32-x86 Support\Headers\Win32 SDK"/>
     <SetEnv Order="16" Name="MWSym2Libraries" Value="%MWROOT%\Symbian_Support\Win32-x86 Support\Libraries\Win32 SDK;%MWROOT%\Symbian_Support\Runtime\Runtime_x86\Runtime_Win32\Libs"/>

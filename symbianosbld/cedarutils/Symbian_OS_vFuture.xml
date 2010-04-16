@@ -26,12 +26,12 @@
     <SetEnv Order="6" Name="RVCT22BIN" Value="%ARMROOT%\RVCT\Programs\2.2\349\win_32-pentium"/>
     <SetEnv Order="7" Name="RVCT22INC" Value="%ARMROOT%\RVCT\Data\2.2\349\include\windows"/>
     <SetEnv Order="8" Name="RVCT22LIB" Value="%ARMROOT%\RVCT\Data\2.2\349\lib"/>
-    <SetEnv Order="9" Name="RVCT22_CCOPT" Value="--licretry"/>
-    <SetEnv Order="10" Name="RVCT22_ASMOPT" Value="--licretry"/>
-    <SetEnv Order="11" Name="RVCT22_LINKOPT" Value="--licretry"/>
+    <SetEnv Order="9" Name="RVCT22_CCOPT" Value="--licretry --fastlicense --sitelicense"/>
+    <SetEnv Order="10" Name="RVCT22_ASMOPT" Value="--licretry --fastlicense --sitelicense"/>
+    <SetEnv Order="11" Name="RVCT22_LINKOPT" Value="--licretry --fastlicense --sitelicense"/>
     <SetEnv Order="12" Name="PATH" Value="%RVCT22BIN%;%PATH%"/>
 
-    <SetEnv Order="13" Name="MWVER" Value="3.1.2"/>
+    <SetEnv Order="13" Name="MWVER" Value="3.2.5"/>
     <SetEnv Order="14" Name="MWROOT" Value="C:\Apps\Metrowerks\OEM%MWVER%"/>    
     <SetEnv Order="15" Name="MWCSym2Includes" Value="%MWROOT%\Symbian_Support\MSL\MSL_C\MSL_Common\Include;%MWROOT%\Symbian_Support\MSL\MSL_C\MSL_Win32\Include;%MWROOT%\Symbian_Support\MSL\MSL_C\MSL_X86;%MWROOT%\Symbian_Support\MSL\MSL_C++\MSL_Common\Include;+%MWROOT%\Symbian_Support\MSL\MSL_Extras\MSL_Common\Include;%MWROOT%\Symbian_Support\MSL\MSL_Extras\MSL_Win32\Include;%MWROOT%\Symbian_Support\Win32-x86 Support\Headers\Win32 SDK"/>
     <SetEnv Order="16" Name="MWSym2Libraries" Value="%MWROOT%\Symbian_Support\Win32-x86 Support\Libraries\Win32 SDK;%MWROOT%\Symbian_Support\Runtime\Runtime_x86\Runtime_Win32\Libs"/>
@@ -41,7 +41,7 @@
     <SetEnv Order="20" Name="PATH" Value="%MWROOT%\Symbian_Tools\Command_Line_Tools;%PATH%"/>
     <SetEnv Order="21" Name="PATH" Value="%PATH%;C:\Apps\Python24"/>
     <SetEnv Order="22" Name="PATH" Value="%EPOCROOT%SBSv2\bin;%PATH%"/>
-    <SetEnv Order="23" Name="SBS_SRC" Value="%EPOCROOT%tools\sbs"/>
+    <SetEnv Order="23" Name="SBS_SRC" Value="%EPOCROOT%tools"/>
 	<SetEnv Order="24" Name="SBS_HOME" Value="%EPOCROOT%SBSv2"/>
     <SetEnv Order="25" Name="SOURCEROOT" Value="%SourceDir%"/> 
     <SetEnv Order="26" Name="SBS_VERSION" Value="1"/>
@@ -49,7 +49,8 @@
 	<SetEnv Order="28" Name="PERL510_HOME" Value="C:\Apps\Perl.5.10.0"/> 
 	<SetEnv Order="29" Name="TCLDeltaCache" Value="%BuildsDirect%\%Type%\src_tcl_for_mcl_sf"/>
 
-
+	<SetEnv Order="30" Name="SYSDEF_TOOLS" Value="os\buildtools\bldsystemtools\sysdeftools"/> 
+    <SetEnv Order="31" Name="SBS_JAVATC" Value="C:\Apps\jre1.5.0_13\bin\java.exe"/>
     <!-- Dumping environment -->
     <Execute Component="Dumping all environment variables" Cwd="%BuildDir%" CommandLine="SET"/>
  
@@ -59,22 +60,22 @@
 	<!-- Install cbr tools from latest green tcl build by sf zip package  -->
 	<Execute Component="Make temporary epoc32/relinfo Dir" Cwd="%BuildDir%" CommandLine="mkdir %EPOCROOT%epoc32\relinfo"/>
     <Execute Component="Get TCL sfreltools.ini" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\TCL_Support\sfreltools.ini %EPOCROOT%epoc32\relinfo\reltools.ini"/>
-    <Execute Component="Unzip zip package of cbr tools" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\unzip_cbr_tools.pl -tcl_delta_cache %TCLDeltaCache% -log_dir %LogsDir% -product dp -number 11 -version DP00572"/>
+    <Execute Component="Unzip zip package of cbr tools" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\unzip_cbr_tools.pl -tcl_delta_cache %TCLDeltaCache% -log_dir %LogsDir% -product dp -number 11"/>
 	<Execute Component="Copy cbr tools to own directory" Cwd="%BuildDir%" CommandLine="xcopy &quot;cbr tools&quot; \reltools\ /E /R /Y"/>
 	<Execute Component="Remove cbr tools directory" Cwd="%BuildDir%" CommandLine="rd &quot;cbr tools&quot; /s /q"/>
     <Execute Component="Publish cbrtools_unzip.log" Cwd="%LogsDir%" CommandLine="copy cbrtools_unzip.log %PublishLocation%\%Type%\%BuildNumber%\logs\"/>
 	
     <!-- Install SBSv2 -->
-    <Execute Component="Get Raptor related components" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c dev_build_sbsv2_raptor -c dev_build_sbsv2_cpp-raptor -c dev_hostenv_dist_cygwin-1.5.25 -c dev_hostenv_dist_mingw-5.1.4 -c dev_hostenv_pythontoolsplat_python-2.5.2 -bv DP00572_DeveloperProduct -o %LogsDir%\raptor_version.txt"/>
-    <Execute Component="Copy SBSv2 to own directory" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\bxcopy.pl  -s %SBS_SRC%  -t %SBS_HOME%"/>
-    <Execute Component="Remove Raptor related components" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\RmInstalledEnv.pl -x  %LogsDir%\raptor_version.txt"/>
-	<Execute Component="Remove epoc32 directory" Cwd="%BuildDir%" CommandLine="rd %EPOCROOT%epoc32 /s /q"/>
+    <Execute Component="Unzip SBSv2 to location" Cwd="%BuildDir%" CommandLine="unzip \\builds01\devbuilds\BuildPCs\Software\sbsv2\sbs.zip -d %SBS_SRC% >> M:\logs\SF\RaptorUnzip.txt"/>
+    <Execute Component="Copy SBSv2 to own directory" Cwd="%BuildDir%" CommandLine="xcopy %SBS_SRC%\sbs /d %SBS_HOME% /e /i /q"/>
+	<Execute Component="Get version of SBSv2" Cwd="%BuildDir%" CommandLine="sbs -v >> %BuildDir%\Logs\SF\RaptorVersion.txt"/>
+    <Execute Component="Remove Raptor src directory" Cwd="%BuildDir%" CommandLine="rd %SBS_SRC%\sbs /s /q"/>
 
     <!-- Combine system definitions -->
-    <Execute Component="Join Foundation System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\foundation_system\system_model\system_definition_v2.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.SF.xml"/>
-    <Execute Component="Join Nokia System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\nokia_system\nokia_model\system_definition_v2.xml -param path /os/deviceplatformrelease/nokia_system/nokia_model/system_definition_v2.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Nokia.xml"/>
-    <Execute Component="Merge System Definitions" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in variability\vp_data\templates\System_Definition_Template.SF.xml -param Downstream System_Definition_Template.Nokia.xml -xsl ..\sysdeftools\mergesysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Full.xml"/>
-    <Execute Component="Create 2.0.1 format System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in variability\vp_data\templates\System_Definition_Template.Full.xml -xsl ..\sysdeftools\sysdefdowngrade.xsl -out variability\vp_data\templates\System_Definition_Template.xml"/>
+    <Execute Component="Join Foundation System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\foundation_system\system_model\system_definition_v2.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.SF.xml"/>
+    <Execute Component="Join Nokia System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\nokia_system\nokia_model\system_definition_v2.xml -param path /os/deviceplatformrelease/nokia_system/nokia_model/system_definition_v2.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Nokia.xml"/>
+    <Execute Component="Merge System Definitions" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in variability\vp_data\templates\System_Definition_Template.SF.xml -param Downstream System_Definition_Template.Nokia.xml -xsl ..\sysdeftools\mergesysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Full.xml"/>
+    <Execute Component="Create 2.0.1 format System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in variability\vp_data\templates\System_Definition_Template.Full.xml -xsl ..\sysdeftools\sysdefdowngrade.xsl -out variability\vp_data\templates\System_Definition_Template.xml"/>
     <Execute Component="Copy *intermediate* System Definition Files to Local Logs Dir" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="copy variability\vp_data\templates\System_Definition*.xml %LogsDir%\"/>
 
     <!-- Run Variability Tools -->
@@ -91,9 +92,9 @@
      
 
     <!-- Create component lists for CBR from System_definition_template.xml -->
-    <Execute Component="Create Intermediate GT System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;!systemtest,!techview,!s60&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_GT.xml"/>
-    <Execute Component="Create Intermediate TV System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;techview&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_TV.xml"/>
-    <Execute Component="Create Intermediate System Test System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\os\buildtools\devlib\devlibhelp\tools\doc_tree\lib\apache\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;systemtest&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_SystemTest.xml"/>
+    <Execute Component="Create Intermediate GT System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;!systemtest,!techview,!s60&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_GT.xml"/>
+    <Execute Component="Create Intermediate TV System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;techview&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_TV.xml"/>
+    <Execute Component="Create Intermediate System Test System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %LogsDir%\System_Definition_Template.xml -xsl ..\sysdeftools\filtering.xsl -param filter-type has -param filter &quot;systemtest&quot; -param addbuild 1 -out variability\vp_data\templates\system_definition_SystemTest.xml"/>
     <Execute Component="Create GTcomponents.txt" Cwd="%LogsDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\genxml.pl -x %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\variability\vp_data\templates\system_definition_GT.xml -s %CleanSourceDir% -e \sf -n any -c %CleanSourceDir%\os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\%BuildShortName%\GTcomponents.txt"/>
     <Execute Component="Create TechviewComponents.txt" Cwd="%LogsDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\genxml.pl -x %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\variability\vp_data\templates\system_definition_TV.xml -s %CleanSourceDir% -e \sf -n any -c %CleanSourceDir%\os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\%BuildShortName%\TechViewComponents.txt"/>
     <Execute Component="Create SystemTestComponents.txt" Cwd="%LogsDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\genxml.pl -x %CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools\variability\vp_data\templates\system_definition_SystemTest.xml  -f systemtest -s %CleanSourceDir% -e \sf -n any -c %CleanSourceDir%\os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\%BuildShortName%\SystemTestComponents.txt"/>
@@ -231,26 +232,26 @@
     <Execute Component="Start Phase GT" Cwd="%ToolsDir%\bin" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\start-perl.pl -- notifyBuildPhase.pl -s %SnapshotNumber% -p %BuildShortName% -n GT -t START"/>
 	
 	<!-- Compile various tool targets prior to actual GT build -->
-    <Execute Component="e32toolp Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog  -t 3 -j %MAX_CONCURRENT% -k -m %EPOCROOT%epoc32\build\Makefile_e32toolp -f %LogsDir%\sbs_e32toolp_log.xml.log -b %SourceDir%\os\buildtools\sbsv1_os\e32toolp\group\bld.inf -c tools2_rel.vFuture.whatlog -i > %LogsDir%\e32toolp.log 2>&amp;1"/>
+    <Execute Component="e32toolp Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog  -t 3 -j %MAX_CONCURRENT% -k -m %EPOCROOT%epoc32\build\Makefile_e32toolp -f %LogsDir%\sbs_e32toolp_log.xml.log -b %SourceDir%\os\buildtools\sbsv1_os\e32toolp\group\bld.inf -c tools2_rel.vFuture.whatlog.tracecompiler -i > %LogsDir%\e32toolp.log 2>&amp;1"/>
     <Execute Component="Generate html log for e32toolp" Cwd="%EPOCROOT%tools" CommandLine="perl %EPOCROOT%tools\sbsv2htmlscanlog.pl -l %LogsDir%\sbs_e32toolp_log.xml.log  -o %LogsDir%\sbs_e32toolp_log.html -v -v "/>
     <Execute Component="Copy TCL reltools.ini to get rcomp" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\TCL_Support\sfreltools.ini %EPOCROOT%epoc32\relinfo\reltools.ini"/>
-    <Execute Component="Get latest Rcomp component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_bintools_rcomp -bv DP00572_DeveloperProduct -o %LogsDir%\rcomp_version.txt 2>&amp;1"/>
-    <Execute Component="Get Latest Green Trace Compiler from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c osttracecompiler -bv DP00572_DeveloperProduct -o %LogsDir%\tracecompiler_version.txt 2>&amp;1"/>
+    <Execute Component="Get latest Rcomp component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_bintools_rcomp -bv green -o %LogsDir%\rcomp_version.txt 2>&amp;1"/>
+    <Execute Component="Get Latest Green Trace Compiler from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c osttracecompiler -bv green -o %LogsDir%\tracecompiler_version.txt 2>&amp;1"/>
     <Execute Component="Copy OS Reltools.ini to epoc32/relinfo" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\%BuildShortName%\reltools.ini %EPOCROOT%epoc32\relinfo\toreltools.ini"/>
-    <Execute Component="Push the latest Rcomp to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_bintools_rcomp -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
-     <Execute Component="Push the Latest Green Trace Compiler to OS Archive" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c osttracecompiler -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+    <Execute Component="Push the latest Rcomp to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_bintools_rcomp -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
+     <Execute Component="Push the Latest Green Trace Compiler to OS Archive" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c osttracecompiler -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
      <!-- "DS.1756" changes bootstrapping components from TCL START -->
-     <Execute Component="Get latest dev_build_imgtools_romtools component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_romtools -bv DP00572_DeveloperProduct -o %LogsDir%\dev_build_imgtools_romtools_version.txt 2>&amp;1"/>
-     <Execute Component="Push the latest dev_build_imgtools_romtools to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_romtools -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+     <Execute Component="Get latest dev_build_imgtools_romtools component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_romtools -bv green -o %LogsDir%\dev_build_imgtools_romtools_version.txt 2>&amp;1"/>
+     <Execute Component="Push the latest dev_build_imgtools_romtools to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_romtools -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
      
-     <Execute Component="Get latest dev_build_imgtools_buildrom component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_buildrom -bv DP00572_DeveloperProduct -o %LogsDir%\dev_build_imgtools_buildrom_version.txt 2>&amp;1"/>
-     <Execute Component="Push the latest dev_build_imgtools_buildrom to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_buildrom -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+     <Execute Component="Get latest dev_build_imgtools_buildrom component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_buildrom -bv green -o %LogsDir%\dev_build_imgtools_buildrom_version.txt 2>&amp;1"/>
+     <Execute Component="Push the latest dev_build_imgtools_buildrom to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_buildrom -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
  
-     <Execute Component="Get latest dev_build_imgtools_imglib component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_imglib -bv DP00572_DeveloperProduct -o %LogsDir%\dev_build_imgtools_imglib_version.txt 2>&amp;1"/>
-     <Execute Component="Push the latest dev_build_imgtools_imglib to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_imglib -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+     <Execute Component="Get latest dev_build_imgtools_imglib component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_imglib -bv green -o %LogsDir%\dev_build_imgtools_imglib_version.txt 2>&amp;1"/>
+     <Execute Component="Push the latest dev_build_imgtools_imglib to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_imglib -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
  
-     <Execute Component="Get latest dev_build_imgtools_sisutils component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_sisutils -bv DP00572_DeveloperProduct -o %LogsDir%\dev_build_imgtools_sisutils_version.txt 2>&amp;1"/>
-     <Execute Component="Push the latest dev_build_imgtools_sisutils to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_sisutils -r %EPOCROOT%epoc32\relinfo\toreltools.ini -version DP00572"/>
+     <Execute Component="Get latest dev_build_imgtools_sisutils component from TCL" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -s -c dev_build_imgtools_sisutils -bv green -o %LogsDir%\dev_build_imgtools_sisutils_version.txt 2>&amp;1"/>
+     <Execute Component="Push the latest dev_build_imgtools_sisutils to OS" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\pushComp.pl -c dev_build_imgtools_sisutils -r %EPOCROOT%epoc32\relinfo\toreltools.ini -g"/>
      <!-- "DS.1756" changes bootstrapping components from TCL END -->
 
  <!-- Retrieve S60 binaries which remoteconn is dependent on -->
@@ -258,21 +259,21 @@
 
     <Execute Component="Delete TCL reltools.ini" Cwd="%BuildDir%" CommandLine="del %EPOCROOT%epoc32\relinfo\reltools.ini"/>
     <Execute Component="Rename and restore OS reltools.ini" Cwd="%BuildDir%" CommandLine="rename %EPOCROOT%epoc32\relinfo\toreltools.ini reltools.ini"/>
-    <Execute Component="TOOLS2 REL Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog  -t 3 -j %MAX_CONCURRENT% -k -m %EPOCROOT%epoc32\build\Makefile_tools2_rel -f %LogsDir%\sbs_tools2_rel_log.xml.log  -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c tools2_rel.savespace.vFuture.whatlog -i > %LogsDir%\tools2_rel.log 2>&amp;1"/>
-	<Execute Component="TOOLS2 DEB LIBRARY Build" Cwd="%BuildDir%" CommandLine="sbs -t 3 -j %MAX_CONCURRENT% -k -m %EPOCROOT%epoc32\build\Makefile_tools2_deb -f %LogsDir%\sbs_tools2_deb_log.xml.log  -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c tools2_deb.savespace.vFuture.whatlog -i LIBRARY > %LogsDir%\tools2_deb.log 2>&amp;1"/>
+    <Execute Component="TOOLS2 REL Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog  -t 3 -j %MAX_CONCURRENT% -k -m %EPOCROOT%epoc32\build\Makefile_tools2_rel -f %LogsDir%\sbs_tools2_rel_log.xml.log  -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c tools2_rel.savespace.vFuture.whatlog.tracecompiler -i > %LogsDir%\tools2_rel.log 2>&amp;1"/>
+	<Execute Component="TOOLS2 DEB LIBRARY Build" Cwd="%BuildDir%" CommandLine="sbs -t 3 -j %MAX_CONCURRENT% -k -m %EPOCROOT%epoc32\build\Makefile_tools2_deb -f %LogsDir%\sbs_tools2_deb_log.xml.log  -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c tools2_deb.savespace.vFuture.whatlog.tracecompiler -i LIBRARY > %LogsDir%\tools2_deb.log 2>&amp;1"/>
 	
     <Execute Component="Generate html log for tools2 rel"  Cwd="%EPOCROOT%tools" CommandLine="perl %EPOCROOT%tools\sbsv2htmlscanlog.pl -l %LogsDir%\sbs_tools2_rel_log.xml.log  -o %LogsDir%\sbs_tools2_rel_log.html -v -v "/>
     <Execute Component="Generate html log for tools2 deb"  Cwd="%EPOCROOT%tools" CommandLine="perl %EPOCROOT%tools\sbsv2htmlscanlog.pl -l %LogsDir%\sbs_tools2_deb_log.xml.log  -o %LogsDir%\sbs_tools2_deb_log.html -v -v "/>
     
 	<!--  tools_rel target SHOULD be run sequentially , DO NOT add -j option below -->
-	<Execute Component="TOOLS Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog -t 3 -j 1 -k -m %EPOCROOT%epoc32\build\Makefile_tools -f %LogsDir%\sbs_tools_log.xml.log -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c tools_rel.vFuture.whatlog -i > %LogsDir%\tools.log 2>&amp;1"/>
+	<Execute Component="TOOLS Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog -t 3 -j 1 -k -m %EPOCROOT%epoc32\build\Makefile_tools -f %LogsDir%\sbs_tools_log.xml.log -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c tools_rel.vFuture.whatlog.tracecompiler -i > %LogsDir%\tools.log 2>&amp;1"/>
 	
     <Execute Component="Generate html log for tools  "  Cwd="%EPOCROOT%tools" CommandLine="perl %EPOCROOT%tools\sbsv2htmlscanlog.pl -l %LogsDir%\sbs_tools_log.xml.log  -o %LogsDir%\sbs_tools_log.html -v -v "/>
 
     <Execute Component="Copy Makefile_*tool* and logs to Local Logs Dir" Cwd="%BuildDir%" CommandLine="copy %EPOCROOT%epoc32\build\Makefile_*tool* %LogsDir%\"/>
 <!-- Will want to scan and publish these logs too -->
     <!-- Compile GT using SBSv2 -->
-    <Execute Component="GT Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog -t 3 -j %MAX_CONCURRENT% -k -f %LogsDir%\sbs_GT_log.xml.log  -m %EPOCROOT%epoc32\build\Makefile_GT -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c default.savespace.vFuture.whatlog -c armv5.smp.savespace.vFuture.whatlog -i > %LogsDir%\GT2.log 2>&amp;1"/>
+    <Execute Component="GT Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog -t 3 -j %MAX_CONCURRENT% -k -f %LogsDir%\sbs_GT_log.xml.log  -m %EPOCROOT%epoc32\build\Makefile_GT -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c default.savespace.vFuture.whatlog -c armv5.smp.savespace.vFuture.whatlog.tracecompiler -i > %LogsDir%\GT2.log 2>&amp;1"/>
     <Execute Component="Copy Makefile_GT and log to Local Logs Dir" Cwd="%BuildDir%" CommandLine="copy %EPOCROOT%epoc32\build\Makefile_GT* %LogsDir%\"/>
 
     <!--Post GT Build Stuff -->
@@ -307,7 +308,7 @@
     <Execute Component="Prep for Techview Build" Cwd="%BuildDir%" CommandLine="xcopy %CleanSourceDir%\os\buildtools\sbsv1_os\e32toolp %SourceDir%\cedar\techview\tools\e32toolp /E /Z /I /Q"/>
 
     <!-- Compile Techview using SBSv2 -->
-    <Execute Component="Techview Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog  -t 3 -j %MAX_CONCURRENT% -f %LogsDir%\sbs_TV_log.xml.log -k -m %EPOCROOT%epoc32\build\Makefile_TV -s %EPOCROOT%epoc32\data\system_definition_TV.xml -c default.techview.savespace.vFuture.whatlog -i > %LogsDir%\TV2.log 2>&amp;1"/>
+    <Execute Component="Techview Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog  -t 3 -j %MAX_CONCURRENT% -f %LogsDir%\sbs_TV_log.xml.log -k -m %EPOCROOT%epoc32\build\Makefile_TV -s %EPOCROOT%epoc32\data\system_definition_TV.xml -c default.techview.savespace.vFuture.whatlog.tracecompiler -i > %LogsDir%\TV2.log 2>&amp;1"/>
     <Execute Component="Copy Makefile_TV and log to Local Logs Dir" Cwd="%BuildDir%" CommandLine="copy %EPOCROOT%epoc32\build\Makefile_TV* %LogsDir%\"/>
 
     <!-- Compile System Test components using EBS -->
@@ -385,7 +386,7 @@
 
     <!--Prep for CBR -->
     <Execute Component="CBR Copy Clean Src" Cwd="%BuildDir%\CBRTV" CommandLine="xcopy %CleanSourceDir% %BuildDir%\CBRTV\sf /E /Z /I /Q"/>
-    <Execute Component="Run sbsv2cache tool" Cwd="%BuildDir%" CommandLine="%SBS_HOME%\win32\python252\python.exe %SBS_HOME%\bin\sbsv2cache.py -v -s -o %ABLDCACHE% -l %LogsDir%\sbs_e32toolp_log.xml.log -l %LogsDir%\sbs_GT_log.xml.log -l %LogsDir%\sbs_TV_log.xml.log -l %LogsDir%\sbs_tools_log.xml.log -l %LogsDir%\sbs_tools2_rel_log.xml.log -l %LogsDir%\sbs_tools2_deb_log.xml.log > %LogsDir%\sbs_sbsv2cache.log 2>&amp;1"/>
+    <Execute Component="Run sbsv2cache tool" Cwd="%BuildDir%" CommandLine="%SBS_HOME%\win32\python264\python.exe %SBS_HOME%\bin\sbsv2cache.py -v -s -o %ABLDCACHE% -l %LogsDir%\sbs_e32toolp_log.xml.log -l %LogsDir%\sbs_GT_log.xml.log -l %LogsDir%\sbs_TV_log.xml.log -l %LogsDir%\sbs_tools_log.xml.log -l %LogsDir%\sbs_tools2_rel_log.xml.log -l %LogsDir%\sbs_tools2_deb_log.xml.log > %LogsDir%\sbs_sbsv2cache.log 2>&amp;1"/>
     <Execute Component="Publish Raptor Cache Log"    Cwd="%BuildDir%" CommandLine="copy %LogsDir%\sbs_sbsv2cache.log %PublishLocation%\%Type%\%BuildNumber%\logs\sbs_sbsv2cache.log"/>
 
 	<!-- Cleanup unnecessary files  to remove warnings -->
@@ -429,7 +430,7 @@
     <!-- GET IMGCHECK component  --> 
     <Execute Component="Imgcheck  Make Dir relinfo" Cwd="%BuildDir%" CommandLine="mkdir %BuildDir%\epoc32\relinfo\"/>
     <Execute Component="Get TCL sfreltools.ini" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\TCL_Support\sfreltools.ini %BuildDir%\epoc32\relinfo\reltools.ini"/>
-    <Execute Component="Obtain IMGCHECK component" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c dev_build_imgtools_imgcheck -bv DP00572_DeveloperProduct -o %LogsDir%\imgcheck_version.txt"/>
+    <Execute Component="Obtain IMGCHECK component" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c dev_build_imgtools_imgcheck -bv green -o %LogsDir%\imgcheck_version.txt"/>
 
     <!-- USE IMGCHECK to create SID, VID reports for these ROM images -->
     <Execute Component="Run IMGCHECK" Cwd="%BuildDir%" CommandLine="%BuildDir%\epoc32\tools\imgcheck.exe --e32input --sid --vid  --verbose M:\epoc32\release\armv5\urel\ -x -o=%LogsDir%\SIDVID.xml -a 2>&amp;1"/> 
@@ -447,7 +448,7 @@
     <Execute Component="Make Dir relinfo" Cwd="%BuildDir%" CommandLine="mkdir %BuildDir%\epoc32\relinfo\"/>
     <Execute Component="Get TCL sfreltools.ini" Cwd="%BuildDir%" CommandLine="copy %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\TCL_Support\sfreltools.ini %EPOCROOT%epoc32\relinfo\reltools.ini"/>
     
-    <Execute Component="Obtain CDB tools" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c ana_compatanamdw_apicompatanamdw_cdb -bv DP00572_DeveloperProduct -o %LogsDir%\cdb_version.txt"/>          
+    <Execute Component="Obtain CDB tools" Cwd="%BuildDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\GetDPComp\GetDPComp.pl -c ana_compatanamdw_apicompatanamdw_cdb -bv green -o %LogsDir%\cdb_version.txt"/>          
     <!-- Retrieve S60 binaries which remoteconn is dependent on for gccxml CDB phase-->
     <Execute Component="Get specific S60 dependencies to enable remote conn compilation" Cwd="%BuildDir%" CommandLine="%SourceDir%\os\buildtools\toolsandutils\cbrtools\perl\getrel -vv remoteconn_s60_dependencies 9 2>&amp;1"/>
 
