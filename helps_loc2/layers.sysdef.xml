@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_4_0.dtd" [
+  <!ENTITY layer_real_source_path "ext/os/s60platformrelease/helps_loc2" >
+]>
+
+<SystemDefinition name="helps_loc2" schema="1.4.0">
+  <systemModel>
+    <layer name="os_layer">
+      <module name="helps_loc2">
+        <unit unitID="abs.helps_loc2" mrp="" bldFile="&layer_real_source_path;/group" name="helps_loc2" />
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>
