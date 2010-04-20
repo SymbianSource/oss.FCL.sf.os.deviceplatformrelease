@@ -266,7 +266,7 @@ Excludes Symbian SIP components.
 /** #SYMBIAN_GRAPHICS_ADAPTATION  
 This flag is used to take right graphics adaptation components to the ROM build 
 */ 
-#define SYMBIAN_GRAPHICS_ADAPTATION                        None 
+#define SYMBIAN_GRAPHICS_ADAPTATION                        SGA_SW 
  
 /** #SYMBIAN_GRAPHICS_USE_GCE  
 Includes the Symbian the Surface Manager and Graphics Composition Engine on ROM
@@ -463,7 +463,7 @@ policies and procedures.
 
 This define supports PREQ1871. 
 */ 
-#undef SYMBIAN_SYSTEM_STATE_MANAGEMENT                     
+#define SYMBIAN_SYSTEM_STATE_MANAGEMENT                     
  
 /** #SYMBIAN_USE_DOS_SERVER_SERVICES  
 The DOS_SERVER_SERVICES should indicate that the DOS Server Services is present.
@@ -482,7 +482,7 @@ The macro NOKIA_FEATURE_MANAGER should indicate that the Nokia version of the
 Feature Manager is present. The Feature Manager was part of the CoreOS, and
 there is a Symbian version of it in 9.5. 
 */ 
-#define SYMBIAN_USE_NOKIA_FEATURE_MANAGER                   
+#undef SYMBIAN_USE_NOKIA_FEATURE_MANAGER                   
  
 /** #USE_MSCDB  
 Enable usage of mass storage double buffering. 
@@ -1681,9 +1681,9 @@ proactive commands or envelope command responses."
 #define __SAT_LANGUAGE_NOTIFICATION                         
  
 /** #__SAT_LAUNCH_BROWSER  
-"If this flag is enabled, upon receiving SAT Launch Browser command, the ME
+When this flag is enabled, upon receiving SAT Launch Browser command, the ME
 shall decide if it is able to execute the command. See details from 3GPP
-specifications." 
+specifications. 
 */ 
 #define __SAT_LAUNCH_BROWSER                                
  
@@ -2208,4 +2208,4 @@ showing it to user)."
 #define __XSP_EXTENSION_MANAGER                             
  
 
-#endif // __BLDPRIVATE_HRH 
+#endif // __BLDPRIVATE_HRH

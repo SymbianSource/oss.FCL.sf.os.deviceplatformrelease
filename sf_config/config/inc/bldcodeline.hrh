@@ -58,6 +58,12 @@ RD flag for development of new AIW Dial Data APIs.
 Flag enables ui accelerator toolkit development. 
 */ 
 #define RD_ALF_IN_PLATFORM                                  
+
+/** #ALF_USE_OPENWF_COMPOSITION
+Bug 1391 - UI Acceleration migration to OpenWF
+*/ 
+#define ALF_USE_OPENWF_COMPOSITION
+
  
 /** #RD_ALR_AND_NLR_ENABLERS  
 Enables Application and Network Level Roaming. 
@@ -1414,4 +1420,11 @@ RD flag for development of new XML Engine APIs.
 #define RD_XML_ENGINE_API_CHANGE                            
  
 
-#endif // __BLDCODELINE_HRH 
+/**
+SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV
+
+If SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV, the windowserver component is built to use the OpenWF version of NGA.
+*/
+#define SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV
+
+#endif // __BLDCODELINE_HRH
