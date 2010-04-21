@@ -198,7 +198,7 @@ APIs for monitoring free disk space.
 @see SysUtil::DiskSpaceBelowCriticalLevelL
  
 */ 
-#undef SYMBIAN_BAFL_SYSUTIL                                
+#define SYMBIAN_BAFL_SYSUTIL                                
  
 /** #SYMBIAN_DOS_SERVER_SERVICES  
 Indicate that the DOS Server Services is present. This is needed to turn the RF
