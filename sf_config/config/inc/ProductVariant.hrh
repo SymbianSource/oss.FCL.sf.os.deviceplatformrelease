@@ -13,7 +13,19 @@
 *
 * Description: 
 *
+*  The file is included by any code (cpp and resource) that needs to
+*  have static (compilation time, link time, image build time) or
+*  dynamic (run time) variation support for variant specific features.
+*
+*  This file is meant for licensees to customize the default variability
+*  settings configured for the release. The existing values can overridden
+*  in this file by defining/undefining feature flags.
+*
+*
+*
 */
+
+
 
 #ifndef PRODUCTVARIANT_HRH
 #define PRODUCTVARIANT_HRH
