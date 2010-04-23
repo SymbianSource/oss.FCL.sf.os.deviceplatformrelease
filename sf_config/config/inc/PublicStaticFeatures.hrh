@@ -15,6 +15,7 @@
 *
 */
 
+
 #ifdef FF_3D_RINGING_TONES
 KFeatureId3DRingingTones,
 #endif
@@ -23,12 +24,28 @@ KFeatureId3DRingingTones,
 KFeatureIdFf3gCellbroadcast,
 #endif
 
+#ifdef FF_ABC_AGRESSIVE_UI
+KFeatureIdFfAbcAgressiveUi,
+#endif
+
 #ifdef FF_ADAPTIVE_WLAN_SCANNING_SUPPORT
 KFeatureIdFfAdaptiveWlanScanningSupport,
 #endif
 
+#ifdef FF_ADDITIONAL_FONTS
+KFeatureIdFfAdditionalFonts,
+#endif
+
 #ifdef FF_AI_WLANSNIFFER_WIDGET
 KFeatureIdFfAiWlansnifferWidget,
+#endif
+
+#ifdef FF_ALTERNATIVE_CALL_WAITING_TONE
+KFeatureIdFfAlternativeCallWaitingTone,
+#endif
+
+#ifdef FF_ARABIC_HANDWRITING_RECOGNITION_INPUT
+KFeatureIdArabicHandwritingRecognitionInput,
 #endif
 
 #ifdef FF_ASYNCH_FILE_SAVE_QUEUE
@@ -37,6 +54,10 @@ KFeatureIdAsynchFileSaveQueue,
 
 #ifdef FF_AUDT
 KFeatureIdFfAudt,
+#endif
+
+#ifdef FF_AUTOMOTIVESTACK
+KFeatureIdFfAutomotivestack,
 #endif
 
 #ifdef FF_AUTO_REDIAL_FOR_VIDEO_CALL
@@ -51,8 +72,28 @@ KFeatureIdFfAvkonEmotionIconEnabled,
 KFeatureIdFfBirthdayImprovement,
 #endif
 
+#ifdef FF_BLUETOOTH_DATA_PROFILES_DISABLED
+KFeatureIdFfBluetoothDataProfilesDisabled,
+#endif
+
+#ifdef FF_BLUETOOTH_DISABLED
+KFeatureIdFfBluetoothDisabled,
+#endif
+
 #ifdef FF_BROWSER_PROGRESSIVE_DOWNLOAD
 KFeatureIdBrowserProgressiveDownload,
+#endif
+
+#ifdef FF_CALENDAR_DAY_VIEW
+KFeatureIdFfCalDayView,
+#endif
+
+#ifdef FF_CALENDAR_SCROLLABLE_PREVIEW
+KFeatureIdFfCalScrollablePreview,
+#endif
+
+#ifdef FF_CAL_MEETING_REQUEST_UI
+KFeatureIdFfCalMeetingRequestUi,
 #endif
 
 #ifdef FF_CAPACITIVE_DISPLAY
@@ -63,8 +104,16 @@ KFeatureIdFfCapacitiveDisplay,
 KFeatureIdChineseFontsHires,
 #endif
 
+#ifdef FF_CHINESE_SELECTION_KEY
+KFeatureIdFfChineseSelectionKey,
+#endif
+
 #ifdef FF_CLOCK_MULTIPROCOL_SUPPORT
 KFeatureIdFfClockMultiprocolSupport,
+#endif
+
+#ifdef FF_CMAIL_INTEGRATION
+KFeatureIdFfCmailIntegration,
 #endif
 
 #ifdef FF_COMMSDAT_CREATION_FROM_XML
@@ -75,8 +124,48 @@ KFeatureIdCommsDatCreationFromXml,
 KFeatureIdFfConnectionOverride,
 #endif
 
+#ifdef FF_CONTACTS_COMPANY_NAMES
+KFeatureIdFfContactsCompanyNames,
+#endif
+
+#ifdef FF_CONTACTS_MERGE
+KFeatureIdFfContactsMerge,
+#endif
+
+#ifdef FF_CONTACTS_MYCARD
+KFeatureIdffContactsMycard,
+#endif
+
 #ifdef FF_CONTACTS_NICKNAME
 KFeatureIdFfContactsNickname,
+#endif
+
+#ifdef FF_CONTACTS_PREDICTIVE_SEARCH
+KFeatureIdFfContactsPredictiveSearch,
+#endif
+
+#ifdef FF_CONTACTS_REMOTE_LOOKUP
+KFeatureIdFfContactsRemoteLookup,
+#endif
+
+#ifdef FF_CONTACTS_SOCIAL
+KFeatureIdFfContactsSocial,
+#endif
+
+#ifdef FF_CONTEXT_PROFILES
+KFeatureIdFfContextProfiles,
+#endif
+
+#ifdef FF_DEVICE_ENCRYPTION_FEATURE
+KFeatureIdFfDeviceEncryptionFeature,
+#endif
+
+#ifdef FF_DISABLE_OMA_SUPL_V2
+KFeatureIdFfDisableOmaSuplV2,
+#endif
+
+#ifdef FF_DM_CONNMO_ADAPTER
+KFeatureIdFfDmConnmoAdapter,
 #endif
 
 #ifdef FF_DM_INSTALL_SECURITY
@@ -87,8 +176,16 @@ KFeatureIdDmInstallSecurity,
 KFeatureIdFfDualLanguageSupport,
 #endif
 
+#ifdef FF_DUAL_MODEM
+KFeatureIdDualModem,
+#endif
+
 #ifdef FF_EMAIL_FRAMEWORK
 KFeatureIdFfEmailFramework,
+#endif
+
+#ifdef FF_EMAIL_FULLSCREENVIEWER
+KFeatureIdFfEmailFullscreenviewer,
 #endif
 
 #ifdef FF_EMAIL_IPS_SERVICES
@@ -99,12 +196,28 @@ KFeatureIdFfEmailIpsServices,
 KFeatureIdEmailMceIntegration,
 #endif
 
+#ifdef FF_EMAIL_PREDICTIVESEARCH
+KFeatureIdFfEmailPredictivesearch,
+#endif
+
 #ifdef FF_EMAIL_PROTOCOL_PLUGINS
 KFeatureIdFfEmailProtocolPlugins,
 #endif
 
 #ifdef FF_EMAIL_UI
 KFeatureIdFfEmailUi,
+#endif
+
+#ifdef FF_EMAIL_UI_SPLITSCREEN
+KFeatureIdFfEmailUiSplitscreen,
+#endif
+
+#ifdef FF_ENABLE_ISI_COMMUNICATION_IN_USB_CHARGING_MODE
+KFeatureIdEnableIsiCommunicationInUsbChargingMode,
+#endif
+
+#ifdef FF_ENHANCED_CALENDAR_EVENT_UI
+KFeatureIdFfEnhancedCalendarEventUi,
 #endif
 
 #ifdef FF_FARSI_CALENDAR
@@ -115,8 +228,20 @@ KFeatureIdFfFarsiCalendar,
 KFeatureIdFmtx,
 #endif
 
+#ifdef FF_FMTX_RDS_TEXT
+KFeatureIdFfFmtxRdsText,
+#endif
+
+#ifdef FF_FOTA_CHECK_LIMITATION
+KFeatureIdFfFotaCheckLimitation,
+#endif
+
 #ifdef FF_FULLSCR_HWR_INPUT
 KFeatureIdFullscrHwrInput,
+#endif
+
+#ifdef FF_GENERIC_ACCESS_NETWORK
+KFeatureIdFfGenericAccessNetwork,
 #endif
 
 #ifdef FF_GENERIC_FONTS_ASSETS
@@ -151,6 +276,10 @@ KFeatureIdIAUpdate,
 KFeatureIdFfIaupdatePhase2,
 #endif
 
+#ifdef FF_IMAGE_EDITOR
+KFeatureIdFfImageEditor,
+#endif
+
 #ifdef FF_INPUTS_PER_ORIENTATION
 KFeatureIdFfInputsPerOrientation,
 #endif
@@ -159,16 +288,48 @@ KFeatureIdFfInputsPerOrientation,
 KFeatureIdFfIntelligentTextInput,
 #endif
 
+#ifdef FF_IPSEC_UMA_SUPPORT_ENABLE
+KFeatureIdFfIpsecUmaSupportEnable,
+#endif
+
+#ifdef FF_ITI_VIRTUAL_TOUCH_FIRST_GENERATION_SUPPORT
+KFeatureIdFfItiVirtualTouchFirstGenerationSupport,
+#endif
+
 #ifdef FF_JAVA_GLOBAL_INDICATORS_API
 KFeatureIdFfJavaGlobalIndicatorsApi,
+#endif
+
+#ifdef FF_KEYPAD_NO_SEND_KEY
+KFeatureIdFfKeypadNoSendKey,
 #endif
 
 #ifdef FF_KOREAN
 KFeatureIdKorean,
 #endif
 
+#ifdef FF_LAYOUT_480_640_VGA3
+KFeatureIdFfLayout480640Vga3,
+#endif
+
+#ifdef FF_LAYOUT_640_480_VGA3
+KFeatureIdFfLayout640480Vga3,
+#endif
+
+#ifdef FF_LIMITED_MESSAGE_AND_ALARM_TONE_SIZE
+KFeatureIdFfLimitedMessageAndAlarmToneSize,
+#endif
+
 #ifdef FF_LINKED_FONTS_CHINESE
 KFeatureIdFfLinkedFontsChinese,
+#endif
+
+#ifdef FF_LOCATION_MW_APE_CENTRIC_ARCH_SUPPORT
+KFeatureIdFfLocationMwApeCentricArchSupport,
+#endif
+
+#ifdef FF_MECO_XMPP
+KFeatureIdFfMecoXmpp,
 #endif
 
 #ifdef FF_MEETING_REQUEST_UI
@@ -177,6 +338,10 @@ KFeatureIdFfMeetingRequestUi,
 
 #ifdef FF_MENU_TEXTURE_PRELOADING
 KFeatureIdFfMenuTexturePreloading,
+#endif
+
+#ifdef FF_MTP_CONTROLLER
+KFeatureIdS60MtpController,
 #endif
 
 #ifdef FF_NCD_ENGINE
@@ -211,12 +376,24 @@ KFeatureIdFfOdeLegalNotice,
 KFeatureIdFfOfnFeature,
 #endif
 
+#ifdef FF_OMADRM1_FULL_SUPPORT
+KFeatureIdFfOmadrm1FullSupport,
+#endif
+
+#ifdef FF_OMADRM2_SUPPORT
+KFeatureIdFfOmadrm2Support,
+#endif
+
 #ifdef FF_OMA_SCOMO_ADAPTER
 KFeatureIdFfOmaScomoAdapter,
 #endif
 
 #ifdef FF_OSS_LEGAL_NOTICE
 KFeatureIdFfOssLegalNotice,
+#endif
+
+#ifdef FF_PLAYREADY_SUPPORT
+KFeatureIdFfPlayreadySupport,
 #endif
 
 #ifdef FF_PNPMS_PROV_FILTER
@@ -239,6 +416,10 @@ KFeatureIdPreminetCatalogsClient,
 KFeatureIdProvAuthtypePlugin,
 #endif
 
+#ifdef FF_QT
+KFeatureIdFfQt,
+#endif
+
 #ifdef FF_QWERTY_FN_KEY
 KFeatureIdQwertyFnKey,
 #endif
@@ -255,8 +436,40 @@ KFeatureIdFfRuntimeDeviceCapabilityConfiguration,
 KFeatureIdSelectableEmail,
 #endif
 
+#ifdef FF_SIDESLIDER_SUPPORT
+KFeatureIdFfSidesliderSupport,
+#endif
+
+#ifdef FF_SIM_CONSECUTIVE_6F00_ERRORS_HANDLING
+KFeatureIdFfSimConsecutive6f00ErrorsHandling,
+#endif
+
+#ifdef FF_SIP_APN_SWITCHING
+KFeatureIdFfSipApnSwitching,
+#endif
+
+#ifdef FF_SIP_CUSTOM_PDP_HANDLING
+KFeatureIdFfSipCustomPdpHandling,
+#endif
+
+#ifdef FF_SMALL_SCREEN_TOUCH
+KFeatureIdFfSmallScreenTouch,
+#endif
+
 #ifdef FF_STARTUP_OMA_DM_SUPPORT
 KFeatureStartupOmaDmSupport,
+#endif
+
+#ifdef FF_STROKE_INPUTMODE_IN_TAIWAN
+KFeatureIdFfStrokeInputmodeInTaiwan,
+#endif
+
+#ifdef FF_SUPL_IMSI_GENERATED_SERVER_PRIORITY_DEFAULT
+KFeatureIdFfSuplImsiGeneratedServerPriorityDefault,
+#endif
+
+#ifdef FF_SYNCML_STATUS_EXTENDED_ERROR_CODES
+KFeatureIdFfSyncmlStatusExtendedErrorCodes,
 #endif
 
 #ifdef FF_TACTICONS
@@ -271,12 +484,44 @@ KFeatureIdTactileFeedback,
 KFeatureIdFfTarmCapabilityBasedAccess,
 #endif
 
+#ifdef FF_TARM_CAPABILITY_CHECKING
+KFeatureIdFfTarmCapabilityChecking,
+#endif
+
 #ifdef FF_TCP_MYFAVES_FEATURE
 KFeatureIdTcpMyfavesFeature,
 #endif
 
 #ifdef FF_TCP_MYPROFILE
 KFeatureIdFfTcpMyprofile,
+#endif
+
+#ifdef FF_TD_CLMContactReplicationFromPhonebookToUSIMCard
+KFeatureIdFfTdClmcontactreplicationfromphonebooktousimcard,
+#endif
+
+#ifdef FF_TD_CMCCATCommandsSupport
+KFeatureIdFfTdCmccatcommandssupport,
+#endif
+
+#ifdef FF_TD_CMCCPIMPromptServerFullWhenReceive420StatusCodeFromServer
+KFeatureIdFfTdCmccpimpromptserverfullwhenreceive420statuscodefromserver,
+#endif
+
+#ifdef FF_TD_CMCCPIMSynchronizationProgressIndicatorUI 
+KFeatureIdFfTdCmccpimsynchronizationprogressindicatorui ,
+#endif
+
+#ifdef FF_TD_SCDMA
+KFeatureIdFfTdScdma,
+#endif
+
+#ifdef FF_TD_SCDMA_FORBIDDENOPERATORICONDISPLAY
+KFeatureIdFfTdScdmaForbiddenoperatoricondisplay,
+#endif
+
+#ifdef FF_TD_SCDMA_VIDEOCALL_KEY
+KFeatureIdFfTdScdmaVideocallKey,
 #endif
 
 #ifdef FF_TOUCHSCREENCALIB_IN_STARTUP
@@ -299,8 +544,24 @@ KFeatureIdUsbCharging,
 KFeatureIdUsbHost,
 #endif
 
+#ifdef FF_USB_MODEM
+KFeatureIdUsbModem,
+#endif
+
 #ifdef FF_USE_EGPRS_ICON
 KFeatureIdUseEGprsIcon,
+#endif
+
+#ifdef FF_USE_NAVIKEY_FOR_VOLUME
+KFeatureIdFfUseNavikeyForVolume,
+#endif
+
+#ifdef FF_VIDEO_AUDIO_BRANDING
+KFeatureIdFfVideoAudioBranding,
+#endif
+
+#ifdef FF_VIDEO_EDITOR
+KFeatureIdFfVideoEditor,
 #endif
 
 #ifdef FF_VIRTUAL_FULLSCR_QWERTY_INPUT
@@ -327,8 +588,8 @@ KFeatureIdFfVpnClient,
 KFeatureIdWebvideoPh2,
 #endif
 
-#ifdef FF_WLANSNIFFER_VOIP_ENHANCEMENTS
-KFeatureIdFfWlansnifferVoipEnhancements,
+#ifdef FF_WLAN_AUTHENTICATION_ONLY_SUPPORT
+KFeatureIdFfWlanAuthenticationOnlySupport,
 #endif
 
 #ifdef FF_WLAN_EXTENSIONS
@@ -337,6 +598,22 @@ KFeatureIdFfWlanExtensions,
 
 #ifdef FF_WLAN_WAPI
 KFeatureIdFfWlanWapi,
+#endif
+
+#ifdef FF_WMDRM_DLA_SUPPORT
+KFeatureIdFfWmdrmDlaSupport,
+#endif
+
+#ifdef SYMBIAN_INCLUDE_LOCATION_NPE_DSM
+KFeatureIdSymbianIncludeLocationNpeDsm,
+#endif
+
+#ifdef SYMBIAN_INCLUDE_LOCATION_SUPL_POS_INIT
+KFeatureIdSymbianIncludeLocationSuplPosInit,
+#endif
+
+#ifdef SYMBIAN_INCLUDE_LOCATION_SUPL_PROXY
+KFeatureIdSymbianIncludeLocationSuplProxy,
 #endif
 
 #ifdef __3D_MENU
@@ -995,3 +1272,68 @@ KFeatureIdXdmLocalStorage,
 KFeatureIdXdmXcap,
 #endif
 
+/** Features added from customswstaticfeatures.hrh (removed from customswstaticfeatures.hrh) */
+
+#ifdef FF_MTP_ALBUM_ART
+KFeatureIdFfMtpAlbumArt,
+#endif
+
+#ifdef FF_MUSIC_PATH_PLUGIN
+KFeatureIdFfMusicPathPlugin,
+#endif
+
+#ifdef FF_POWER_KEY_AS_KEYGUARD
+KFeatureIdFfPowerKeyAsKeyguard,
+#endif
+
+#ifdef FF_DISPLAY_NETWORK_NAME_AFTER_CS_REGISTRATION
+KFeatureIdFfDisplayNetworkNameAfterCsRegistration,
+#endif
+
+#ifdef FF_MANUAL_SELECTION_POPULATED_PLMN_LIST
+KFeatureIdFfManualSelectionPopulatedPlmnList,
+#endif
+
+#ifdef FF_MOBILITY_MANAGEMENT_ERRORS
+KFeatureIdFfMobilityManagementErrors,
+#endif
+
+#ifdef FF_SERVICE_CALL_WHILE_PHONE_LOCKED
+KFeatureIdFfServiceCallWhilePhoneLocked,
+#endif
+
+#ifdef FF_LOCATIONSYSUI_HIDE_POSITIONING_MENU
+KFeatureIdFfLocationsysuiHidePositioningMenu,
+#endif
+
+#ifdef FF_MASTER_RESET_AND_CLEAR_SUBMENU
+KFeatureIdFfMasterResetAndClearSubmenu,
+#endif
+
+#ifdef FF_SIMLOCK_UI
+KFeatureIdFfSimlockUi,
+#endif
+
+#ifdef FF_ENTRY_POINT_FOR_VIDEO_SHARE
+KFeatureIdFfEntryPointForVideoShare,
+#endif
+
+#ifdef FF_IMS_DEREGISTRATION_IN_OFFLINE
+KFeatureIdFfImsDeregistrationInOffline,
+#endif
+
+#ifdef FF_IMS_DEREGISTRATION_IN_RFS
+KFeatureIdFfImsDeregistrationInRfs,
+#endif
+
+#ifdef FF_IMS_DEREGISTRATION_IN_VPN
+KFeatureIdFfImsDeregistrationInVpn,
+#endif
+
+#ifdef FF_INTRANET_BROWSING
+KFeatureIdFfIntranetBrowsing,
+#endif
+
+#ifdef FF_HOME_SCREEN_EASY_DIALING
+KFeatureIdProductIncludesHomeScreenEasyDialing,
+#endif

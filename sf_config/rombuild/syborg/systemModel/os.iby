@@ -1,0 +1,340 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __OS_IBY__
+#define __OS_IBY__
+                                                        
+#include <data_caging_paths_for_iby.hrh>                // Generic S60 Macro Definitions
+
+#define __INCLUDE_SW_KEYSTORE__                         // in Certman.iby some files need this
+
+
+REM ##############################################################################
+
+REM Symbian UI Images OS Level
+
+REM ##############################################################################
+
+REM From here should start the UI stuff
+
+/* Low Level libraries and Framework */
+#include <ecom.iby>                                       // Plugins Framework
+#include <bafl.iby>                                       // VERY IMPORTANT Backup Server,System Sounds Server,Centralrepository, initlocale.iby
+//Emilio #include "../core/os/initialiselocale_variant.iby"        // Custom VERY IMPORTANT FOR LOCALIZATION Central Repository file for variant locales
+
+//Not Present #include <./core/os/locale.iby>                           // Locale Files Different From Symbian^2
+
+#include <sysutil.iby>                                    //System Utilities
+
+#include <stdlib.iby>                                     // Standard C Library has a dependency with C32.lib
+#include <charconv.iby>                                   // TODO :
+//Emilio #include <./customer/mw/charconvPlugin_variant.iby>       // TODO :
+#include <ezlib.iby>                                      // Compresion Libraries
+#include <etext.iby>                                      // To FIND:
+#include <numberconversion.iby>                           // To FIND:
+#include <./core/os/platformenv.iby>                      // Required by the SkinsServer
+
+
+#include <commonengine.iby>                              // Required by the SkinsServer
+#include <commonengineresources.iby>                     // Required by the SkinsServer
+
+
+
+
+#include <FeatMgr.iby>                                   // Required by the DRMHelper ,asking if feature is supported or not 
+//Emilio #include <./customer/os/featuremanager_variant.iby>       // StaticFeatures.DLL for the feature manager
+#include <./core/os/mediator.iby>                         // Mediator Server Required by the DRMHelper
+#include <./core/os/dosserver.iby>                        // DosServer required by commonengine
+             
+#include <HWResourceManager.iby>                         
+
+#include <Openenv.iby>                                    // Includes libpthread.dll required by WEBKIT
+#include <timezonelocalization.iby>                       // Required by OpenEnv
+#include <watcher.iby>                                    // The Watcher Framework required by BIOUtils Biowatcher.dll
+#include <messageserver.iby>                              // Message Server TODO: What is this use for and where this is coming from 
+#include <schsvr.iby>                                     // Task Scheduler Server Required by FOTA Server
+#include <logeng.iby>                                     // Log Engine Required by the schsvr scheduler server
+
+
+/* Comms Framework and Networking Services */ 
+//#include "../commsframework/commsframework.iby"            // Custom Minimal comms framework for a simple UI
+#include <insock.iby>                                     // Required by the cmmanager ( comms manager ?? )
+
+                      
+/* Networking */
+#include <network.iby>  
+#include <commdb.iby>
+#include <dial.iby>
+
+// NGA stack
+//
+#define SYMBIAN_GRAPHICS_USE_GCE
+#define SYMBIAN_GRAPHICS_USE_OPENWF
+#define OPENWFCLIB_DRV <openwfc_ref.iby>
+#define EGL_DRV <egl_ref.iby>
+ 
+#include <gdi.iby>
+#include <bitgdi.iby>
+#include <fntstore.iby>
+#include <fbserv.iby>
+#include <iculayoutengine.iby>
+#include <freetype.iby>
+#include <directgdi.iby>
+#include <wserv.iby>
+#include <wslog.iby>
+//#include <econs_wserv.iby>
+#include <surfaceupdate.iby>
+#include <surfacemanager.iby>
+//file=\epoc32\release\ARMV5\urel\_generic_scdv.dll	sys\bin\scdv.dll
+ 
+//data=DATAZ_\wsini_minigui.ini	\system\data\wsini.ini
+data=DATAZ_\wsini.ini            system\data\wsini.ini
+
+
+
+/* Graphics Package */
+//#include <wserv.iby>                                        // Windows Server with NGA and NONGA Support
+
+//#include <graphicsresource.iby>
+//#include <directgdi.iby>
+//#include <surfacemanager.iby>
+//#include <surfaceupdate.iby>
+//#include <fbserv.iby>                                       // Font and Bitmap Server
+                                    
+#include <opengles.iby>
+//#include <egl.iby>                                          // Included in the OpenVG iby 
+#include <openvg.iby>                                       // Define another implementation libEGL.dll different than egl.iby
+//#include <openwfc.iby>                                      // Pointing to libegl_ref.dll
+
+//#include <tiger.iby>
+//#include <freetype.iby>
+//#include <freetype.hby>
+
+#include <.\core\os\libvgi.iby>
+#include <.\core\os\m3gcore.iby>
+
+//#ifdef _DEBUG
+//ECOM_PLUGIN_UDEB(t_extendedbitmaprenderstage.dll, t_extendedbitmaprenderstage.rsc)
+//#else
+//ECOM_PLUGIN(t_extendedbitmaprenderstage.dll, t_extendedbitmaprenderstage.rsc)
+//#endif
+//file=ABI_DIR\DEBUG_DIR\textendedbitmapgc.dll \sys\bin\textendedbitmapgc.dll
+
+//#include <sfopenvg.iby>
+//ECOM_PLUGIN(10286378.dll,10286378.rsc)
+
+
+
+//#include <gdi.iby>				                      // Graphics Device Interface
+//#include "../graphics/palette.iby"                         // Palette Components required by GDI and FontBitmap Server
+//#include <bitgdi.iby>                          // Bitmaps Graphics Device Interface
+//#include <fntstore.iby>                        // Font Storage
+
+//#include "../graphics/iculayoutengine.iby"
+//#include "../graphics/freetype.iby"                        // TrueType Support and Fonts Requires StdLib
+
+//#include "../graphics/screendriver.iby"                    // SCDV ScreenDriver NO NGA Support for Syborg and Symbian^2
+//data=DATAZ_\wsini.ini            system\data\wsini.ini
+data=DATAZ_\BMP\WSAUTOTEST.MBM   BMP\WSAUTOTEST.MBM
+
+#include <nvgrenderstage.iby>
+
+
+/* OS Security */
+#include <caf.iby>           	                            // Content Access Framework ( DRMs ).
+#include <reccafconfig.iby>                               // Content Access Framework Recognizer Configuration Files.
+
+#include <certman.iby>                                    // Required by DRM5  
+#include <crypto.iby>                                     // Required by DRM5 , includes Hash.iby and random.iby
+                                     
+
+/* XML Services */
+//#include <xml.iby>                                      // XML Package
+#include <xmlframework.iby>
+#include <.\core\os\xmlsec.iby>                          // XMLSec Package for Base64Decoding in SVGEngine.dll
+#include <xmlengine.iby>                       // Required by XMLSec 
+#include <xmlengineutils.iby>                   // Required by WEBKIT
+
+#include <sql.iby>                                        // SQL Lite
+file=ABI_DIR\BUILD_DIR\abclient.dll			  sys\bin\abclient.dll     // for central repository and sqllite
+#include <dbms.iby>                                       // Symbian Relational Database
+#include <store.iby>                                      // Symbian Local Persistent Storage
+
+
+/* Imaging and Camera Framework */
+#include <.\core\os\IclExtJpegApi.iby>                    // Required by the AknSkinsServer
+
+/* Bluetooth */
+#include <bluetooth.iby>                                  // Required by SyncML and FOTA Server 
+#include <btlogger.iby>
+
+/* Open Env */
+#include <openenv.iby>
+
+/* Etel Sat */
+#include <etelsat.iby>
+
+/* Localization */
+#include <lbs.iby>
+
+/* Etel isv */
+#include <etelisv.iby>
+
+/* Obex */
+#include <obexprotocol.iby>
+
+/* irda */
+#include <irda.iby>
+
+#include <.\core\os\diskspacereserver.iby>
+
+/* System State Manager */
+
+#include <ssma.iby>
+#include <shma.iby>
+#include <conditionevaluator.iby>
+#include <scs.iby>
+
+
+
+#include <.\core\os\ssmcmdlists.iby>
+//#include <.\core\os\ssmcompatibility.iby>
+#include <.\core\os\ssmcustcmds.iby>
+#include <.\core\os\ssmmapperutility.iby>
+#include <.\core\os\ssmpolicyplugins.iby>
+#include <.\core\os\ssmutilityplugins.iby>
+#include <.\core\os\syslangutil.iby>
+#include <.\core\os\sysrestart.iby>
+#include <ssplugins.iby>
+//#include <.\core\os\sysuiprovider.iby>
+//#include <sysstartconfig.iby>
+//#include <ssmclayer.iby>
+#include <ssrefplugins.iby>
+#include <lafshutdowneventobserveradaptor.iby>
+
+
+/* Exif Lib */
+#include <.\core\os\Exiflib.iby>
+
+
+/* */
+#include <securitycommonutils.iby>
+
+/* DRM Audio Player */
+#include <.\core\os\DrmAudioPlayer.iby>
+
+/* IP SEC */
+#include <ipsec.iby>
+
+/* OCSP */
+#include <ocsp.iby>
+//#include <ocspconfig.iby>
+
+/* WAP */
+#include <wappushsupport.iby>
+
+/* */
+#include <.\core\os\tspclientmapper.iby>
+
+/* Http */
+#include <httpcore.iby>
+
+/* MMF */
+#include <mmf.iby>
+#include <.\core\os\MmfCustomInterfaces.iby>
+#include <.\core\os\mmextfw.iby>
+#include <.\core\os\effects.iby>
+#include <.\core\os\AudioRouting.iby>
+#include <.\core\os\RestrictedAudioOutput.iby>
+#include <.\core\mw\AudioControllerPluginsVariant.iby>
+#include <.\core\os\AudioOutputControlUtility.iby>
+#include <.\core\os\AddedDevSoundControl.iby>
+
+/* */
+#include <.\core\os\ConfigurationComponentsFactory.iby>
+
+/* */
+
+
+#include "../qt46/qt.iby"
+#include <sendas2.iby>
+ 
+//file=\epoc32\release\armv5\urel\hyperui.exe 				\sys\bin\hyperui.exe
+//data=\epoc32\data\z\resource\apps\hyperui.rsc 				\resource\apps\hyperui.rsc
+//data=\epoc32\data\z\private\10003a3f\import\apps\hyperui_reg.rsc 	\private\10003a3f\import\apps\hyperui_reg.rsc
+//data=\epoc32\data\z\resource\apps\hyperui.mif 				\resource\apps\hyperui.mif
+
+//#include <.\core\os\stdcpp.iby>
+#include <.\core\os\glib.iby>
+#include <.\core\os\ssl.iby>
+#include <.\core\os\stdcpp4.iby>
+#include <.\core\os\stdlibs.iby>
+
+/**/
+#include <btlogger.iby>
+#include <cflog.iby>
+
+/* TRK Debugger */
+
+//#include <.\core\tools\dbgtrccomm.iby>
+//#include <.\core\tools\trk.iby>
+
+//data=ZSYSTEM\..\trk\trk_syborg.ini     \trk.ini
+
+// test mbms
+data=ZSYSTEM\DATA\dgdi32bit.mbm           		System\data\dgdi32bit.mbm
+
+/* Sensor Server */
+#include <.\core\os\SensorServer.iby>
+
+/* */
+#include <.\core\os\Frametable.iby>
+
+/* */
+#include <.\core\os\accremcon.iby>
+
+/* Audio Server */
+#include <a3fserverstart.iby>
+#include <a3fdevsound.iby>
+#include <acf.iby>
+#include <devsoundadaptationinfo.iby>
+#include <refacladaptation.iby>
+#include <acl.iby>
+
+/**/
+#include <refmmrc.iby>
+
+/* Telephony */
+#include <.\core\os\TelephonyAudioRouting.iby>
+#include <ctsy.iby>
+file=ABI_DIR\DEBUG_DIR\licenseetsy_stub.dll     	\sys\bin\licenseetsy.dll
+file=ABI_DIR\DEBUG_DIR\SIMATKTSY_STUB.dll         \sys\bin\SIMATKTSY.dll
+
+
+/* Accesory Server */
+#include <.\core\os\AccServer.iby>
+
+/* PSM Server */
+#include <.\core\os\psmserver.iby>
+
+/* */
+#include <fmtx_hwrm.iby>
+
+/* Graphic Test */
+#include <graphicstest.iby>
+
+#endif
