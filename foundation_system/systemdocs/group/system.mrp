@@ -1,6 +1,0 @@
-component	system
-notes_source	\component_defs\release.src
-source		\sf\os\deviceplatformrelease\foundation_system\systemdocs
-
-ipr G 
-ipr O \sf\os\deviceplatformrelease\foundation_system\systemdocs\documentation\saod93\deps\icons
