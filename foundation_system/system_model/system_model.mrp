@@ -1,0 +1,4 @@
+component           system_model
+source   \sf\os\deviceplatformrelease\foundation_system\system_model\
+notes_source      \component_defs\release.src
+ipr T
