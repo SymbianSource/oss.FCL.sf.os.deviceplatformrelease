@@ -1647,12 +1647,12 @@ Device supports 208x208 resolution (square)
 /** #__LAYOUT_240_320 
 Device supports 240x320 resolution (QVGA)
 */
-#define __LAYOUT_240_320                                   
+#undef __LAYOUT_240_320                                   
 
 /** #__LAYOUT_240_320_LARGE_SCREEN 
 "Device supports 240x320 resolution (QVGA2 for larger screens, portrait)"
 */
-#define __LAYOUT_240_320_LARGE_SCREEN                      
+#undef __LAYOUT_240_320_LARGE_SCREEN                      
 
 /** #__LAYOUT_240_320_QVGA3 
 Device supports 240x320 resolution (QVGA3)
@@ -1662,12 +1662,12 @@ Device supports 240x320 resolution (QVGA3)
 /** #__LAYOUT_320_240 
 Device supports 320x240 resolution (QVGA landscape)
 */
-#define __LAYOUT_320_240                                   
+#undef __LAYOUT_320_240                                   
 
 /** #__LAYOUT_320_240_LARGE_SCREEN 
 "Device supports 320x240 resolution (QVGA2 for larger screens, landscape)"
 */
-#define __LAYOUT_320_240_LARGE_SCREEN                      
+#undef __LAYOUT_320_240_LARGE_SCREEN                      
 
 /** #__LAYOUT_320_240_QVGA3 
 Device supports 320x240 resolution (QVGA3)
@@ -1703,7 +1703,7 @@ Device supports macrodia flash 6.
 /** #__MEDIA_TRANSFER_PROTOCOL 
 Device supports MTP application.
 */
-#undef __MEDIA_TRANSFER_PROTOCOL                          
+#define __MEDIA_TRANSFER_PROTOCOL                          
 
 /** #__MMS_POSTCARD 
 Flag is used ro incorporate Postcard application into the release.
@@ -1747,7 +1747,7 @@ is combined to some other hard key."
 /** #__OMA_POC 
 OMA Push-to-talk over Cellular.
 */
-#define __OMA_POC                                          
+#undef __OMA_POC                                          
 
 /** #__ON_SCREEN_DIALER 
 This flag indicates that the dialer.dll is included to the rom image and
@@ -1957,7 +1957,7 @@ Device supports configuring IMPS using SyncML.
 /** #__SYNCML_DM_OBEX 
 Device supports device management over OBEX.
 */
-#undef __SYNCML_DM_OBEX                                   
+#define __SYNCML_DM_OBEX                                   
 
 /** #__SYNCML_DM_OTA 
 SyncML DM OMA provisioning adapter.
