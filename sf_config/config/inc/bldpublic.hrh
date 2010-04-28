@@ -99,7 +99,7 @@ downloads in download manager server and its clients.
 Device uses capacitive touch technology in its display.
 
 */
-#undef FF_CAPACITIVE_DISPLAY                              
+#define FF_CAPACITIVE_DISPLAY                              
 
 /** #FF_CHINESE_FONTS_HIRES 
 This flag controls whether Chinese variants use TrueType fonts instead of the
@@ -168,7 +168,7 @@ their own contact group functionality we need a feature flag so that the variant
 can remove the platform group plugin component. This allow the component to be
 removed from the ROM image, thus making the ROM size smaller.
 */
-#undef FF_CONTACTS_GROUP_FUNCTIONALITY                    
+#define FF_CONTACTS_GROUP_FUNCTIONALITY                    
 
 /** #FF_CONTACTS_NICKNAME 
 The nickname functionality needs a feature flag for the following reasons:
@@ -209,7 +209,7 @@ DevDiagApp.exe. This would load all related plugins. The Diagnostics application
 offers self-test service on the Mobile Applications and hardware for the phone
 users.
 */
-#define FF_DEVICE_DIAGNOSTICS_APP                          
+#undef FF_DEVICE_DIAGNOSTICS_APP                          
 
 /** #FF_DM_INSTALL_SECURITY 
 OMA DM SW installer implementation included in build.
@@ -309,13 +309,13 @@ When enabled/defined flash can be used as Screensaver.
 /** #FF_FMTX 
 FMTX application and Nseries Music Player support for FMTX
 */
-#define FF_FMTX                                            
+#undef FF_FMTX                                            
 
 /** #FF_FULLSCR_HWR_INPUT 
 Indicates whether a device needs fullscreen HWR (HandWritingRecognition) input
 or not.
 */
-#define FF_FULLSCR_HWR_INPUT                               
+#undef FF_FULLSCR_HWR_INPUT                               
 
 /** #FF_GENERIC_FONTS_ASSETS 
 This flag is used to check if generic font assets are to be used, this is used
@@ -553,7 +553,7 @@ UI (viewer) is visible to Email application as Ecom plugin.
 
 If the flag is not defined, MR UI related components are not in ROM.
 */
-#define FF_MEETING_REQUEST_UI                              
+#undef FF_MEETING_REQUEST_UI                              
 
 /** #FF_MENU_TEXTURE_PRELOADING 
 In Menu (AppShell) application the performance of changing the folder has been
@@ -631,7 +631,7 @@ by switching the boolean flag defined/undefined.
 This feature enables OMA SCOMO feature in "application management component".
 
 */
-#undef FF_OMA_SCOMO_ADAPTER                               
+#define FF_OMA_SCOMO_ADAPTER                               
 
 /** #FF_OOM_MONITOR2_COMPONENT 
 Feature flag for controlling the inclusion of Out-of-Memory2 component into the
@@ -683,7 +683,7 @@ On enabling this feature flag pnpprovfilter.dll will be created and this feature
 flag is used to enable PNPProvisioning HTTP filter which by passes the download
 manager launching PNPMS provisioning engine.
 */
-#define FF_PNPMS_PROV_FILTER                               
+#undef FF_PNPMS_PROV_FILTER                               
 
 /** #FF_PNPMS_SERVICE_HELP_PLUGIN 
 This feature flag is required for launching PNPMS application from general
@@ -693,7 +693,7 @@ General Settings/Control Panel. Service Help will launch browser on selection
 and direct the browser with predefined PnPMS server URL where user can download
 provisioning settings over HTTP from web server.
 */
-#define FF_PNPMS_SERVICE_HELP_PLUGIN                       
+#undef FF_PNPMS_SERVICE_HELP_PLUGIN                       
 
 /** #FF_POWER_SAVE 
 "Power save mode is a collection of features which are put in a power saving
@@ -753,7 +753,7 @@ used if some special functionality is needed.
 The device has multidirectional "rocker" key.
 
 */
-#undef FF_ROCKER_KEY                                      
+#define FF_ROCKER_KEY                                      
 
 /** #FF_ROM_INCLUDE_ALF 
 This flags controls whether the UI Accelerator toolkit (ALF) is included in the
@@ -764,12 +764,12 @@ build.
 /** #FF_RUNTIME_DEVICE_CAPABILITY_CONFIGURATION 
 To enable the feature to variate the device capability on runtime
 */
-#undef FF_RUNTIME_DEVICE_CAPABILITY_CONFIGURATION         
+#define FF_RUNTIME_DEVICE_CAPABILITY_CONFIGURATION         
 
 /** #FF_S60_HELPS_IN_USE 
 Platform helps are included into image based on this flag.
 */
-#define FF_S60_HELPS_IN_USE                                
+#undef FF_S60_HELPS_IN_USE                                
 
 /** #FF_S60_POSTING_IMPLEMENTATION_IN_USE 
 Flag to enable/disable usage of S60 implementation of posting surface api.
@@ -814,7 +814,7 @@ success or failure of actions. Tacticons can be also automatically played
 together with some Sound IDs.
 
 */
-#undef FF_TACTICONS                                       
+#define FF_TACTICONS                                       
 
 /** #FF_TACTILE_FEEDBACK 
 Device supports Tactile Feedback. Tactile feedback is produced by UI components
@@ -827,7 +827,7 @@ and applications on pointer down events. Actual physical feedback effect
 This is the feature flag to allow branching of the code flow based on the
 capability check or SID check for the third party applications.
 */
-#undef FF_TARM_CAPABILITY_BASED_ACCESS                    
+#define FF_TARM_CAPABILITY_BASED_ACCESS                    
 
 /** #FF_TCP_MYFAVES_FEATURE 
 The feature flag is to turn ON/OFF MyFaves feature in a S60 3.2 complementary
@@ -883,7 +883,7 @@ Note. This flag replaces RD_USB_CHARGING in 5.0 release.
 /** #FF_USB_HOST 
 The flag excludes all S60 USB host and OTG related components. 
 */
-#undef FF_USB_HOST                                        
+#define FF_USB_HOST                                        
 
 /** #FF_USE_EGPRS_ICON 
 The flag is used to enable EGPRS icon in the status pane. If the flag is
@@ -900,7 +900,7 @@ C=Phone memory, E=Internal mass storage and F=Memory card.
 The flag affects how S60 components see the drives setup from estart
 txt-file(s).
 */
-#undef FF_USE_MASS_STORAGE_CONFIG                         
+#define FF_USE_MASS_STORAGE_CONFIG                         
 
 /** #FF_USE_ZI_ENGINE 
 On enabling this feature flag eZitext engine will be part of the Image and
@@ -991,7 +991,7 @@ service via Sniffer's Active Idle plugin.
 Device supports extended WLAN functionalities e.g. for association and
 authentication.
 */
-#undef FF_WLAN_EXTENSIONS                                 
+#define FF_WLAN_EXTENSIONS                                 
 
 /** #FF_WLAN_WAPI 
  WLAN Authentication and Privacy Infrastructure (WAPI) is a Chinese national
@@ -1012,7 +1012,7 @@ authentication and data link protection.
 This feature flag is used only for including WAPI binaries to ROM. WAPI
 functionality can be (run-time) enabled with FF_WLAN_WAPI.
 */
-#undef FF_WLAN_WAPI_INCLUDE_IN_ROM                        
+#define FF_WLAN_WAPI_INCLUDE_IN_ROM                        
 
 /** #FF_XML_IDLE_THEME_BASIC_IDLE 
 Controls if Basic idle theme is going to image or not.

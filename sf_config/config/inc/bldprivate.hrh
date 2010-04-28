@@ -2208,5 +2208,17 @@ showing it to user)."
 */ 
 #define __XSP_EXTENSION_MANAGER                             
 
+/** 
+ * block of Feature flags believed to be required for wk12 tb10.1 baseline
+ */ 
+#define FF_CONTACTS_MYCARD  
+#define FF_CONTACTS_REMOTE_LOOKUP  
+#define FF_CONTACTS_SOCIAL  
+#define FF_DEVICE_ENCRYPTION_FEATURE  
+#define FF_DM_BROWSER_ADAPTER  
+#define FF_DM_STREAMING_ADAPTER
+#define FF_TMS  
+
+
 
 #endif // __BLDPRIVATE_HRH
