@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2010 Symbian Foundation Ltd
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Symbian Foundation Ltd - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+PRJ_PLATFORMS
+ARMV5
+
+PRJ_EXPORTS
+../F32/F32.iby                                  /epoc32/rom/config/syborg/platform/F32/
+../QT46/qt.iby                                  /epoc32/rom/config/syborg/platform/QT46/
+../S60Macros.iby                                /epoc32/rom/config/syborg/platform/
+../baseport/Syborg_textshell.iby                /epoc32/rom/config/syborg/platform/baseport/
+../baseport/compsupp.iby                        /epoc32/rom/config/syborg/platform/baseport/
+../baseport/syborg_baseport.iby                 /epoc32/rom/config/syborg/platform/baseport/
+../commsframework/commsframework.iby            /epoc32/rom/config/syborg/platform/commsframework/
+../graphics/aa/bitgdi.iby                       /epoc32/rom/config/syborg/platform/graphics/aa/
+../graphics/aa/fbserv.iby                       /epoc32/rom/config/syborg/platform/graphics/aa/
+../graphics/aa/fntstore.iby                     /epoc32/rom/config/syborg/platform/graphics/aa/
+../graphics/aa/freetype.iby                     /epoc32/rom/config/syborg/platform/graphics/aa/
+../graphics/aa/gdi.iby                          /epoc32/rom/config/syborg/platform/graphics/aa/
+../graphics/aa/iculayoutengine.iby              /epoc32/rom/config/syborg/platform/graphics/aa/
+../graphics/aa/libvgi.iby                       /epoc32/rom/config/syborg/platform/graphics/aa/
+../graphics/aa/openvg.iby                       /epoc32/rom/config/syborg/platform/graphics/aa/
+../graphics/aa/palette.iby                      /epoc32/rom/config/syborg/platform/graphics/aa/
+../graphics/screendriver.iby                    /epoc32/rom/config/syborg/platform/graphics/
+../image_conf_Syborg.mk                         /epoc32/rom/config/syborg/platform/
+../image_conf_Syborg_tshell.mk                  /epoc32/rom/config/syborg/platform/
+../language/langpack_01/language_variant.mk     /epoc32/rom/config/syborg/platform/language/langpack_01/
+../mw/custom/AppInstUI.iby                      /epoc32/rom/config/syborg/platform/mw/custom/
+../romheader/header.iby                         /epoc32/rom/config/syborg/platform/
+../syborgMasterFullUI.oby                       /epoc32/rom/config/syborg/platform/
+../syborgMasterTextShell.oby                    /epoc32/rom/config/syborg/platform/
+../systemModel/S60Macros.iby                    /epoc32/rom/config/syborg/platform/systemModel/
+../systemModel/app.iby                          /epoc32/rom/config/syborg/platform/systemModel/
+../systemModel/mw.iby                           /epoc32/rom/config/syborg/platform/systemModel/
+../systemModel/os.iby                           /epoc32/rom/config/syborg/platform/systemModel/
+../systemstarter/SSCForStartupMode1.rss         /epoc32/rom/config/syborg/platform/systemstarter/
+../systemstarter/SSCForStartupMode1_target.rss  /epoc32/rom/config/syborg/platform/systemstarter/
+../systemstarter/initilizelocale_Variant.iby    /epoc32/rom/config/syborg/platform/systemstarter/
+../systemstarter/sysagent.iby                   /epoc32/rom/config/syborg/platform/systemstarter/
+../systemstarter/sysstart.iby                   /epoc32/rom/config/syborg/platform/systemstarter/
+../systemstarter/sysstartconfig.iby             /epoc32/rom/config/syborg/platform/systemstarter/
