@@ -193,6 +193,8 @@ base_drivers_camerasc,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_sensors,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_unistore2,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_unistore2_undeliverable,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+base_drivers_usbdescriptors,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+base_drivers_usbdi_utils,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_usbhostotg,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_usbhostotg_usbware,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_e32_compsupp,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
@@ -424,6 +426,7 @@ install_config,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 install_testframework,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 integtestltsy,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 integtestsmp,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+kernelhwsrv_doc_pub,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_admin,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_agpslocationmanager,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_agps_positioning_module,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T

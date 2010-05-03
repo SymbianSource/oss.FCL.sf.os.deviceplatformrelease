@@ -31,7 +31,6 @@
 #include <Techview.oby>
 #include <shma.iby>
 #include <opengles.iby>
-#include <authserver.iby>
 #include <openenv.iby>
 #include <streamingcaf.iby>
 #include <mtp_ptpip.iby>
@@ -44,7 +43,10 @@
 #include <sqlite3.iby>
 #include <amastart.iby>
 #include <openvg.iby>
+#ifdef SYMBIAN_AUTH_SERVER
+#include <authserver.iby>
 #include <pinplugin.iby>
+#endif //SYMBIAN_AUTH_SERVER
 #include <PlatSec.oby>
 
 patchdata ssmcmn.DLL @ KSsmGracefulShutdown 1

@@ -68,6 +68,8 @@ base_domain	\sf\os\kernelhwsrv\userlibandfileserver\domainmgr\group\base_domain.
 base_drivers_camerasc	\sf\os\kernelhwsrv\kernel\eka\drivers\camerasc\base_drivers_camerasc.mrp
 base_drivers_unistore2	\sf\os\kernelhwsrv\kernel\eka\drivers\unistore2\base_drivers_unistore2.mrp
 base_drivers_unistore2_undeliverable	\sf\os\kernelhwsrv\kernel\eka\drivers\unistore2\base_drivers_unistore2_undeliverable.mrp
+base_drivers_usbdescriptors	\sf\os\kernelhwsrv\kernel\eka\drivers\usbho\usbdescriptors\base_drivers_usbdescriptors.mrp
+base_drivers_usbdi_utils	\sf\os\kernelhwsrv\kernel\eka\drivers\usbho\usbdi_utils\base_drivers_usbdi_utils.mrp
 base_drivers_usbhostotg	\sf\os\kernelhwsrv\kernel\eka\drivers\usbho\base_drivers_usbhostotg.mrp
 base_drivers_usbhostotg_usbware	\sf\os\kernelhwsrv\kernel\eka\drivers\usbho\usbd\base_drivers_usbhostotg_usbware.mrp
 base_e32	\sf\os\kernelhwsrv\kernel\eka\base_e32.mrp
@@ -259,6 +261,7 @@ install_config	\sf\mw\appinstall\installationservices\swiconfig\group\install_co
 install_testframework	\sf\mw\appinstall\installationservices\switestfw\group\install_testframework.mrp
 ipappprotocols_metadata	\sf\mw\ipappprotocols\ipappprotocols_info\ipappprotocols_metadata\ipappprotocols_metadata.mrp
 ipappsrv_metadata	\sf\mw\ipappsrv\ipappsrv_info\ipappsrv_metadata\ipappsrv_metadata.mrp
+kernelhwsrv_doc_pub	\sf\os\kernelhwsrv\kernelhwsrv_info\doc_pub\kernelhwsrv_doc_pub.mrp
 kernelhwsrv_metadata	\sf\os\kernelhwsrv\kernelhwsrv_info\kernelhwsrv_metadata\kernelhwsrv_metadata.mrp
 lbs_admin	\sf\os\lbs\locationmgmt\locationcore\group\lbs_admin.mrp
 lbs_agps_positioning_module	\sf\os\lbs\datasourcemodules\gpspositioningmodule\group\lbs_agps_positioning_module.mrp

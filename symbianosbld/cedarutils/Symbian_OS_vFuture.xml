@@ -72,8 +72,8 @@
     <Execute Component="Remove Raptor src directory" Cwd="%BuildDir%" CommandLine="rd %SBS_SRC%\sbs /s /q"/>
 
     <!-- Combine system definitions -->
-    <Execute Component="Join Foundation System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\foundation_system\system_model\system_definition_v2.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.SF.xml"/>
-    <Execute Component="Join Nokia System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\nokia_system\nokia_model\system_definition_v2.xml -param path /os/deviceplatformrelease/nokia_system/nokia_model/system_definition_v2.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Nokia.xml"/>
+    <Execute Component="Join Foundation System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\foundation_system\system_model\system_definition.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.SF.xml"/>
+    <Execute Component="Join Nokia System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in %CleanSourceDir%\os\deviceplatformrelease\nokia_system\nokia_model\system_definition.xml -param path /os/deviceplatformrelease/nokia_system/nokia_model/system_definition.xml -xsl ..\sysdeftools\joinsysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Nokia.xml"/>
     <Execute Component="Merge System Definitions" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in variability\vp_data\templates\System_Definition_Template.SF.xml -param Downstream System_Definition_Template.Nokia.xml -xsl ..\sysdeftools\mergesysdef.xsl  -out variability\vp_data\templates\System_Definition_Template.Full.xml"/>
     <Execute Component="Create 2.0.1 format System Definition" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="java -jar %CleanSourceDir%\%SYSDEF_TOOLS%\xalan.jar -in variability\vp_data\templates\System_Definition_Template.Full.xml -xsl ..\sysdeftools\sysdefdowngrade.xsl -out variability\vp_data\templates\System_Definition_Template.xml"/>
     <Execute Component="Copy *intermediate* System Definition Files to Local Logs Dir" Cwd="%CleanSourceDir%\os\buildtools\bldsystemtools\buildsystemtools" CommandLine="copy variability\vp_data\templates\System_Definition*.xml %LogsDir%\"/>
@@ -217,7 +217,7 @@
     <!-- Setup BuildInfo.txt -->
     <Execute Component="BuildInfo" Cwd="%BuildDir%" CommandLine="echo DeviceFamily               100 >%EPOCROOT%epoc32\data\BuildInfo.txt"/>
     <Execute Component="BuildInfo" Cwd="%BuildDir%" CommandLine="echo DeviceFamilyRev            0x900 >>%EPOCROOT%epoc32\data\BuildInfo.txt"/>
-    <Execute Component="BuildInfo" Cwd="%BuildDir%" CommandLine="echo ManufacturerSoftwareBuild  %BuildNumber% >>%EPOCROOT%epoc32\data\BuildInfo.txt"/>
+    <Execute Component="BuildInfo" Cwd="%BuildDir%" CommandLine="echo ManufacturerSoftwareBuild  %SnapshotNumber%_%BuildShortName% >>%EPOCROOT%epoc32\data\BuildInfo.txt"/>
 
 	 
 
