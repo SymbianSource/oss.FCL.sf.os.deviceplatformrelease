@@ -2198,7 +2198,9 @@ Note that it is possible to create S60 image with Java functionality if Java
 binaries have been delivered to the licensee. More information is available in
 __JAVA flag definition."
 */
-#undef __JAVA_STUBS                                       
+// darios: __JAVA_STUBS must be enabled see bug 2616
+//#undef __JAVA_STUBS                                       
+#define __JAVA_STUBS                                       
 
 /** #__LAYOUT208_208 
 Device supports 208x208 resolution (square)
