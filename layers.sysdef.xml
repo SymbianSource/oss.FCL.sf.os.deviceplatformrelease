@@ -28,6 +28,9 @@
       <module name="helps_loc2">
         <unit unitID="platform.helps_loc2" mrp="" bldFile="&layer_real_source_path;/helps_loc2/group" name="helps_loc2" />
       </module>
+      <module name="CI_external">
+        <unit unitID="tools.CI_external" mrp="" bldFile="&layer_real_source_path;/foundation_system/sf_config/CI_external/group" name="CI_external" />
+      </module>
     </layer>
     
     <!-- from buildplatform, this is needed for winscw emulator -->
