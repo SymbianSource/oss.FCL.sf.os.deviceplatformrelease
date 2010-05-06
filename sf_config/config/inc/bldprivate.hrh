@@ -566,9 +566,7 @@ policies and procedures.
 
 This define supports PREQ1871. 
 */ 
-// darios: disabling as solution for bug 2620
-//#define SYMBIAN_SYSTEM_STATE_MANAGEMENT                     
-#undef SYMBIAN_SYSTEM_STATE_MANAGEMENT                     
+#define SYMBIAN_SYSTEM_STATE_MANAGEMENT                     
  
 /** #SYMBIAN_USE_DOS_SERVER_SERVICES  
 The DOS_SERVER_SERVICES should indicate that the DOS Server Services is present.
