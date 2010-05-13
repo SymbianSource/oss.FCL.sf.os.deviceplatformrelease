@@ -2,9 +2,9 @@
 # Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
 # All rights reserved.
 # This component and the accompanying materials are made available
-# under the terms of the License "Symbian Foundation License v1.0" to Symbian Foundation members and "Symbian Foundation End User License Agreement v1.0" to non-members
+# under the terms of the License "Symbian Foundation License v1.0"
 # which accompanies this distribution, and is available
-# at the URL "http://www.symbianfoundation.org/legal/licencesv10.html".
+# at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
 #
 # Initial Contributors:
 # Nokia Corporation - initial contribution.
@@ -59,7 +59,7 @@ COREPLAT_OPT = $(BLDROM_OPT) -D_EABI=$(ARM_VERSION)\
 NAME            = MySyborg
 CORE_NAME 	    = Syborg
 CORE_NDNAME     = Syborg.NDcore
-CORE_OBY        = $(E32ROM)/config/Syborg/platform/SyborgMasterFullUI.oby
+CORE_OBY        = $(E32ROM)/config/Syborg/platform/SyborgMinigui.oby
 
 CORE_UDEBFILE   = $(E32ROM)/config/Syborg/platform/mytraces.txt
 CORE_ROMFILE    = $(E32ROM)/config/Syborg/platform/romfiles.txt
@@ -68,8 +68,11 @@ CORE_OPT= $(COREPLAT_OPT) -es60ibymacros -DSECTION
 
 # Workaround to fix Rombuild errors:
 # "ERROR: incorrect format for time keyword..." and "The size of the ROM has not been supplied."
-CORE_OPT += --DROMMEGS=80 --DROMDATE=$(CORE_TIME)
+CORE_OPT += --DROMMEGS=80 --DROMDATE=$(CORE_TIME) -D__BT_LOGGER__  -nofm=\epoc32\rom\include\featuredatabase.xml
 
+//-nofm=Z:\epoc32\data\z\private\10205054\features.dat
+
+//-fm=\epoc32\rom\include\featuredatabase.xml
 
 # ROFS2
 # imaker -f /epoc32/rom/config/platform/product/image_conf_product.mk langpack_01

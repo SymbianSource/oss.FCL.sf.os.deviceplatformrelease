@@ -32,7 +32,8 @@ REM Symbian UI Images OS Kernel Level
 
 REM ##############################################################################
 
-#include "./romheader/header.iby"                         // EABI and DEBUG_DIR defines for Imaker
+#include "header.iby"                         // EABI and DEBUG_DIR defines for Imaker
+
 
 #include "./baseport/Syborg_baseport.iby"                 // Kernel and Baseport Drivers
 
@@ -44,25 +45,9 @@ REM Symbian UI Images OS Level
 
 REM ##############################################################################
 
-REM Including the OS Layer of the System Model
+REM Including the Minigui Content
 
-#include "./systemModel/os.iby"
+#include "minigui_syborg.iby"
 
-REM ##############################################################################
-
-REM Symbian UI Images MW Level
-
-REM ##############################################################################
-
-#include "./systemModel/mw.iby"
-
- 
-REM ##############################################################################
-
-REM Symbian UI Images App Level
-
-REM ############################################################################## 
-
-#include ".\systemModel\app.iby"
 
 #endif

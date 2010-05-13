@@ -102,6 +102,9 @@ file=			        ABI_DIR\DEBUG_DIR\ektran.dll				                      \sys\bin\E
 /* Hardware Platform Registers and Funcionality ( HW Registers, HW Timers, Mailboxes, etcr ) */
 variant[VARID]=		KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_KASYBORG.DLL	  \sys\bin\KASYBORG.DLL	// HW Resources 
 
+// Kernel pipe
+
+device[VARID]=    KERNEL_DIR\DEBUG_DIR\pipelib.ldd					    \sys\bin\pipelib.ldd
 
 /* Display Controller, LCD HW Interface, */
 //extension[VARID]=	KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_LCD.DLL		      \sys\bin\LCD.DLL 	// Frame Buffer for Syborg
