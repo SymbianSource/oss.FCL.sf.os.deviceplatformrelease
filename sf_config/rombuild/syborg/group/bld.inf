@@ -26,3 +26,4 @@ PRJ_EXPORTS
 ../mytraces.txt                                 /epoc32/rom/config/syborg/platform/
 ../S60Macros.iby                                /epoc32/rom/config/syborg/platform/
 ../SyborgMinigui.oby                            /epoc32/rom/config/syborg/platform/
+../header.iby                                   /epoc32/rom/config/syborg/platform/
