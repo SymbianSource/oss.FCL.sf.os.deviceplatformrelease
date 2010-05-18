@@ -34,3 +34,5 @@ PRJ_EXPORTS
 ../inc/bldcodeline.hrh                  /epoc32/include/bldcodeline.hrh
 ../inc/features.hrh                     /epoc32/include/features.hrh
 ../../s60_features.csv                  /epoc32/include/s60_features.csv
+
+symbian_os_romdefs.hby                 /epoc32/rom/include/symbian_os_romdefs.hby
