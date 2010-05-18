@@ -5,6 +5,7 @@
  * the system
  */
 
+#define FF_FMTX
 #define SYMBIAN_FLEXMM_ZERO_COPY_NETWORKING
 #define SYMBIAN_EXCLUDE_LIBXML2
 #define SYMBIAN_EXCLUDE_LIBXML2_SAX_CPARSER_PLUGIN
@@ -15,8 +16,8 @@
 #define USE_MSCDB
 #define SYMBIAN_EXCLUDE_LOCATION
 #define SYMBIAN_EXCLUDE_DNS_PROXY
-#define SYMBIAN_EXCLUDE_MTP
-#define SYMBIAN_EXCLUDE_USB
+#undef __MTP_PROTOCOL_SUPPORT
+#undef __USB
 #define SSMA_MINIMAL_BOOT
 #include <34xx_sdp.oby>
 #include <Techview_ExcludeRemovable.oby>

@@ -54,6 +54,7 @@
     <!-- Dumping environment -->
     <Execute Component="Dumping all environment variables" Cwd="%BuildDir%" CommandLine="SET"/>
  
+	<Execute Component="Make Temp Dir" Cwd="%BuildDir%" CommandLine="mkdir D:\Builds\Temp"/>
      <!-- Get source code from TCL -->
     <Execute Component="Delta sync TCL sources" Cwd="%CleanSourceDir%" CommandLine="perl %CleanSourceDir%\os\buildtools\bldsystemtools\commonbldutils\perforce\P4GetSource.pl -f -s %CleanSourceDir%\os\deviceplatformrelease\symbianosbld\cedarutils\tcl_in_mcl_sf_clientspec.txt -d %TCLDeltaCache% -p tcl -t for_mcl -c  %ChangelistNumber%"/>
 	
@@ -495,7 +496,10 @@
     <!--Stop Performance Monitoring -->
     <Execute Component="Stop PerfMon" Cwd="%SourceDir%\os\buildtools\bldsystemtools\commonbldutils\PerfMon" CommandLine="perl PerfMonControlStop.pl -p 1973"/>
     <Execute Component="Publish PerfMon Log" Cwd="%LogsDir%" CommandLine="xcopy PerfMon_%BuildNumber%.csv %PublishLocation%\%Type%\%BuildNumber%\logs\ /Z /I /Q"/>
-
+	
+	<!-- Remove CBR Temp Dir -->
+	<Execute Component="Delete Temp Folder" Cwd="%BuildDir%" CommandLine="rmdir D:\Builds\Temp /s /q"/>
+	
     <!--Publish the Full Logs Dir -->
     <Execute Component="Publish Full Logs Dir" Cwd="%BuildDir%" CommandLine="xcopy %LogsDir% %PublishLocation%\%Type%\logs\%BuildNumber% /E /Z /I /Q"/>
 

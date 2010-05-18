@@ -468,6 +468,7 @@ nokia_usb_metadata	\sf\os\usb\usb_info\nokia_usb_metadata\nokia_usb_metadata.mrp
 obex	\sf\mw\remoteconn\obex\obexprotocol\group\obex.mrp
 obex_extensionapis	\sf\mw\remoteconn\obex\obexextensionapi\group\obex_extensionapis.mrp
 oeaddons_liboil	\sf\os\ossrv\genericopenlibs\liboil\group\oeaddons_liboil.mrp
+oeaddons_libpam	\sf\os\ossrv\genericopenlibs\pluggableauthenticationmodulefw\group\oeaddons_libpam.mrp
 oeaddons_librt	\sf\os\ossrv\genericopenlibs\posixrealtimeextensions\group\oeaddons_librt.mrp
 oetools_telnetd	\sf\mw\appsupport\openenvutils\telnetserver\group\oetools_telnetd.mrp
 oetools_zsh	\sf\mw\appsupport\openenvutils\commandshell\group\oetools_zsh.mrp
@@ -498,6 +499,7 @@ security_documentation	\sf\os\security\cryptomgmtlibs\securitydocs\security_docu
 security_filetokens	\sf\os\security\cryptoservices\filebasedcertificateandkeystores\group\security_filetokens.mrp
 security_makekeys	\sf\mw\appinstall\secureswitools\makekeys\group\security_makekeys.mrp
 security_metadata	\sf\os\security\security_info\security_metadata\security_metadata.mrp
+security_mtputils	\sf\os\security\contentmgmt\mtputils\group\security_mtputils.mrp
 security_openssl	\sf\mw\appinstall\secureswitools\openssllib\security_openssl.mrp
 security_reccafconfig	\sf\os\security\contentmgmt\cafrecogniserconfig\security_reccafconfig.mrp
 security_referenceapplicationmanager	\sf\mw\appinstall\installationservices\refsoftwareappmgr\group\security_referenceapplicationmanager.mrp

@@ -2398,3 +2398,15 @@ This #define supports PREQ1440
 */
 #define SYMBIAN_E32_ATOMIC_API
 
+/**
+	@publishedAll
+
+	FF_EGL_SUPPORT_ENDPOINT_MMP
+	
+	EglEndPoint is an EGL Extension that allows an EGL application to get the current FrontBuffer 
+	on a stream of images (such as a video stream or the WindowSurface of an application). 
+	This supports advanced application transition effects
+	
+*/
+#define FF_EGL_SUPPORT_ENDPOINT_MMP
+
