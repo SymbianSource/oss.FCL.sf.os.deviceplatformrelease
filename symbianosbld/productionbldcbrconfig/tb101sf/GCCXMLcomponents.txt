@@ -211,7 +211,6 @@ graphics_graphicsresourceadapter	\sf\os\graphics\graphicsresourceservices\graphi
 graphics_graphicsresourceimplementation	\sf\os\graphics\graphicsresourceservices\graphicsresourceimplementation\group\graphics_graphicsresourceimplementation.mrp
 graphics_graphicsresourceinterface	\sf\os\graphics\graphicsresourceservices\graphicsresourceinterface\group\graphics_graphicsresourceinterface.mrp
 graphics_iculayoutengine	\sf\os\textandloc\fontservices\textshaperplugin\group\graphics_iculayoutengine.mrp
-graphics_itype	\sf\os\graphics\fbs\itypefontrasteriser\group\graphics_itype.mrp
 graphics_metadata	\sf\os\graphics\graphics_info\graphics_metadata\graphics_metadata.mrp
 graphics_opengles	\sf\os\graphics\opengles\openglesimplementation\group\graphics_opengles.mrp
 graphics_openglesdisplayproperty	\sf\os\graphics\opengles\openglesdisplayproperties\group\graphics_openglesdisplayproperty.mrp
@@ -247,6 +246,7 @@ kernelhwsrv_metadata	\sf\os\kernelhwsrv\kernelhwsrv_info\kernelhwsrv_metadata\ke
 lbs_admin	\sf\os\lbs\locationmgmt\locationcore\group\lbs_admin.mrp
 lbs_agps_positioning_module	\sf\os\lbs\datasourcemodules\gpspositioningmodule\group\lbs_agps_positioning_module.mrp
 lbs_agpslocationmanager	\sf\os\lbs\locationmgmt\agpslocationmgr\group\lbs_agpslocationmanager.mrp
+lbs_ape_supl_positioning_module	\sf\os\lbs\datasourcemodules\locationapesuplpsy\group\lbs_ape_supl_positioning_module.mrp
 lbs_bt_positioning_module	\sf\os\lbs\datasourcemodules\bluetoothgpspositioningmodule\group\lbs_bt_positioning_module.mrp
 lbs_datasourceplugins	\sf\os\lbs\datasourcemodules\agpsintegrationmodule\group\lbs_datasourceplugins.mrp
 lbs_default_positioning_module	\sf\os\lbs\datasourcemodules\defaultpositioningmodule\group\lbs_default_positioning_module.mrp
@@ -568,6 +568,11 @@ testtools_testdriver	\sf\os\buildtools\toolsandutils\testdriver\Group\testtools_
 testtools_ucc	\sf\os\buildtools\toolsandutils\usecasecontroller\BuildScripts\group\testtools_ucc.mrp
 testtools_utilities	\sf\os\persistentdata\loggingservices\rfilelogger\group\testtools_utilities.mrp
 textandloc_metadata	\sf\os\textandloc\textandloc_info\textandloc_metadata\textandloc_metadata.mrp
+tls_inlinetext	\sf\os\textandloc\textandlocutils\inlinetext\group\tls_inlinetext.mrp
+tls_itype	\sf\os\textandloc\fontservices\ityperaster\group\tls_itype.mrp
+tls_jplangutil	\sf\os\textandloc\textandlocutils\jplangutil\group\tls_jplangutil.mrp
+tls_numbergrouping	\sf\os\textandloc\textandlocutils\numbergrouping\group\tls_numbergrouping.mrp
+tls_sortutil	\sf\os\textandloc\textandlocutils\sortutil\group\tls_sortutil.mrp
 tools_autotest	\sf\os\buildtools\toolsandutils\autotest\group\tools_autotest.mrp
 tools_build	\sf\os\buildtools\bldsystemtools\buildsystemtools\group\tools_build.mrp
 tools_cbr_tools	\sf\os\buildtools\toolsandutils\cbrtools\group\tools_cbr_tools.mrp
