@@ -2186,7 +2186,7 @@ Device supports WAP Wireless Identification Module (WIM).
 Device supports Windows Media. In other words it indicates whether WM-related
 components such as ASF-parser and codecs are in place. 
 */ 
-#define _WINDOWS_MEDIA
+#define __WINDOWS_MEDIA
 
 
 /** #__WINDOWS_MEDIA_DRM  
