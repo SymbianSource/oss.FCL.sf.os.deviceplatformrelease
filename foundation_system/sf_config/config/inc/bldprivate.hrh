@@ -198,7 +198,7 @@ APIs for monitoring free disk space.
 @see SysUtil::DiskSpaceBelowCriticalLevelL
  
 */ 
-#undef SYMBIAN_BAFL_SYSUTIL                                
+#define SYMBIAN_BAFL_SYSUTIL                                
  
 /** #SYMBIAN_DOS_SERVER_SERVICES  
 Indicate that the DOS Server Services is present. This is needed to turn the RF
@@ -220,18 +220,18 @@ Introduced by PREQ1684 Simple DNS proxy
 This flag can be used to exclude Symbian's d_exc.exe from rom image when
 Symbian's base.iby is included 
 */ 
-#undef SYMBIAN_EXCLUDE_D_EXC                               
+#define SYMBIAN_EXCLUDE_D_EXC                               
  
 /** #SYMBIAN_EXCLUDE_ECAM_STUBPLUGIN  
 This flag is used to exclude Symbian Camera API stub 
 */ 
-#undef SYMBIAN_EXCLUDE_ECAM_STUBPLUGIN                     
+#define SYMBIAN_EXCLUDE_ECAM_STUBPLUGIN                     
  
 /** #SYMBIAN_EXCLUDE_KEYMAP  
 This flag can be used to include/exclude Symbian's KEYMAP_FILE (EKData.dll) from
 rom image if base.iby is included 
 */ 
-#undef SYMBIAN_EXCLUDE_KEYMAP                              
+#define SYMBIAN_EXCLUDE_KEYMAP                              
  
 /** #SYMBIAN_EXCLUDE_LOCATION_MANAGEMENT  
 The macro SYMBIAN_EXCLUDE_LOCATION_MANAGEMENT is used to exclude the location
@@ -250,13 +250,13 @@ that flag it can be excluded from usbhostmsmm.iby.
 Related with PREQ1305
  
 */ 
-#undef SYMBIAN_EXCLUDE_MSMM_POLICY_PLUGIN                  
+#define SYMBIAN_EXCLUDE_MSMM_POLICY_PLUGIN                  
  
 /** #SYMBIAN_EXCLUDE_SCDV  
 This flag can be used to exclude Symbian ScDv.dll from rom image when Symbian's
 base.iby is included 
 */ 
-#undef SYMBIAN_EXCLUDE_SCDV                                
+#define SYMBIAN_EXCLUDE_SCDV                                
  
 /** #SYMBIAN_EXCLUDE_SIP  
 Excludes Symbian SIP components.  
@@ -266,7 +266,7 @@ Excludes Symbian SIP components.
 /** #SYMBIAN_GRAPHICS_ADAPTATION  
 This flag is used to take right graphics adaptation components to the ROM build 
 */ 
-#define SYMBIAN_GRAPHICS_ADAPTATION                        None 
+#define SYMBIAN_GRAPHICS_ADAPTATION                        SGA_SW 
  
 /** #SYMBIAN_GRAPHICS_USE_GCE  
 Includes the Symbian the Surface Manager and Graphics Composition Engine on ROM
@@ -413,14 +413,14 @@ ROM image.Default value should be "Defined".
 /** #SYMBIAN_INCLUDE_USB_OTG_HOST  
 Feature USB Host (and related OTG) binaries are included into romimage 
 */ 
-#undef SYMBIAN_INCLUDE_USB_OTG_HOST                        
+#define SYMBIAN_INCLUDE_USB_OTG_HOST                        
  
 /** #SYMBIAN_INCLUDE_USB_RNDIS  
  plugin, RNDIS agent and IP stack packet driver in the ROM. 
 Introduced by PREQ1872.
  
 */ 
-#undef SYMBIAN_INCLUDE_USB_RNDIS                           
+#define SYMBIAN_INCLUDE_USB_RNDIS                           
  
 /** #SYMBIAN_MULTIMEDIA_A3FDEVSOUND  
 This definition is used in symbian A3F build files.
@@ -442,7 +442,7 @@ the amount of pages should be increased in order to preserve good system
 performance and memory consumption balance. Increasing the value increases the
 memory consumption. 
 */ 
-#define SYMBIAN_ODP_NUMBER_OF_MAX_LIVE_PAGES               4096 
+#define SYMBIAN_ODP_NUMBER_OF_MAX_LIVE_PAGES               65536 
  
 /** #SYMBIAN_ODP_NUMBER_OF_MIN_LIVE_PAGES  
 Defines the minimum number of 4k live pages available in the system for code
@@ -451,7 +451,7 @@ the amount of pages should be increased in order to preserve good system
 performance and memory consumption balance. Increasing the value decreases the
 amount of free memory after start up. 
 */ 
-#define SYMBIAN_ODP_NUMBER_OF_MIN_LIVE_PAGES               0 
+#define SYMBIAN_ODP_NUMBER_OF_MIN_LIVE_PAGES               1024 
  
 /** #SYMBIAN_SYSTEM_STATE_MANAGEMENT  
 If SYMBIAN_SYSTEM_STATE_MANAGEMENT is defined, this will enable 
@@ -463,14 +463,14 @@ policies and procedures.
 
 This define supports PREQ1871. 
 */ 
-#undef SYMBIAN_SYSTEM_STATE_MANAGEMENT                     
+#define SYMBIAN_SYSTEM_STATE_MANAGEMENT                     
  
 /** #SYMBIAN_USE_DOS_SERVER_SERVICES  
 The DOS_SERVER_SERVICES should indicate that the DOS Server Services is present.
 This is needed to turn the RF on in an emergency call when the phone is in
 flight mode. 
 */ 
-#define SYMBIAN_USE_DOS_SERVER_SERVICES                     
+#undef SYMBIAN_USE_DOS_SERVER_SERVICES                     
  
 /** #SYMBIAN_USE_HCI_V2  
 Defines if HCIv2 (bluetooth v2.0) is used in image or not. 
@@ -482,7 +482,7 @@ The macro NOKIA_FEATURE_MANAGER should indicate that the Nokia version of the
 Feature Manager is present. The Feature Manager was part of the CoreOS, and
 there is a Symbian version of it in 9.5. 
 */ 
-#define SYMBIAN_USE_NOKIA_FEATURE_MANAGER                   
+#undef SYMBIAN_USE_NOKIA_FEATURE_MANAGER                   
  
 /** #USE_MSCDB  
 Enable usage of mass storage double buffering. 
@@ -1346,7 +1346,7 @@ This feature activates the Exchange Active Sync UI.
 /** #__MP3  
 Device supports MP3 audio codec. 
 */ 
-#undef __MP3                                               
+#define __MP3                                               
  
 /** #__MROUTER  
 Device uses Symbian MRrouter technology for PC connectivity.  If this feature is
@@ -1681,9 +1681,9 @@ proactive commands or envelope command responses."
 #define __SAT_LANGUAGE_NOTIFICATION                         
  
 /** #__SAT_LAUNCH_BROWSER  
-"If this flag is enabled, upon receiving SAT Launch Browser command, the ME
+When this flag is enabled, upon receiving SAT Launch Browser command, the ME
 shall decide if it is able to execute the command. See details from 3GPP
-specifications." 
+specifications. 
 */ 
 #define __SAT_LAUNCH_BROWSER                                
  
@@ -2090,7 +2090,7 @@ external subsystems.
 Defines whether transition effects are used in UI. Also controls whether the
 effect engine is included in ROM or not. 
 */ 
-#undef __UI_TRANSITION_EFFECTS                             
+#define __UI_TRANSITION_EFFECTS                             
  
 /** #__UI_ZOOM  
 This feature activates the zooming support in Series 60 UI. 
@@ -2130,7 +2130,7 @@ Includes and excludes UI components used in PictBridge printing
 /** #__USB_PTP  
 Includes and excludes PTP (Picture Transfer Protocol) components. 
 */ 
-#define __USB_PTP                                           
+#undef __USB_PTP                                           
  
 /** #__USB_REMOTE_PERSONALITY  
 Includes and excludes S60 USB Remote Personality component. 
@@ -2186,8 +2186,9 @@ Device supports WAP Wireless Identification Module (WIM).
 Device supports Windows Media. In other words it indicates whether WM-related
 components such as ASF-parser and codecs are in place. 
 */ 
-#undef __WINDOWS_MEDIA                                     
- 
+#define __WINDOWS_MEDIA
+
+
 /** #__WINDOWS_MEDIA_DRM  
 Device supports Windows Media DRM. In other words it indicates whether WMDRM
 related components such as WMDRM MTP plugin and WMDRM PK are in place. 
@@ -2206,6 +2207,18 @@ Sorting of xSP tabs, Accessing certain xSP view from external application and
 showing it to user)." 
 */ 
 #define __XSP_EXTENSION_MANAGER                             
- 
 
-#endif // __BLDPRIVATE_HRH 
+/** 
+ * block of Feature flags believed to be required for wk12 tb10.1 baseline
+ */ 
+#define FF_CONTACTS_MYCARD  
+#define FF_CONTACTS_REMOTE_LOOKUP  
+#define FF_CONTACTS_SOCIAL  
+#define FF_DEVICE_ENCRYPTION_FEATURE  
+#define FF_DM_BROWSER_ADAPTER  
+#define FF_DM_STREAMING_ADAPTER
+#define FF_TMS  
+
+
+
+#endif // __BLDPRIVATE_HRH
