@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration name="CustomisationInterface__root_confml" xmlns="http://www.s60.com/xml/confml/2" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xi:include href="confml/CI_bteng.confml"/>
+	<xi:include href="confml/CIA_bteng.confml"/>
+	<xi:include href="confml/CI_javainstaller.confml"/>
+	<xi:include href="confml/CI_javasecurity.confml"/>
 </configuration>
