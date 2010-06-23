@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2010 Symbian Foundation Ltd
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Symbian Foundation Ltd - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+PRJ_PLATFORMS
+ARMV5
+
+PRJ_EXPORTS
+../bigrom.oby                 		/epoc32/rom/config/sf_refhw/
+../image_conf_sf_refhw.mk        	/epoc32/rom/config/sf_refhw/
+../S60Macros.iby        			/epoc32/rom/include/
+../mytraces.txt        				/epoc32/rombuild/
+
+
+../zoom2/image_conf_zoom2.mk        /epoc32/rom/config/sf_refhw/zoom2/
+
+../syborg/image_conf_syborg.mk      /epoc32/rom/config/sf_refhw/syborg/
+
+../beagle/image_conf_beagle.mk      /epoc32/rom/config/sf_refhw/beagle/
