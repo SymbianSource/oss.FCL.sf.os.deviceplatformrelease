@@ -25,5 +25,8 @@
 		<append name="CPP_LANG_OPTION" value="-fpermissive"/>   <!-- downgrade "extra qualification XXX on member YYY" errors to warnings -->
 		<append name="CPP_LANG_OPTION" value="-Wno-invalid-offsetof"/>		<!-- turn off "perhaps the 'offsetof' macro was used incorrectly" -->
 		<append name="CC_WARNINGS_CONTROL_OPTION" value="-Wno-attributes"/>		<!-- turn off warnings where IMPORT_C and EXPORT_C are *correctly* matched -->
+
+		<set name="USER_STATIC_RUNTIME_LIB" value="usrt4_0.lib"/>        <!-- use the RVCT 4.0 version of the runtime support -->
+		<set name="KERNEL_STATIC_RUNTIME_LIB" value="ksrt4_0.lib"/>      <!-- use the RVCT 4.0 version of the runtime support -->
 	</var>
 </build>
