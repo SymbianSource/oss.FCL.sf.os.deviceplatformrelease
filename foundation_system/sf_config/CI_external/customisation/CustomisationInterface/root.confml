@@ -4,4 +4,14 @@
 	<xi:include href="confml/CIA_bteng.confml"/>
 	<xi:include href="confml/CI_javainstaller.confml"/>
 	<xi:include href="confml/CI_javasecurity.confml"/>
+	<xi:include href="confml/CI_startup.confml"/>
+	<xi:include href="confml/CIA_StartupSequence.confml"/>
+	<xi:include href="confml/CIA_ShutdownSequence.confml"/>
+	<xi:include href="confml/CI_clockapp.confml"/>
+	<xi:include href="confml/CI_numbergrouping.confml"/>
+	<xi:include href="confml/CI_pdpcontextmanager2.confml"/>
+	<xi:include href="confml/CI_commsdatcreator.confml"/>
+	<xi:include href="confml/CI_camerax.confml"/>	
+	<xi:include href="confml/CI_emailwizard.confml"/>
+	<xi:include href="confml/CI_suplsettings_productconfig.confml"/>		
 </configuration>
