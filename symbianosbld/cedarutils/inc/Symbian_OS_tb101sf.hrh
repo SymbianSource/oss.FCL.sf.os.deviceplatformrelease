@@ -2154,3 +2154,16 @@ This #define supports PREQ2669.
 */
 #define SYMBIAN_E32_ATOMIC_API
 
+/** 
+	@publishedPartner
+	@released
+	
+	SYMBIAN_ADAPTIVE_TCP_RECEIVE_WINDOW
+	
+	If SYMBIAN_ADAPTIVE_TCP_RECEIVE_WINDOW is defined, TCP protocol will set the Receive window size according to the underlying bearer (ex. GPRS, WiFi, etc)
+	and the window size will change as the bearer changes or the modulation of the bearer changes.
+	#define supports PREQ1854.
+	
+*/
+#define SYMBIAN_ADAPTIVE_TCP_RECEIVE_WINDOW
+

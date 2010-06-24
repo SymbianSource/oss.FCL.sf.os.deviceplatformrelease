@@ -280,7 +280,7 @@
     <Execute Component="Copy Makefile_*tool* and logs to Local Logs Dir" Cwd="%BuildDir%" CommandLine="copy %EPOCROOT%epoc32\build\Makefile_*tool* %LogsDir%\"/>
 <!-- Will want to scan and publish these logs too -->
     <!-- Compile GT using SBSv2 -->
-    <Execute Component="GT Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog -t 3 -j %MAX_CONCURRENT% -k -f %LogsDir%\sbs_GT_log.xml.log  -m %EPOCROOT%epoc32\build\Makefile_GT -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c default.savespace.vtb101sf.whatlog -c armv5.smp.savespace.vtb101sf.whatlog.tracecompiler -i > %LogsDir%\GT2.log 2>&amp;1"/>
+    <Execute Component="GT Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog -t 3 -j %MAX_CONCURRENT% -k -f %LogsDir%\sbs_GT_log.xml.log  -m %EPOCROOT%epoc32\build\Makefile_GT -s %EPOCROOT%epoc32\data\system_definition_GT.xml -c default.savespace.vtb101sf.whatlog.tracecompiler -c armv5.smp.savespace.vtb101sf.whatlog.tracecompiler -i > %LogsDir%\GT2.log 2>&amp;1"/>
     <Execute Component="Copy Makefile_GT and log to Local Logs Dir" Cwd="%BuildDir%" CommandLine="copy %EPOCROOT%epoc32\build\Makefile_GT* %LogsDir%\"/>
 
     <!--Post GT Build Stuff -->

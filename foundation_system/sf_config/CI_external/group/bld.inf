@@ -22,6 +22,16 @@ DEFAULT
 PRJ_EXPORTS
 
 
+..\customisation\Common\root.confml \epoc32\rom\config\customisation\Common\root.confml
+..\customisation\CustomisationInterface\root.confml \epoc32\rom\config\customisation\CustomisationInterface\root.confml
+..\customisation\CustomisationInterface\confml\CIA_bteng.confml \epoc32\rom\config\customisation\CustomisationInterface\confml\CIA_bteng.confml
+..\customisation\CustomisationInterface\confml\CI_bteng.confml \epoc32\rom\config\customisation\CustomisationInterface\confml\CI_bteng.confml
+..\customisation\CustomisationInterface\confml\CI_javainstaller.confml \epoc32\rom\config\customisation\CustomisationInterface\confml\CI_javainstaller.confml
+..\customisation\CustomisationInterface\confml\CI_javasecurity.confml \epoc32\rom\config\customisation\CustomisationInterface\confml\CI_javasecurity.confml
+..\customisation\CustomisationInterface\confml\CI_startup.confml \epoc32\rom\config\customisation\CustomisationInterface\confml\CI_startup.confml
+..\customisation\Views\Features\root.confml \epoc32\rom\config\customisation\Views\Features\root.confml
+
+
 PRJ_MMPFILES
 
 PRJ_TESTMMPFILES
