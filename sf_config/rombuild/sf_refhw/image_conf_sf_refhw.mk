@@ -29,10 +29,14 @@ USE_VARIANTBLD = 0
 USE_VERGEN     = 1
 USE_ROFS       = 0
 
+
 # CORE
 # imaker -f /epoc32/rom/config/platform/product/image_conf_product.mk core
 #
-COREPLAT_OPT = $(BLDROM_OPT) -D_EABI=$(ARM_VERSION)\
+# added includes here to workaround IBYs including others as 'xxx.iby' when it should have been 'core/mw/xxx.iby' etc.
+
+COREPLAT_OPT = $(BLDROM_OPT) -D_EABI=$(ARM_VERSION) \
+  -I$(ITOOL_DIR)/../../rom/include/core/mw -I$(ITOOL_DIR)/../../rom/include/core/app \
   $(if $(PRODUCT_MSTNAME),-D$(call ucase,$(PRODUCT_MSTNAME))) -D$(call ucase,$(PRODUCT_NAME)) $(PRODUCT_OPT)
 
 CORE_OBYGEN =\
@@ -51,6 +55,6 @@ CORE_OPT = $(COREPLAT_OPT) -es60ibymacros -DSECTION
 
 # Workaround to fix Rombuild errors:
 # "ERROR: incorrect format for time keyword..." and "The size of the ROM has not been supplied."
-CORE_OPT += --DROMMEGS=80 --DROMDATE=$(CORE_TIME)
+CORE_OPT += --DROMMEGS=F8 --DROMDATE=$(CORE_TIME)
 
 
