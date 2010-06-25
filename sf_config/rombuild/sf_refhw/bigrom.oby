@@ -196,7 +196,7 @@
 define ROMDATE ##TODAY## // added for Syborg, Zoom2 includes this itself
 #define BTRACE_INCLUDED // this is already done by the Syborg includes
 #include <header.iby> // added for Syborg, Zoom2 includes this itself
-#include <base_syborg.iby> // added for Syborg, Zoom2 includes this itself
+#include <base_syborg_ui.iby> // added for Syborg, Zoom2 includes this itself
 #define USE_CUSTOM_MMC_PARTITION // stops emmcptn.dll being pulled in, which uses epbusm.dll
 #include <base.iby> // added for Syborg, Zoom2 includes this itself
 #undef SYMBIAN_EXCLUDE_MTP // Syborg is defining this again
