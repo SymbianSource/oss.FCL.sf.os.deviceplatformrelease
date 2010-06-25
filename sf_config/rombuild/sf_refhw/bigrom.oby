@@ -274,7 +274,7 @@ data= \epoc32\rom\beagle\estart.txt \sys\data\estart.txt // ???
 //                                            which includes <btrace.iby>
 #include <alarmserver.iby>
 //                                            which includes <ssmsus.iby>
-#include <alfred.iby>
+// #include <alfred.iby> /* included by other components */
 #include <amastart.iby>
 #include <animation.iby>
 #include <aplp.iby>
