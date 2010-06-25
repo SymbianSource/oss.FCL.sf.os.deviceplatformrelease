@@ -717,7 +717,7 @@ data= \epoc32\rom\beagle\estart.txt \sys\data\estart.txt // ???
 #include <omxilcomp.iby>
 #include <omxilcompref.iby>
 #include <omxilcore.iby>
-#include <opengles.iby>
+//#include <opengles.iby>
 //                                            which includes <opengles_sw.iby>
 //#include <openwfc_ref.iby>
 //                                            which includes <openwfc_support.iby>
