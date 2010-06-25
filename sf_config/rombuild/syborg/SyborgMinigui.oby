@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __SYBORG_OBY__
+#define __SYBORG_OBY__
+
+
+define OBEYFILE Syborg
+define ROMDATE	##TODAY##
+
+                                                          
+#include <data_caging_paths_for_iby.hrh>                // Generic S60 Macro Definitions
+#include "S60Macros.iby"                                // Generic S60 Macro Definitions
+
+REM ##############################################################################
+
+REM Symbian UI Images OS Kernel Level
+
+REM ##############################################################################
+
+#include "header.iby"                         // EABI and DEBUG_DIR defines for Imaker
+
+
+#include "./baseport/Syborg_baseport.iby"                 // Kernel and Baseport Drivers
+
+#include "./F32/F32.iby"                                  // FileServer,File systems, Base Starter , Domain Manager	
+
+REM ##############################################################################
+
+REM Symbian UI Images OS Level
+
+REM ##############################################################################
+
+REM Including the Minigui Content
+
+#include "minigui_syborg.iby"
+
+
+#endif

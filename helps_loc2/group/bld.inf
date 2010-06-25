@@ -1,0 +1,102 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+* 
+* Contributors:
+* 
+* 
+* Description:
+* Export help related files.
+*
+*/
+
+#include <platform_paths.hrh>	
+  
+#include "../adobereader/help/group/bld.inf"
+#include "../appmngr2/help/group/bld.inf"
+#include "../audiothemes/help/group/bld.inf"
+#include "../blid/help/group/bld.inf"
+#include "../browserui/help/group/bld.inf"
+#include "../btui/help/group/bld.inf"
+#include "../calcsoft/help/group/bld.inf"
+#include "../calendarui/help/group/bld.inf"
+#include "../cameraapp/help/group/bld.inf"
+#include "../cbsui/help/group/bld.inf"
+#include "../certmanui/help/group/bld.inf"
+#include "../clock2/help/group/bld.inf"
+#include "../chinesedictionary/help/group/bld.inf"
+#include "../connectionmonitorui/help/group/bld.inf"
+#include "../converter/help/group/bld.inf"
+#include "../cscapplicationui/help/group/bld.inf"
+#include "../deviceencryption/help/group/bld.inf"
+#include "../drmsettingsplugin/help/group/bld.inf"
+#include "../emailhelp/help/group/bld.inf"
+#include "../equalizer/help/group/bld.inf"
+#include "../eventsui/help/group/bld.inf"
+#include "../fep/help/group/bld.inf"
+#include "../filemanager/help/group/bld.inf"
+#include "../fmtx/help/group/bld.inf"
+#include "../gssettingsuis/help/group/bld.inf"
+#include "../homemedia/help/group/bld.inf"
+#include "../hqtts/help/group/bld.inf"
+#include "../iaupdate/help/group/bld.inf"
+#include "../idlehomescreen/help/group/bld.inf"
+#include "../im/help/group/bld.inf"
+#include "../imageprintui/help/group/bld.inf"
+#include "../imageviewer/help/group/bld.inf"
+#include "../imum/help/group/bld.inf"
+#include "../java/help/group/bld.inf"
+#include "../landmarksui/help/group/bld.inf"
+#include "../locationsysui/help/group/bld.inf"
+#include "../logsui/help/group/bld.inf"
+#include "../matrixmenu/help/group/bld.inf"
+#include "../mce/help/group/bld.inf"
+#include "../mcsplugin/help/group/bld.inf"
+#include "../mmshui/help/group/bld.inf"
+#include "../mmsui/help/group/bld.inf"
+#include "../mobiledictionary/help/group/bld.inf"
+#include "../mpxmusicplayer/help/group/bld.inf"
+#include "../msgmedia/help/group/bld.inf"
+#include "../nfcapplication/help/group/bld.inf"
+#include "../notepad/help/group/bld.inf"
+#include "../omadmappui/help/group/bld.inf"
+#include "../omadsappui/help/group/bld.inf"
+#include "../omaprovisioning/help/group/bld.inf"
+#include "../operatormenu/help/group/bld.inf"
+#include "../ovisync/help/group/bld.inf"
+#include "../phonebook/help/group/bld.inf"
+#include "../phoneui/help/group/bld.inf"
+#include "../photossuite/help/group/bld.inf"
+#include "../postcard/help/group/bld.inf"
+#include "../presencesettingsui/help/group/bld.inf"
+#include "../profilesapplication/help/group/bld.inf"
+#include "../psln/help/group/bld.inf"
+#include "../pushmtm/help/group/bld.inf"
+#include "../quickoffice/help/group/bld.inf"
+#include "../radio/help/group/bld.inf"
+#include "../saplayer/help/group/bld.inf"
+#include "../satui/help/group/bld.inf"
+#include "../searchui/help/group/bld.inf"
+#include "../secmodui/help/group/bld.inf"
+#include "../smartmessaging/help/group/bld.inf"
+#include "../smsui/help/group/bld.inf"
+#include "../speeddial/help/group/bld.inf"
+#include "../svgtviewerplugin/help/group/bld.inf"
+#include "../switch5/help/group/bld.inf"
+#include "../unieditor/help/group/bld.inf"
+#include "../usbui/help/group/bld.inf"
+#include "../ussd/help/group/bld.inf"
+#include "../vcommand/help/group/bld.inf"
+#include "../videocenter/help/group/bld.inf"
+#include "../vmbx/help/group/bld.inf"
+#include "../voicerec/help/group/bld.inf"
+#include "../vpnclient/help/group/bld.inf"
+#include "../wlansniffer/help/group/bld.inf"
+#include "../xdmsettingsui/help/group/bld.inf"

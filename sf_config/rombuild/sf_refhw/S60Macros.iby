@@ -1,0 +1,114 @@
+/*
+* ============================================================================
+*  Name     : S60Macros.iby
+*  Part of  : ROM Build Process
+*
+*  Description:
+*  Build ROM Information
+*
+*  Version:
+*
+*  Copyright (C) 2002 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation. All rights are reserved. Copying, 
+*  including reproducing, storing,  adapting or translating, any 
+*  or all of this material requires the prior written consent of 
+*  Nokia Corporation. This material also contains confidential 
+*  information which may not be disclosed to others without the 
+*  prior written consent of Nokia Corporation.
+*
+* ============================================================================
+*/
+
+#ifndef __S60MACROS_IBY__
+#define __S60MACROS_IBY__
+
+// Scalable image
+#ifdef RD_SCALABLE_UI
+ #define SCALABLE_IMAGE(path,target,name) __SCALABLE_IMAGE(DATAZ_,path,target,name)
+#else
+ #define SCALABLE_IMAGE(path,target,name) AUTO-BITMAP=DATAZ_\ ## path ## \ ## name ## .mbm  target ## \ ## name ## .mbm
+#endif
+
+
+
+// App files
+#ifndef RD_APPS_TO_EXES
+ #define S60_APP_EXE(NAME) file=ABI_DIR\BUILD_DIR\ ## NAME ## .app                   System\Apps\ ## NAME ## \ ## NAME ## .app
+ #define S60_APP_EXE_UDEB(NAME) file=ABI_DIR\UDEB\ ## NAME ## .app                   System\Apps\ ## NAME ## \ ## NAME ## .app
+#else // RD_APPS_TO_EXES
+ #define S60_APP_EXE(NAME) file=ABI_DIR\BUILD_DIR\ ## NAME ## .exe                   PROGRAMS_DIR\ ## NAME ## .exe
+ #define S60_APP_EXE_UDEB(NAME) file=ABI_DIR\UDEB\ ## NAME ## .exe                   PROGRAMS_DIR\ ## NAME ## .exe
+#endif // RD_APPS_TO_EXES
+
+
+
+// App bitmap
+#ifdef RD_APPS_TO_EXES
+ #ifdef RD_SCALABLE_UI
+  #define S60_APP_BITMAP(NAME) __SCALABLE_IMAGE(DATAZ_,APP_BITMAP_DIR,APP_BITMAP_DIR, ## NAME ## )
+  #define S60_APP_BITMAP2(DIR,NAME) __SCALABLE_IMAGE(DATAZ_,APP_BITMAP_DIR,APP_BITMAP_DIR, ## NAME ## )
+ #else // RD_SCALABLE_UI
+  #define S60_APP_BITMAP(NAME) AUTO-BITMAP=DATAZ_\APP_BITMAP_DIR\ ## NAME ## .mbm APP_BITMAP_DIR\ ## NAME ## .mbm
+  #define S60_APP_BITMAP2(DIR,NAME) AUTO-BITMAP=DATAZ_\APP_BITMAP_DIR\ ## NAME ## .mbm APP_BITMAP_DIR\ ## NAME ## .mbm
+ #endif // RD_SCALABLE_UI
+#else // RD_APPS_TO_EXES
+ #ifdef RD_SCALABLE_UI
+  #define S60_APP_BITMAP(NAME) __SCALABLE_IMAGE(DATAZ_,System\Apps\ ## NAME ## ,System\Apps\ ## NAME ## , ## NAME ## )
+  #define S60_APP_BITMAP2(DIR,NAME) __SCALABLE_IMAGE(DATAZ_,System\Apps\ ## DIR ## ,System\Apps\ ## DIR ## , ## NAME ## )
+ #else // RD_SCALABLE_UI
+  #define S60_APP_BITMAP(NAME) AUTO-BITMAP=DATAZ_\System\Apps\ ## NAME ## \ ## NAME ## .mbm System\Apps\ ## NAME ## \ ## NAME ## .mbm
+  #define S60_APP_BITMAP2(DIR,NAME) AUTO-BITMAP=DATAZ_\System\Apps\ ## DIR ## \ ## NAME ## .mbm System\Apps\ ## DIR ## \ ## NAME ## .mbm
+ #endif // RD_SCALABLE_UI
+#endif // RD_APPS_TO_EXES
+
+
+
+// AIF icons/files
+#ifdef RD_SCALABLE_UI // New app framework used
+ #ifdef RD_APPS_TO_EXES
+  #ifdef __SCALABLE_ICONS
+   #define S60_APP_AIF_ICONS(NAME) data=DATAZ_\APP_BITMAP_DIR\ ## NAME ## _AIF.MIF    APP_BITMAP_DIR\ ## NAME ## _aif.mif
+  #else
+   #define S60_APP_AIF_ICONS(NAME) AUTO-BITMAP=DATAZ_\APP_BITMAP_DIR\ ## NAME ## _AIF.MBM       APP_BITMAP_DIR\ ## NAME ## _aif.mbm
+  #endif
+ #else // RD_APPS_TO_EXES
+  #ifdef __SCALABLE_ICONS
+   #define S60_APP_AIF_ICONS(NAME) data=ZSYSTEM\APPS\ ## NAME ## \ ## NAME ## _AIF.MIF       System\Apps\ ## NAME ## \ ## NAME ## _aif.mif
+  #else
+   #define S60_APP_AIF_ICONS(NAME) AUTO-BITMAP=ZSYSTEM\APPS\ ## NAME ## \ ## NAME ## _AIF.MBM       System\Apps\ ## NAME ## \ ## NAME ## _aif.mbm
+  #endif
+ #endif // RD_APPS_TO_EXES
+ #define S60_APP_AIF_RSC(NAME) data=DATAZ_\PRIVATE\10003A3F\APPS\ ## NAME ## _reg.rsc        Private\10003a3f\apps\ ## NAME ## _reg.rsc
+ #define S60_UPGRADABLE_APP_REG_RSC(NAME) data=DATAZ_\PRIVATE\10003A3F\APPS\ ## NAME ## _reg.rsc        Private\10003a3f\import\apps\ ## NAME ## _reg.rsc
+
+#else // RD_SCALABLE_UI Old app framework used
+ #define S60_APP_AIF_ICONS(NAME) AIF=ZSYSTEM\APPS\ ## NAME ## \ ## NAME ## .AIF            System\Apps\ ## NAME ## \ ## NAME ## .aif
+ #define S60_APP_AIF_RSC(NAME)
+ #define S60_UPGRADABLE_APP_REG_RSC(NAME)
+#endif
+
+
+
+//Resource file(s)
+#ifdef RD_APPS_TO_EXES
+ #define S60_APP_RESOURCE(NAME)  data=DATAZ_\APP_RESOURCE_DIR\ ## NAME ## .RSC   APP_RESOURCE_DIR\ ## NAME ## .rsc
+ #define S60_APP_RESOURCE2(APPNAME,RESNAME) data=DATAZ_\APP_RESOURCE_DIR\ ## RESNAME ## .RSC   APP_RESOURCE_DIR\ ## RESNAME ## .rsc
+ #ifndef RD_SCALABLE_UI // Old app framework used
+  #define S60_APP_CAPTION(NAME)  data=DATAZ_\APP_RESOURCE_DIR\ ## NAME ## _CAPTION.RSC   APP_RESOURCE_DIR\ ## NAME ## _caption.rsc
+ #else
+  #define S60_APP_CAPTION(NAME)
+ #endif // RD_SCALABLE_UI
+#else // RD_APPS_TO_EXES
+ #define S60_APP_RESOURCE(NAME)  data=ZSYSTEM\APPS\ ## NAME ## \ ## NAME ## .RSC    System\Apps\ ## NAME ## \ ## NAME ## .rsc
+ #define S60_APP_RESOURCE2(APPNAME,RESNAME) data=ZSYSTEM\APPS\ ## APPNAME ## \ ## RESNAME ## .RSC    System\Apps\ ## APPNAME ## \ ## RESNAME ## .rsc
+ #ifndef RD_SCALABLE_UI // Old app framework used
+  #define S60_APP_CAPTION(NAME)  data=ZSYSTEM\APPS\ ## NAME ## \ ## NAME ## _CAPTION.RSC   System\Apps\ ## NAME ## \ ## NAME ## _caption.rsc
+ #else
+  #define S60_APP_CAPTION(NAME)
+ #endif // RD_SCALABLE_UI
+#endif // RD_APPS_TO_EXES
+
+
+#endif //__S60MACROS_IBY__
