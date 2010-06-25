@@ -21,6 +21,8 @@ PRJ_EXPORTS
 ../bigrom.oby                 		/epoc32/rom/config/sf_refhw/
 ../image_conf_sf_refhw.mk        	/epoc32/rom/config/sf_refhw/
 ../S60Macros.iby        			/epoc32/rom/include/
+../base_yborg_ui.iby        		/epoc32/rom/include/
+
 ../mytraces.txt        				/epoc32/rombuild/
 
 
