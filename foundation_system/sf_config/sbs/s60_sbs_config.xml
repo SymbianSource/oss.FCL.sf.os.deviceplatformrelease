@@ -23,7 +23,8 @@
 
 	<var name="surge">
 		<append name="CPP_LANG_OPTION" value="-fpermissive"/>   <!-- downgrade "extra qualification XXX on member YYY" errors to warnings -->
-		<append name="CPP_LANG_OPTION" value="-Wno-invalid-offsetof"/>		<!-- turn off "perhaps the 'offsetof' macro was used incorrectly" -->
+		<append name="CPP_LANG_OPTION" value="-Wno-invalid-offsetof"/>    <!-- turn off "perhaps the 'offsetof' macro was used incorrectly" -->
+		<append name="CPP_LANG_OPTION" value="-Wno-psabi"/>		            <!-- turn off " mangling of 'va_list' has changedin GCC 4.4" -->
 		<append name="CC_WARNINGS_CONTROL_OPTION" value="-Wno-attributes"/>		<!-- turn off warnings where IMPORT_C and EXPORT_C are *correctly* matched -->
 
 		<set name="AAPCS_OPTION" value="-mapcs-frame -mthumb-interwork"/>   <!-- use -mapcs-frame instead of -mapcs - see Bug 1405 -->
