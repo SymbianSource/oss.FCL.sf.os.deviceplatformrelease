@@ -59,12 +59,6 @@
 //#define __TAGCOLLECTIONPLUGIN_IBY__
 //#define __TAGSBROWSERVIEWPLUGIN_IBY__
 
-
-
-
-#define XMLUICONTROLLERRESOURCES_IBY // ai3xmlui already includes the only resource included by this file
-
-
 // these are defined in bldprivate.hrh
 #undef __LAYOUT_480_320_TOUCH
 #undef __LAYOUT_320_480_TOUCH
@@ -177,6 +171,10 @@
 //#undef USE_CUSTOM_MMC_PARTITION // stops base.iby pulling in emmcptn.dll, which is pulled in by base_zoom2.iby
 #ifdef ZOOM2
 #include <zoom2.oby>
+// default base.iby does not have a #ifdef added to include base_zoom2.iby
+// like so:
+// #elif defined(__MOMAP34XX_ZOOM2__)
+// #include <base_zoom2.iby>
 //                                            which includes <header.iby>
 //                                            which includes <symbian_os_romdefs.hby>
 //                                            which includes <feature.iby>
@@ -239,6 +237,14 @@ data= \epoc32\rom\beagle\estart.txt \sys\data\estart.txt // ???
 
 #undef FF_WLAN_WAPI_INCLUDE_IN_ROM // needed so that wapisecuritysettingsui.iby pulls in a wapuisecuritysettingsui.dll that we have in the build
 
+#define XMLUIRENDERINGRESOURCES_IBY // resolves xnuiengine.rsc clash
+#define XMLUICONTROLLERRESOURCES_IBY // ai3xmlui already includes the only resource included by this file
+#define __SERVICEWIDGET_20021383_RESOURCES_IBY__ // resolves servicewidget.o0000 clash
+#define __AVKON_RESOURCES_IBY__ // resolves smiley.rsc clash
+data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
+#define __DESKTOP_20026F4F_RESOURCES_IBY__ // resolves desktopconfiguration.dtd clash
+#define __EMAILWIDGET_RESOURCES_IBY__ // resolves emailwidgetconfiguration.dtd clash
+#define __MUSICWIDGET_10207c18_RESOURCES_IBY__ // resolves musicwidgetconfiguration.dtd clash
 
 
 /* The top-level includes */
