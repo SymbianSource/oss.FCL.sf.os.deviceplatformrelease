@@ -24,6 +24,8 @@ PRJ_EXPORTS
 ../S60CenRep_variant.iby       		/epoc32/rom/include/
 ../base_syborg_ui.iby        		/epoc32/rom/include/
 
+../wsini.ini		        		/epoc32/data/
+
 
 ../mytraces.txt        				/epoc32/rombuild/
 
