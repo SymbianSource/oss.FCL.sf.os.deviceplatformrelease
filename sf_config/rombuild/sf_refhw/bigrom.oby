@@ -36,7 +36,7 @@
 /* test */
 
 //#define AISATPLUGIN_IBY
-#define __NVGDECODER_IBY__ // we don't want the non_sw version
+//#define __NVGDECODER_IBY__ // we don't want the non_sw version
 
 //#define photossuiteSUITE_IBY
 
