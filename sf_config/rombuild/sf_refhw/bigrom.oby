@@ -171,6 +171,9 @@
 //#undef USE_CUSTOM_MMC_PARTITION // stops base.iby pulling in emmcptn.dll, which is pulled in by base_zoom2.iby
 #ifdef ZOOM2
 #include <zoom2.oby>
+#include <base_zoom2.iby>
+#include <header.iby>
+#include <base.iby>
 // default base.iby does not have a #ifdef added to include base_zoom2.iby
 // like so:
 // #elif defined(__MOMAP34XX_ZOOM2__)
