@@ -37,6 +37,9 @@
 
 //#define AISATPLUGIN_IBY
 //#define __NVGDECODER_IBY__ // we don't want the non_sw version
+#define __SFOPENVG_IBY__
+//#define EGL_REF_IBY
+
 
 //#define photossuiteSUITE_IBY
 
@@ -174,21 +177,6 @@
 #include <base_zoom2.iby>
 #include <header.iby>
 #include <base.iby>
-// default base.iby does not have a #ifdef added to include base_zoom2.iby
-// like so:
-// #elif defined(__MOMAP34XX_ZOOM2__)
-// #include <base_zoom2.iby>
-//                                            which includes <header.iby>
-//                                            which includes <symbian_os_romdefs.hby>
-//                                            which includes <feature.iby>
-//                                            which includes <base.iby>
-//                                            which includes <kernel.hby>
-//                                            which includes <base.iby>
-//                                            which includes <base_zoom2.iby>
-//                                            which includes <compsupp.iby>
-//                                            which includes <rm_debug_svr.iby>
-//#undef SURFACEMANAGER_DRV // because zoom2.oby defines it but doesn't have _zoom2_surfacemanagerdriver.ldd
-//device[VARID]=KERNEL_DIR\BUILD_DIR\pipelib.ldd        \Sys\Bin\pipelib.ldd /* zoom2 base was not including this */
 
 #elif defined(SYBORG)
 // The following is for Syborg
@@ -248,6 +236,9 @@ data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
 #define __DESKTOP_20026F4F_RESOURCES_IBY__ // resolves desktopconfiguration.dtd clash
 #define __EMAILWIDGET_RESOURCES_IBY__ // resolves emailwidgetconfiguration.dtd clash
 #define __MUSICWIDGET_10207c18_RESOURCES_IBY__ // resolves musicwidgetconfiguration.dtd clash
+
+
+
 
 
 /* The top-level includes */
@@ -882,9 +873,15 @@ file=ABI_DIR\BUILD_DIR\usbclasscontroller.dll        Sys\Bin\usbclasscontroller.
 file=ABI_DIR\BUILD_DIR\cnvshiftjisdirectmap.dll        Sys\Bin\cnvshiftjisdirectmap.dll /* comes from the Japanese charconv IBYs */
 
 
+/* these are here because we're disabling the IBYs that are pulling in the non _sw versions */
 file=ABI_DIR\BUILD_DIR\libegl_sw.dll        Sys\Bin\libegl_sw.dll /* */ /* needed for libvgi */
+//alias \sys\bin\libegl_sw.dll \sys\bin\libegl.dll
 file=ABI_DIR\BUILD_DIR\libopenvg_sw.dll        Sys\Bin\libopenvg_sw.dll /* */
+alias \sys\bin\libopenvg_sw.dll \sys\bin\libOpenVG.dll
 file=ABI_DIR\BUILD_DIR\libopenvgu_sw.dll        Sys\Bin\libopenvgu_sw.dll /* */
+alias \sys\bin\libopenvgu_sw.dll \sys\bin\libOpenVGU.dll
+file=ABI_DIR\BUILD_DIR\sflibopenvgrefimpl.dll  sys\bin\sflibopenvgrefimpl.dll
+
 //file=ABI_DIR\BUILD_DIR\libopenvg.dll        Sys\Bin\libopenvg.dll /* test */
 //file=ABI_DIR\BUILD_DIR\libopenvgu.dll        Sys\Bin\libopenvgu.dll /* test */
 //file=ABI_DIR\BUILD_DIR\libgles_cm.dll        Sys\Bin\libgles_cm.dll /* */
