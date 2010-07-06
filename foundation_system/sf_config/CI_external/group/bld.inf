@@ -43,8 +43,12 @@ PRJ_EXPORTS
 ../customisation/CustomisationInterface/confml/CI_numbergrouping.confml /epoc32/rom/config/customisation/CustomisationInterface/confml/CI_numbergrouping.confml
 ../customisation/CustomisationInterface/confml/CI_pdpcontextmanager2.confml /epoc32/rom/config/customisation/CustomisationInterface/confml/CI_pdpcontextmanager2.confml
 ../customisation/CustomisationInterface/confml/CI_s60provisioning.confml /epoc32/rom/config/customisation/CustomisationInterface/confml/CI_s60provisioning.confml
+../customisation/CustomisationInterface/confml/ci_s60telephony.confml /epoc32/rom/config/customisation/CustomisationInterface/confml/ci_s60telephony.confml
+../customisation/CustomisationInterface/confml/CI_securityconfig.confml /epoc32/rom/config/customisation/CustomisationInterface/confml/CI_securityconfig.confml
 ../customisation/CustomisationInterface/confml/CI_startup.confml /epoc32/rom/config/customisation/CustomisationInterface/confml/CI_startup.confml
 ../customisation/CustomisationInterface/confml/CI_suplsettings_productconfig.confml /epoc32/rom/config/customisation/CustomisationInterface/confml/CI_suplsettings_productconfig.confml
+../customisation/CustomisationInterface/confml/CI_telephonyservices.confml /epoc32/rom/config/customisation/CustomisationInterface/confml/CI_telephonyservices.confml
+../customisation/CustomisationInterface/confml/CI_videoplayerservicelist.confml /epoc32/rom/config/customisation/CustomisationInterface/confml/CI_videoplayerservicelist.confml
 ../customisation/Views/Features/root.confml /epoc32/rom/config/customisation/Views/Features/root.confml
 
 

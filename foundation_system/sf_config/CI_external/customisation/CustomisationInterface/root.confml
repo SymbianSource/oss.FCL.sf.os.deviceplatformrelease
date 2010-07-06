@@ -14,4 +14,6 @@
 	<xi:include href="confml/CI_camerax.confml"/>	
 	<xi:include href="confml/CI_emailwizard.confml"/>
 	<xi:include href="confml/CI_suplsettings_productconfig.confml"/>		
+	<xi:include href="confml/CI_securityconfig.confml"/>
+	<xi:include href="confml/CI_videoplayerservicelist.confml"/>
 </configuration>
