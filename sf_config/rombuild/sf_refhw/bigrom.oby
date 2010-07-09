@@ -1,0 +1,1006 @@
+/*
+* Copyright (c) 2010 Symbian Foundation Ltd
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Symbian Foundation Ltd - initial contribution.
+*
+* Contributors:
+* Gareth Long
+* Description:
+* bigrom.oby
+*/
+
+#include <RemovableFeatures.iby>
+#include <bldvariant.hrh> // so that we can override some of the settings here
+#define __USE_NHD // just for bigrom, to choose between 640x360 or 640x480
+
+#undef SYMBIAN_EXCLUDE_KEYMAP
+#undef SYMBIAN_EXCLUDE_LOCATION // so that lbs.dll is included
+#undef SYMBIAN_EXCLUDE_SIP // so that sipsw.dll etc are included
+#undef SYMBIAN_EXCLUDE_SCDV // so that SCDV is included
+#undef SYMBIAN_EXCLUDE_BLUETOOTH // so that BT is included
+#undef SYMBIAN_EXCLUDE_MTP
+#undef SYMBIAN_EXCLUDE_OFFLINE_MODE
+#undef SYMBIAN_EXCLUDE_OBEX
+
+#define SYMBIAN_INCLUDE_USB_OTG_HOST // for usbdescriptors.dll
+
+#undef FF_RUNTIME_DEVICE_CAPABILITY_CONFIGURATION // to stop dcomo resources getting pulled in twice
+
+#define FF_TOPCONTACTSWIDGET_COMPONENT // needed for desktop_20018eee components
+
+/* test */
+
+//#define AISATPLUGIN_IBY
+//#define __NVGDECODER_IBY__ // we don't want the non_sw version
+#define __SFOPENVG_IBY__
+//#define EGL_REF_IBY
+
+
+//#define photossuiteSUITE_IBY
+
+// Stub out the GLX stuff
+//#define __GLXGALLERY_IBY__
+//#define __GLX_TVOUT_IBY__
+//#define __GLXMEMORYPLUGIN_IBY__
+//#define GLX_LOGGING_IBY
+//#define __GLXFETCHER_IBY__
+//#define __GLXCOMMANDDRMUTILITY_IBY__
+//#define __GLXCONTENTHARVESTERPLUGIN_IBY__
+//#define __GLXCOMMONCOMMANDHANDLERS_IBY__
+//#define __GLXCOMMANDHANDLERMOREINFO_IBY__
+//#define __GLXCOMMANDHANDLERDRM_IBY__
+//#define __CLOUDVIEW_IBY__
+
+// and remove the dependancies on this
+//#define CAMERAAPP_IBY
+//#define SHW_IBY
+//#define __TAGCOLLECTIONPLUGIN_IBY__
+//#define __TAGSBROWSERVIEWPLUGIN_IBY__
+
+// these are defined in bldprivate.hrh
+#undef __LAYOUT_480_320_TOUCH
+#undef __LAYOUT_320_480_TOUCH
+
+// these are defined in bldpublic.hrh
+#undef __LAYOUT_240_320
+#undef __LAYOUT_240_320_LARGE_SCREEN
+#undef __LAYOUT_320_240
+#undef __LAYOUT_320_240_LARGE_SCREEN
+#undef __LAYOUT_360_640_TOUCH
+
+#ifdef __USE_NHD
+#define FF_LAYOUT_640_360_TOUCH // this works, need to define early on
+#define __LAYOUT_640_360_TOUCH  
+#undef FF_LAYOUT_640_480_TOUCH_VGA4 // this works, need to define early on
+#undef __LAYOUT_640_480_TOUCH
+
+// test
+#define FF_LAYOUT_640_360 // this works, need to define early on
+#define FF_LAYOUT_360_640 // this works, need to define early on
+#define FF_LAYOUT_360_640_NONTOUCH // this works, need to define early on
+#define FF_LAYOUT_640_360_NONTOUCH // this works, need to define early on
+#define FF_LAYOUT_360_640_TOUCH // this works, need to define early on
+#define FF_LAYOUT_360_640_TOUCH_NHD4 // this works, need to define early on
+#define FF_LAYOUT_640_360_TOUCH_NHD4 // this works, need to define early on
+#define FF_LAYOUT_640_480_TOUCH_VGA3 // this works, need to define early on
+#define FF_LAYOUT_640_480_TOUCH_VGA4 // this works, need to define early on
+#define __LAYOUT_640_480_TOUCH
+#define __LAYOUT_360_640_TOUCH
+#define __LAYOUT_360_640
+#define __LAYOUT_640_360
+
+#else
+#undef FF_LAYOUT_640_360_TOUCH // this works, need to define early on
+#undef __LAYOUT_640_360_TOUCH  
+#define FF_LAYOUT_640_480_TOUCH_VGA4 // this works, need to define early on
+#define __LAYOUT_640_480_TOUCH
+#endif
+
+#define __LOCALES_37_IBY__
+#define __LOCALES_50_IBY__
+#define __LOCALES_57_IBY__
+#define __LOCALES_94_IBY__
+
+#define __OMA_SUPL_PLUGINS // for core/mw/omasuplprotocolhandler.iby
+
+/* videoeditorcommon.dll cannot be built, so remove whatever uses it */
+#define __VIDEOEDITORENGINE_IBY__
+#define __VIDEOEDITORUICOMPONENTS_IBY__
+#define __SIMPLEVIDEOEDITOR_IBY__
+#define __SIMPLECUTVIDEO_IBY__
+#define __VIDEOPROVIDER_IBY__
+
+
+/* from language/app */
+//#define FF__ROM_HIDE_ISRAEL
+#undef __ROM_HIDE_JERUSALEM
+//#define __CLOCK_RESOURCES_IBY__
+
+/* from language/mw */
+// #define __AVKON_RESOURCES_IBY__ // smiley.rsc
+
+/* from language/os */
+#define __GTEMAILMTM_RESOURCES_IBY__
+#define __MESSAGESERVER_RSC_IBY__
+
+/* resources and customer clash with DTD files, removed DTD from the customer/app versions of desktop, email and music widget */
+/* from customer/app */
+//#define __DESKTOP_20026F4F_CUSTOMER_IBY__
+//#define __EMAILWIDGET_CUSTOMER_IBY__
+//#define __MUSICWIDGET_10207c18_CUSTOMER_IBY__
+
+//test (removal when using 640x480)
+#ifdef __USE_NHD
+#define __ORGANIZER_2001F481_CUSTOMER_IBY__ // needed for 640x360
+#define __PROFILEWIDGET_2001CB7C_CUSTOMER_IBY__ // clashes with same file
+#define __SERVICEWIDGET_20021383_CUSTOMER_IBY__
+#define __AI3TEMPLATEVIEW_20026F50_CUSTOMER_IBY__
+
+#define __AI3VIEW_200286E4_CUSTOMER_IBY__ // the resources version pulls in the same file
+//#define __AI3VIEW_200286E4_RESOURCES_IBY__ // the resources version pulls in the same file
+
+#define __AI3VIEW_200286E5_CUSTOMER_IBY__ // the resources version pulls in the same file
+//#define __AI3VIEW_200286E5_RESOURCES_IBY__ // the resources version pulls in the same file
+
+#define __AI3VIEW_2001F48B_CUSTOMER_IBY__ // the resources version pulls in the same file
+
+
+
+/* from customer/mw (need to remove when using 640x360) */
+#define __WSFWIDGET_20026F45_CUSTOMER_IBY__
+#endif
+
+
+
+/* from core/app */
+//#define __SERVICEWIDGET_20021383_THEME_IBY__
+
+/* for 640x480 */
+#define __AI3VIEW_2001FDB9_CUSTOMER_IBY__ // resources and customer version of this appear identical
+#define __WIDEIMAGE_10009DFF_RESOURCES_IBY__ // resources and customer version of this appear identical
+
+
+
+/* eaacplusaudiocontrollerutility.dll can't be built, so remove whatever uses it */
+#define AUDIOCONTROLLERPLUGINSVARIANT_IBY
+
+#include "s60macros.iby"
+
+//#undef USE_CUSTOM_MMC_PARTITION // stops base.iby pulling in emmcptn.dll, which is pulled in by base_zoom2.iby
+#ifdef ZOOM2
+#include <zoom2.oby>
+#include <base_zoom2.iby>
+#include <header.iby>
+#include <base.iby>
+
+#elif defined(SYBORG)
+// The following is for Syborg
+#define SYMBIAN_BASE_USE_GCE
+#include <syborg.oby>
+define ROMDATE ##TODAY## // added for Syborg, Zoom2 includes this itself
+#define BTRACE_INCLUDED // this is already done by the Syborg includes
+#include <header.iby> // added for Syborg, Zoom2 includes this itself
+#include <base_syborg_ui.iby> // added for Syborg, Zoom2 includes this itself
+#define USE_CUSTOM_MMC_PARTITION // stops emmcptn.dll being pulled in, which uses epbusm.dll
+#include <base.iby> // added for Syborg, Zoom2 includes this itself
+#undef SYMBIAN_EXCLUDE_MTP // Syborg is defining this again
+
+#elif defined(BEAGLE)
+// The following is for Syborg
+#define SYMBIAN_BASE_USE_GCE
+#include <beagle.oby>
+define ROMDATE ##TODAY## // added for Syborg, Zoom2 includes this itself
+//#define BTRACE_INCLUDED // this is already done by the Syborg includes
+#include <header.iby> // added for Syborg, Zoom2 includes this itself
+#include <base_beagle.iby> // added for Syborg, Zoom2 includes this itself
+#define USE_CUSTOM_MMC_PARTITION // stops emmcptn.dll being pulled in, which uses epbusm.dll
+#include <base.iby> // added for Syborg, Zoom2 includes this itself
+#undef SYMBIAN_EXCLUDE_MTP // Syborg is defining this again
+ROMBUILD_OPTION -no-header
+// hanging on Beagle
+#define BACKSTEPPINGSERVICE_IBY
+
+data= \epoc32\rom\beagle\estart.txt \sys\data\estart.txt // ???
+#endif
+
+/* Graphics adaptation */
+
+#define SYMBIAN_BUILD_GCE
+#define SYMBIAN_GRAPHICS_USE_GCE // for graphics_adaptation.hby
+#undef SYMBIAN_GRAPHICS_ADAPTATION // allows for setup of SYMBIAN_GRAPHICS_ADAPTATION to SGA_SW
+#define SYMBIAN_GRAPHICS_USE_EGL_REF
+#define SYMBIAN_GRAPHICS_USE_OPENWF
+#define FBSRASTERIZER_DRV <fbsrasterizer_stub.iby>
+//#define GRAPHICSRESOURCE_DRV <graphicsresourceadapter_stub.iby>
+#define OPENWFCLIB_DRV <openwfc_ref.iby>
+
+//#undef FF_WLAN_WAPI_INCLUDE_IN_ROM // needed so that wapisecuritysettingsui.iby pulls in a wapuisecuritysettingsui.dll that we have in the build
+
+
+/* miscallaneous defines */
+
+
+
+#undef FF_WLAN_WAPI_INCLUDE_IN_ROM // needed so that wapisecuritysettingsui.iby pulls in a wapuisecuritysettingsui.dll that we have in the build
+
+#define XMLUIRENDERINGRESOURCES_IBY // resolves xnuiengine.rsc clash
+#define XMLUICONTROLLERRESOURCES_IBY // ai3xmlui already includes the only resource included by this file
+#define __SERVICEWIDGET_20021383_RESOURCES_IBY__ // resolves servicewidget.o0000 clash
+#define __AVKON_RESOURCES_IBY__ // resolves smiley.rsc clash
+data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
+#define __DESKTOP_20026F4F_RESOURCES_IBY__ // resolves desktopconfiguration.dtd clash
+#define __EMAILWIDGET_RESOURCES_IBY__ // resolves emailwidgetconfiguration.dtd clash
+#define __MUSICWIDGET_10207c18_RESOURCES_IBY__ // resolves musicwidgetconfiguration.dtd clash
+
+
+
+
+
+/* The top-level includes */
+
+
+#include <graphics_adaptation.hby>
+
+
+
+
+#include <3gplibrary.iby>
+//                                            which includes <3gpmp4lib.iby>
+#include <a3fdevsound.iby>
+#include <a3fserverstart.iby>
+
+#include <abtester.oby>
+//                                            which includes <ABTester.iby>
+#include <acf.iby>
+#include <acl.iby>
+#include <activitymanager.iby>
+#include <addressinfohook.iby>
+#include <agentdialog.iby>
+#include <agentpr.iby>
+//                                            which includes <agentprcore.iby>
+#include <agentshellnotifier.iby>
+#include <agnmodel.iby>
+#include <agnversit.iby>
+//                                            which includes <timezoneserver.iby>
+//                                            which includes <BackupRestoreNotification.iby>
+//                                            which includes <swiplugin.iby>
+//                                            which includes <sql.iby>
+//                                            which includes <utrace.iby>
+//                                            which includes <btrace.iby>
+#include <alarmserver.iby>
+//                                            which includes <ssmsus.iby>
+// #include <alfred.iby> /* included by other components */
+#include <amastart.iby>
+#include <animation.iby>
+#include <aplp.iby>
+#include <apparc.iby>
+#include <asn1export.iby>
+#include <asn1rrlp.iby>
+#include <asn1supl.iby>
+#include <asnpkcs.iby>
+//                                            which includes <pbe.iby>
+//                                            which includes <crypto.iby>
+//                                            which includes <random.iby>
+//                                            which includes <hash.iby>
+//                                            which includes <cryptospi_plugins.iby>
+//                                            which includes <filetokensconfig.iby>
+#include <ASR.iby>
+// not in 3.0.I #include <authserver.iby>
+#include <autotest.iby>
+#include <avi.iby>
+//                                            which includes <subtitledecoder.iby>
+#include <bioclass0smsplugin.iby>
+//                                            which includes <watcher.iby>
+//                                            which includes <flogger.iby>
+//                                            which includes <gtbioutils.iby>
+//                                            which includes <messageserver.iby>
+//                                            which includes <messageserver.hby>
+//                                            which includes <gtsmsmtm.iby>
+//                                            which includes <c32.iby>
+//                                            which includes <usb.iby>
+//                                            which includes <usbman.iby>
+//                                            which includes <c32.iby>
+//                                            which includes <ecom.iby>
+//                                            which includes <ecompatchconstants.hby>
+//                                            which includes <usbmanrsc.iby>
+//                                            which includes <usbmanbin.iby>
+//                                            which includes <esock.iby>
+//                                            which includes <esock_core.iby>
+//                                            which includes <subconparams.iby>
+//                                            which includes <connservparams.iby>
+//                                            which includes <ESockMessages.iby>
+//                                            which includes <esock_params.iby>
+//                                            which includes <esock_api_ext.iby>
+//                                            which includes <commsdataobjects.iby>
+//                                            which includes <commsdataobjectsecom.iby>
+//                                            which includes <serverden.iby>
+//                                            which includes <commsfw.iby>
+//                                            which includes <factories.iby>
+//                                            which includes <meshmachine.iby>
+//                                            which includes <NETMSG.iby>
+//                                            which includes <NetInterfaces.iby>
+//                                            which includes <NETMessages.iby>
+//                                            which includes <NetMeta.iby>
+//                                            which includes <NETSubscribe.iby>
+//                                            which includes <esock.iby>
+//                                            which includes <insock.iby>
+//                                            which includes <esock.iby>
+//                                            which includes <nodemessages.iby>
+//                                            which includes <ResponseMsg.iby>
+//                                            which includes <rootserver.iby>
+//                                            which includes <NETStSrv.iby>
+//                                            which includes <NETSM.iby>
+//                                            which includes <virtualconstructors.iby>
+//                                            which includes <logeng.iby>
+//                                            which includes <dbms.iby>
+//                                            which includes <logeng.hby>
+//                                            which includes <scheduledsending.iby>
+//                                            which includes <schsvr.iby>
+//                                            which includes <sysagent.iby>
+//                                            which includes <cntmodel.iby>
+//                                            which includes <versit.iby>
+//                                            which includes <conarc.iby>
+//                                            which includes <charconv.iby>
+//                                            which includes <cntplsql.iby>
+//                                            which includes <cntmatchlog.iby>
+//                                            which includes <smsstack.iby>
+//                                            which includes <commsdebugutility.iby>
+//                                            which includes <ost.iby>
+//                                            which includes <etel.iby>
+//                                            which includes <commdb.iby>
+//                                            which includes <commsdat.iby>
+//                                            which includes <ShimNotifier.iby>
+//                                            which includes <fax.iby>
+//                                            which includes <etelmm.iby>
+//                                            which includes <gtsmsmtm.hby>
+#include <bionbswatcher.iby>
+#include <bioparsers.iby>
+#include <biowapwatcher.iby>
+#include <bitgdi.iby>
+#include <bitmaptransforms.iby>
+#include <bitmaptransformsplugin.iby>
+//#include <bldinfo.hby>
+#include <bluetooth.iby>
+//                                            which includes <btlogger.iby>
+//                                            which includes <remotecontrol.iby>
+//                                            which includes <tsp.iby>
+//                                            which includes <hci.iby>
+//                                            which includes <hci_framework.iby>
+//                                            which includes <hci_implementation.iby>
+//                                            which includes <corehci_symbian.iby>
+//                                            which includes <commandsevents_symbian.iby>
+//                                            which includes <hci_qdp_symbian.iby>
+//                                            which includes <hctl_bcsp.iby>
+//                                            which includes <initialisor_symbian.iby>
+#include <bmpanim.iby>
+#include <bookmarkdb.iby>
+#include <btpan.iby>
+#include <btsnoophcilogger.iby>
+#include <c32bca.iby>
+#include <c32start.iby>
+#include <caf.iby>
+//                                            which includes <reccafconfig.iby>
+#include <calcon.iby>
+#include <calinterimapi.iby>
+#include <ced.iby>
+//                                            which includes <Xml.iby>
+//                                            which includes <xmlframework.iby>
+//                                            which includes <xmlcustomresolver.iby>
+//                                            which includes <xmlparserplugin.iby>
+//                                            which includes <wbxmlparser.iby>
+//                                            which includes <stdlib.iby>
+#include <ceddump.iby>
+#include <certman.iby>
+//                                            which includes <secutil.iby>
+//                                            which includes <sectcbutil.iby>
+//                                            which includes <ocspconfig.iby>
+#include <cflog.iby>
+#include <cfrtp.iby>
+//                                            which includes <rtpcore.iby>
+#include <charconv_all_plugins.iby>
+//                                            which includes <charconv_chinese_simplfied.iby>
+//                                            which includes <charconv_chinese_traditional.iby>
+//                                            which includes <charconv_japanese.iby>
+//                                            which includes <charconv_japanese_docomo.iby>
+//                                            which includes <charconv_iso8859x.iby>
+//                                            which includes <charconv_codepage.iby>
+//                                            which includes <charconv_sms7bit.iby>
+//                                            which includes <charconv_gsm7_turkish.iby>
+//                                            which includes <charconv_spanish_smsencoding.iby>
+//                                            which includes <charconv_portuguese_smsencoding.iby>
+//                                            which includes <charconv_s60.iby>
+//**#include <charconv_gsm7_turkish_Variant.iby>
+
+#include <charconv_japanese_kddiau.iby>
+#include <charconv_japanese_s60.iby>
+#include <chtmltocrtconverter.iby>
+//**#include <cinidata.iby>
+#include <cmncustomcmds.iby>
+#include <commonengine.iby>
+#include <commonengineresources.iby>
+#include <commsbufs.iby>
+#include <commsbufskern.iby>
+#include <commslog.iby>
+//                                            which includes <commsrootserver.iby>
+#include <conditionevaluator.iby>
+#include <cone.iby>
+//**#include <connect-gt.iby>
+#include <connectivity_securebackupengine.iby>
+// not in 3.0.I #include <coredumpscriptconfig.iby>
+// not in 3.0.I #include <coredumpserver.iby>
+// not in 3.0.I #include <coredumpserverstub.iby>
+// not in 3.0.I #include <coredumpui.iby>
+#include <coreproviders.iby>
+#include <coreprovidersecom.iby>
+#include <csc_plugin.iby>
+
+#include <ctsy.iby> // builds in phonetsy.tsy which relies on licenseetsy.dll 
+//                                            which includes <ctsysystemstateplugin.iby>
+//#include <customcmds.iby>
+#include <DEBUG.iby>
+#include <devsoundadaptationinfo.iby>
+//GSL#include <devsound_pluginsupport.iby>
+//#include <devsound_refplugin.iby> // clashes with core/mw/mmfaudioconnectioncontroller.iby
+#include <DevVideo.iby>
+// not in 3.0.I #include <dexcformatter.iby>
+
+#include <dial.iby>
+#include <directgdi.iby>
+//                                            which includes <graphicsresource.iby>
+//                                            which includes <graphicsresourceadapter.iby>
+//                                            which includes <graphicsresourceadapter_sw.iby>
+//                                            which includes <surfacemanager.iby>
+//                                            which includes <surfacemanager_omap.iby>
+//                                            which includes <directgdiadapter.iby>
+//                                            which includes <directgdiadapter_sw.iby>
+//#include <directgdiadapter_vg.iby>
+//                                            which includes <openvg.iby>
+//                                            which includes <openvg_sw.iby>
+#include <dnd.iby>
+#include <dnsproxy.iby>
+#include <dnsproxyupdateif.iby>
+#include <dptestcons.oby>
+#include <ecam.iby>
+//                                            which includes <ecam_stubplugin.iby>
+//#include <econs_wserv.iby>
+#include <ecuart.iby>
+//#include <egl.iby>
+//                                            which includes <egl_ref.iby>
+#include <egul.iby>
+#include <elements.iby>
+//                                            which includes <NodeMessages.iby>
+//                                            which includes <MeshMachine.iby>
+#include <emime.iby>
+#include <eon_font.iby>
+#include <epos_omasuplposmessageplugin.iby>
+#include <epos_omasuplposmsgpluginimpl.iby>
+#include <ESHELL.iby>
+#include <esockmessageintercept.iby>
+
+#include <etelisv.iby>
+#include <etelpckt.iby>
+//#include <etelsat.iby> // test removal
+
+#include <ether802.iby>
+#include <euserhl.iby>
+#include <exifutility.iby>
+#include <ezlib.iby>
+//                                            which includes <openenv.iby>
+//                                            which includes <timezonelocalization.iby>
+//                                            which includes <TimeZoneServer.iby>
+//                                            which includes <stdcpp.iby>
+//                                            which includes <oelibrt.iby>
+//                                            which includes <openenv.iby>
+#include <fatcharsetconv.iby>
+#include <fbserv.iby>
+//                                            which includes <fbsrasterizer_stub.iby>
+#include <fdf.iby>
+#include <featmgr.iby>
+#include <featreg.iby>
+#include <fepbase.iby>
+#include <filetokens.iby>
+// not in 3.0.I #include <filewriter.iby>
+#include <fmtx_hwrm.iby>
+#include <fntstore.iby>
+#include <freetype.iby>
+//                                            which includes <freetype.hby>
+#include <ftp_e.iby>
+#include <gdi.iby>
+//                                            which includes <palette.iby>
+#include <genericscprparams.iby>
+#include <gfxtranseffect.iby>
+#include <gifscaler.iby>
+// not in 3.0.I #include <gmxml.iby>
+#include <gpssetclock.iby>
+//#include <graphicsresourceadapter_mbx.iby>
+//#include <graphicsresourceadapter_sgx.iby>
+#include <gtbioengmtm.iby>
+#include <gtbiomessaging.iby>
+//#include <gtemailmtm.hby>
+
+#include <gtmessaging.iby>
+//                                            which includes <sendas2.iby>
+//                                            which includes <gtmtur.iby>
+//                                            which includes <msgurlhandler.iby>
+#include <guqos.iby>
+#include <hciproxy.iby>
+#include <hci_initialisor_ti.iby>
+#include <hctl_ti.iby>
+#include <hctl_uart_original.iby>
+
+#include <hlpmodel.iby>
+#include <http.iby>
+//                                            which includes <httpcore.iby>
+//                                            which includes <InetProtUtil.iby>
+//                                            which includes <GtEmailMtm.iby>
+//                                            which includes <transporthandler.iby>
+#include <httpservice.iby>
+#include <httpservicetest.iby>
+#include <hwresourcemanager.iby>
+#include <hwrmuiplugin.iby>
+#include <iclcodecs.iby>
+//                                            which includes <JpegYuvDecoder.iby>
+
+#include <iculayoutengine.iby>
+#include <imageconversion.iby>
+#include <imagedisplay.iby>
+//                                            which includes <MngImageDisplay.iby>
+//                                            which includes <IclWrapperImageDisplay.iby>
+#include <imageprocessor.iby>
+#include <imagetransform.iby>
+
+#include <ineturilist.iby>
+// not in 3.0.I #include <iniparser.iby>
+
+//#include <integrationtest.iby> // integrationtest.dll is not getting built
+//                                            which includes <testexecute.iby>
+//                                            which includes <testexecutelogger.iby>
+//                                            which includes <RFilelogger.iby>
+#include <ipaddrinfoparams.iby>
+#include <ipeventfactory.iby>
+#include <ipeventnotifier.iby>
+//                                            which includes <ipeventtypes.iby>
+//                                            which includes <netmeta.iby>
+//                                            which includes <netsubscribe.iby>
+//                                            which includes <netmeta.iby>
+#include <ipproto.iby>
+#include <ipsec.iby>
+//                                            which includes <ipsec6.iby>
+//                                            which includes <ipseccrypto.iby>
+#include <iptransport.iby>
+//                                            which includes <mobilitycoreproviders.iby>
+//**#include <ipupsdialog.iby>
+#include <irda.iby>
+//                                            which includes <obexprotocol.iby>
+
+
+#include <kerneltrace.oby>
+#include <lafshutdowneventobserveradaptor.iby>
+#include <lbs.iby>
+#include <lbsadatacache.iby>
+#include <lbsadmin.iby>
+//                                            which includes <lbsassistancedata.iby>
+//                                            which includes <lbslocmonclient.iby>
+//                                            which includes <lbsloccommon.iby>
+//                                            which includes <LbsLocDataSource.iby>
+//                                            which includes <lbsinternalapi.iby>
+//                                            which includes <lbsnetprotocol.iby>
+//                                            which includes <lbspartnercommon.iby>
+//                                            which includes <lbsnetinternalapi.iby>
+//                                            which includes <lbsagpsngmsgs.iby>
+//                                            which includes <lbscommoninternaldatatypes.iby>
+//                                            which includes <lbsnetregstatusint.iby>
+//                                            which includes <lbsngnlmint.iby>
+//                                            which includes <lbsnrhngmsgs.iby>
+//                                            which includes <lbsreffnpint.iby>
+//                                            which includes <lbssymmetryint.iby>
+//                                            which includes <lbsroot.iby>
+//                                            which includes <lbsrootapi.iby>
+//                                            which includes <lbsloggerapi.iby>
+//                                            which includes <lbsdebug.iby>
+//                                            which includes <lbslocsettings.iby>
+//                                            which includes <lbslocindicatorlib.iby>
+//                                            which includes <lbsmlfwutils.iby>
+#include <lbsagpslocmanager.iby>
+#include <lbsbtgpspsy.iby>
+#include <lbsdefaultpsy.iby>
+#include <lbsgpsagpspsy.iby>
+#include <lbshostsettings.iby>
+#include <lbslocationmonitor.iby>
+
+#include <lbslocserver.iby>
+//                                            which includes <lbslocutils.iby>
+//                                            which includes <lbsqualityprofileapi.iby>
+#include <lbsnetgateway.iby>
+#include <lbsnetpsy.iby>
+#include <lbsnetsim.iby>
+#include <lbsnetworklocationmanager.iby>
+#include <lbsnetworkprivacy.iby>
+#include <lbsnetworkrequesthandler.iby>
+//                                            which includes <lbsx3p.iby>
+//                                            which includes <lbsprivacycontroller.iby>
+//                                            which includes <lbsprivacyexnotifiers.iby>
+//                                            which includes <lbsprivacydatatypes.iby>
+//                                            which includes <lbsqueryandnotification.iby>
+#include <lbsnetworktest.iby>
+//                                            which includes <lbsprotocolmodule.iby>
+//                                            which includes <suplasn1.iby>
+//                                            which includes <lbssupltestmodule.iby>
+#include <lbspospluginfw.iby>
+#include <lbsprivacyprotocolmodule.iby>
+#include <lbsprivacyrequest.iby>
+#include <lbspsytester.iby>
+#include <lbssimulationpsy.iby>
+#include <lbssuplsmstrigger.iby>
+#include <lbssuplwappush.iby>
+#include <lbs_privacyprotocolmodule.iby>
+#include <loadlafshutdown.iby>
+#include <loopback.iby>
+#include <mbmsparams.iby>
+#include <mdf.iby>
+#include <MESON.iby>
+//                                            which includes <Store.iby>
+//                                            which includes <EText.iby>
+//                                            which includes <Form.iby>
+//                                            which includes <print.iby>
+//                                            which includes <PwrCli.iby>
+//                                            which includes <Bafl.iby>
+//                                            which includes <NumberConversion.iby>
+#include <MESON.iby>
+#include <Midi.iby>
+#include <milif.iby>
+#include <miscpushutils.iby>
+#include <mmcommon.iby>
+#include <mmf.iby>
+//                                            which includes <mmfEffect.iby>
+//                                            which includes <MmfDrmPlugin.iby>
+//                                            which includes <mmf_plugin.iby>
+
+#include <mmssettings.iby>
+#include <mmtsy.iby>
+
+#include <msfdc.iby>
+//**#include <mtp_backupnrestoredp.iby>
+//                                            which includes <mtp_framework.iby>
+//                                            which includes <mtp_devicedp.iby>
+#include <mtp_filedp.iby>
+#include <mtp_ptpip.iby>
+#include <mtp_usbsic.iby>
+#include <multipartparser.iby>
+#include <napt.iby>
+
+#include <netcfgextnmip.iby>
+//                                            which includes <netstsrv.iby>
+//                                            which includes <NetCfgExtnBase.iby>
+//                                            which includes <netstsrv.iby>
+
+#include <netups.iby>
+//                                            which includes <ups.iby>
+//                                            which includes <ups_config.iby>
+#include <network.iby>
+//                                            which includes <simpleselectorbase.iby>
+//                                            which includes <upscoreproviders.iby>
+//                                            which includes <tls.iby>
+//                                            which includes <ocsp.iby>
+//                                            which includes <tlsprovider.iby>
+//                                            which includes <tlsproviderconfig.iby>
+//                                            which includes <CSD.IBY>
+//                                            which includes <psdagt.iby>
+//                                            which includes <nullagt.iby>
+//                                            which includes <ppp.iby>
+//                                            which includes <PREDCOMP.IBY>
+//                                            which includes <rawipnif.iby>
+//                                            which includes <packetlogger.iby>
+//                                            which includes <rawipnif.iby>
+//                                            which includes <DHCPServ.iby>
+//                                            which includes <umtsif.iby>
+//                                            which includes <pfqoslib.iby>
+//                                            which includes <qos.iby>
+//                                            which includes <qoslib.iby>
+//                                            which includes <qosextnapi.iby>
+//                                            which includes <qos3gpp.iby>
+//                                            which includes <pdp.iby>
+//                                            which includes <QosIPSCPR.iby>
+//                                            which includes <networking_dnsproxy.iby>
+
+//**#include <ntras-plugin.iby>
+
+#include <nvgrenderstage.iby>
+#include <obex.iby>
+#include <OBEYFILE.iby>
+// #include <oggvorbis.iby> // relies on oggvorbisint/floatutil.dll, but our source only builds .libs
+#include <omxilcomp.iby>
+#include <omxilcompref.iby>
+#include <omxilcore.iby>
+//#include <opengles.iby>
+//                                            which includes <opengles_sw.iby>
+//#include <openwfc_ref.iby>
+//                                            which includes <openwfc_support.iby>
+#include <pagedrom.oby>
+#include <pagedrom_functional.oby>
+#include <pagedrom_stressed.oby>
+#include <panorama.iby>
+#include <pbap.iby>
+#include <pdrstore.iby>
+#include <phbksync.iby>
+#include <pkcs12.iby>
+#include <pkcs7.iby>
+#include <PlatSec.oby>
+#include <PlatSecDiagnostics.oby>
+#include <PlatSecEnforcement.oby>
+//**#include <plpremotelink.iby>
+//                                            which includes <plpvariant.iby>
+
+#include <printers.iby>
+#include <punycodeconverter.iby>
+
+#include <recognisers.iby>
+#include <refacladaptation.iby>
+#include <refmmrc.iby>
+
+//**#include <rfs_variant.iby>
+#include <richtexttohtmlconv.iby>
+#include <rohandler.iby>
+#include <rpnp.iby>
+//**#include <rta.iby>
+#include <rtp.iby>
+//                                            which includes <shimrtp.iby>
+//**#include <rtpamr.iby>
+#include <S60CenRep_variant.iby>
+//#include <S60Macros.iby>
+#include <scs.iby>
+#include <securitycommonutils.iby>
+#include <security_ups_utils.iby>
+#include <setcap.iby>
+#include <sfopenvg.iby>
+
+#include <shma.iby>
+#include <sipdummyprt.iby>
+#include <siph2lanbearermonitor.iby>
+#include <sipproviders.iby>
+#include <sipstatemachine.iby>
+#include <sipsw.iby>
+//#include <sislwappush.iby> // mutually exclusive with S60SislWapPush
+#include <sqlite3.iby>
+#include <ssma.iby>
+//                                            which includes <ssmcmn.iby>
+//                                            which includes <ssmcmd.iby>
+//                                            which includes <ssmserver.iby>
+//                                            which includes <ssmss.iby>
+//                                            which includes <ssmdomainpolicy.iby>
+//#include <ssmclayer.iby>
+//#include <ssplugins.iby>
+//                                            which includes <sspluginsadaptation.iby>
+//                                            which includes <sspluginsgsa.iby>
+// not in 3.0.I #include <stat.iby>
+//                                            which includes <statcommon.iby>
+
+#include <subtitle.iby>
+//#include <surfacemanager_ref.iby>
+#include <surfaceupdate.iby>
+//                                            which includes <surfaceupdate_ref.iby>
+#include <swi.iby>
+//                                            which includes <swiconfig.iby>
+// not in 3.0.I #include <symbianelfformatter.iby>
+
+#include <sysawatcher.iby>
+//                                            which includes <telwatcher.iby>
+#include <sysstart.iby>
+#include <sysstartconfig.iby>
+// not in 3.0.I #include <tefcleanup.iby>
+// not in 3.0.I #include <tefutilityserver.iby>
+#include <telephony.iby>
+#include <telnetd.iby>
+#include <telnet_e.iby>
+#include <testbed.iby>
+// not in 3.0.I #include <testexecutepipslogger.iby>
+// not in 3.0.I #include <testexecutepipsloggerclient.iby>
+//#include <testlocale.iby> // clashes with language\mw\elocl.iby
+#include <tiger.iby>
+#include <traces.iby>
+// clashes with clockresources #include <tzlocalizationrscfactory.iby>
+// not in 3.0.I #include <ucc.iby>
+#include <uikon.iby>
+//                                            which includes <uiklaf.iby>
+#include <ulogger.iby>
+// not in 3.0.I #include <uloggerclttool.iby>
+#include <usbhostmsmm.iby> // need to find how to build this
+#include <Version_Variant.iby>
+#include <versitrecognizer.iby>
+#include <videorenderer.iby>
+
+#include <wapurilookup.iby>
+#include <wfcinterop_tests.iby>
+// not in 3.0.I #include <wrapperutilsplugin.iby>
+//#undef SYMBIAN_GRAPHICS_USE_GCE // for graphics_adaptation.hby
+#include <wserv.iby>
+//                                            which includes <wserv_std_plugins.iby>
+//                                            which includes <openwfc.iby>
+//#define SYMBIAN_GRAPHICS_USE_GCE // for graphics_adaptation.hby
+
+#include <wslog.iby>
+
+#include <xmlengine.iby>
+#include <xmlenginedom.iby>
+//                                            which includes <xmlengineutils.iby>
+#include <xmlenginesaxplugin.iby>
+#include <xmlengineserializer.iby>
+#include <zsh.iby>
+
+
+// manually copied into place
+#include <fontutils.iby>
+
+// needed for 3.0.I
+#include <legacyminidomparser.iby>
+#include <stdcpp.iby>
+
+#include <core\stubs\srsfenginestub.iby> // exported when this module is correctly built
+
+
+// IBY files to not include.
+// This is achieved by defining the IBY's gating define.
+//
+
+#define FBSRASTERIZER_IBY // to stop core/mw/fbsrasterizer.iby getting included 
+//#define __NETWORKING_TEST_IBY__ // don't pull in networktest.iby
+//#define __BASE_SYBORG_IBY__ // we are using Zoom2
+//#define SWITEXTSHELL // switextshell.iby
+
+// fixups
+
+//file=ABI_DIR\BUILD_DIR\vimpstsettings.dll				SHARED_LIB_DIR\vimpstsettings.dll
+
+file=ABI_DIR\BUILD_DIR\LICENSEETSY_STUB.DLL        Sys\Bin\licenseetsy.dll /* needed by phonetsy.tsy */
+file=ABI_DIR\BUILD_DIR\SIMATKTSY_STUB.DLL        Sys\Bin\simatktsy.dll /* needed by licenseetsy_stub.dll */
+//file=ABI_DIR\BUILD_DIR\usbcsc.ldd        SHARED_LIB_DIR\usbcsc.ldd /* needed by msfs_db.fsy */
+
+//extension[VARID]=KERNEL_DIR\BUILD_DIR\display.ldd        \Sys\Bin\display0.ldd /* needed for the graphics composition */
+
+
+file=ABI_DIR\BUILD_DIR\tvoutconfig.dll        Sys\Bin\tvoutconfig.dll /* can't find a .iby that includes this */
+file=ABI_DIR\BUILD_DIR\ddc_access.dll        Sys\Bin\ddc_access.dll /* can't find a .iby that includes this */
+file=ABI_DIR\BUILD_DIR\power_save_display_mode_stub.dll        Sys\Bin\power_save_display_mode.dll /* can't find a .iby that includes this */
+// found properly in 3.0.I file=ABI_DIR\BUILD_DIR\usbcsc_bil.dll        Sys\Bin\usbcsc_bil.dll /* can't find a .iby that includes this */
+file=ABI_DIR\BUILD_DIR\fmradiotunercontrol.dll        Sys\Bin\fmradiotunercontrol.dll /* can't find a .iby that includes this */
+file=ABI_DIR\BUILD_DIR\usbclasscontroller.dll        Sys\Bin\usbclasscontroller.dll /* added normally via usbmanbin.iby */
+
+file=ABI_DIR\BUILD_DIR\cnvshiftjisdirectmap.dll        Sys\Bin\cnvshiftjisdirectmap.dll /* comes from the Japanese charconv IBYs */
+
+
+/* these are here because we're disabling the IBYs that are pulling in the non _sw versions */
+file=ABI_DIR\BUILD_DIR\libegl_sw.dll        Sys\Bin\libegl_sw.dll /* */ /* needed for libvgi */
+//alias \sys\bin\libegl_sw.dll \sys\bin\libegl.dll
+file=ABI_DIR\BUILD_DIR\libopenvg_sw.dll        Sys\Bin\libopenvg_sw.dll /* */
+alias \sys\bin\libopenvg_sw.dll \sys\bin\libOpenVG.dll
+file=ABI_DIR\BUILD_DIR\libopenvgu_sw.dll        Sys\Bin\libopenvgu_sw.dll /* */
+alias \sys\bin\libopenvgu_sw.dll \sys\bin\libOpenVGU.dll
+file=ABI_DIR\BUILD_DIR\sflibopenvgrefimpl.dll  sys\bin\sflibopenvgrefimpl.dll
+
+//file=ABI_DIR\BUILD_DIR\libopenvg.dll        Sys\Bin\libopenvg.dll /* test */
+//file=ABI_DIR\BUILD_DIR\libopenvgu.dll        Sys\Bin\libopenvgu.dll /* test */
+//file=ABI_DIR\BUILD_DIR\libgles_cm.dll        Sys\Bin\libgles_cm.dll /* */
+file=ABI_DIR\BUILD_DIR\libglesv1_cm.dll        Sys\Bin\libglesv1_cm.dll /* */ /* needed by m3gcore */
+
+
+//file=ABI_DIR\BUILD_DIR\atextclient.dll        Sys\Bin\atextclient.dll /*required for dunatext.dll, but not referenced by an IBY file I could see */
+//file=ABI_DIR\BUILD_DIR\atextcommon.dll        Sys\Bin\atextcommon.dll /*required for dunatext.dll, but not referenced by an IBY file I could see */
+//file=ABI_DIR\BUILD_DIR\asrsttshwdevice_stub.dll        Sys\Bin\asrsttshwdevice.dll /*required for nss* */
+//file=ABI_DIR\BUILD_DIR\atextcommon.dll        Sys\Bin\atextcommon.dll /*required for dunatext.dll, but not referenced by an IBY file I could see */
+#ifdef _FULL_DEBUG
+file=ABI_DIR\BUILD_DIR\mullogging.dll        Sys\Bin\mullogging.dll /* needs forcing in for the debug build */
+#endif
+
+
+// things we may ne needing (seem to be wanted a lot)
+data=\epoc32\data\Z\private\10202BE9\200159c9.txt		private\10202BE9\200159c9.txt
+data=\epoc32\data\Z\private\10202BE9\200159c9.cre		private\10202BE9\200159c9.cre
+data=\epoc32\data\Z\private\101f5027\alarmserver.rsc		private\101f5027\alarmserver.rsc
+
+data=\epoc32\data\Z\private\10202BE9\10207376.txt		private\10202BE9\10207376.txt
+//data=\epoc32\data\Z\private\1020383E\TZDB.DBZ			private\1020383E\TZDB.DBZ
+
+
+// extra fonts
+//data=ZRESOLURCE\fonts\S60SSB_V4196.ttf				Resource\Fonts\S60SSB_v4196.ttf
+
+
+
+//data=ZRESOURCE\fonts\HeiseiGothS60v1_16.ttf			Resource\Fonts\HeiseiGothS60v1_16.ttf
+data=ZRESOURCE\fonts\S60DIGI_V314.ttf				Resource\Fonts\S60DIGI_v314.ttf
+//data=ZRESOURCE\fonts\S60SC_v410.ccc				Resource\Fonts\S60SC_v410.ccc
+data=ZRESOURCE\fonts\S60SNR_V4196.ttf				Resource\Fonts\S60SNR_v4196.ttf
+data=ZRESOURCE\fonts\S60SSB_V4196.ttf				Resource\Fonts\S60SSB_v4196.ttf
+//data=ZRESOURCE\fonts\S60TCHK_v414.ccc				Resource\Fonts\S60TCHK_v414.ccc
+data=ZRESOURCE\fonts\S60TSB_V4196.ttf				Resource\Fonts\S60TSB_v4196.ttf
+//data=ZRESOURCE\fonts\series60korean.ttf				Resource\Fonts\series60korean.ttf
+//data=ZRESOURCE\plugins\ityperast.rsc				Resource\plugins\ityperast.rsc
+//file=ABI_DIR\BUILD_DIR\ityperast.dll        		Sys\Bin\ityperast.dll /* */ 
+
+
+// homescreen
+
+data=ZPRIVATE\200159c0\install\view_200286e4\hsps\00\manifest.dat \private\200159c0\install\view_200286e4\hsps\00\manifest.dat
+data=ZPRIVATE\200159c0\install\view_200286e5\hsps\00\manifest.dat \private\200159c0\install\view_200286e5\hsps\00\manifest.dat
+//data=ZPRIVATE\200159c0\install\view1_2001fdb9\hsps\00\manifest.dat \private\200159c0\install\view1_2001fdb9\hsps\00\manifest.dat
+data=ZPRIVATE\200159c0\install\view_2001f48b\hsps\00\manifest.dat \private\200159c0\install\view_2001f48b\hsps\00\manifest.dat
+data=ZPRIVATE\200159c0\install\view_2001f48b\hsps\00\viewconfiguration.xml \private\200159c0\install\view_2001f48b\hsps\00\viewconfiguration.xml
+
+// we know these weren't in place before...
+//data=ZPRIVATE\200159c0\install\double_row_icon_widget_2001fdbd\hsps\00\manifest.dat \private\200159c0\install\double_row_icon_widget_2001fdbd\hsps\00\manifest.dat
+//data=ZPRIVATE\200159c0\install\double_row_widget_2001fdc2\hsps\00\manifest.dat \private\200159c0\install\double_row_widget_2001fdc2\hsps\00\manifest.dat
+//data=ZPRIVATE\200159c0\install\root_2001f482\hsps\00\manifest.dat \private\200159c0\install\root_2001f482\hsps\00\manifest.dat
+
+data=ZPRIVATE\200159c0\install\root_2001f482\hsps\00\rootconfiguration.xml \private\200159c0\install\root_2001f482\hsps\00\rootconfiguration.xml
+//data=ZPRIVATE\200159c0\install\root_2001f48f\hsps\00\rootconfiguration.xml \private\200159c0\install\root_2001f48f\hsps\00\rootconfiguration.xml
+//data=ZPRIVATE\200159c0\install\single_row_icon_widget_2001fdc0\hsps\00\widgetconfiguration.xml \private\200159c0\install\single_row_icon_widget_2001fdc0\hsps\00\widgetconfiguration.xml
+//data=ZPRIVATE\200159c0\install\single_row_widget_2001fdc1\hsps\00\widgetconfiguration.xml \private\200159c0\install\single_row_widget_2001fdc1\hsps\00\widgetconfiguration.xml
+//data=ZPRIVATE\200159c0\install\triple_row_icon_widget_2001fdbe\hsps\00\widgetconfiguration.xml \private\200159c0\install\triple_row_icon_widget_2001fdbe\hsps\00\widgetconfiguration.xml
+//data=ZPRIVATE\200159c0\install\triple_row_widget_2001fdbf\hsps\00\widgetconfiguration.xml \private\200159c0\install\triple_row_widget_2001fdbf\hsps\00\widgetconfiguration.xml
+data=ZPRIVATE\200159c0\install\view_200286e4\hsps\00\viewconfiguration.xml \private\200159c0\install\view_200286e4\hsps\00\viewconfiguration.xml
+data=ZPRIVATE\200159c0\install\view_200286e5\hsps\00\viewconfiguration.xml \private\200159c0\install\view_200286e5\hsps\00\viewconfiguration.xml
+//data=ZPRIVATE\200159c0\install\view1_2001fdb9\hsps\00\viewconfiguration.xml \private\200159c0\install\view1_2001fdb9\hsps\00\viewconfiguration.xml
+//data=ZPRIVATE\200159c0\install\wideimage_10009dff\hsps\00\widgetconfiguration.xml \private\200159c0\install\wideimage_10009dff\hsps\00\widgetconfiguration.xml
+
+
+//data=ZPRIVATE\200159c0\install\root_2001f482\hsps\00\manifest.dat \private\200159c0\install\root_2001f482\hsps\00\manifest.dat
+//data=ZPRIVATE\200159c0\install\root_2001f48f\hsps\00\manifest.dat \private\200159c0\install\root_2001f48f\hsps\00\manifest.dat
+
+#if 0
+data=ZPRIVATE\200159c0\install\single_row_icon_widget_2001fdc0\hsps\00\manifest.dat \private\200159c0\install\single_row_icon_widget_2001fdc0\hsps\00\manifest.dat
+data=ZPRIVATE\200159c0\install\single_row_widget_2001fdc1\hsps\00\manifest.dat \private\200159c0\install\single_row_widget_2001fdc1\hsps\00\manifest.dat
+data=ZPRIVATE\200159c0\install\triple_row_icon_widget_2001fdbe\hsps\00\manifest.dat \private\200159c0\install\triple_row_icon_widget_2001fdbe\hsps\00\manifest.dat
+data=ZPRIVATE\200159c0\install\triple_row_widget_2001fdbf\hsps\00\manifest.dat \private\200159c0\install\triple_row_widget_2001fdbf\hsps\00\manifest.dat
+//data=ZPRIVATE\200159c0\install\view1_2001fdb9\hsps\00\manifest.dat \private\200159c0\install\view1_2001fdb9\hsps\00\manifest.dat
+data=ZPRIVATE\200159c0\install\wideimage_10009dff\hsps\00\manifest.dat \private\200159c0\install\wideimage_10009dff\hsps\00\manifest.dat
+#endif
+
+
+file=\epoc32\release\armv5\urel\elocl.01 	"sys\bin\elocl.01"
+#if 0
+file=\epoc32\release\armv5\urel\elocl.37 	"sys\bin\elocl.37"
+file=\epoc32\release\armv5\urel\elocl.42 	"sys\bin\elocl.42"
+file=\epoc32\release\armv5\urel\elocl.25 	"sys\bin\elocl.25"
+file=\epoc32\release\armv5\urel\elocl.07 	"sys\bin\elocl.07"
+file=\epoc32\release\armv5\urel\elocl.03 	"sys\bin\elocl.03"
+file=\epoc32\release\armv5\urel\elocl.54 	"sys\bin\elocl.54"
+file=\epoc32\release\armv5\urel\elocl.10 	"sys\bin\elocl.10"
+file=\epoc32\release\armv5\urel\elocl.04 	"sys\bin\elocl.04"
+file=\epoc32\release\armv5\urel\elocl.49 	"sys\bin\elocl.49"
+file=\epoc32\release\armv5\urel\elocl.09 	"sys\bin\elocl.09"
+file=\epoc32\release\armv5\urel\elocl.51 	"sys\bin\elocl.51"
+file=\epoc32\release\armv5\urel\elocl.02 	"sys\bin\elocl.02"
+file=\epoc32\release\armv5\urel\elocl.57 	"sys\bin\elocl.57"
+file=\epoc32\release\armv5\urel\elocl.45 	"sys\bin\elocl.45"
+file=\epoc32\release\armv5\urel\elocl.17 	"sys\bin\elocl.17"
+file=\epoc32\release\armv5\urel\elocl.59 	"sys\bin\elocl.59"
+file=\epoc32\release\armv5\urel\elocl.15 	"sys\bin\elocl.15"
+file=\epoc32\release\armv5\urel\elocl.05 	"sys\bin\elocl.05"
+file=\epoc32\release\armv5\urel\elocl.32 	"sys\bin\elocl.32"
+file=\epoc32\release\armv5\urel\elocl.68 	"sys\bin\elocl.68"
+file=\epoc32\release\armv5\urel\elocl.67 	"sys\bin\elocl.67"
+file=\epoc32\release\armv5\urel\elocl.70 	"sys\bin\elocl.70"
+file=\epoc32\release\armv5\urel\elocl.18 	"sys\bin\elocl.18"
+file=\epoc32\release\armv5\urel\elocl.08 	"sys\bin\elocl.08"
+file=\epoc32\release\armv5\urel\elocl.27 	"sys\bin\elocl.27"
+file=\epoc32\release\armv5\urel\elocl.76 	"sys\bin\elocl.76"
+file=\epoc32\release\armv5\urel\elocl.13 	"sys\bin\elocl.13"
+file=\epoc32\release\armv5\urel\elocl.78 	"sys\bin\elocl.78"
+file=\epoc32\release\armv5\urel\elocl.16 	"sys\bin\elocl.16"
+file=\epoc32\release\armv5\urel\elocl.26 	"sys\bin\elocl.26"
+file=\epoc32\release\armv5\urel\elocl.28 	"sys\bin\elocl.28"
+file=\epoc32\release\armv5\urel\elocl.79 	"sys\bin\elocl.79"
+file=\epoc32\release\armv5\urel\elocl.06 	"sys\bin\elocl.06"
+file=\epoc32\release\armv5\urel\elocl.33 	"sys\bin\elocl.33"
+file=\epoc32\release\armv5\urel\elocl.39 	"sys\bin\elocl.39"
+file=\epoc32\release\armv5\urel\elocl.14 	"sys\bin\elocl.14"
+file=\epoc32\release\armv5\urel\elocl.93 	"sys\bin\elocl.93"
+file=\epoc32\release\armv5\urel\elocl.96 	"sys\bin\elocl.96"
+file=\epoc32\release\armv5\urel\elocl.31 	"sys\bin\elocl.31"
+file=\epoc32\release\armv5\urel\elocl.30 	"sys\bin\elocl.30"
+#endif
