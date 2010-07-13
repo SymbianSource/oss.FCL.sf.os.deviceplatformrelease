@@ -29,6 +29,6 @@
 #include <bldpublic.hrh>
 #include <bldregional.hrh> 
 
-#include "productvariant.hrh" 
+#include "ProductVariant.hrh" 
 
 #endif
