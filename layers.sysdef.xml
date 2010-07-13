@@ -23,13 +23,11 @@
 					<unit unitID="symbian.openvg11" name="sf_openvg11" bldFile="sf/os/graphics/openvg/openvginterface/group/openvg11" mrp="" filter="sf_build"/>
 				</component>
 			</module>
-  	</layer>
-    <layer name="app_layer">
       <module name="CI_external">
         <unit unitID="tools.CI_external" mrp="" bldFile="&layer_real_source_path;/foundation_system/sf_config/CI_external/group" name="CI_external" />
       </module>
-    </layer>
-    
+  	</layer>
+   
     <!-- from buildplatform, this is needed for winscw emulator -->
     <layer name="stubs_layer">
 			<module name="sf_licenseetsystub">
