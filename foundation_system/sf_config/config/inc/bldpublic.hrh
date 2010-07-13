@@ -990,8 +990,9 @@ service via Sniffer's Active Idle plugin.
 /** #FF_WLAN_EXTENSIONS 
 Device supports extended WLAN functionalities e.g. for association and
 authentication.
+NB. The code associated with this Feature flag as not been contributed to Symbian.
 */
-#define FF_WLAN_EXTENSIONS                                 
+#undef FF_WLAN_EXTENSIONS                                 
 
 /** #FF_WLAN_WAPI 
  WLAN Authentication and Privacy Infrastructure (WAPI) is a Chinese national
