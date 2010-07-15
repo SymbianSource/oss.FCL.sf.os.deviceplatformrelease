@@ -42,7 +42,7 @@ app-services_alarmserver	\sf\mw\appsupport\commonappservices\alarmserver\Group\a
 app-services_calcon	\sf\app\organizer\pimappsupport\chinesecalendarconverter\group\app-services_calcon.mrp
 app-services_chinesecalendaralgorithm	\sf\app\organizer\pimappsupport\chinesecalendaralg\group\app-services_chinesecalendaralgorithm.mrp
 app-services_chtmltocrtconv	\sf\mw\appsupport\filehandling\htmltorichtextconverter\group\app-services_chtmltocrtconv.mrp
-app-services_documentation	\sf\mw\appsupport\commonappservices\appservicesdocs\app-services_documentation.mrp
+app-services_documentation	\sf\mw\appsupport\commonappservices\doc_pub\app-services_documentation.mrp
 app-services_hlpmodel	\sf\app\helps\symhelp\helpmodel\group\app-services_hlpmodel.mrp
 app-services_richtexttohtmlconv	\sf\mw\appsupport\filehandling\richtexttohtmlconverter\Group\app-services_richtexttohtmlconv.mrp
 app-services_testalarmsrv	\sf\mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv\app-services_testalarmsrv.mrp

@@ -47,7 +47,7 @@ app-services_calcon	\sf\app\organizer\pimappsupport\chinesecalendarconverter\gro
 app-services_chinesecalendaralgorithm	\sf\app\organizer\pimappsupport\chinesecalendaralg\group\app-services_chinesecalendaralgorithm.mrp
 app-services_chtmltocrtconv	\sf\mw\appsupport\filehandling\htmltorichtextconverter\group\app-services_chtmltocrtconv.mrp
 app-services_coreappstest	\sf\mw\appsupport\commonappservices\coreappstest\Group\app-services_CoreAppsTest.mrp
-app-services_documentation	\sf\mw\appsupport\commonappservices\appservicesdocs\app-services_documentation.mrp
+app-services_documentation	\sf\mw\appsupport\commonappservices\doc_pub\app-services_documentation.mrp
 app-services_hlpmodel	\sf\app\helps\symhelp\helpmodel\group\app-services_hlpmodel.mrp
 app-services_richtexttohtmlconv	\sf\mw\appsupport\filehandling\richtexttohtmlconverter\Group\app-services_richtexttohtmlconv.mrp
 app-services_testalarmsrv	\sf\mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv\app-services_testalarmsrv.mrp
@@ -93,6 +93,7 @@ base_e32test	\sf\os\kernelhwsrv\kerneltest\e32test\group\base_e32test.mrp
 base_e32utils	\sf\os\kernelhwsrv\kerneltest\e32utils\group\base_e32utils.mrp
 base_e32utils_restricted	\sf\os\kernelhwsrv\kerneltest\e32utils\group\restricted\base_e32utils_restricted.mrp
 base_f32	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\group\base_f32.mrp
+base_f32_automounter	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\automounter\base_f32_automounter.mrp
 base_f32_automounter	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\automounter\base_f32_automounter.mrp
 base_f32_eshell	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\etshell\base_f32_eshell.mrp
 base_f32_estart	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\estart\base_f32_estart.mrp
