@@ -859,6 +859,7 @@ data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
 file=ABI_DIR\BUILD_DIR\LICENSEETSY_STUB.DLL        Sys\Bin\licenseetsy.dll /* needed by phonetsy.tsy */
 file=ABI_DIR\BUILD_DIR\SIMATKTSY_STUB.DLL        Sys\Bin\simatktsy.dll /* needed by licenseetsy_stub.dll */
 //file=ABI_DIR\BUILD_DIR\usbcsc.ldd        SHARED_LIB_DIR\usbcsc.ldd /* needed by msfs_db.fsy */
+file=ABI_DIR\BUILD_DIR\ocrsrv.dll        Sys\Bin\ocrsrv.dll /* needed by InputMethods smoke test */
 
 //extension[VARID]=KERNEL_DIR\BUILD_DIR\display.ldd        \Sys\Bin\display0.ldd /* needed for the graphics composition */
 
