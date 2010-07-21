@@ -1007,3 +1007,8 @@ file=\epoc32\release\armv5\urel\elocl.30 	"sys\bin\elocl.30"
 #endif
 
 ECOM_PLUGIN(ptikeymappings_itut_01.dll,ptikeymappings_itut_01.rsc)
+
+// "Fresh" ROM skin
+AUTO-BITMAP=DATAZ_\RESOURCE_FILES_DIR\skins\200259E6\Symbian.mbm  RESOURCE_FILES_DIR\skins\200259E6\Symbian.mbm
+data=DATAZ_\SKINS_DIR\import\200259E6\Symbian.skn  SKINS_DIR\import\200259E6\Symbian.skn
+data=DATAZ_\RESOURCE_FILES_DIR\skins\200259E6\Symbian.mif  RESOURCE_FILES_DIR\skins\200259E6\Symbian.mif
