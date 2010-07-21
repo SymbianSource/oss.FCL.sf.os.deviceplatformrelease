@@ -1005,3 +1005,5 @@ file=\epoc32\release\armv5\urel\elocl.96 	"sys\bin\elocl.96"
 file=\epoc32\release\armv5\urel\elocl.31 	"sys\bin\elocl.31"
 file=\epoc32\release\armv5\urel\elocl.30 	"sys\bin\elocl.30"
 #endif
+
+ECOM_PLUGIN(ptikeymappings_itut_01.dll,ptikeymappings_itut_01.rsc)
