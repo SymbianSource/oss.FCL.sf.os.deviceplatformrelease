@@ -36,7 +36,8 @@ networking_qosextnapi,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 networking_qoslib,B D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 
 # non-standard source code will not be delivered as beinG O Tagged as cat. B, but we need to deliver the cat B exports,,,
-graphics_itype,E(B) D E F G O T,E(B) D E F G O T,A B D E F G O T,A B D E F G O T
+#tls_itype,E(B) D E F G O T,E(B) D E F G O T,A B D E F G O T,A B D E F G O T
+tls_itype,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 
 multimedia_icl_capsadaptation,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 
@@ -430,6 +431,7 @@ kernelhwsrv_doc_pub,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_admin,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_agpslocationmanager,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_agps_positioning_module,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
+lbs_ape_supl_positioning_module,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_bt_positioning_module,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_datasourceplugins,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_default_positioning_module,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
@@ -852,6 +854,10 @@ testtools_testdriver,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 testtools_ucc,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 testtools_utilities,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 testtools_wintunnel,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+tls_jplangutil,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+tls_inlinetext,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+tls_numbergrouping,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+tls_sortutil,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_autotest,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_bspbuilder,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_build,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
@@ -937,6 +943,7 @@ usb_manager,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 usb_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 usb_rndis,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 usb_test,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+usb_autotest,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 wap-browser_wapbase,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 wap-browser_wappush,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 wap-browser_wappushsupport,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T

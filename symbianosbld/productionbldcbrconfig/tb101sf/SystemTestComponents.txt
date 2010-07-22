@@ -1,3 +1,0 @@
-integtestltsy	\sf\app\techview\sysvalidation\integtestltsy\group\integtestltsy.mrp
-integtestsmp	\sf\app\techview\sysvalidation\integtestsmp\group\integtestsmp.mrp
-systemtest_os	\sf\app\techview\sysvalidation\systemtestos\Group\tb101sf\Group\systemtest_os.mrp
