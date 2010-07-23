@@ -420,7 +420,7 @@ Feature USB Host (and related OTG) binaries are included into romimage
 Introduced by PREQ1872.
  
 */ 
-#define SYMBIAN_INCLUDE_USB_RNDIS                           
+#undef SYMBIAN_INCLUDE_USB_RNDIS                           
  
 /** #SYMBIAN_MULTIMEDIA_A3FDEVSOUND  
 This definition is used in symbian A3F build files.
