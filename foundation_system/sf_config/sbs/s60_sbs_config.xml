@@ -28,7 +28,9 @@
 		<append name="CC_WARNINGS_CONTROL_OPTION" value="-Wno-attributes"/>		<!-- turn off warnings where IMPORT_C and EXPORT_C are *correctly* matched -->
 
 		<set name="AAPCS_OPTION" value="-mapcs-frame -mthumb-interwork"/>   <!-- use -mapcs-frame instead of -mapcs - see Bug 1405 -->
+		<set name="RW_BASE" value="$(RW_BASE_OPTION)0x800000"/>          <!-- allow for the mega Qt executables with more than 4 Meg of code+rodata -->
 		<set name="USER_STATIC_RUNTIME_LIB" value="usrt4_0.lib"/>        <!-- use the RVCT 4.0 version of the runtime support -->
 		<set name="KERNEL_STATIC_RUNTIME_LIB" value="ksrt4_0.lib"/>      <!-- use the RVCT 4.0 version of the runtime support -->
+
 	</var>
 </build>
