@@ -33,4 +33,13 @@
 		<set name="KERNEL_STATIC_RUNTIME_LIB" value="ksrt4_0.lib"/>      <!-- use the RVCT 4.0 version of the runtime support -->
 
 	</var>
+
+  <alias name="armv5_urel" meaning="arm.v5.urel.gcce4_4_1.surge"/>
+  <alias name="armv5_udeb" meaning="arm.v5.udeb.gcce4_4_1.surge"/>
+  <group name="armv5">
+    <aliasRef ref="armv5_urel"/>
+    <aliasRef ref="armv5_udeb"/>
+  </group>
+
+
 </build>
