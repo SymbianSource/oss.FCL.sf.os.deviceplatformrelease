@@ -19,7 +19,6 @@
 
 #include <platform_paths.hrh>	
   
-#include "../adobereader/help/group/bld.inf"
 #include "../appmngr2/help/group/bld.inf"
 #include "../audiothemes/help/group/bld.inf"
 #include "../blid/help/group/bld.inf"
@@ -35,7 +34,6 @@
 #include "../connectionmonitorui/help/group/bld.inf"
 #include "../converter/help/group/bld.inf"
 #include "../cscapplicationui/help/group/bld.inf"
-#include "../deviceencryption/help/group/bld.inf"
 #include "../drmsettingsplugin/help/group/bld.inf"
 #include "../emailhelp/help/group/bld.inf"
 #include "../equalizer/help/group/bld.inf"
@@ -70,7 +68,6 @@
 #include "../omadsappui/help/group/bld.inf"
 #include "../omaprovisioning/help/group/bld.inf"
 #include "../operatormenu/help/group/bld.inf"
-#include "../ovisync/help/group/bld.inf"
 #include "../phonebook/help/group/bld.inf"
 #include "../phoneui/help/group/bld.inf"
 #include "../photossuite/help/group/bld.inf"

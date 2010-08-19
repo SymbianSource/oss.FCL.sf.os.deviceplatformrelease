@@ -2078,4 +2078,25 @@ SYMBIAN_GRAPHICS_FIXNATIVEORIENTATION
 If SYMBIAN_GRAPHICS_FIXNATIVEORIENTATION is enabled, the Orientation Independent Windows feature is enabled.
 */
 #define SYMBIAN_GRAPHICS_FIXNATIVEORIENTATION
+/** 
+@publishedPartner
+ @released
+ 
+ SYMBIAN_ADAPTIVE_TCP_RECEIVE_WINDOW
+ 
+If SYMBIAN_ADAPTIVE_TCP_RECEIVE_WINDOW is defined, TCP protocol will set the Receive window size according to the underlying bearer (ex. GPRS, WiFi, etc)
+ and the window size will change as the bearer changes or the modulation of the bearer changes.
+  #define supports PREQ1854.
+ 
+*/
+#define SYMBIAN_ADAPTIVE_TCP_RECEIVE_WINDOW
+
+/**
+@internalAll
+
+SYMBIAN_EMULATOR_SUPPORTS_PERPROCESS_WSD
+
+If SYMBIAN_EMULATOR_SUPPORTS_PERPROCESS_WSD is enabled, Symbian emulator will have support for per-(emulated) process writable static data.
+*/
+#define SYMBIAN_EMULATOR_SUPPORTS_PERPROCESS_WSD
 

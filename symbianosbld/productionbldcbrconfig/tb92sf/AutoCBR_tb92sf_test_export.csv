@@ -60,6 +60,12 @@ ipappsrv_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 kernelhwsrv_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 kernelhwsrv_doc_pub,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+lbs_networkpmasn1_plat,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+lbs_networkpmasn1_pub,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+lbs_networkpmutils,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+lbs_suplcontrolplaneprotocols,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+lbs_suplpmcore,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+lbs_suplproxyprotocolmodule,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 messaging_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 messagingmw_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 mm_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
