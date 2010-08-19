@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE SystemDefinition SYSTEM "sysdef_1_4_0.dtd" [
-  <!ENTITY layer_real_source_path "ext/os/s60platformrelease/helps_loc2" >
+  <!ENTITY layer_real_source_path "sf/os/deviceplatformrelease/helps_loc2" >
 ]>
 
 <SystemDefinition name="helps_loc2" schema="1.4.0">
