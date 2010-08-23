@@ -47,7 +47,7 @@ app-services_calcon	\sf\app\organizer\pimappsupport\chinesecalendarconverter\gro
 app-services_chinesecalendaralgorithm	\sf\app\organizer\pimappsupport\chinesecalendaralg\group\app-services_chinesecalendaralgorithm.mrp
 app-services_chtmltocrtconv	\sf\mw\appsupport\filehandling\htmltorichtextconverter\group\app-services_chtmltocrtconv.mrp
 app-services_coreappstest	\sf\mw\appsupport\commonappservices\coreappstest\Group\app-services_CoreAppsTest.mrp
-app-services_documentation	\sf\mw\appsupport\commonappservices\appservicesdocs\app-services_documentation.mrp
+app-services_documentation	\sf\mw\appsupport\commonappservices\doc_pub\app-services_documentation.mrp
 app-services_hlpmodel	\sf\app\helps\symhelp\helpmodel\group\app-services_hlpmodel.mrp
 app-services_richtexttohtmlconv	\sf\mw\appsupport\filehandling\richtexttohtmlconverter\Group\app-services_richtexttohtmlconv.mrp
 app-services_testalarmsrv	\sf\mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv\app-services_testalarmsrv.mrp
@@ -93,6 +93,7 @@ base_e32test	\sf\os\kernelhwsrv\kerneltest\e32test\group\base_e32test.mrp
 base_e32utils	\sf\os\kernelhwsrv\kerneltest\e32utils\group\base_e32utils.mrp
 base_e32utils_restricted	\sf\os\kernelhwsrv\kerneltest\e32utils\group\restricted\base_e32utils_restricted.mrp
 base_f32	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\group\base_f32.mrp
+base_f32_automounter	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\automounter\base_f32_automounter.mrp
 base_f32_automounter	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\automounter\base_f32_automounter.mrp
 base_f32_eshell	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\etshell\base_f32_eshell.mrp
 base_f32_estart	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\estart\base_f32_estart.mrp
@@ -273,11 +274,16 @@ lbs_metadata	\sf\os\lbs\lbs_info\lbs_metadata\lbs_metadata.mrp
 lbs_network_positioning_module	\sf\os\lbs\datasourcemodules\networkpositioningmodule\group\lbs_network_positioning_module.mrp
 lbs_networkgateway	\sf\os\lbs\locationmgmt\networkgateway\group\lbs_networkgateway.mrp
 lbs_networklocationmanager	\sf\os\lbs\locationmgmt\networklocationmgr\group\lbs_networklocationmanager.mrp
+lbs_networkpmasn1_plat	\sf\os\lbs\networkprotocolmodules\networkpmasn1_plat\group\lbs_networkpmasn1_plat.mrp
+lbs_networkpmasn1_pub	\sf\os\lbs\networkprotocolmodules\networkpmasn1_pub\group\lbs_networkpmasn1_pub.mrp
+lbs_networkpmutils	\sf\os\lbs\networkprotocolmodules\networkpmutils\group\lbs_networkpmutils.mrp
 lbs_networkrequesthandler	\sf\os\lbs\locationrequestmgmt\networkrequesthandler\group\lbs_networkrequesthandler.mrp
 lbs_networktest	\sf\os\lbs\lbstest\locationprotocoltest\group\lbs_networktest.mrp
 lbs_npeintegrationmodule	\sf\os\lbs\datasourcemodules\npeintegmodule\group\lbs_npeintegrationmodule.mrp
 lbs_privacyprotocolmodule	\sf\os\lbs\networkprotocolmodules\privacyprotocolmodule\group\lbs_privacyprotocolmodule.mrp
 lbs_simulation_positioning_module	\sf\os\lbs\datasourcemodules\simulationpositioningmodule\group\lbs_simulation_positioning_module.mrp
+lbs_suplcontrolplaneprotocols	\sf\os\lbs\networkprotocolmodules\suplcontrolplaneprotocols\group\lbs_suplcontrolplaneprotocols.mrp
+lbs_suplpmcore	\sf\os\lbs\networkprotocolmodules\suplpmcore\group\lbs_suplpmcore.mrp
 lbs_suplprotocolmodule	\sf\os\lbs\networkprotocolmodules\suplprotocolmodule\group\lbs_suplprotocolmodule.mrp
 lbs_suplproxyprotocolmodule	\sf\os\lbs\networkprotocolmodules\suplproxyprotocolmodule\group\lbs_suplproxyprotocolmodule.mrp
 lbs_suplsmstrigger	\sf\mw\messagingmw\messagingfw\suplsmshandler\group\lbs_suplsmstrigger.mrp
