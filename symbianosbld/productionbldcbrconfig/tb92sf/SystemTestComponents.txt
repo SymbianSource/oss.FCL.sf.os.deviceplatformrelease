@@ -1,2 +1,0 @@
-integtestltsy	\sf\app\techview\sysvalidation\integtestltsy\group\integtestltsy.mrp
-systemtest_os	\sf\app\techview\sysvalidation\systemtestos\Group\tb92sf\Group\systemtest_os.mrp
