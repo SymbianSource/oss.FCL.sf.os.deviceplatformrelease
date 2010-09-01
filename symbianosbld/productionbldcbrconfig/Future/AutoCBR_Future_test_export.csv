@@ -36,8 +36,7 @@ networking_qosextnapi,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 networking_qoslib,B D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 
 # non-standard source code will not be delivered as beinG O Tagged as cat. B, but we need to deliver the cat B exports,,,
-#tls_itype,E(B) D E F G O T,E(B) D E F G O T,A B D E F G O T,A B D E F G O T
-tls_itype,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+graphics_itype,E(B) D E F G O T,E(B) D E F G O T,A B D E F G O T,A B D E F G O T
 
 multimedia_icl_capsadaptation,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 
@@ -194,8 +193,6 @@ base_drivers_camerasc,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_sensors,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_unistore2,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_unistore2_undeliverable,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-base_drivers_usbdescriptors,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-base_drivers_usbdi_utils,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_usbhostotg,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_drivers_usbhostotg_usbware,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_e32_compsupp,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
@@ -427,11 +424,9 @@ install_config,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 install_testframework,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 integtestltsy,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 integtestsmp,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-kernelhwsrv_doc_pub,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_admin,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_agpslocationmanager,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_agps_positioning_module,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
-lbs_ape_supl_positioning_module,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_bt_positioning_module,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_datasourceplugins,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 lbs_default_positioning_module,B D E F G O T,B D E F G O T,A B D E F G O T,A B D E F G O T
@@ -651,7 +646,6 @@ nokia_usb_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 obex,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 obex_extensionapis,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 oeaddons_crypto,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-oeaddons_liboil,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 oeaddons_libpam,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 oeaddons_librt,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 oeaddons_ssl,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
@@ -800,6 +794,7 @@ techview_syncmlapp,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 techview_timew,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 techview_uiklaf,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 techview_usbui,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+techview_wpsconnect,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 CommonSimAtkTSY,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 telephony_commontsy,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 telephony_confidential,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
@@ -854,10 +849,6 @@ testtools_testdriver,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 testtools_ucc,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 testtools_utilities,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 testtools_wintunnel,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-tls_jplangutil,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-tls_inlinetext,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-tls_numbergrouping,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-tls_sortutil,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_autotest,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_bspbuilder,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 tools_build,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
@@ -943,7 +934,6 @@ usb_manager,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 usb_metadata,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 usb_rndis,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 usb_test,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
-usb_autotest,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 wap-browser_wapbase,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 wap-browser_wappush,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 wap-browser_wappushsupport,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T

@@ -30,7 +30,7 @@
 	<component id="locfiles_set6" name="Locale Files Set 6" class="config" filter="s60">
 		<unit bldFile="locfiles/group/set6"/>
 	</component>
-	<!-- is the a problem with SF builds with the following? -->
+	<!-- is there a problem with SF builds with the following? -->
 	<component id="locfiles_set7" name="Locale Files Set 7" class="config" filter="s60">
 		<unit bldFile="locfiles/group/set7"/>
 	</component>
