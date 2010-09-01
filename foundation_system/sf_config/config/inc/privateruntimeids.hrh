@@ -894,4 +894,6 @@
 
 #define KPrivacyDisclaimerFtrEnabled                        5257
 
+#define KFeatureIdFfSipNonstandardInteropfix                5259
+
 #endif // __PRIVATERUNTIMEIDS_HRH
