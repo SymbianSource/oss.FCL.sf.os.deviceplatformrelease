@@ -1,0 +1,159 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Used by techview roms
+*
+*/
+
+#ifndef __SYBORG_BASEPORT__ 
+#define __SYBORG_BASEPORT__
+
+/*############################################*/
+/*#	ROM Definitions			                     #*/
+/*#					                                 #*/
+/*############################################*/
+
+
+define SYBORG_L1		0x0b0a0001
+define VARIANT			syborg
+define VARID			  SYBORG_L1
+define ASSP_DIR			EPOCROOT##epoc32\release\syborg
+//define ROMMEGS			15		/* !! HEX !! */
+define _PLATFORM_NAME_		_syborg_
+
+
+kerneltrace 0x80000002
+
+
+memmodel multiple 0x100000
+//memmodel flexible 0x100000 0x1000 -0x4000
+//dlldatatop 0x7f000000
+
+
+trace 0x10
+collapse arm gcc 0
+multikernel
+
+
+version=0.01
+bootbinary=\epoc32\release\armv5\_syborg_bootloader_bootrom.bin
+
+
+debugport 0
+romsize=0x8000000
+romlinearbase=0x80000000
+romalign=0x10
+kerneldataaddress=0xC8000000
+kernelheapmin=0x08000			// calculated at boot time
+kernelheapmax=0x00FFF000
+dataaddress=0x400000
+defaultstackreserve=0x200000
+romchecksum=0x12345678
+
+
+nowrapper				// no rom header
+
+
+#ifdef UNICODE
+unicode
+#endif
+
+#define HEAPMAX(x)
+
+
+/*#################################################################################*/
+/*#	                   KERNEL, Compiler Support and User Binaries	  	            #*/
+/*#					                                                                      #*/
+/*#################################################################################*/
+
+
+/* The Symbian Kernel and Kernel Things. */
+// Must align kernel to 16K boundary since exception vectors will be mapped at 0xFFFF0000
+primary[VARID]=		KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_EKERN.EXE		          \sys\bin\EKERN.EXE	code-align 0x4000
+file=			        ABI_DIR\DEBUG_DIR\_PLATFORM_NAME_euser.dll		            \sys\bin\EUser.dll	// EUser Library
+
+
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\EXSTART.DLL			                    \sys\bin\EXSTART.DLL	// Symbian First Stage Starter
+file=			        ABI_DIR\DEBUG_DIR\RPIPE.DLL				                        \sys\bin\RPIPE.dll	// ?? To Find
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\EVFP.DLL				                      \sys\bin\EVFP.DLL	// IEEE-mode VFP support.
+file=			        ABI_DIR\DEBUG_DIR\ektran.dll				                      \sys\bin\EKTran.dll	// ?? To Find
+
+
+// Compiler and ABI support libraries
+#include <compsupp.iby>					
+
+
+/*#################################################################################*/
+/*#	                   HW Specific Binaries, Silicon HW Baseport       	  #*/
+/*#					                                          #*/
+/*#################################################################################*/
+
+
+/* Hardware Platform Registers and Funcionality ( HW Registers, HW Timers, Mailboxes, etcr ) */
+variant[VARID]=		KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_KASYBORG.DLL	  \sys\bin\KASYBORG.DLL	// HW Resources 
+
+// Kernel pipe
+
+device[VARID]=    KERNEL_DIR\DEBUG_DIR\pipelib.ldd					    \sys\bin\pipelib.ldd
+
+/* Display Controller, LCD HW Interface, */
+//extension[VARID]=	KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_LCD.DLL		      \sys\bin\LCD.DLL 	// Frame Buffer for Syborg
+//file=			        KERNEL_DIR\DEBUG_DIR\EDISP.dll	                    \sys\bin\EDISP.DLL	// Display Driver for TexShell
+
+/* Display Driver */
+device[VARID]=    KERNEL_DIR\DEBUG_DIR\display.ldd	                    \sys\bin\display0.ldd	// Display Driver for Syborg LDD
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\_syborg_svpframebuffer.dll       \sys\bin\LCD.DLL 	       // Frame Buffer for Syborg PDD
+file=             ABI_DIR\DEBUG_DIR\_generic_scdv.dll                   \sys\bin\scdv.dll           // Generic Driver with GCE Support
+
+
+/* UART Serial Port HW Interfaces and Drivers */
+device[VARID]=		KERNEL_DIR\DEBUG_DIR\ECOMM.LDD				              \sys\bin\ECOMM.LDD	// Serial Port Drivers
+device[VARID]=		KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_ESERIAL.PDD		  \sys\bin\ESERIAL.PDD	// Serial Port Drivers
+
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_EPOINTER.DLL	  \sys\bin\EPOINTER.DLL	// ???
+
+
+/* NAND/NOR/RAM Drive HW Interface and NAND/NOR/RAM Drive Drivers */
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_MEDINT.PDD	    \sys\bin\MEDINT.PDD	// Internal RAM Media Driver
+
+
+/* Keyboard Support */ 
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_EKEYB.DLL		    \sys\bin\EKEYB.DLL	// Keyboard Driver
+file[VARID]=		  KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_EKDATA.DLL	    \sys\bin\EKDATA.DLL	// Keyboard map
+
+
+/* Syborg Hardware Abstraction Layer */ 
+file=ABI_DIR\DEBUG_DIR\_PLATFORM_NAME_hal.dll					                 \sys\bin\Hal.dll	// Syborg HAL
+
+          
+
+/*#################################################################################*/
+/*#	              HW/SW Debug and Trace Support Specific Binaries	            	  #*/
+/*#					                                                                      #*/
+/*#################################################################################*/
+
+/* Trace and Debug Support */
+// Common monitor support. Must be before both 
+//interactive debugger and automatic logger.
+
+define BTRACEX_LDD _PLATFORM_NAME_btracex.ldd 
+
+#include <btrace.iby>
+
+
+extension[VARID]= KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_EXMONCOMMON.DLL 	\sys\bin\EXMONCOMMON.DLL
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\_PLATFORM_NAME_EXMONDEBUG.DLL  	\sys\bin\EXMONDEBUG.DLL
+extension[VARID]=	KERNEL_DIR\DEBUG_DIR\KDEBUG.DLL				                \sys\bin\KDEBUG.DLL
+//device[VARID]=	KERNEL_DIR\DEBUG_DIR\D_DEBUG.LDD			                \sys\bin\D_DEBUG.LDD
+
+#endif /* __SYBORG_BASEPORT__ */
