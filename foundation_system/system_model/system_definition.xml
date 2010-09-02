@@ -100,6 +100,9 @@
 ]>
 <SystemDefinition schema="3.0.0">
   <systemModel name="Symbian^4">
+    <layer id="adapt" name="Adaptation" levels="low mw high">
+      <package id="openmaxil.nokia" tech-domain="mm" level="high" href="../../../../adapt/openmaxil.nokia/package_definition.xml"/>
+    </layer>
     <layer id="os" name="OS" levels="hw services">
       <package id="kernelhwsrv" level="hw" tech-domain="hb" href="../../../../os/kernelhwsrv/package_definition.xml"/>
       <package id="boardsupport" level="hw" tech-domain="hb" href="../../../../os/boardsupport/package_definition.xml"/>
