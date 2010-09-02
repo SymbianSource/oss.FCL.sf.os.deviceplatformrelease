@@ -11,11 +11,9 @@
 *
 * Contributors:
 *
-* Description: 
+* Description:
 *
 */
-/*
-* deprecated, use bldvariant.hrh instead
-*/
+PRJ_EXPORTS
 
-#include <bldvariant.hrh>
+../inc/bldregional.hrh			/epoc32/include/ //

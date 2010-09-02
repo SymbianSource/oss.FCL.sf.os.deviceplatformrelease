@@ -2099,4 +2099,10 @@ SYMBIAN_EMULATOR_SUPPORTS_PERPROCESS_WSD
 If SYMBIAN_EMULATOR_SUPPORTS_PERPROCESS_WSD is enabled, Symbian emulator will have support for per-(emulated) process writable static data.
 */
 #define SYMBIAN_EMULATOR_SUPPORTS_PERPROCESS_WSD
+/**
+SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV
+
+If SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV, the windowserver component is built to use the OpenWF version of NGA.
+*/
+#define SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV
 
