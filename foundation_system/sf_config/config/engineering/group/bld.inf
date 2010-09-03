@@ -11,24 +11,9 @@
 *
 * Contributors:
 *
-* Description: 
+* Description:
 *
 */
+PRJ_EXPORTS
 
-#ifndef BLDVARIANT_HRH
-#define BLDVARIANT_HRH
-
-#include "defaultcaps.hrh"
-
-#include "variant/Symbian_OS.hrh"
-#include "privateruntimeids.hrh"  
-#include "publicruntimeids.hrh"  
-
-#include <bldcodeline.hrh>		
-#include <bldprivate.hrh>
-#include <bldpublic.hrh>
-#include <bldregional.hrh> 
-
-#include "ProductVariant.hrh" 
-
-#endif
+../inc/bldregional.hrh			/epoc32/include/ //

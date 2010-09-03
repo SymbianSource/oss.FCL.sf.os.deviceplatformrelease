@@ -646,4 +646,254 @@
 
 #define KFeatureIdXspExtensionManager                       1692
 
+#define KFeatureIdCoverToDeskSetting                        5061
+
+#define KFeatureIdDmCameraDisable                           5064
+
+#define KFeatureIdEmailIpsServices                          5089
+
+#define KFeatureIdEsCalendar                                5078 
+
+#define KFeatureIdEsEmail                                   5082 
+
+#define KFeatureIdEsEmailFramework                          5083 
+
+#define KFeatureIdFfAiEmailWidget                           5138
+
+#define KFeatureIdFfAnykeyAlphabeticalList                  5158 
+
+#define KFeatureIdFfAnykeyDisablekeytones                   5156 
+
+#define KFeatureIdFfAnykeyKickstandEnabled                  5166 
+
+#define KFeatureIdFfAnykeyOnetouchui                        5165 
+
+#define KFeatureIdFfAnykeyOwnkeyEnabled                     5167 
+
+#define KFeatureIdFfAnykeyPcfwNgiCheck                      5157 
+
+#define KFeatureIdFfAtntAtCommands                          5200 
+
+#define KFeatureIdFfAttAddressBk                            5240 
+
+#define KFeatureIdFfAttAddressBkGroupSync                   5250 
+
+#define KFeatureIdFfAttVideoShareUiComplianceFor323         5196 
+
+#define KFeatureIdFfAutomaticDisplayOrientation             5137 
+
+#define KFeatureIdFfAvcDisplayMipSupport                    5219 
+
+#define KFeatureIdFfAvcDisplayOledLowpowerSupport           5221 
+
+#define KFeatureIdFfCDriveAsLowestPriority                  5249 
+
+#define KFeatureIdFfCallRestriction                         5218 
+
+#define KFeatureIdFfCameraLaunchWithCameraKey               5176 
+
+#define KFeatureIdFfCameraPda                               5131 
+
+#define KFeatureIdFfCarrierProfileLocked                    5206 
+
+#define KFeatureIdFfChinaRichDictionary                     5150 
+
+#define KFeatureIdFfChinaUdx                                5172 
+
+#define KFeatureIdFfChinauiMsgMgnt                          5143 
+
+#define KFeatureIdFfChipmunk                                5163 
+
+#define KFeatureIdFfCmccTdAppMenus                          5252 
+
+#define KFeatureIdFfCmccUserPlmn                            5258 
+
+#define KFeatureIdFfCommonSlide                             5214 
+
+#define KFeatureIdFfCommunityTmoIntl                        5222 
+
+#define KFeatureIdFfContactsCompanyNames                    236 
+
+#define KFeatureIdFfContactsbarCcaEventHistoryTab           5244 
+
+#define KFeatureIdFfContactsbarEmail                        5193 
+
+#define KFeatureIdFfContactsbarImPresence                   5194 
+
+#define KFeatureIdFfContactsbarOnecontactWidget             5245 
+
+#define KFeatureIdFfContactsbarRssFeeds                     5192 
+
+#define KFeatureIdFfContactsbarUseContactColour             5191 
+
+#define KFeatureIdFfContactsbarUseDetailsApp                5188 
+
+#define KFeatureIdFfContactsbarWidget                       5246 
+
+#define KFeatureIdFfCsw9wayScrolling                        5140 
+
+#define KFeatureIdFfCswPimLocationIntegration               5153 
+
+#define KFeatureIdFfDeviceEncryptionFotaDisable             5164 
+
+#define KFeatureIdFfDeviceEncryptionFotaSupport             5179 
+
+#define KFeatureIdFfDualDisplaySupport                      5132 
+
+#define KFeatureIdFfDynamicContentDelivery                  5205 
+
+#define KFeatureIdFfEmailPluginHelpNotAvailable             5152 
+
+#define KFeatureIdFfEnablePrintingFramework                 5127 
+
+#define KFeatureIdFfEsAdvancedWizard                        5122 
+
+#define KFeatureIdFfEsCalMeetingRequestUi                   5130 
+
+#define KFeatureIdFfEsContactServices                       5093 
+
+#define KFeatureIdFfEsContacts                              5092 
+
+#define KFeatureIdFfEsEmailIntellisync                      5119 
+
+#define KFeatureIdFfEsEmailMceIntegration                   5097 
+
+#define KFeatureIdFfEsGenericUiComponents                   5121 
+
+#define KFeatureIdFfEsMeetingRequestUi                      5091 
+
+#define KFeatureIdFfEsUsbModem                              5096 
+
+#define KFeatureIdFfExchangeActivesync                      5111 
+
+#define KFeatureIdFfFaceDetection                           5181 
+
+#define KFeatureIdFfFindAndDo                               5178 
+
+#define KFeatureIdFfFingerprinthandlerUi                    5236 
+
+#define KFeatureIdFfFsCalendarLocation                      5171 
+
+#define KFeatureIdFfGpsKeyLed                               5162 
+
+#define KFeatureIdFfHomeScreenVanityDialing                 5098 
+
+#define KFeatureIdFfHomescreenNotificationWidget            5235 
+
+#define KFeatureIdFfImsDeregistrationInOfflineFor323        5203 
+
+#define KFeatureIdFfImsDeregistrationInRfsFor323            5202 
+
+#define KFeatureIdFfIntelligentSlide                        5213 
+
+#define KFeatureIdFfMediaKey                                5220 
+
+#define KFeatureIdFfMessageBoard                            5227 
+
+#define KFeatureIdFfMessagingSplitView                      5133 
+
+#define KFeatureIdFfMobileShareInMyStuff                    5199 
+
+#define KFeatureIdFfMobiledictionary                        5116 
+
+#define KFeatureIdFfMyfavesTmoUs                            5223 
+
+#define KFeatureIdFfNativeFileEncryption                    5106 
+
+#define KFeatureIdFfNonFsMail                               5124 
+
+#define KFeatureIdFfPhoneasmodemQuickLink                   5190 
+
+#define KFeatureIdFfPhotosPdaEnhancements                   5141 
+
+#define KFeatureIdFfPopupClock                              5173 
+
+#define KFeatureIdFfProductIncludesPa50                     5177 
+
+#define KFeatureIdFfQtBearerManagement                      319 
+
+#define KFeatureIdFfRcs                                     5247 
+
+#define KFeatureIdFfRsswidgetAdvertiserWidget               5248 
+
+#define KFeatureIdFfRsswidgetTemplate                       5242 
+
+#define KFeatureIdFfS60CustomSwWelcome2                     5149 
+
+#define KFeatureIdFfSearchSw                                321 
+
+#define KFeatureIdFfSensorBasedSilencing                    5175 
+
+#define KFeatureIdFfSettingsSplitView                       5134 
+
+#define KFeatureIdFfSettingwizard6                          5160 
+
+#define KFeatureIdFfSkype                                   229 
+
+#define KFeatureIdFfSliderLandscapeStartsApp                5126 
+
+#define KFeatureIdFfSmallScreenTouch                        279 
+
+#define KFeatureIdFfSmsSelfRegistration                     5207 
+
+#define KFeatureIdFfSocialPhonebook                         5215 
+
+#define KFeatureIdFfSpeechUseWebDownload                    5226 
+
+#define KFeatureIdFfSwitchProfiletransferDisabled           5139 
+
+#define KFeatureIdFfSyncStatusCheckEnabled                  5142 
+
+#define KFeatureIdFfTakeMeHome                              5161 
+
+#define KFeatureIdFfTouchscreenKeyfeedback                  5174 
+
+#define KFeatureIdFfTutorialNoCoverDisplayContent           5144 
+
+#define KFeatureIdFfUifwBackgroundOffsetAdjustmentForSplitview  5147 
+
+#define KFeatureIdFfUifwListboxHighlightSelection           5146 
+
+#define KFeatureIdFfVoiceUiWithDeviceLock                   5170 
+
+#define KFeatureIdFotaEnterpriseControl                     5123 
+
+#define KFeatureIdMsgForwardWithSender                      5239 
+
+#define KFeatureIdMuteNotificationTones                     5070
+
+#define KFeatureIdPrintingFrameworkCalendarPlugin           5057 
+
+#define KFeatureIdPrintingFrameworkContactsPlugin           5058 
+
+#define KFeatureIdPrintingFrameworkHelp                     5054 
+
+#define KFeatureIdPrintingFrameworkMmsPlugin                5056 
+
+#define KFeatureIdPrintingFrameworkSmsPlugin                5055 
+
+#define KFeatureIdProductIncludesHomeScreenDeviceLockView   5086 
+
+#define KFeatureIdProductIncludesHomeScreenModes            5084 
+
+#define KFeatureIdProductIncludesUsch                       5117 
+
+#define KFeatureIdProductIncludesVoipRel30                  5088 
+
+#define KFeatureIdProductIncludesWlanWizardForActiveIdle    5060 
+
+#define KFeatureIdS60CustomSwTutorialAlwaysPortrait         5125 
+
+#define KFeatureIdS60CustomSwWelcome                        5151
+
+#define KFeatureIdS60NokiaFarsiCalendar                     5187 
+
+#define KFeatureIdS60NokiaHijriCalendar                     5186
+
+#define KFeatureIdS60NokiaMobilecrashSender2                5155
+
+#define KPrivacyDisclaimerFtrEnabled                        5257
+
+#define KFeatureIdFfSipNonstandardInteropfix                5259
+
 #endif // __PRIVATERUNTIMEIDS_HRH
