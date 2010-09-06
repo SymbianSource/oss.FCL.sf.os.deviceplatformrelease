@@ -1035,6 +1035,11 @@ Controls if Navibar idle theme is going to image or not.
 */
 #define FF_XML_IDLE_THEME_NAVIBAR_IDLE                     
 
+/** #FF_OPENMAX_AL 
+Appears to enable the creation of openmaxal.dll
+*/
+#define FF_OPENMAX_AL                     
+
 /** #LANGPACK_DEFAULTLANG 
 The default language that is selected during bootup (this selection is
 overridden by the sim language selection). 
@@ -2146,4 +2151,4 @@ of XDM
 */
 #define __XDM_XCAP                                         
 
-#endif // __BLDPUBLIC_HRH 
+#endif // __BLDPUBLIC_HRH
