@@ -903,6 +903,5 @@
 // dummy flag until we get the right number
 
 #define KFeatureIdFfVirtualFullscrPortraitQwertyInput       9001
-#define KFeatureIdFfHttpAllowUntrustedCertificates          9002
 
 #endif // __PRIVATERUNTIMEIDS_HRH
