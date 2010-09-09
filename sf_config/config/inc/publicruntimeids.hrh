@@ -155,8 +155,6 @@
 
 #define KFeatureIdFfIntelligentTextInput                    216
 
-#define KFeatureIdFfIpsecUmaSupportEnable                   332
-
 #define KFeatureIdFfItiVirtualTouchFirstGenerationSupport   218
 
 #define KFeatureIdFfJavaGlobalIndicatorsApi                 134
