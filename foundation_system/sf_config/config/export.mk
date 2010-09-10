@@ -25,9 +25,6 @@ REGION = western
 INCFILES =	$(MAKEFILEDIR)inc/bldvariant.hrh                                    /epoc32/include/	\
             $(MAKEFILEDIR)inc/privateruntimeids.hrh                             /epoc32/include/ \
             $(MAKEFILEDIR)inc/publicruntimeids.hrh                              /epoc32/include/ \
-            $(MAKEFILEDIR)inc/PublicStaticFeatures.hrh                          /epoc32/include/ \
-            $(MAKEFILEDIR)inc/PrivateStaticFeatures.hrh                         /epoc32/include/ \
-            $(MAKEFILEDIR)inc/PlatformStaticFeatures.hrh                        /epoc32/include/ \
             $(MAKEFILEDIR)inc/ProductVariant.hrh                                /epoc32/include/ \
             $(MAKEFILEDIR)inc/defaultcaps.hrh                                   /epoc32/include/ \
             $(MAKEFILEDIR)inc/s60_features.xml                                  /epoc32/include/ \

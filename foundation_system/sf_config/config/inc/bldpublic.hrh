@@ -324,6 +324,11 @@ used.
 */
 #undef FF_GENERIC_FONTS_ASSETS                            
 
+/** #FF_GSTREAMER 
+Device supports GStreamer APIs.
+*/
+#define FF_GSTREAMER                                
+
 /** #FF_HDMI 
 Feature flag to indicate HDMI availability.  IIf defined, device supports HDMI
 (High Definition Multimedia Interface)

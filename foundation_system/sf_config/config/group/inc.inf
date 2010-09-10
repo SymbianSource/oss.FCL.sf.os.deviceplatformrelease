@@ -24,9 +24,6 @@ PRJ_EXPORTS
 ../inc/bldvariant.hrh			              /epoc32/include/bldvariant.hrh
 ../inc/privateruntimeids.hrh		        /epoc32/include/privateruntimeids.hrh
 ../inc/publicruntimeids.hrh		          /epoc32/include/publicruntimeids.hrh
-../inc/PublicStaticFeatures.hrh		      /epoc32/include/PublicStaticFeatures.hrh
-../inc/PrivateStaticFeatures.hrh	      /epoc32/include/PrivateStaticFeatures.hrh
-../inc/PlatformStaticFeatures.hrh	      /epoc32/include/PlatformStaticFeatures.hrh
 ../inc/s60_features.xml	                /epoc32/include/s60_features.xml
 
 ../inc/bldpublic.hrh                    /epoc32/include/bldpublic.hrh
