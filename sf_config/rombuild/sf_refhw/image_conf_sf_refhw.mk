@@ -51,7 +51,7 @@ CORE_OBYGEN =\
 CORE_OBY = $(CONFIGROOT)/sf_refhw/bigrom.oby $(CORE_PREFIX)_core_collected.oby
 # <variant/patchdata.iby> would be added here too
 
-CORE_OPT = $(COREPLAT_OPT) -es60ibymacros -DSECTION
+CORE_OPT = $(COREPLAT_OPT) -es60ibymacros -elocalise -DSECTION -fm=\epoc32\rom\include\featuredatabase.xml
 
 # Workaround to fix Rombuild errors:
 # "ERROR: incorrect format for time keyword..." and "The size of the ROM has not been supplied."

@@ -14,6 +14,360 @@
 * bigrom.oby
 */
 
+
+/* additional feature descriptions to allow for the target UI build */
+
+FEATURE Camera SF 0x00000001 UD 0x00000000
+FEATURE FMRadio  SF 0x00000001 UD 0x00000000
+FEATURE OpenGLES3DApi  SF 0x00000001 UD 0x00000000
+FEATURE BtAudio  SF 0x00000001 UD 0x00000000
+FEATURE Srcs  SF 0x00000001 UD 0x00000000
+FEATURE BtImagingProfile  SF 0x00000001 UD 0x00000000
+FEATURE Wim  SF 0x00000001 UD 0x00000000
+FEATURE SimCertificates  SF 0x00000001 UD 0x00000000
+FEATURE SmartCardProv  SF 0x00000001 UD 0x00000000
+FEATURE IAUpdate  SF 0x00000001 UD 0x00000000
+FEATURE Dpb  SF 0x00000001 UD 0x00000000
+FEATURE Im  SF 0x00000001 UD 0x00000000
+FEATURE ImpsStandaloneIpCir  SF 0x00000001 UD 0x00000000
+FEATURE Presence  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDm  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDs  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsMMS  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsEmail  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsCon  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsCal  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmDs  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmIAP  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmEmail  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmMMS  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlObex  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsAlert  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsNotepad  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmObex  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmWlan  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmImps  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmFota  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmVoIP  SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmSIP  SF 0x00000001 UD 0x00000000
+FEATURE FfNcdEngine  SF 0x00000001 UD 0x00000000
+FEATURE FfNcdUi  SF 0x00000001 UD 0x00000000
+FEATURE VirtualFullscrQwertyInput  SF 0x00000001 UD 0x00000000
+FEATURE VirtualItutInput  SF 0x00000001 UD 0x00000000
+FEATURE Mp3  SF 0x00000001 UD 0x00000000
+FEATURE Sind  SF 0x00000001 UD 0x00000000
+FEATURE AmrNb  SF 0x00000001 UD 0x00000000
+FEATURE AmrWb  SF 0x00000001 UD 0x00000000
+FEATURE Aac  SF 0x00000001 UD 0x00000000
+FEATURE SymbianMultimediaA3fdevsoundId  SF 0x00000001 UD 0x00000000
+FEATURE Svgt  SF 0x00000001 UD 0x00000000
+FEATURE MacromediaFlash6  SF 0x00000001 UD 0x00000000
+FEATURE Mpeg4VideoEncoding  SF 0x00000001 UD 0x00000000
+FEATURE ProtocolGsm  SF 0x00000001 UD 0x00000000
+FEATURE ProtocolWcdma  SF 0x00000001 UD 0x00000000
+FEATURE SimCard  SF 0x00000001 UD 0x00000000
+FEATURE UseDrmEngineInCcp  SF 0x00000001 UD 0x00000000
+FEATURE DrmFull  SF 0x00000001 UD 0x00000000
+FEATURE DrmPhase2  SF 0x00000001 UD 0x00000000
+FEATURE DrmClock  SF 0x00000001 UD 0x00000000
+FEATURE DrmOma2  SF 0x00000001 UD 0x00000000
+FEATURE Qos  SF 0x00000001 UD 0x00000000
+//FEATURE LoggerGprs  SF 0x00000001 UD 0x00000000
+FEATURE EdgeKnowledge  SF 0x00000001 UD 0x00000000
+FEATURE NetworkRegistration  SF 0x00000001 UD 0x00000000
+FEATURE ConnMonExtension  SF 0x00000001 UD 0x00000000
+FEATURE ProtocolWlan  SF 0x00000001 UD 0x00000000
+FEATURE Landmarks  SF 0x00000001 UD 0x00000000
+FEATURE PrivacyFramework  SF 0x00000001 UD 0x00000000
+FEATURE UsbCharging  SF 0x00000001 UD 0x00000000
+FEATURE RockerKey  SF 0x00000001 UD 0x00000000
+FEATURE LandmarksConverter  SF 0x00000001 UD 0x00000000
+FEATURE LocationSysUi  SF 0x00000001 UD 0x00000000
+FEATURE SelectableEmail  SF 0x00000001 UD 0x00000000
+FEATURE EmailMceIntegration  SF 0x00000001 UD 0x00000000
+FEATURE FfSimlessOfflineSupport  SF 0x00000001 UD 0x00000000
+FEATURE CaeVrCustomCommands  SF 0x00000001 UD 0x00000000
+FEATURE CameraBurstMode  SF 0x00000001 UD 0x00000000
+FEATURE FfEmailFramework  SF 0x00000001 UD 0x00000000
+FEATURE JavaMMAPI11  SF 0x00000001 UD 0x00000000
+FEATURE JavaFileAPI  SF 0x00000001 UD 0x00000000
+FEATURE JavaPIMAPI  SF 0x00000001 UD 0x00000000
+FEATURE Java3DAPI  SF 0x00000001 UD 0x00000000
+FEATURE JavaLocationAPI  SF 0x00000001 UD 0x00000000
+FEATURE OCSP  SF 0x00000001 UD 0x00000000
+FEATURE J2MEWebServicesAPI  SF 0x00000001 UD 0x00000000
+FEATURE FfVoiceCallContinuity  SF 0x00000001 UD 0x00000000
+FEATURE FfWsNcim  SF 0x00000001 UD 0x00000000
+FEATURE BrowserAdaptiveBookm  SF 0x00000001 UD 0x00000000
+FEATURE BrowserUrlCompletion  SF 0x00000001 UD 0x00000000
+FEATURE RssFeeds  SF 0x00000001 UD 0x00000000
+FEATURE Series60NativeBrowser  SF 0x00000001 UD 0x00000000
+FEATURE FfConnectionOverride  SF 0x00000001 UD 0x00000000
+FEATURE FfCapacitiveDisplay  SF 0x00000001 UD 0x00000000
+FEATURE FfTacticons  SF 0x00000001 UD 0x00000000
+FEATURE FfIaupdatePhase2  SF 0x00000001 UD 0x00000000
+FEATURE FfOmaScomoAdapter  SF 0x00000001 UD 0x00000000
+FEATURE FfRuntimeDeviceCapabilityConfiguration  SF 0x00000001 UD 0x00000000
+FEATURE IncludeUsbRndis  SF 0x00000001 UD 0x00000000
+FEATURE SideVolumeKeys  SF 0x00000001 UD 0x00000000
+FEATURE VideoRecorder  SF 0x00000001 UD 0x00000000
+FEATURE OpenGLESSWImplementation  SF 0x00000001 UD 0x00000000
+FEATURE FfAvkonEmotionIconEnabled  SF 0x00000001 UD 0x00000000
+FEATURE FfTarmCapabilityBasedAccess  SF 0x00000001 UD 0x00000000
+FEATURE FfEmailProtocolPlugins  SF 0x00000001 UD 0x00000000
+FEATURE BtSap  SF 0x00000001 UD 0x00000000
+FEATURE AtHandler  SF 0x00000001 UD 0x00000000
+FEATURE BtTestMode  SF 0x00000001 UD 0x00000000
+FEATURE PushWhiteList  SF 0x00000001 UD 0x00000000
+FEATURE OmaProv  SF 0x00000001 UD 0x00000000
+FEATURE FfContactsRemoteLookup  SF 0x00000001 UD 0x00000000
+FEATURE FfContactsCompanyNames  SF 0x00000001 UD 0x00000000
+FEATURE MMS SF 0x00000001 UD 0x00000000
+FEATURE FfDeviceEncryptionFeature SF 0x00000001 UD 0x00000000
+FEATURE ffContactsMycard SF 0x00000001 UD 0x00000000
+FEATURE FfContactsMerge SF 0x00000001 UD 0x00000000
+FEATURE S60MtpController SF 0x00000001 UD 0x00000000
+FEATURE FfContactsSocial SF 0x00000001 UD 0x00000000
+FEATURE MpegAacEncoding SF 0x00000001 UD 0x00000000
+FEATURE UseAmrNbCMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE UseAmrWbCMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE UseAacCMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE UseMp3CMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE UseQcelpCMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE IncludeAmrNbCMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE SimPhonebookMatch SF 0x00000001 UD 0x00000000
+FEATURE CommonTsy SF 0x00000001 UD 0x00000000
+FEATURE CommonDsy SF 0x00000001 UD 0x00000000
+FEATURE CommonVoip SF 0x00000001 UD 0x00000000
+FEATURE EnableIsiCommunicationInUsbChargingMode SF 0x00000001 UD 0x00000000
+FEATURE QwertyInput SF 0x00000001 UD 0x00000000
+FEATURE PenSupport SF 0x00000001 UD 0x00000000
+FEATURE IncludeAmrWbCMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE IncludeAacCMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE IncludeMp3CMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE IncludeQcelpCMMFCodec SF 0x00000001 UD 0x00000000
+FEATURE Id3V2Metadata SF 0x00000001 UD 0x00000000
+FEATURE MmfDrmUtility SF 0x00000001 UD 0x00000000
+FEATURE AudioEffectsApi SF 0x00000001 UD 0x00000000
+FEATURE AudioResourceIndications SF 0x00000001 UD 0x00000000
+FEATURE MmCommsEngine SF 0x00000001 UD 0x00000000
+FEATURE Wma SF 0x00000001 UD 0x00000000
+FEATURE MmCommsAvController SF 0x00000001 UD 0x00000000
+FEATURE SupportedFeature1 SF 0x00000001 UD 0x00000000
+FEATURE SupportedFeature2 SF 0x00000001 UD 0x00000000
+FEATURE AvkonELaf SF 0x00000001 UD 0x00000000
+FEATURE Midi SF 0x00000001 UD 0x00000000
+FEATURE Help SF 0x00000001 UD 0x00000000
+FEATURE LunarCalendar SF 0x00000001 UD 0x00000000
+FEATURE PhoneCnap SF 0x00000001 UD 0x00000000
+FEATURE PhoneTty SF 0x00000001 UD 0x00000000
+FEATURE RealPlayer SF 0x00000001 UD 0x00000000
+FEATURE SettingsProtection SF 0x00000001 UD 0x00000000
+FEATURE PushSL SF 0x00000001 UD 0x00000000
+FEATURE DynamicProfiles SF 0x00000001 UD 0x00000000
+FEATURE ExtendedStartup SF 0x00000001 UD 0x00000000
+FEATURE OperatorMenu SF 0x00000001 UD 0x00000000
+FEATURE MultipleProvCtx SF 0x00000001 UD 0x00000000
+FEATURE BrowserNarrowScreen SF 0x00000001 UD 0x00000000
+FEATURE AudioAac SF 0x00000001 UD 0x00000000
+FEATURE AudioPlaylist SF 0x00000001 UD 0x00000000
+FEATURE BrowserProgressInd SF 0x00000001 UD 0x00000000
+FEATURE BrowserFullScr SF 0x00000001 UD 0x00000000
+FEATURE BrowserFrames SF 0x00000001 UD 0x00000000
+FEATURE OperatorCache SF 0x00000001 UD 0x00000000
+FEATURE SmilEditor SF 0x00000001 UD 0x00000000
+FEATURE SeamlessLinks SF 0x00000001 UD 0x00000000
+FEATURE ShowPanics SF 0x00000001 UD 0x00000000
+FEATURE MmcHotswap SF 0x00000001 UD 0x00000000
+FEATURE AlwaysOnLine SF 0x00000001 UD 0x00000000
+FEATURE HttpDigestAuth SF 0x00000001 UD 0x00000000
+FEATURE SendFileInCall SF 0x00000001 UD 0x00000000
+FEATURE IPv6 SF 0x00000001 UD 0x00000000
+FEATURE CellBroadcast SF 0x00000001 UD 0x00000000
+FEATURE USSD SF 0x00000001 UD 0x00000000
+FEATURE RV9 SF 0x00000001 UD 0x00000000
+FEATURE WorldClock SF 0x00000001 UD 0x00000000
+FEATURE BrowserFileUpload SF 0x00000001 UD 0x00000000
+FEATURE AlwaysOnLineEmail SF 0x00000001 UD 0x00000000
+FEATURE BrowserNetscapeAPI SF 0x00000001 UD 0x00000000
+FEATURE ConnMonUI SF 0x00000001 UD 0x00000000
+FEATURE SmartmsgSMSBookmarkReceiving SF 0x00000001 UD 0x00000000
+FEATURE SmartmsgSMSOperatorLogoReceiving SF 0x00000001 UD 0x00000000
+FEATURE SmartmsgSMSRingingToneReceiving SF 0x00000001 UD 0x00000000
+FEATURE SmartmsgSMSGmsMessageReceiving SF 0x00000001 UD 0x00000000
+FEATURE SmartmsgSMSVcalReceiving SF 0x00000001 UD 0x00000000
+FEATURE SmartmsgSMSVcardReceiving SF 0x00000001 UD 0x00000000
+FEATURE SmartmsgSMSVcalSending SF 0x00000001 UD 0x00000000
+FEATURE SmartmsgSMSVcardSending SF 0x00000001 UD 0x00000000
+FEATURE EnPolicyDos SF 0x00000001 UD 0x00000000
+FEATURE BrowserAudioPlugin SF 0x00000001 UD 0x00000000
+//FEATURE Layout240_320 SF 0x00000001 UD 0x00000000
+//FEATURE Layout320_240 SF 0x00000001 UD 0x00000000
+FEATURE ScalableIcons SF 0x00000001 UD 0x00000000
+FEATURE Jsr135Support SF 0x00000001 UD 0x00000000
+FEATURE SvgtViewer SF 0x00000001 UD 0x00000000
+FEATURE UsbDeviceLock SF 0x00000001 UD 0x00000000
+FEATURE AacEncoderPlugin SF 0x00000001 UD 0x00000000
+FEATURE AacPlusDecoderPlugin SF 0x00000001 UD 0x00000000
+FEATURE FlashLiteViewer SF 0x00000001 UD 0x00000000
+FEATURE FlashLiteBrowserPlugin SF 0x00000001 UD 0x00000000
+FEATURE AccessoryFw SF 0x00000001 UD 0x00000000
+FEATURE EmailUi SF 0x00000001 UD 0x00000000
+FEATURE InstallerSisx SF 0x00000001 UD 0x00000000
+FEATURE JavaMIDP20 SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsOverHttp SF 0x00000001 UD 0x00000000
+FEATURE JavaJsr205Wma20Support SF 0x00000001 UD 0x00000000
+FEATURE JavaJsr2343DAudioAndMusicCapabilities SF 0x00000001 UD 0x00000000
+FEATURE JavaJsr2262DSvgAPI SF 0x00000001 UD 0x00000000
+FEATURE JavaJsr177SecurityAndTrustServices SF 0x00000001 UD 0x00000000
+FEATURE Equalizer SF 0x00000001 UD 0x00000000
+FEATURE CallImagetext SF 0x00000001 UD 0x00000000
+FEATURE ContentDownload SF 0x00000001 UD 0x00000000
+FEATURE 3DMenu SF 0x00000001 UD 0x00000000
+FEATURE BasicLocationInfoDisplay SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsAiwProvider SF 0x00000001 UD 0x00000000
+FEATURE JapaneseLargerDictionary SF 0x00000001 UD 0x00000000
+FEATURE IncludeEaacplusCmmfcodec SF 0x00000001 UD 0x00000000
+FEATURE UseEaacplusCmmfCodec SF 0x00000001 UD 0x00000000
+FEATURE Xdm SF 0x00000001 UD 0x00000000
+FEATURE XdmXcap SF 0x00000001 UD 0x00000000
+FEATURE XdmLocalStorage SF 0x00000001 UD 0x00000000
+FEATURE UpnpStack SF 0x00000001 UD 0x00000000
+FEATURE UsbPictbridge SF 0x00000001 UD 0x00000000
+FEATURE UpnpAvcp SF 0x00000001 UD 0x00000000
+FEATURE UsbMultiPersonality SF 0x00000001 UD 0x00000000
+FEATURE S60FmRadioApplication SF 0x00000001 UD 0x00000000
+FEATURE TvOut SF 0x00000001 UD 0x00000000
+FEATURE SatCallControl SF 0x00000001 UD 0x00000000
+FEATURE SatBip SF 0x00000001 UD 0x00000000
+FEATURE SatDisplayText SF 0x00000001 UD 0x00000000
+FEATURE SatGetInkey SF 0x00000001 UD 0x00000000
+FEATURE SatGetInput SF 0x00000001 UD 0x00000000
+FEATURE SatLanguageNotification SF 0x00000001 UD 0x00000000
+FEATURE SatLaunchBrowser SF 0x00000001 UD 0x00000000
+FEATURE SatMoSmControl SF 0x00000001 UD 0x00000000
+FEATURE SatPlayTone SF 0x00000001 UD 0x00000000
+FEATURE SatProvideLocalInfo SF 0x00000001 UD 0x00000000
+FEATURE SatRefresh SF 0x00000001 UD 0x00000000
+FEATURE SatSelectItem SF 0x00000001 UD 0x00000000
+FEATURE SatSendDtfm SF 0x00000001 UD 0x00000000
+FEATURE SatSendSm SF 0x00000001 UD 0x00000000
+FEATURE SatSendSs SF 0x00000001 UD 0x00000000
+FEATURE SatSendUssd SF 0x00000001 UD 0x00000000
+FEATURE SatSetupCall SF 0x00000001 UD 0x00000000
+FEATURE SatSetUpEventList SF 0x00000001 UD 0x00000000
+FEATURE SatSetUpIdleModeText SF 0x00000001 UD 0x00000000
+FEATURE SatSetUpMenu SF 0x00000001 UD 0x00000000
+FEATURE AudioMessaging SF 0x00000001 UD 0x00000000
+FEATURE AvcDecoder SF 0x00000001 UD 0x00000000
+FEATURE AvcEncoder SF 0x00000001 UD 0x00000000
+FEATURE SapEmbeddedLinkAdapter SF 0x00000001 UD 0x00000000
+FEATURE SapIdleSoftkeyAdapter SF 0x00000001 UD 0x00000000
+FEATURE SapOperatorLogoAdapter SF 0x00000001 UD 0x00000000
+FEATURE SapScreensaverAdapter SF 0x00000001 UD 0x00000000
+FEATURE SapStartupAdapter SF 0x00000001 UD 0x00000000
+FEATURE SapThemesAdapter SF 0x00000001 UD 0x00000000
+FEATURE SapWallpaperAdapter SF 0x00000001 UD 0x00000000
+FEATURE SapApplicationManagement SF 0x00000001 UD 0x00000000
+FEATURE SapTerminalControlFw SF 0x00000001 UD 0x00000000
+FEATURE SapPolicyManagement SF 0x00000001 UD 0x00000000
+FEATURE SapUiSettingServer SF 0x00000001 UD 0x00000000
+FEATURE BtStereoAudio SF 0x00000001 UD 0x00000000
+FEATURE RemoteStorageFw SF 0x00000001 UD 0x00000000
+FEATURE SuplFramework SF 0x00000001 UD 0x00000000
+FEATURE OmaSuplPlugins SF 0x00000001 UD 0x00000000
+FEATURE JavaJsr177SecurityAndTrustServicesApdu SF 0x00000001 UD 0x00000000
+FEATURE JavaJsr177SecurityAndTrustServicesPki SF 0x00000001 UD 0x00000000
+FEATURE JavaJsr177SecurityAndTrustServicesCrypto SF 0x00000001 UD 0x00000000
+FEATURE ICalSupport SF 0x00000001 UD 0x00000000
+FEATURE RtpStack SF 0x00000001 UD 0x00000000
+FEATURE MeetingRequestEnabler SF 0x00000001 UD 0x00000000
+FEATURE AudioControllerStreaming SF 0x00000001 UD 0x00000000
+FEATURE 3GpExtension SF 0x00000001 UD 0x00000000
+FEATURE NpProxy SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsSms SF 0x00000001 UD 0x00000000
+FEATURE BticEnabled SF 0x00000001 UD 0x00000000
+FEATURE MapAndNavigationAiwProvider SF 0x00000001 UD 0x00000000
+FEATURE VirtualKeyboardInput SF 0x00000001 UD 0x00000000
+FEATURE HandwritingRecognitionInput SF 0x00000001 UD 0x00000000
+FEATURE OpenvgSwImplementation SF 0x00000001 UD 0x00000000
+FEATURE BrowserVideoPlugin SF 0x00000001 UD 0x00000000
+FEATURE CameraFullscreenViewfinder SF 0x00000001 UD 0x00000000
+FEATURE DisplayPost SF 0x00000001 UD 0x00000000
+FEATURE SapDeviceLockEnhancements SF 0x00000001 UD 0x00000000
+FEATURE Upin SF 0x00000001 UD 0x00000000
+FEATURE Mediator SF 0x00000001 UD 0x00000000
+//FEATURE Layout240_320_LargeScreen SF 0x00000001 UD 0x00000000
+//FEATURE Layout320_240_LargeScreen SF 0x00000001 UD 0x00000000
+//FEATURE Layout320_480_Touch SF 0x00000001 UD 0x00000000
+//FEATURE Layout480_320_Touch SF 0x00000001 UD 0x00000000
+FEATURE ArmAvc SF 0x00000001 UD 0x00000000
+FEATURE UiZoom SF 0x00000001 UD 0x00000000
+FEATURE OmaEmailNotifications SF 0x00000001 UD 0x00000000
+FEATURE VideoMenu SF 0x00000001 UD 0x00000000
+FEATURE SipSimplePresenceProtocol SF 0x00000001 UD 0x00000000
+FEATURE PresenceFramework SF 0x00000001 UD 0x00000000
+FEATURE UiTransitionEffects SF 0x00000001 UD 0x00000000
+FEATURE BeatnikAudioengine SF 0x00000001 UD 0x00000000
+FEATURE RealPlayerAsDefault SF 0x00000001 UD 0x00000000
+FEATURE ArmMdfH264Dec SF 0x00000001 UD 0x00000000
+FEATURE ArmMdfRealvideoDec SF 0x00000001 UD 0x00000000
+FEATURE ArmMdfH263mpeg4Dec SF 0x00000001 UD 0x00000000
+FEATURE ArmMdfPostprocessor SF 0x00000001 UD 0x00000000
+FEATURE ThaiCalendar SF 0x00000001 UD 0x00000000
+FEATURE SvgtScreensaverPlugin SF 0x00000001 UD 0x00000000
+FEATURE GeneralSearchFramework SF 0x00000001 UD 0x00000000
+FEATURE GeneralSearchUi SF 0x00000001 UD 0x00000000
+FEATURE ChatNG SF 0x00000001 UD 0x00000000
+FEATURE MobileActiveSync SF 0x00000001 UD 0x00000000
+FEATURE RemoteLock SF 0x00000001 UD 0x00000000
+FEATURE WindowsMedia SF 0x00000001 UD 0x00000000
+FEATURE WindowsMediaDrm SF 0x00000001 UD 0x00000000
+FEATURE MultimediaSharing SF 0x00000001 UD 0x00000000
+FEATURE BrandingServer SF 0x00000001 UD 0x00000000
+FEATURE PenSupportCalibration SF 0x00000001 UD 0x00000000
+FEATURE PlugAndPlayMobileServices SF 0x00000001 UD 0x00000000
+FEATURE DialupNetworking SF 0x00000001 UD 0x00000000
+FEATURE UpnpMediaserver SF 0x00000001 UD 0x00000000
+FEATURE MrtSdkLibraries SF 0x00000001 UD 0x00000000
+FEATURE JavaESWT SF 0x00000001 UD 0x00000000
+FEATURE HwrmTargetModifierPlugin SF 0x00000001 UD 0x00000000
+FEATURE HsxpaSupport SF 0x00000001 UD 0x00000000
+FEATURE JavaApiEnhancementsIap SF 0x00000001 UD 0x00000000
+FEATURE JavaApiEnhancementsMobinfo SF 0x00000001 UD 0x00000000
+FEATURE VfpHwSupport SF 0x00000001 UD 0x00000000
+FEATURE MmcLock SF 0x00000001 UD 0x00000000
+FEATURE EditKey SF 0x00000001 UD 0x00000000
+FEATURE SlideshowScreensaver SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDmOta SF 0x00000001 UD 0x00000000
+FEATURE SyncMlIsync SF 0x00000001 UD 0x00000000
+FEATURE ImageViewer SF 0x00000001 UD 0x00000000
+FEATURE MmcEject SF 0x00000001 UD 0x00000000
+FEATURE OmaImps12 SF 0x00000001 UD 0x00000000
+FEATURE BtPbap SF 0x00000001 UD 0x00000000
+FEATURE Java SF 0x00000001 UD 0x00000000
+FEATURE UsbRemotePersonality SF 0x00000001 UD 0x00000000
+FEATURE WebWidgets SF 0x00000001 UD 0x00000000
+FEATURE XspExtensionManager SF 0x00000001 UD 0x00000000
+FEATURE IndicRomContent SF 0x00000001 UD 0x00000000
+FEATURE OnScreenDialer SF 0x00000001 UD 0x00000000
+FEATURE MediaTransferProtocol SF 0x00000001 UD 0x00000000
+FEATURE AllowUpgradeHelix SF 0x00000001 UD 0x00000000
+FEATURE Layout640_360_Touch SF 0x00000001 UD 0x00000000
+FEATURE Layout360_640_Touch SF 0x00000001 UD 0x00000000
+FEATURE LocationCentre SF 0x00000001 UD 0x00000000
+FEATURE AsynchFileSaveQueue SF 0x00000001 UD 0x00000000
+FEATURE SyncMlDsBookmark SF 0x00000001 UD 0x00000000
+FEATURE PowerSave SF 0x00000001 UD 0x00000000
+FEATURE TouchCallHandling SF 0x00000001 UD 0x00000000
+FEATURE TactileFeedback SF 0x00000001 UD 0x00000000
+FEATURE AutoRedialForVideoCall SF 0x00000001 UD 0x00000000
+FEATURE BrowserProgressiveDownload SF 0x00000001 UD 0x00000000
+FEATURE ProductIncludesHomeScreenEasyDialing SF 0x00000001 UD 0x00000000
+FEATURE HlpClearKey SF 0x00000001 UD 0x00000000
+FEATURE HlpMsk SF 0x00000001 UD 0x00000000
+
+
 #include <RemovableFeatures.iby>
 #include <bldvariant.hrh> // so that we can override some of the settings here
 #define __USE_NHD // just for bigrom, to choose between 640x360 or 640x480
@@ -35,11 +389,11 @@
 
 /* test */
 
-//#define AISATPLUGIN_IBY
-//#define __NVGDECODER_IBY__ // we don't want the non_sw version
-#define __SFOPENVG_IBY__
-//#define EGL_REF_IBY
+#define __FEATMGRSTUBPLUGIN_IBY__
+//#define __HWRMSTUBPLUGINS_IBY__
+//#define __STARTUPADAPTATIONSTUB_IBY__
 
+#define __SFOPENVG_IBY__
 
 //#define photossuiteSUITE_IBY
 
@@ -87,9 +441,9 @@
 #define FF_LAYOUT_360_640_TOUCH // this works, need to define early on
 #define FF_LAYOUT_360_640_TOUCH_NHD4 // this works, need to define early on
 #define FF_LAYOUT_640_360_TOUCH_NHD4 // this works, need to define early on
-#define FF_LAYOUT_640_480_TOUCH_VGA3 // this works, need to define early on
-#define FF_LAYOUT_640_480_TOUCH_VGA4 // this works, need to define early on
-#define __LAYOUT_640_480_TOUCH
+//#define FF_LAYOUT_640_480_TOUCH_VGA3 // this works, need to define early on
+//#define FF_LAYOUT_640_480_TOUCH_VGA4 // this works, need to define early on
+//#define __LAYOUT_640_480_TOUCH
 #define __LAYOUT_360_640_TOUCH
 #define __LAYOUT_360_640
 #define __LAYOUT_640_360
@@ -101,10 +455,10 @@
 #define __LAYOUT_640_480_TOUCH
 #endif
 
-#define __LOCALES_37_IBY__
-#define __LOCALES_50_IBY__
-#define __LOCALES_57_IBY__
-#define __LOCALES_94_IBY__
+//#define __LOCALES_37_IBY__
+//#define __LOCALES_50_IBY__
+//#define __LOCALES_57_IBY__
+//#define __LOCALES_94_IBY__
 
 #define __OMA_SUPL_PLUGINS // for core/mw/omasuplprotocolhandler.iby
 
@@ -117,53 +471,41 @@
 
 
 /* from language/app */
-//#define FF__ROM_HIDE_ISRAEL
 #undef __ROM_HIDE_JERUSALEM
-//#define __CLOCK_RESOURCES_IBY__
 
 /* from language/mw */
-// #define __AVKON_RESOURCES_IBY__ // smiley.rsc
 
 /* from language/os */
 #define __GTEMAILMTM_RESOURCES_IBY__
 #define __MESSAGESERVER_RSC_IBY__
 
-/* resources and customer clash with DTD files, removed DTD from the customer/app versions of desktop, email and music widget */
+
 /* from customer/app */
-//#define __DESKTOP_20026F4F_CUSTOMER_IBY__
-//#define __EMAILWIDGET_CUSTOMER_IBY__
-//#define __MUSICWIDGET_10207c18_CUSTOMER_IBY__
 
 //test (removal when using 640x480)
 #ifdef __USE_NHD
 #define __ORGANIZER_2001F481_CUSTOMER_IBY__ // needed for 640x360
 #define __PROFILEWIDGET_2001CB7C_CUSTOMER_IBY__ // clashes with same file
-#define __SERVICEWIDGET_20021383_CUSTOMER_IBY__
-#define __AI3TEMPLATEVIEW_20026F50_CUSTOMER_IBY__
-
+#define __AI3TEMPLATEVIEW_20026F50_CUSTOMER_IBY__  // the resources version pulls in the same file
 #define __AI3VIEW_200286E4_CUSTOMER_IBY__ // the resources version pulls in the same file
-//#define __AI3VIEW_200286E4_RESOURCES_IBY__ // the resources version pulls in the same file
-
 #define __AI3VIEW_200286E5_CUSTOMER_IBY__ // the resources version pulls in the same file
-//#define __AI3VIEW_200286E5_RESOURCES_IBY__ // the resources version pulls in the same file
-
-#define __AI3VIEW_2001F48B_CUSTOMER_IBY__ // the resources version pulls in the same file
-
-
+#define __AI3VIEW_2001F48B_CUSTOMER_IBY__ // the resources version pulls in the same file (view.o0000)
 
 /* from customer/mw (need to remove when using 640x360) */
-#define __WSFWIDGET_20026F45_CUSTOMER_IBY__
+#define __WSFWIDGET_20026F45_CUSTOMER_IBY__ // DTD clash with resources
 #endif
 
-
-
 /* from core/app */
-//#define __SERVICEWIDGET_20021383_THEME_IBY__
 
-/* for 640x480 */
 #define __AI3VIEW_2001FDB9_CUSTOMER_IBY__ // resources and customer version of this appear identical
-#define __WIDEIMAGE_10009DFF_RESOURCES_IBY__ // resources and customer version of this appear identical
+#define __WIDEIMAGE_10009DFF_CUSTOMER_IBY__ // resources and customer version of this appear identical
 
+
+
+
+/* additional gating for 3.0.2 */
+#define __POSTERWIDEIMAGE_2001F480_CUSTOMER_IBY__
+#define __AI3VIEW_20022FE0_CUSTOMER_IBY__
 
 
 /* eaacplusaudiocontrollerutility.dll can't be built, so remove whatever uses it */
@@ -174,9 +516,22 @@
 //#undef USE_CUSTOM_MMC_PARTITION // stops base.iby pulling in emmcptn.dll, which is pulled in by base_zoom2.iby
 #ifdef ZOOM2
 #include <zoom2.oby>
-#include <base_zoom2.iby>
-#include <header.iby>
-#include <base.iby>
+
+#if 0
+/* LDD WLAN modules */
+#include <core\mw\wlanpsmplugin.iby>                            
+#include <core\os\wlanagt.iby>                            
+#include <core\os\wlandbif.iby>                           
+#include <core\os\wlaneng.iby>                            
+#include <core\os\wlanldd.iby>                            
+#include <core\os\wlannif.iby>                            
+/* PDD WLAN modules */
+#include <TI_wlanhwinit.iby> 
+
+/* additional resources for WLAN */
+data=\epoc32\data\z\resource\plugins\wlanmgmtimpl.rsc \resource\plugins\101f8efd.rsc
+data=\epoc32\data\z\resource\plugins\wlancontrolimpl.rsc \resource\plugins\10282e0d.rsc
+#endif
 
 #elif defined(SYBORG)
 // The following is for Syborg
@@ -197,15 +552,13 @@ define ROMDATE ##TODAY## // added for Syborg, Zoom2 includes this itself
 define ROMDATE ##TODAY## // added for Syborg, Zoom2 includes this itself
 //#define BTRACE_INCLUDED // this is already done by the Syborg includes
 #include <header.iby> // added for Syborg, Zoom2 includes this itself
-#include <base_beagle.iby> // added for Syborg, Zoom2 includes this itself
 #define USE_CUSTOM_MMC_PARTITION // stops emmcptn.dll being pulled in, which uses epbusm.dll
 #include <base.iby> // added for Syborg, Zoom2 includes this itself
 #undef SYMBIAN_EXCLUDE_MTP // Syborg is defining this again
 ROMBUILD_OPTION -no-header
 // hanging on Beagle
 #define BACKSTEPPINGSERVICE_IBY
-
-data= \epoc32\rom\beagle\estart.txt \sys\data\estart.txt // ???
+data= \epoc32\rom\beagle\estart.txt \sys\data\estart.txt // Beagle needs one of these with persistent storage
 #endif
 
 /* Graphics adaptation */
@@ -216,10 +569,7 @@ data= \epoc32\rom\beagle\estart.txt \sys\data\estart.txt // ???
 #define SYMBIAN_GRAPHICS_USE_EGL_REF
 #define SYMBIAN_GRAPHICS_USE_OPENWF
 #define FBSRASTERIZER_DRV <fbsrasterizer_stub.iby>
-//#define GRAPHICSRESOURCE_DRV <graphicsresourceadapter_stub.iby>
 #define OPENWFCLIB_DRV <openwfc_ref.iby>
-
-//#undef FF_WLAN_WAPI_INCLUDE_IN_ROM // needed so that wapisecuritysettingsui.iby pulls in a wapuisecuritysettingsui.dll that we have in the build
 
 
 /* miscallaneous defines */
@@ -230,13 +580,28 @@ data= \epoc32\rom\beagle\estart.txt \sys\data\estart.txt // ???
 
 #define XMLUIRENDERINGRESOURCES_IBY // resolves xnuiengine.rsc clash
 #define XMLUICONTROLLERRESOURCES_IBY // ai3xmlui already includes the only resource included by this file
-#define __SERVICEWIDGET_20021383_RESOURCES_IBY__ // resolves servicewidget.o0000 clash
-#define __AVKON_RESOURCES_IBY__ // resolves smiley.rsc clash
-data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
-#define __DESKTOP_20026F4F_RESOURCES_IBY__ // resolves desktopconfiguration.dtd clash
-#define __EMAILWIDGET_RESOURCES_IBY__ // resolves emailwidgetconfiguration.dtd clash
-#define __MUSICWIDGET_10207c18_RESOURCES_IBY__ // resolves musicwidgetconfiguration.dtd clash
 
+#define __SERVICEWIDGET_20021383_RESOURCES_IBY__ // resolves servicewidget.o0000 clash (with theme), no other overlaps
+#define __SERVICEWIDGET_20021383_CUSTOMER_IBY__ // resolves servicewidget.o0000 clash (with theme), no other overlaps
+
+#define __AVKON_RESOURCES_IBY__ // resolves smiley.rsc clash
+data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc // the other resource that was on avkon resources
+
+#define __DESKTOP_20026F4F_CUSTOMER_IBY__ // resolves desktopconfiguration.dtd clash
+data=ZPRIVATE\200159c0\install\desktop_20026f4f\xuikon\00\desktop.o0000 \private\200159c0\install\desktop_20026f4f\xuikon\00\desktop.o0000 // from the customer/app version
+
+#define __EMAILWIDGET_CUSTOMER_IBY__ // resolves emailwidgetconfiguration.dtd clash
+data=ZPRIVATE\200159c0\install\emailwidget\xuikon\00\EW.o0000 \private\200159c0\install\emailwidget\xuikon\00\EW.o0000 // from the customer/app version
+
+#define __MUSICWIDGET_10207c18_CUSTOMER_IBY__ // resolves musicwidgetconfiguration.dtd clash
+data=ZPRIVATE\200159c0\install\musicwidget_10207c18\xuikon\00\musicwidget.o0000 \private\200159c0\install\musicwidget_10207c18\xuikon\00\musicwidget.o0000 // from the customer/app version
+
+/* work around platsec violation caused by these components */
+#define __HTIUI_IBY__
+#define __HTIOS_IBY__
+
+/* for Calendar */
+data=ZRESOURCE\calencaldavplugindata.rsc \resource\calencaldavplugindata.rsc
 
 
 
@@ -515,7 +880,7 @@ data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
 #include <genericscprparams.iby>
 #include <gfxtranseffect.iby>
 #include <gifscaler.iby>
-// not in 3.0.I #include <gmxml.iby>
+#include <gmxml.iby>
 #include <gpssetclock.iby>
 //#include <graphicsresourceadapter_mbx.iby>
 //#include <graphicsresourceadapter_sgx.iby>
@@ -555,7 +920,7 @@ data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
 #include <imagetransform.iby>
 
 #include <ineturilist.iby>
-// not in 3.0.I #include <iniparser.iby>
+#include <iniparser.iby>
 
 //#include <integrationtest.iby> // integrationtest.dll is not getting built
 //                                            which includes <testexecute.iby>
@@ -792,14 +1157,14 @@ data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
 //                                            which includes <telwatcher.iby>
 #include <sysstart.iby>
 #include <sysstartconfig.iby>
-// not in 3.0.I #include <tefcleanup.iby>
-// not in 3.0.I #include <tefutilityserver.iby>
+#include <tefcleanup.iby>
+#include <tefutilityserver.iby>
 #include <telephony.iby>
 #include <telnetd.iby>
 #include <telnet_e.iby>
 #include <testbed.iby>
-// not in 3.0.I #include <testexecutepipslogger.iby>
-// not in 3.0.I #include <testexecutepipsloggerclient.iby>
+#include <testexecutepipslogger.iby>
+#include <testexecutepipsloggerclient.iby>
 //#include <testlocale.iby> // clashes with language\mw\elocl.iby
 #include <tiger.iby>
 #include <traces.iby>
@@ -816,7 +1181,7 @@ data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
 
 #include <wapurilookup.iby>
 #include <wfcinterop_tests.iby>
-// not in 3.0.I #include <wrapperutilsplugin.iby>
+#include <wrapperutilsplugin.iby>
 //#undef SYMBIAN_GRAPHICS_USE_GCE // for graphics_adaptation.hby
 #include <wserv.iby>
 //                                            which includes <wserv_std_plugins.iby>
@@ -859,7 +1224,6 @@ data=ZRESOURCE\avkon.rsc        RESOURCE_FILES_DIR\avkon.rsc
 file=ABI_DIR\BUILD_DIR\LICENSEETSY_STUB.DLL        Sys\Bin\licenseetsy.dll /* needed by phonetsy.tsy */
 file=ABI_DIR\BUILD_DIR\SIMATKTSY_STUB.DLL        Sys\Bin\simatktsy.dll /* needed by licenseetsy_stub.dll */
 //file=ABI_DIR\BUILD_DIR\usbcsc.ldd        SHARED_LIB_DIR\usbcsc.ldd /* needed by msfs_db.fsy */
-file=ABI_DIR\BUILD_DIR\ocrsrv.dll        Sys\Bin\ocrsrv.dll /* needed by InputMethods smoke test */
 
 //extension[VARID]=KERNEL_DIR\BUILD_DIR\display.ldd        \Sys\Bin\display0.ldd /* needed for the graphics composition */
 
@@ -899,7 +1263,7 @@ file=ABI_DIR\BUILD_DIR\mullogging.dll        Sys\Bin\mullogging.dll /* needs for
 
 
 // things we may ne needing (seem to be wanted a lot)
-data=\epoc32\data\Z\private\10202BE9\200159c9.txt		private\10202BE9\200159c9.txt
+//data=\epoc32\data\Z\private\10202BE9\200159c9.txt		private\10202BE9\200159c9.txt
 data=\epoc32\data\Z\private\10202BE9\200159c9.cre		private\10202BE9\200159c9.cre
 data=\epoc32\data\Z\private\101f5027\alarmserver.rsc		private\101f5027\alarmserver.rsc
 
@@ -923,6 +1287,11 @@ data=ZRESOURCE\fonts\S60TSB_V4196.ttf				Resource\Fonts\S60TSB_v4196.ttf
 //data=ZRESOURCE\plugins\ityperast.rsc				Resource\plugins\ityperast.rsc
 //file=ABI_DIR\BUILD_DIR\ityperast.dll        		Sys\Bin\ityperast.dll /* */ 
 
+
+// ECOM plugin for input method
+
+// remporarily removed due to changes needed to support it (HarvesterServer etc)
+// ECOM_PLUGIN(PtiKeymappings_ITUT_01.dll, PtiKeymappings_ITUT_01.rsc)
 
 // homescreen
 
@@ -1005,10 +1374,3 @@ file=\epoc32\release\armv5\urel\elocl.96 	"sys\bin\elocl.96"
 file=\epoc32\release\armv5\urel\elocl.31 	"sys\bin\elocl.31"
 file=\epoc32\release\armv5\urel\elocl.30 	"sys\bin\elocl.30"
 #endif
-
-ECOM_PLUGIN(ptikeymappings_itut_01.dll,ptikeymappings_itut_01.rsc)
-
-// "Fresh" ROM skin
-AUTO-BITMAP=DATAZ_\RESOURCE_FILES_DIR\skins\200259E6\Symbian.mbm  RESOURCE_FILES_DIR\skins\200259E6\Symbian.mbm
-data=DATAZ_\SKINS_DIR\import\200259E6\Symbian.skn  SKINS_DIR\import\200259E6\Symbian.skn
-data=DATAZ_\RESOURCE_FILES_DIR\skins\200259E6\Symbian.mif  RESOURCE_FILES_DIR\skins\200259E6\Symbian.mif
