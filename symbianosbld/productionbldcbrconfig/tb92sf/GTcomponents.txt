@@ -446,6 +446,9 @@ networking_tcpip6	\sf\os\networkingsrv\networkprotocols\tcpipv4v6prt\group\netwo
 networking_tcpip6-config	\sf\os\networkingsrv\networkprotocols\tcpipv4v6prt\group\networking_tcpip6-config.mrp
 networking_telnet_e	\sf\mw\netprotocols\applayerprotocols\telnetengine\group\networking_telnet_e.mrp
 networking_tls	\sf\os\networkingsrv\networksecurity\tls\group\networking_tls.mrp
+networking_tun	\sf\os\networkingsrv\tcpiputils\tun\group\networking_tun.mrp
+networking_tundriver	\sf\os\networkingsrv\linklayerprotocols\tundriver\group\networking_tundriver.mrp
+networking_tundriveragt	\sf\os\networkingsrv\linklayercontrol\tundriveragt\group\networking_tundriveragt.mrp
 networking_tunnelnif	\sf\os\networkingsrv\linklayerprotocols\tunnelnif\group\networking_tunnelnif.mrp
 networking_umtsif	\sf\os\cellularsrv\telephonyprotocols\gprsumtsqosinterface\group\networking_umtsif.mrp
 networking_unittest	\sf\os\networkingsrv\networkingtestandutils\networkingunittest\group\networking_unittest.mrp
