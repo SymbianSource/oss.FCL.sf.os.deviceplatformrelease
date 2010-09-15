@@ -85,7 +85,7 @@ base_e32_sd3c	\sf\os\kernelhwsrv\kernel\eka\drivers\medsd3c\base_e32_sd3c.mrp
 base_e32_sd4c	\sf\os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard4c\base_e32_sd4c.mrp
 base_e32test	\sf\os\kernelhwsrv\kerneltest\e32test\group\base_e32test.mrp
 base_e32utils	\sf\os\kernelhwsrv\kerneltest\e32utils\group\base_e32utils.mrp
-base_e32utils_restricted	\sf\os\kernelhwsrv\kerneltest\e32utils\group\restricted\base_e32utils_restricted.mrp
+base_e32utils_restricted	\sf\os\kernelhwsrv\kerneltest\e32utils\restricted\base_e32utils_restricted.mrp
 base_f32	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\group\base_f32.mrp
 base_f32_automounter	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\automounter\base_f32_automounter.mrp
 base_f32_eshell	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\etshell\base_f32_eshell.mrp
@@ -118,6 +118,7 @@ base_omaph4hrp_sdio	\sf\os\boardsupport\omaph4\omaph4sdio\base_omaph4hrp_sdio.mr
 base_omaph4hrp_unistore2	\sf\os\boardsupport\omaph4\omaph4unistore2\base_omaph4hrp_unistore2.mrp
 base_omaph4hrp_usbhostotg_usbware	\sf\os\boardsupport\omaph4\omapusbhotgdrivers\base_omaph4hrp_usbhostotg_usbware.mrp
 base_sdiotests	\sf\os\kernelhwsrv\kerneltest\sdiotest\base_sdiotests.mrp
+base_sdiotests_restricted	\sf\os\kernelhwsrv\kerneltest\sdiotest_restricted\base_sdiotests_restricted.mrp
 base_template	\sf\os\kernelhwsrv\bsptemplate\asspandvariant\base_template.mrp
 base_template_usbhostotg	\sf\os\usb\usbbsptemplate\usbhostcntrldrivertemplate\base_template_usbhostotg.mrp
 base_tiomap3	\sf\os\boardsupport\omap3variants\tiomap3bsp\base_tiomap3.mrp

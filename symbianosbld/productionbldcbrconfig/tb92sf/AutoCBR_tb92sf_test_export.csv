@@ -271,6 +271,7 @@ base_omaph4hrp_usbhostotg_usbware,D E F G O T,D E F G O T,A B D E F G O T,A B D 
 base_omaph4hrp_sdio,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_sa1100,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_sdiotests,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
+base_sdiotests_restricted,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_soc,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_template,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
 base_template_usbhostotg,D E F G O T,D E F G O T,A B D E F G O T,A B D E F G O T
