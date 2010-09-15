@@ -1427,5 +1427,10 @@ If SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV, the windowserver component is built to u
 */
 #define SYMBIAN_GRAPHICS_BUILD_OPENWF_WSERV
 
+/**
+Defines needed for "10.1" build of qtmobility contacts plugin - see Bug 3708
+*/
+#define SYMBIAN_BACKEND_USE_SQLITE
+#define SYMBIAN_BACKEND_SIGNAL_EMISSION_TWEAK
 
 #endif // __BLDCODELINE_HRH
