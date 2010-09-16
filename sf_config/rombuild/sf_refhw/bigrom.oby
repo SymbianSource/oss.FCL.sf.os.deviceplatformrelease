@@ -366,7 +366,8 @@ FEATURE BrowserProgressiveDownload SF 0x00000001 UD 0x00000000
 FEATURE ProductIncludesHomeScreenEasyDialing SF 0x00000001 UD 0x00000000
 FEATURE HlpClearKey SF 0x00000001 UD 0x00000000
 FEATURE HlpMsk SF 0x00000001 UD 0x00000000
-
+FEATURE FeatureIdFfHttpAllowUntrustedCertificates SF 0x00000001 UD 0x00000000
+FEATURE FeatureIdFfIpsecUmaSupportEnable SF 0x00000001 UD 0x00000000
 
 #include <RemovableFeatures.iby>
 #include <bldvariant.hrh> // so that we can override some of the settings here
