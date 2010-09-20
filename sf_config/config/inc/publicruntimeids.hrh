@@ -679,4 +679,9 @@
 
 #define KFeatureIdProductIncludesHomeScreenEasyDialing      5085
 
+// add dummy define value until real value can be obtained
+
+#define KFeatureIdFfFotaDecryptMemBeforeUpdate  		9002
+
+
 #endif // __PUBLICRUNTIMEIDS_HRH
