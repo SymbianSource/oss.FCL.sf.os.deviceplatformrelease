@@ -482,7 +482,12 @@ The macro NOKIA_FEATURE_MANAGER should indicate that the Nokia version of the
 Feature Manager is present. The Feature Manager was part of the CoreOS, and
 there is a Symbian version of it in 9.5. 
 */ 
-#undef SYMBIAN_USE_NOKIA_FEATURE_MANAGER                   
+#undef SYMBIAN_USE_NOKIA_FEATURE_MANAGER   
+
+/** #SYMBIAN_AUDIO_REFDEVSOUND_ON_TARGET  
+Enable build of reference Multimedia DevSound implementation 
+*/ 
+#define SYMBIAN_AUDIO_REFDEVSOUND_ON_TARGET                
  
 /** #USE_MSCDB  
 Enable usage of mass storage double buffering. 
@@ -2218,6 +2223,7 @@ showing it to user)."
 #define FF_DM_BROWSER_ADAPTER  
 #define FF_DM_STREAMING_ADAPTER
 #define FF_TMS  
+
 
 
 
