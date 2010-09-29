@@ -25,12 +25,16 @@
 		<append name="CC_ERRORS_CONTROL_OPTION" value="-fpermissive"/>
 	</var>
 
-	<!-- Use RVCT 4.0 as the default compiler for ARMV5 -->
+	<!-- Use RVCT 4.0 as the default compiler for ARMV5 and build for SMP as well -->
 	<alias name="armv5_urel" meaning="arm.v5.urel.rvct4_0"/>
 	<alias name="armv5_udeb" meaning="arm.v5.udeb.rvct4_0"/>
+	<alias name="armv5smp_urel" meaning="arm.v5.smp.urel.rvct4_0"/>
+	<alias name="armv5smp_udeb" meaning="arm.v5.smp.udeb.rvct4_0"/>
 	<group name="armv5">
 		<aliasRef ref="armv5_urel"/>
 		<aliasRef ref="armv5_udeb"/>
+		<aliasRef ref="armv5smp_urel"/>
+		<aliasRef ref="armv5smp_udeb"/>
 	</group>
 
 </build>
