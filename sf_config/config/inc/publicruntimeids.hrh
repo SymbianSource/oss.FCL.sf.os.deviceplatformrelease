@@ -45,11 +45,15 @@
 
 #define KFeatureIdFfAvkonEmotionIconEnabled                 211
 
+#define KFeatureIdFfBigclockScreensaver                     364
+
 #define KFeatureIdFfBirthdayImprovement                     189
 
 #define KFeatureIdFfBluetoothDataProfilesDisabled           271
 
 #define KFeatureIdFfBluetoothDisabled                       270
+
+#define KFeatureIdFfBoxHwrInput                             354
 
 #define KFeatureIdBrowserProgressiveDownload                1724
 
@@ -57,9 +61,13 @@
 
 #define KFeatureIdFfCalScrollablePreview                    307
 
+#define KFeatureIdFfCalendarWidget                          5264
+
 #define KFeatureIdFfCalMeetingRequestUi                     296
 
 #define KFeatureIdFfCapacitiveDisplay                       183
+
+#define KFeatureIdFfChineseEngineImprove                    365
 
 #define KFeatureIdChineseFontsHires                         138
 
@@ -87,19 +95,27 @@
 
 #define KFeatureIdFfContactsSocial                          273
 
+#define KFeatureIdFfContactsVcardSyncGroup                  357
+
 #define KFeatureIdFfContextProfiles                         254
 
 #define KFeatureIdFfDeviceEncryptionFeature                 250
 
 #define KFeatureIdFfDisableOmaSuplV2                        308
 
+#define KFeatureIdFfDisplayNetworkNameAfterCsRegistration   5217
+
 #define KFeatureIdFfDmConnmoAdapter                         277
+
+#define KFeatureIdFfDmIapOverWrite                          367
 
 #define KFeatureIdDmInstallSecurity                         5065
 
 #define KFeatureIdFfDualLanguageSupport                     194
 
 #define KFeatureIdDualModem                                 230
+
+#define KFeatureIdFfEmailConversationView                   344
 
 #define KFeatureIdFfEmailFramework                          135
 
@@ -117,17 +133,27 @@
 
 #define KFeatureIdFfEmailUiSplitscreen                      323
 
+#define KFeatureIdFfEmergencyCbs                            343
+
 #define KFeatureIdEnableIsiCommunicationInUsbChargingMode   309
 
 #define KFeatureIdFfEnhancedCalendarEventUi                 295
 
+#define KFeatureIdFfEntryPointForVideoShare                 5225
+
 #define KFeatureIdFfFarsiCalendar                           213
 
+#define KFeatureIdFfFingerHwrInput                          353
+
 #define KFeatureIdFmtx                                      1705
+
+#define KFeatureIdFfFmtxAutoTune                            368
 
 #define KFeatureIdFfFmtxRdsText                             220
 
 #define KFeatureIdFfFotaCheckLimitation                     326
+
+#define KFeatureIdFfFotaDecryptMemBeforeUpdate              363
 
 #define KFeatureIdFullscrHwrInput                           66
 
@@ -145,11 +171,23 @@
 
 #define KFeatureIdFfHomescreenSwitchableRoot                154
 
+#define KFeatureIdProductIncludesHomeScreenEasyDialing      5085
+
+#define KFeatureIdFfHomeScreenVanityDialing                 5098
+
 #define KFeatureIdIAUpdate                                  30
 
 #define KFeatureIdFfIaupdatePhase2                          185
 
+#define KFeatureIdFfIce                                     349
+
 #define KFeatureIdFfImageEditor                             255
+
+#define KFeatureIdFfImsDeregistrationInOffline              5230
+
+#define KFeatureIdFfImsDeregistrationInRfs                  5231
+
+#define KFeatureIdFfImsDeregistrationInVpn                  5209
 
 #define KFeatureIdFfInputsPerOrientation                    192
 
@@ -171,7 +209,13 @@
 
 #define KFeatureIdFfLinkedFontsChinese                      159
 
+#define KFeatureIdFfLocationsysuiHidePositioningMenu        5224
+
 #define KFeatureIdFfLocationMwApeCentricArchSupport         258
+
+#define KFeatureIdFfManualSelectionPopulatedPlmnList        5184
+
+#define KFeatureIdFfMasterResetAndClearSubmenu              5195
 
 #define KFeatureIdFfMecoXmpp                                232
 
@@ -179,7 +223,13 @@
 
 #define KFeatureIdFfMenuTexturePreloading                   118
 
+#define KFeatureIdFfMobilityManagementErrors                5228
+
+#define KFeatureIdMsgForwardWithSender                      5239
+
 #define KFeatureIdS60MtpController                          272
+
+#define KFeatureIdFfMusicPathPlugin                         5232
 
 #define KFeatureIdFfNcdEngine                               61
 
@@ -201,7 +251,11 @@
 
 #define KFeatureIdFfOmadrm2Support                          328
 
+#define KFeatureIdFfOmaLawmo                                345
+
 #define KFeatureIdFfOmaScomoAdapter                         197
+
+#define KFeatureIdFfOnlyHwrInputExist                       355
 
 #define KFeatureIdFfOssLegalNotice                          196
 
@@ -211,13 +265,18 @@
 
 #define KFeatureIdPnpmsServiceHelpPlugin                    128
 
+#define KFeatureIdFfPowerKeyAsKeyguard                      5243
+
 #define KFeatureIdPowerSave                                 1709
 
 #define KFeatureIdPreminetCatalogsClient                    1719
 
+#define KFeatureIdFfProductFonts                            342
 #define KFeatureIdProvAuthtypePlugin                        100
 
 #define KFeatureIdFfQt                                      238
+
+#define KFeatureIdFfQtBearerManagement                      319
 
 #define KFeatureIdQwertyFnKey                               1714
 
@@ -225,21 +284,32 @@
 
 #define KFeatureIdFfRuntimeDeviceCapabilityConfiguration    198
 
+#define KFeatureIdFfSearchSw                                321
+
 #define KFeatureIdSelectableEmail                           125
+
+#define KFeatureIdFfServiceCallWhilePhoneLocked             5198
 
 #define KFeatureIdFfSidesliderSupport                       320
 
+#define KFeatureIdFfSimlockUi                               5197
+
+#define KFeatureIdFfSimpleHwrInput                          352
 #define KFeatureIdFfSimConsecutive6f00ErrorsHandling        327
 
 #define KFeatureIdFfSipApnSwitching                         318
 
 #define KFeatureIdFfSipCustomPdpHandling                    269
 
+#define KFeatureIdFfSipNonstandardInteropfix                350
+
 #define KFeatureIdFfSmallScreenTouch                        279
 
 #define KFeatureStartupOmaDmSupport                         40
 
 #define KFeatureIdFfStrokeInputmodeInTaiwan                 280
+
+#define KFeatureIdFfSuplImsiGeneratedAddressDisplay         366
 
 #define KFeatureIdFfSuplImsiGeneratedServerPriorityDefault  301
 
@@ -271,6 +341,7 @@
 
 #define KFeatureIdFfTdScdmaVideocallKey                     317
 
+#define KFeatureIdFfTdUnSyncabPbfieldsInd                   351
 #define KFeatureIdTouchscreencalibInStartup                 69
 
 #define KFeatureIdFfTouchUnlockStroke                       173
@@ -287,13 +358,17 @@
 
 #define KFeatureIdFfUseNavikeyForVolume                     248
 
+#define KFeatureIdFfVeveoSearch                             358
 #define KFeatureIdFfVideoAudioBranding                      266
 
 #define KFeatureIdFfVideoEditor                             256
 
+#define KFeatureIdFfVirtualFullscrPortraitQwertyInput       348
 #define KFeatureIdVirtualFullscrQwertyInput                 64
 
 #define KFeatureIdVirtualItutInput                          65
+
+#define KFeatureIdFfVirtualKeyboardUsEnglishLayout          347
 
 #define KFeatureIdVmbxCallDivertIcon                        116
 
@@ -678,10 +753,5 @@
 #define KFeatureIdFfIntranetBrowsing                        5109
 
 #define KFeatureIdProductIncludesHomeScreenEasyDialing      5085
-
-// add dummy define value until real value can be obtained
-
-#define KFeatureIdFfFotaDecryptMemBeforeUpdate  		9002
-
 
 #endif // __PUBLICRUNTIMEIDS_HRH
