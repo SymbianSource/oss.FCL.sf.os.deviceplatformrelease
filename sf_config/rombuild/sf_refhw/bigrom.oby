@@ -921,7 +921,7 @@ data=ZRESOURCE\calencaldavplugindata.rsc \resource\calencaldavplugindata.rsc
 #include <imagetransform.iby>
 
 #include <ineturilist.iby>
-#include <iniparser.iby>
+//#include <iniparser.iby>
 
 //#include <integrationtest.iby> // integrationtest.dll is not getting built
 //                                            which includes <testexecute.iby>
@@ -944,8 +944,7 @@ data=ZRESOURCE\calencaldavplugindata.rsc \resource\calencaldavplugindata.rsc
 #include <irda.iby>
 //                                            which includes <obexprotocol.iby>
 
-
-#include <kerneltrace.oby>
+//#include <kerneltrace.oby>
 #include <lafshutdowneventobserveradaptor.iby>
 #include <lbs.iby>
 #include <lbsadatacache.iby>
@@ -1158,14 +1157,14 @@ data=ZRESOURCE\calencaldavplugindata.rsc \resource\calencaldavplugindata.rsc
 //                                            which includes <telwatcher.iby>
 #include <sysstart.iby>
 #include <sysstartconfig.iby>
-#include <tefcleanup.iby>
-#include <tefutilityserver.iby>
+//#include <tefcleanup.iby>
+//#include <tefutilityserver.iby>
 #include <telephony.iby>
 #include <telnetd.iby>
 #include <telnet_e.iby>
 #include <testbed.iby>
-#include <testexecutepipslogger.iby>
-#include <testexecutepipsloggerclient.iby>
+//#include <testexecutepipslogger.iby>
+//#include <testexecutepipsloggerclient.iby>
 //#include <testlocale.iby> // clashes with language\mw\elocl.iby
 #include <tiger.iby>
 #include <traces.iby>
@@ -1182,7 +1181,9 @@ data=ZRESOURCE\calencaldavplugindata.rsc \resource\calencaldavplugindata.rsc
 
 #include <wapurilookup.iby>
 #include <wfcinterop_tests.iby>
-#include <wrapperutilsplugin.iby>
+
+//#include <wrapperutilsplugin.iby>
+
 //#undef SYMBIAN_GRAPHICS_USE_GCE // for graphics_adaptation.hby
 #include <wserv.iby>
 //                                            which includes <wserv_std_plugins.iby>
