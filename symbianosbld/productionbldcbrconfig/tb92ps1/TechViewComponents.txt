@@ -1,7 +1,7 @@
 Testtools_ResourceHandler_Techview	\sf\app\techview\testapps\rschandler\TVResourceHandler\group\Testtools_ResourceHandler_techview.mrp
 bluetooth_remotecontrol_reftsp	\sf\app\techview\shortlinkapps\reftsp\group\bluetooth_remotecontrol_refTSP.mrp
 graphics_testutils	\sf\app\techview\testapps\graphicstestutils\group\graphics_testutils.mrp
-reference_roms_tb92	\sf\os\deviceplatformrelease\symbianosbld\cedarutils\tb92sfrom_obys\reference_roms_tb92.mrp
+reference_roms_tb92	\sf\os\deviceplatformrelease\symbianosbld\cedarutils\tb92ps1rom_obys\reference_roms_tb92.mrp
 security_ups_techview	\sf\app\techview\securityapps\securityupstechview\group\security_ups_techview.mrp
 techview_KeyClickRef	\sf\app\techview\controlpanel\keyclickref\Group\techview_KeyClickRef.mrp
 techview_SimpleApp	\sf\app\techview\testapps\simpleapp\group\Techview_SimpleApp.mrp

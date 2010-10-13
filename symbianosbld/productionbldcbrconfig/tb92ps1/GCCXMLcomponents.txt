@@ -85,7 +85,7 @@ base_e32_sd3c	\sf\os\kernelhwsrv\kernel\eka\drivers\medsd3c\base_e32_sd3c.mrp
 base_e32_sd4c	\sf\os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard4c\base_e32_sd4c.mrp
 base_e32test	\sf\os\kernelhwsrv\kerneltest\e32test\group\base_e32test.mrp
 base_e32utils	\sf\os\kernelhwsrv\kerneltest\e32utils\group\base_e32utils.mrp
-base_e32utils_restricted	\sf\os\kernelhwsrv\kerneltest\e32utils\restricted\base_e32utils_restricted.mrp
+base_e32utils_restricted	\sf\os\kernelhwsrv\kerneltest\e32utils\group\restricted\base_e32utils_restricted.mrp
 base_f32	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\group\base_f32.mrp
 base_f32_automounter	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\automounter\base_f32_automounter.mrp
 base_f32_eshell	\sf\os\kernelhwsrv\userlibandfileserver\fileserver\etshell\base_f32_eshell.mrp
@@ -118,7 +118,6 @@ base_omaph4hrp_sdio	\sf\os\boardsupport\omaph4\omaph4sdio\base_omaph4hrp_sdio.mr
 base_omaph4hrp_unistore2	\sf\os\boardsupport\omaph4\omaph4unistore2\base_omaph4hrp_unistore2.mrp
 base_omaph4hrp_usbhostotg_usbware	\sf\os\boardsupport\omaph4\omapusbhotgdrivers\base_omaph4hrp_usbhostotg_usbware.mrp
 base_sdiotests	\sf\os\kernelhwsrv\kerneltest\sdiotest\base_sdiotests.mrp
-base_sdiotests_restricted	\sf\os\kernelhwsrv\kerneltest\sdiotest_restricted\base_sdiotests_restricted.mrp
 base_template	\sf\os\kernelhwsrv\bsptemplate\asspandvariant\base_template.mrp
 base_template_usbhostotg	\sf\os\usb\usbbsptemplate\usbhostcntrldrivertemplate\base_template_usbhostotg.mrp
 base_tiomap3	\sf\os\boardsupport\omap3variants\tiomap3bsp\base_tiomap3.mrp
@@ -255,16 +254,11 @@ lbs_metadata	\sf\os\lbs\lbs_info\lbs_metadata\lbs_metadata.mrp
 lbs_network_positioning_module	\sf\os\lbs\datasourcemodules\networkpositioningmodule\group\lbs_network_positioning_module.mrp
 lbs_networkgateway	\sf\os\lbs\locationmgmt\networkgateway\group\lbs_networkgateway.mrp
 lbs_networklocationmanager	\sf\os\lbs\locationmgmt\networklocationmgr\group\lbs_networklocationmanager.mrp
-lbs_networkpmasn1_plat	\sf\os\lbs\networkprotocolmodules\networkpmasn1_plat\group\lbs_networkpmasn1_plat.mrp
-lbs_networkpmasn1_pub	\sf\os\lbs\networkprotocolmodules\networkpmasn1_pub\group\lbs_networkpmasn1_pub.mrp
-lbs_networkpmutils	\sf\os\lbs\networkprotocolmodules\networkpmutils\group\lbs_networkpmutils.mrp
 lbs_networkrequesthandler	\sf\os\lbs\locationrequestmgmt\networkrequesthandler\group\lbs_networkrequesthandler.mrp
 lbs_networktest	\sf\os\lbs\lbstest\locationprotocoltest\group\lbs_networktest.mrp
 lbs_npeintegrationmodule	\sf\os\lbs\datasourcemodules\npeintegmodule\group\lbs_npeintegrationmodule.mrp
 lbs_privacyprotocolmodule	\sf\os\lbs\networkprotocolmodules\privacyprotocolmodule\group\lbs_privacyprotocolmodule.mrp
 lbs_simulation_positioning_module	\sf\os\lbs\datasourcemodules\simulationpositioningmodule\group\lbs_simulation_positioning_module.mrp
-lbs_suplcontrolplaneprotocols	\sf\os\lbs\networkprotocolmodules\suplcontrolplaneprotocols\group\lbs_suplcontrolplaneprotocols.mrp
-lbs_suplpmcore	\sf\os\lbs\networkprotocolmodules\suplpmcore\group\lbs_suplpmcore.mrp
 lbs_suplprotocolmodule	\sf\os\lbs\networkprotocolmodules\suplprotocolmodule\group\lbs_suplprotocolmodule.mrp
 lbs_suplproxyprotocolmodule	\sf\os\lbs\networkprotocolmodules\suplproxyprotocolmodule\group\lbs_suplproxyprotocolmodule.mrp
 lbs_suplsmstrigger	\sf\mw\messagingmw\messagingfw\suplsmshandler\group\lbs_suplsmstrigger.mrp
@@ -394,9 +388,6 @@ networking_spud	\sf\os\cellularsrv\telephonyprotocols\secondarypdpcontextumtsdri
 networking_tcpip6	\sf\os\networkingsrv\networkprotocols\tcpipv4v6prt\group\networking_tcpip6.mrp
 networking_telnet_e	\sf\mw\netprotocols\applayerprotocols\telnetengine\group\networking_telnet_e.mrp
 networking_tls	\sf\os\networkingsrv\networksecurity\tls\group\networking_tls.mrp
-networking_tun	\sf\os\networkingsrv\tcpiputils\tun\group\networking_tun.mrp
-networking_tundriver	\sf\os\networkingsrv\linklayerprotocols\tundriver\group\networking_tundriver.mrp
-networking_tundriveragt	\sf\os\networkingsrv\linklayercontrol\tundriveragt\group\networking_tundriveragt.mrp
 networking_tunnelnif	\sf\os\networkingsrv\linklayerprotocols\tunnelnif\group\networking_tunnelnif.mrp
 networking_umtsif	\sf\os\cellularsrv\telephonyprotocols\gprsumtsqosinterface\group\networking_umtsif.mrp
 networkingsrv_metadata	\sf\os\networkingsrv\networkingsrv_info\networkingsrv_metadata\networkingsrv_metadata.mrp
@@ -432,7 +423,7 @@ osttracecompiler	*nosource*
 persistentdata_metadata	\sf\os\persistentdata\persistentdata_info\persistentdata_metadata\persistentdata_metadata.mrp
 product_cbr_config	\sf\os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\product_cbr_config.mrp
 product_tools	\sf\os\buildtools\toolsandutils\productionbldtools\product_tools.mrp
-reference_roms_tb92	\sf\os\deviceplatformrelease\symbianosbld\cedarutils\tb92sfrom_obys\reference_roms_tb92.mrp
+reference_roms_tb92	\sf\os\deviceplatformrelease\symbianosbld\cedarutils\tb92ps1rom_obys\reference_roms_tb92.mrp
 remoteconn_metadata	\sf\mw\remoteconn\remoteconn_info\remoteconn_metadata\remoteconn_metadata.mrp
 rootcerts	\sf\os\security\cryptoservices\rootcertificates\rootcerts.mrp
 security_asnpkcs	\sf\os\security\cryptoservices\asnpkcs\group\security_asnpkcs.mrp
