@@ -2235,7 +2235,7 @@ display driver adaptation. Defaults to <openwfc_ri_displaychannel.iby>
 This flag indicates that the 3GP Extention feature is supported in
 MetadataUtility.
 */
-#define __3GP_EXTENTION                                    
+//#define __3GP_EXTENTION                                    
 
 /** #__AAC_ENCODER_PLUGIN 
 Device supports all-ARM AAC encoding capabilities.

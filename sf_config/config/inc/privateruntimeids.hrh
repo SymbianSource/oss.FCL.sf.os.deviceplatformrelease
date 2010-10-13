@@ -899,8 +899,4 @@
 
 #define KFeatureIdFfHomeScreenVanityDialing                 5098 
 
-// dummy flag until we get the right number
- 
-#define KFeatureIdFfHttpAllowUntrustedCertificates          9002
-
 #endif // __PRIVATERUNTIMEIDS_HRH
