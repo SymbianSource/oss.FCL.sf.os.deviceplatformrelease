@@ -53,8 +53,6 @@
 	<SetEnv Order="30" Name="DiamondsServer" Value="diamonds.nmp.nokia.com:9003"/>
 	<SetEnv Order="31" Name="DiamondsSchemaNum" Value="16"/> 
 	<SetEnv Order="32" Name="SYSDEF_TOOLS" Value="os\buildtools\bldsystemtools\sysdeftools"/> 
-  <SetEnv Order="33" Name="ARMLMD_LICENSE_FILE"  Value="c:\apps\arm\license.dat;8224@lolmg.europe.nokia.com;8224@falic01.europe.nokia.com;8224@salmg01.nmp.nokia.com;28747@saslmg04.nmp.nokia.com"/>
-
  
     <!-- Dumping environment -->
     <Execute Component="Dumping all environment variables" Cwd="%BuildDir%" CommandLine="SET"/>
