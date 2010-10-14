@@ -1219,6 +1219,8 @@ data=ZRESOURCE\calencaldavplugindata.rsc \resource\calencaldavplugindata.rsc
 //#define __BASE_SYBORG_IBY__ // we are using Zoom2
 //#define SWITEXTSHELL // switextshell.iby
 
+#define _DCMOFWRESOURCES_IBY_ // language\mw\dcmoresources has a duplicate of core\mw\dcmo.iby's resource
+
 // fixups
 
 //file=ABI_DIR\BUILD_DIR\vimpstsettings.dll				SHARED_LIB_DIR\vimpstsettings.dll
