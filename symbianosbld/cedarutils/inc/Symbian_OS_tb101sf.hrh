@@ -2141,7 +2141,8 @@ If SYMBIAN_GRAPHICS_WSERV_QT_EFFECTS is enabled,
 
 This #define supports PREQ2669.
 */
-#define SYMBIAN_GRAPHICS_WSERV_QT_EFFECTS
+// Undef as a workaround for Bug 3802
+// #define SYMBIAN_GRAPHICS_WSERV_QT_EFFECTS
 
 /**
 	@publishedPartner
