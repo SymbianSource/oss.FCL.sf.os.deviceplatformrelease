@@ -657,7 +657,7 @@ data=ZRESOURCE\calencaldavplugindata.rsc \resource\calencaldavplugindata.rsc
 //                                            which includes <filetokensconfig.iby>
 #include <ASR.iby>
 // not in 3.0.I #include <authserver.iby>
-#include <autotest.iby>
+// not in 3.0.4 #include <autotest.iby>
 #include <avi.iby>
 //                                            which includes <subtitledecoder.iby>
 #include <bioclass0smsplugin.iby>
