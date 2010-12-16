@@ -22,7 +22,7 @@ PRJ_PLATFORMS
 DEFAULT
 
 PRJ_EXPORTS
-localized_resources.iby                /epoc32/rom/Variant/localized_resources.iby
+localized_resources.iby                /epoc32/rom/variant/localized_resources.iby
 switch_loc_generator.pl                /epoc32/tools/switch_loc_generator.pl
 
 

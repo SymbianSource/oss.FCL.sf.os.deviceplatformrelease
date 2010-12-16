@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition xmlns:sf="http://www.symbian.org/system-definition" id-namespace="http://www.nokia.com/schema/drd/system-definition" schema="3.0.0">
+  <package id="sf:deviceplatformrelease" name="Device Platform Release" levels="bld mid top">
+    <collection id="sf:foundation_system" name="Foundation System" level="top">
+      <component id="systemdocs" name="System Documentation" purpose="development" class="doc">
+        <unit mrp="../../foundation_system/systemdocs/group/system.mrp"/>
+      </component>
+    </collection>
+    <collection id="nokia_system" name="Nokia System" level="top">
+      <component id="nokia_model" name="Nokia Model" class="config" introduced="^2" purpose="development" target="desktop">
+        <unit mrp="../../nokia_system/nokia_model/nokia_model.mrp"/>
+      </component>
+    </collection>
+    <collection id="sf:deviceplatformrelease_info" name="Device Platform Release Info" level="top">
+      <component id="nokia_deviceplatformrelease_metadata" name="Nokia Device Platform Release Metadata" class="config" introduced="^2" purpose="development" target="desktop">
+        <unit mrp="nokia_deviceplatformrelease_metadata.mrp"/>
+      </component>
+    </collection>
+  </package>
+</SystemDefinition>
