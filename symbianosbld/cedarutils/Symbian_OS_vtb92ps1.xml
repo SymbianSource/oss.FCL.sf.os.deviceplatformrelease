@@ -319,7 +319,7 @@
     <Execute Component="Prep for Techview Build" Cwd="%BuildDir%" CommandLine="xcopy %CleanSourceDir%\os\buildtools\sbsv1_os\e32toolp %SourceDir%\cedar\techview\tools\e32toolp /E /Z /I /Q"/>
 
     <!-- Compile Techview using SBSv2 -->
-    <Execute Component="Techview Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog  -t 3 -j %MAX_CONCURRENT% -f %LogsDir%\sbs_TV_log.xml.log -k -m %EPOCROOT%epoc32\build\Makefile_TV -s %EPOCROOT%epoc32\data\system_definition_TV.xml -c default.techview.savespace.vtb92.whatlog -i > %LogsDir%\TV2.log 2>&amp;1"/>
+    <Execute Component="Techview Build" Cwd="%BuildDir%" CommandLine="sbs --filters=FilterSquashlog  -t 3 -j %MAX_CONCURRENT% -f %LogsDir%\sbs_TV_log.xml.log -k -m %EPOCROOT%epoc32\build\Makefile_TV -s %EPOCROOT%epoc32\data\system_definition_TV.xml -c default.techview.vtb92.whatlog -i > %LogsDir%\TV2.log 2>&amp;1"/>
     <Execute Component="Copy Makefile_TV and log to Local Logs Dir" Cwd="%BuildDir%" CommandLine="copy %EPOCROOT%epoc32\build\Makefile_TV* %LogsDir%\"/>
 
     <!-- Compile System Test components using EBS -->
